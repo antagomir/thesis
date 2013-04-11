@@ -1,8 +1,8 @@
-## LaTeX sources for my doctoral thesis
+## LaTeX sources for Doctoral Thesis
 
-[Probabilistic analysis of the human transcriptome with side information](http://lib.tkk.fi/Diss/2010/isbn9789526033686) _D.Sc. Thesis_ Aalto University School of Science and Technology, Faculty of Information and Natural Sciences, Espoo, Finland, 2010. 
+[Probabilistic analysis of the human transcriptome with side information](http://lib.tkk.fi/Diss/2010/isbn9789526033686) Leo Lahti, D.Sc. Thesis. Aalto University School of Science and Technology, Faculty of Information and Natural Sciences, Espoo, Finland, 2010. 
 
-The thesis and all source material are released under CC-BY license
+**License** The thesis and all source material are released under CC-BY license
 unless otherwise mentioned (some Figures and Publications are with
 external copyright holders).
 
