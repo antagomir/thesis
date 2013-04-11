@@ -1,0 +1,112 @@
+
+\documentclass[10pt,twoside]{report} % oneside also possible
+%\usepackage[T1]{fontenc} % comment out for type 1 fonts
+%\usepackage{amsfonts,t1enc}
+\usepackage[latin1]{inputenc} %Paketti jolla nykyaan saa aakkoset toimimaan
+\usepackage[dvips]{graphicx}
+\usepackage[finnish,english]{babel} % Muuta kieli abstraktia varten
+\usepackage{bibalias,amsmath,amssymb}
+\usepackage[footnotesize]{caption}
+%\usepackage[a4paper,dvips]{geometry} %for a4 output
+%\usepackage[a5paper,dvips]{geometry} %for a5 output
+\usepackage[b5paper,dvips]{geometry} % TAMA LOPULLISEEN
+%\usepackage[cross,a4,center,noinfo]{crop} % for a4 output
+\usepackage[round]{natbib}
+\usepackage{fancyheadings} 
+\usepackage{chngpage}
+\usepackage{setspace}
+\usepackage{verbatim} %comments:eja varten
+\usepackage{url}
+%\usepackage{apalike}
+%\usepackage{fancyhdr}
+
+% Page layout
+\setlength{\topmargin}{-15mm}
+\setlength{\textheight}{21cm}
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+\setlength{\textwidth}{125.2mm}
+
+\newcommand{\mychapternonumber}[1]{\newpage\section*{\textsc{\LARGE #1}}\addcontentsline{toc}{section}{\textsc{#1}}}
+\newcommand{\mychapter}[1]{\newpage\section[\textsc{#1}]{\textsc{\LARGE #1}}}
+\newcommand{\mysection}[1]{\subsection{#1}}
+\newcommand{\mysubsection}[1]{\subsubsection{#1}}
+\newcommand{\mychnonumber}[2]{\newpage\section*{\textsc{\LARGE #1}}\addcontentsline{toc}{section}{\textsc{#2}}}
+
+\hyphenation{associ-ati-ons bio-mo-le-cu-lar characteriza-ti-on
+  con-cor-dant constrai-ned con-text con-text-spe-ci-fic da-ta-ba-se
+  da-ta-ba-ses ex-pect-at-i-on ex-pect-at-i-on-maxi-mi-za-ti-on
+  fra-me-work Ge-no-min huo-mi-oin-ti iden-ti-fi-ca-ti-on
+  inter-acti-on ja-los-ta-maan kes-kei-seen know-led-ge liit-tyy
+  me-ne-tel-mi-en me-ta-bo-l-ic mik-ro-si-ru-ko-ko-el-miin
+  mit-ta-us-ai-neis-to-jen mit-ta-us-ha-vain-non mo-le-cu-les
+  neigh-borg-hood net-work net-works o-mi-nai-suuk-si-en or-ga-nism
+  or-ga-ni-sm-wi-de pa-ra-digm pa-ra-digms para-met-ri-zed
+  physio-logi-cal pro-te-ins re-posi-tori-es sta-tis-tics strong-est
+  sub-net-work tar-kas-te-lu tie-teen ti-lastollinen tran-script-io-nal tu-mor
+  tut-ki-mi-seen un-iden-ti-fi-able vank-ko-ja Vo-ro-noi}
+
+
+\input{symbols}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\lhead[\fancyplain{}{\small\sl\leftmark}]{}
+\rhead[]{\fancyplain{}{\small\sl\rightmark}}
+
+\input{preliminary}\newpage
+
+\pagenumbering{roman}
+
+% Dissertation information (in English) and English abstract of the
+% dissertation
+\input{abstract}\newpage
+
+% Dissertation information (in Finnish) and Finnish abstract of the
+% dissertation
+\input{abstractFin}\newpage
+
+\setcounter{page}{3}
+
+{\small \tableofcontents}\newpage
+
+\pagestyle{fancy}
+
+\input{preface}\newpage
+
+\input{publications}\newpage
+
+\input{contributions}\newpage
+
+\input{abbreviations}\newpage
+
+%\listoffigures % Kuvaluettelo / List of Figures
+%\listoftables  % Taulukkoluettelo / List of Tables
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{intro}\newpage
+
+\input{biobg}\newpage
+
+\input{methodbg}\newpage
+
+\input{preprocessing}\newpage
+
+\input{atlases}\newpage
+
+\input{integration}\newpage
+
+\input{conclusion}%\newpage
+
+%\input{appendix}\newpage
+
+\input{references}\newpage
+
+%Cover sheets of the individual articles of a compound dissertation.
+%\articlecovers
+
+\end{document}

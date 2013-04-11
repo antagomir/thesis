@@ -1,0 +1,61 @@
+
+%\chapter*{Appendix}
+
+%\appendix
+\chapter*{Appendix}\label{ch:appendix}
+\addcontentsline{toc}{chapter}{Appendices}
+
+
+%\section*{Dirichlet distribution}\label{sec:DirichletDistribution}
+%\addcontentsline{toc}{section}{Dirichlet distribution}
+
+%\textbf{Dirichlet distribution} is the probability density
+
+%\begin{equation}\label{eq:DirichletDistribution}
+%  p(\pi | \alpha) = \frac{\Gamma (\sum_i \alpha_i)}{\prod_i \Gamma(\alpha_i)} \prod_i \pi_i^{\alpha_i -1}
+%\end{equation}
+
+%where the random variable $\pi$ and the parameter vector \(\alpha\)
+%are vectors with elements indexed by \(i\), $0 < \pi_i < 1$, and
+%$\sum_i \pi_i = 1$, and $\alpha_i > 0$. This defines an exponential
+%family distribution with $\E[\pi_i] = \frac{\alpha_i}{\sum_i
+%  \alpha_i}$.
+
+\section*{Matrix normal distribution and the cost function}\label{sec:matrixnormal}
+%\addcontentsline{toc}{section}{Matrix normal distribution and the cost function}
+
+The matrix normal distribution is defined as:
+
+\begin{flalign*}
+     P(\T) = \Nm(\T | \M, \U, \Vb) \sim exp(-\frac{1}{2} Tr\{\U^{-1}(\T - \I)\Vb^{-1}(\T-\I)^T\})
+\end{flalign*}
+
+\noindent By setting \(\U = \V = \sigma_T \I\) and \(\M = \I\) one
+gets
+
+\begin{flalign*}
+     P(\T) = \Nm(\T | \I, \sigma\I, \sigma\I) &\sim  exp(-\frac{1}{2\sigt} (\T - \I)(\T - \I)^T)\\
+             &\sim  exp(-\frac{1}{2 \sigt} Tr\{(\T-\I)^T(\T-\I)\})\\
+             %&\sim  exp(-\frac{1}{2 \sigt} \sum_i{\lambda_i^2})\\
+             %&\sim  exp(-\frac{1}{2 \sigt} (\sqrt{\sum_i{\lambda_i^2}})^2)\\
+             &\sim  exp(-\frac{1}{2 \sigt} \parallel \T - \I \parallel_{F}^2)\\
+             &\sim N_{+}(\parallel \T - \I \parallel_{F} | \0, \sigt),
+\end{flalign*}
+where \(\parallel\parallel_F\) denotes the Frobenius norm, and
+\(\N_{+}\) refers to truncated normal distribution for positive input
+values.
+
+% = \N_{+}( \parallel W_y (W_x^T W_x)^{-1} W_x^T) - I \parallel | 0, \sigt).
+
+\section*{Deriving cost function for the regularized dependency modeling framework}\label{sec:costderivationSimCCA}
+%\addcontentsline{toc}{section}{Deriving cost function for the regularized dependency modeling
+%framework}
+
+   \begin{flalign*}
+        -LogP(\T) &= -Log \Nm(\I, \sigma \I, \sigma \I)\\        
+             &= Log(c) + \frac{1}{2 \sigt} Tr\{(\T-\I)(\T-\I)^T\}\\
+             &= Log(c) + \frac{1}{2 \sigt} \parallel \T - \I \parallel_{F}^2\\
+             &= Log(c) + \frac{\parallel \T - \I \parallel_{F}^2}{\sigthat}.
+  \end{flalign*}
+
+

@@ -1,0 +1,84 @@
+\select@language {english}
+\contentsline {section}{Preface}{v}
+\contentsline {section}{List of publications}{vii}
+\contentsline {section}{Summary of publications and the author's contribution}{viii}
+\contentsline {section}{List of abbreviations and symbols}{ix}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Contributions and organization of the thesis}{2}
+\contentsline {chapter}{\numberline {2}Functional genomics}{4}
+\contentsline {section}{\numberline {2.1}Universal genetic code}{4}
+\contentsline {subsection}{\numberline {2.1.1}Protein synthesis}{5}
+\contentsline {subsection}{\numberline {2.1.2}Layers of regulation}{6}
+\contentsline {section}{\numberline {2.2}Organization of genetic information}{7}
+\contentsline {subsection}{\numberline {2.2.1}Genome structure}{7}
+\contentsline {subsection}{\numberline {2.2.2}Genome function}{8}
+\contentsline {section}{\numberline {2.3}Genomic data resources}{9}
+\contentsline {subsection}{\numberline {2.3.1}Community databases and evolving biological knowledge}{9}
+\contentsline {subsubsection}{Genomic sequence databases}{9}
+\contentsline {subsubsection}{Transcriptome databases}{9}
+\contentsline {subsubsection}{Other types of microarray data}{11}
+\contentsline {subsubsection}{Pathway and interaction databases}{11}
+\contentsline {subsubsection}{Evolving biological knowledge}{11}
+\contentsline {subsection}{\numberline {2.3.2}Challenges in high-throughput data analysis}{12}
+\contentsline {section}{\numberline {2.4}Genomics and health}{13}
+\contentsline {chapter}{\numberline {3}Statistical learning and exploratory data analysis}{14}
+\contentsline {section}{\numberline {3.1}Modeling tasks}{14}
+\contentsline {subsection}{\numberline {3.1.1}Central concepts in data analysis}{15}
+\contentsline {subsection}{\numberline {3.1.2}Exploratory data analysis}{17}
+\contentsline {subsection}{\numberline {3.1.3}Statistical learning}{18}
+\contentsline {section}{\numberline {3.2}Probabilistic modeling paradigm}{18}
+\contentsline {subsection}{\numberline {3.2.1}Generative modeling}{19}
+\contentsline {subsubsection}{Finite mixture models}{19}
+\contentsline {subsubsection}{Latent variables and marginalization}{20}
+\contentsline {subsection}{\numberline {3.2.2}Nonparametric models}{21}
+\contentsline {subsubsection}{Infinite mixture models}{22}
+\contentsline {subsection}{\numberline {3.2.3}Bayesian analysis}{23}
+\contentsline {section}{\numberline {3.3}Learning and inference}{25}
+\contentsline {subsection}{\numberline {3.3.1}Model fitting}{25}
+\contentsline {subsubsection}{Point estimates}{25}
+\contentsline {subsubsection}{Variational inference}{26}
+\contentsline {subsubsection}{Expectation--Maximization (EM)}{27}
+\contentsline {subsubsection}{Standard optimization methods}{28}
+\contentsline {subsection}{\numberline {3.3.2}Generalizability and overlearning}{28}
+\contentsline {subsection}{\numberline {3.3.3}Regularization and model selection}{29}
+\contentsline {subsection}{\numberline {3.3.4}Validation}{29}
+\contentsline {chapter}{\numberline {4}Reducing uncertainty in high-throughput microarray studies}{31}
+\contentsline {section}{\numberline {4.1}Sources of uncertainty}{31}
+\contentsline {section}{\numberline {4.2}Preprocessing microarray data with side information}{32}
+\contentsline {subsubsection}{Standard preprocessing steps}{32}
+\contentsline {subsubsection}{Probe-level preprocessing methods}{34}
+\contentsline {subsubsection}{Utilizing side information in transcriptome databases}{35}
+\contentsline {section}{\numberline {4.3}Model-based noise reduction}{36}
+\contentsline {subsubsection}{Robust Probabilistic Averaging}{38}
+\contentsline {subsubsection}{Model validation}{40}
+\contentsline {section}{\numberline {4.4}Conclusion}{41}
+\contentsline {chapter}{\numberline {5}Global analysis of the human transcriptome}{42}
+\contentsline {section}{\numberline {5.1}Standard approaches}{42}
+\contentsline {subsubsection}{Investigating known processes}{43}
+\contentsline {subsubsection}{Biclustering and subspace clustering}{44}
+\contentsline {subsubsection}{Role of side information}{45}
+\contentsline {subsubsection}{Other approaches}{46}
+\contentsline {section}{\numberline {5.2}Global modeling of transcriptional activity in interaction networks}{46}
+\contentsline {subsubsection}{A two-step approach}{47}
+\contentsline {subsubsection}{The NetResponse algorithm}{48}
+\contentsline {subsubsection}{Global view on network activation patterns}{49}
+\contentsline {section}{\numberline {5.3}Conclusion}{50}
+\contentsline {chapter}{\numberline {6}Human transcriptome and other layers of genomic information}{51}
+\contentsline {section}{\numberline {6.1}Standard approaches for genomic data integration}{52}
+\contentsline {subsection}{\numberline {6.1.1}Combining statistical evidence}{52}
+\contentsline {subsection}{\numberline {6.1.2}Role of side information}{53}
+\contentsline {subsection}{\numberline {6.1.3}Modeling of mutual dependency}{54}
+\contentsline {subsubsection}{Classical and probabilistic canonical correlation analysis}{55}
+\contentsline {subsubsection}{Contingency table analysis}{56}
+\contentsline {section}{\numberline {6.2}Regularized dependency detection}{57}
+\contentsline {subsubsection}{Correlation-based variant}{58}
+\contentsline {subsubsection}{Probabilistic dependency detection with similarity constraints}{59}
+\contentsline {subsection}{\numberline {6.2.1}Cancer gene discovery with dependency detection}{60}
+\contentsline {subsubsection}{Related approaches}{61}
+\contentsline {section}{\numberline {6.3}Associative clustering}{63}
+\contentsline {subsubsection}{The associative clustering principle}{64}
+\contentsline {subsubsection}{Comparison methods}{66}
+\contentsline {subsection}{\numberline {6.3.1}Exploratory analysis of transcriptional divergence between species}{66}
+\contentsline {section}{\numberline {6.4}Conclusion}{67}
+\contentsline {chapter}{\numberline {7}Summary and conclusions}{69}
+\contentsline {chapter}{References}{71}

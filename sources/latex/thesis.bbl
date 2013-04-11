@@ -1,0 +1,2266 @@
+\begin{thebibliography}{325}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Adler et~al.(2006)Adler, Lin, Horlings, Nuyten, van~de Vijver, and
+  Chang]{Adler2006}
+A.~S. Adler, M.~Lin, H.~Horlings, D.~S.~A. Nuyten, M.~J. van~de Vijver, and
+  H.~Y. Chang.
+\newblock {Genetic regulators of large-scale transcriptional signatures in
+  cancer.}
+\newblock \emph{Nature Genetics}, 38:\penalty0 421--430, 2006.
+
+
+%\bibitem[Affymetrix(2003)]{Affymetrix03}
+%Affymetrix.
+%\newblock Array design for the GeneChip Human Genome U133 Set.
+%\newblock \emph{Technical note on human genome U133 array design.}, Affymetrix,% 2003.
+
+\bibitem[Agresti(1992)]{Agresti92}
+A.~Agresti.
+\newblock A survey of exact inference for contingency tables.
+\newblock \emph{Statistical Science}, 7:\penalty0 131--153, 1992.
+
+\bibitem[Alberts et~al.(2002)Alberts, Johnson, Lewis, Raff, Roberts, and
+  Walter]{Alberts02}
+B.~Alberts, A.~Johnson, J.~Lewis, M.~Raff, K.~Roberts, and P.~Walter.
+\newblock \emph{Molecular Biology of the Cell}.
+\newblock Garland Science, New York, fourth edition, 2002.
+
+\bibitem[Allison et~al.(2006)Allison, Cui, Page, and Sabripour]{Allison06}
+D.~B. Allison, X.~Cui, G.~P. Page, and M.~Sabripour.
+\newblock Microarray data analysis: from disarray to consolidation and
+  consensus.
+\newblock \emph{Nature Reviews Genetics}, 7:\penalty0 55--65, 2006.
+
+\bibitem[Allocco et~al.(2004)Allocco, Kohane, and Butte]{Allocco04}
+D.~J. Allocco, I.~S. Kohane, and A.~J. Butte.
+\newblock Quantifying the relationship between co-expression, co-regulation and
+  gene function.
+\newblock \emph{BMC Bioinformatics}, 5:18, 2004.
+
+\bibitem[Alter and Golub(2005)]{Alter05}
+O.~Alter and G.~H. Golub.
+\newblock {Reconstructing the pathways of a cellular system from genome-scale
+  signals by using matrix and tensor computations}.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  102:\penalty0 17559--17564, 2005.
+
+\bibitem[Alter et~al.(2003)Alter, Brown, and Botstein]{Alter03}
+O.~Alter, P.~O. Brown, and D.~Botstein.
+\newblock Generalized singular value decomposition for comparative analysis of
+  genome-scale expression data sets of two different organisms.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  100:\penalty0 3351--3356, 2003.
+
+\bibitem[Archambeau and Bach(2008)]{Archambeau08}
+C.~Archambeau and F.~Bach.
+\newblock Sparse probabilistic projections.
+\newblock In D.~Koller, D.~Schuurmans, Y.~Bengio, and L.~Bottou, editors,
+  \emph{Advances in Neural Information Processing Systems 21}, pages 73--80.
+  MIT Press, Cambridge, MA, 2008.
+
+\bibitem[Archambeau et~al.(2006)Archambeau, Delannay, and
+  Verleysen]{Archambeau06}
+C.~Archambeau, N.~Delannay, and M.~Verleysen.
+\newblock Robust probabilistic projections.
+\newblock In W.~Cohen and A.~Moore, editors, \emph{Proceedings of the 23rd
+  International conference on machine learning}, volume 148, pages 33--40.
+  ACM, Pittsburgh, Pennsylvania, 2006.
+
+\bibitem[Ashburner et~al.(2000)Ashburner, Ball, Blake, Botstein, Butler,
+  Cherry, Davis, Dolinski, Dwight, Eppig, Harris, Hill, Issel-Tarver,
+  Kasarskis, Lewis, Matese, Richardson, Ringwald, Rubin, and
+  Sherlock]{Ashburner00}
+M.~Ashburner, C.~A. Ball, J.~A. Blake, D.~Botstein, H.~Butler, J.~M. Cherry,
+  A.~P. Davis, K.~Dolinski, S.~S. Dwight, J.~T. Eppig, M.~A. Harris, D.~P.
+  Hill, L.~Issel-Tarver, A.~Kasarskis, S.~Lewis, J.~C. Matese, J.~E.
+  Richardson, M.~Ringwald, G.~M. Rubin, and G.~Sherlock.
+\newblock Gene ontology: tool for the unification of biology.
+\newblock \emph{Nature Genetics}, 25:\penalty0 25--29, 2000.
+
+\bibitem[Auer et~al.(2003)Auer, Lyianarachchi, Newsom, Klisovic, Marcucci, and
+  Kornacker]{Auer03}
+H.~Auer, S.~Lyianarachchi, D.~Newsom, M.~I. Klisovic, G.~Marcucci, and
+  K.~Kornacker.
+\newblock Chipping away at the chip bias: {RNA} degradation in microarray
+  analysis.
+\newblock \emph{Nature Genetics}, 35:\penalty0 292--293, 2003.
+
+\bibitem[Bach and Jordan(2002)]{Bach02}
+F.~R. Bach and M.~I. Jordan.
+\newblock Kernel independent component analysis.
+\newblock \emph{Journal of Machine Learning Research}, 3:\penalty0 1--48, 2002.
+
+\bibitem[Bach and Jordan(2005)]{Bach05}
+F.~R. Bach and M.~I. Jordan.
+\newblock A probabilistic interpretation of canonical correlation analysis.
+\newblock Technical report, Department of Statistics, University of California,
+  Berkeley, 2005.
+
+\bibitem[Badea(2008)]{Badea08}
+L.~Badea.
+\newblock Extracting gene expression profiles common to colon and pancreatic
+  adenocarcinoma using simultaneous nonnegative matrix factorization.
+\newblock In R.~B. Altman, A.~K. Dunker, L.~Hunter, T.~Murray, and T.~E. Klein,
+  editors, \emph{Proceedings of the Pacific Symposium on Biocomputing (PSB'08)}, pages 267--278. World Scientific, USA, 2008. 
+
+\bibitem[Baldi and Brunak(1999)]{Baldi99}
+P.~Baldi and S.~Brunak.
+\newblock \emph{Bioinformatics: the machine learning approach}.
+\newblock Bradford, London, third edition, 1999.
+
+\bibitem[Bammler et~al.(2005)]{Bammler05}
+T.~Bammler et~al.
+\newblock Standardizing global gene expression analysis between laboratories
+  and across platforms.
+\newblock \emph{Nature Methods}, 2:\penalty0 351--356, 2005.
+
+\bibitem[Bannert and Kurth(2004)]{Bannert04}
+N.~Bannert and R.~Kurth.
+\newblock {Retroelements and the human genome: New perspectives on an old
+  relation}.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 101\penalty0
+  (S2):\penalty0 14572--14579, 2004.
+
+\bibitem[Barab\'asi and Oltvai(2004)]{Barabasi04}
+A.-L. Barab\'asi and Z.~N. Oltvai.
+\newblock Network biology: understanding the cell's functional organization.
+\newblock \emph{Nature Reviews}, 5:\penalty0 101--113, 2004.
+
+\bibitem[Barash and Friedman(2002)]{Barash02}
+Y.~Barash and N.~Friedman.
+\newblock Context-specific bayesian clustering for gene expression data.
+\newblock \emph{Journal of Computational Biology}, 9:\penalty0 169--191, 2002.
+
+\bibitem[Barbour et~al.(2005)Barbour, Cohen, and Yamey]{Barbour05}
+V.~Barbour, B.~Cohen, and G.~Yamey.
+\newblock Why bigger is not yet better: The problems with huge datasets.
+\newblock \emph{PLoS Medicine}, 2:\penalty0 e55, 2005.
+
+\bibitem[Barrett et~al.(2009)Barrett, Troup, Wilhite, Ledoux, Rudnev,
+  Evangelista, Kim, Soboleva, Tomashevsky, Marshall, Phillippy, Sherman,
+  Muertter, and Edgar]{Barrett2009}
+T.~Barrett, D.~B. Troup, S.~E. Wilhite, P.~Ledoux, D.~Rudnev, C.~Evangelista,
+  I.~F. Kim, A.~Soboleva, M.~Tomashevsky, K.~A. Marshall, K.~H. Phillippy,
+  P.~M. Sherman, R.~N. Muertter, and R.~Edgar.
+\newblock {NCBI GEO: archive for high-throughput functional genomic data.}
+\newblock \emph{Nucleic Acids Research}, 37:D885--90, 2009.
+
+\bibitem[Bayes(1763)]{Bayes63}
+T.~Bayes.
+\newblock Studies in the history of probability and statistics: {IX}. {T}homas
+  {B}ayes' essay {T}owards solving a problem in the doctrine of chances.
+\newblock \emph{Biometrika}, 45:\penalty0 296--315, 1763.
+\newblock Printed in 1958.
+
+\bibitem[Beer et~al.(2002)Beer, Kardia, Huang, Giordano, Levin, Misek, Lin,
+  Chen, Gharib, Thomas, Lizyness, Kuick, Hayasaka, Taylor, Iannettoni,
+  Orringer, and Hanash]{Beer02}
+D.~G. Beer, S.~L.~R. Kardia, C.-C. Huang, T.~J. Giordano, A.~M. Levin, D.~E.
+  Misek, L.~Lin, G.~Chen, T.~G. Gharib, D.~G. Thomas, M.~L. Lizyness, R.~Kuick,
+  S.~Hayasaka, J.~M.~G. Taylor, M.~D. Iannettoni, M.~B. Orringer, and
+  S.~Hanash.
+\newblock Gene-expression profiles predict survival of patients with lung
+  adenocarcinoma.
+\newblock \emph{Nature Medicine}, 8:\penalty0 816--824, 2002.
+
+\bibitem[Ben-David and Ackerman(2008)]{Ben-David08}
+S.~Ben-David and M.~Ackerman.
+\newblock Measures of clustering quality: A working set of axioms for
+  clustering.
+\newblock In D.~Koller, D.~Schuurmans, Y.~Bengio, and L.~Bottou, editors,
+  \emph{Advances in Neural Information Processing Systems 21}, pages 121--128.  MIT Press, Cambridge, MA, 2008.
+
+%\bibitem[Benedict et~al.(2006)Benedict, Geisler, Trygg, Huner, and
+%  Hurry]{Benedict06}
+%C.~Benedict, M.~Geisler, J.~Trygg, N.~Huner, and V.~Hurry.
+%\newblock {Consensus by Democracy. Using Meta-Analyses of Microarray and
+%  Genomic Data to Model the Cold Acclimation Signaling Pathway in Arabidopsis%}.
+%\newblock \emph{Plant Physiology}, 141:\penalty0 1219--1232, 2006.
+
+\bibitem[Benson et~al.(2010)Benson, Karsch-Mizrachi, Lipman, Ostell, and
+  Sayers]{Benson2010}
+D.~A. Benson, I.~Karsch-Mizrachi, D.~J. Lipman, J.~Ostell, and E.~W. Sayers.
+\newblock {GenBank}.
+\newblock \emph{Nucleic Acids Research}, 38:D46--51, 2010.
+
+\bibitem[Berger et~al.(2006)Berger, Hautaniemi, Mitra, and Astola]{Berger06}
+J.~A. Berger, S.~Hautaniemi, S.~K. Mitra, and J.~Astola.
+\newblock Jointly analyzing gene expression and copy number data in breast
+  cancer using data reduction models.
+\newblock \emph{IEEE/ACM Transactions on Computational Biology and
+  Bioinformatics}, 3:\penalty0 2--16, 2006.
+
+\bibitem[Bergmann et~al.(2004)Bergmann, Ihmels, and Barkai]{Bergmann04}
+S.~Bergmann, J.~Ihmels, and N.~Barkai.
+\newblock Similarities and differences in genome-wide expression data of six
+  organisms.
+\newblock \emph{PLoS Biology}, 2:\penalty0 85--93, 2004.
+
+\bibitem[Bernardo and Smith(2000)]{Bernardo00}
+J.~M. Bernardo and A.~F.~M. Smith.
+\newblock \emph{Bayesian Theory}.
+\newblock John Wiley \& Sons Ltd, Chichester, England, 2000.
+
+\bibitem[Beroukhim et~al.(2010)Beroukhim, Mermel, Porter, Wei, Raychaudhuri,
+  Donovan, Barretina, Boehm, Dobson, Urashima, Mc~Henry, Pinchback, Ligon, Cho,
+  Haery, Greulich, Reich, Winckler, Lawrence, Weir, Tanaka, Chiang, Bass, Loo,
+  Hoffman, Prensner, Liefeld, Gao, Yecies, Signoretti, Maher, Kaye, Sasaki,
+  Tepper, Fletcher, Tabernero, Baselga, Tsao, Demichelis, Rubin, Janne, Daly,
+  Nucera, Levine, Ebert, Gabriel, Rustgi, Antonescu, Ladanyi, Letai, Garraway,
+  Loda, Beer, True, Okamoto, Pomeroy, Singer, Golub, Lander, Getz, Sellers, and
+  Meyerson]{Beroukhim10}
+R.~Beroukhim, C.~H. Mermel, D.~Porter, G.~Wei, S.~Raychaudhuri, J.~Donovan,
+  J.~Barretina, J.~S. Boehm, J.~Dobson, M.~Urashima, K.~T. Mc~Henry, R.~M.
+  Pinchback, A.~H. Ligon, Y.-J. Cho, L.~Haery, H.~Greulich, M.~Reich,
+  W.~Winckler, M.~S. Lawrence, B.~A. Weir, K.~E. Tanaka, D.~Y. Chiang, A.~J.
+  Bass, A.~Loo, C.~Hoffman, J.~Prensner, T.~Liefeld, Q.~Gao, D.~Yecies,
+  S.~Signoretti, E.~Maher, F.~J. Kaye, H.~Sasaki, J.~E. Tepper, J.~A. Fletcher,
+  J.~Tabernero, J.~Baselga, M.-S. Tsao, F.~Demichelis, M.~A. Rubin, P.~A.
+  Janne, M.~J. Daly, C.~Nucera, R.~L. Levine, B.~L. Ebert, S.~Gabriel, A.~K.
+  Rustgi, C.~R. Antonescu, M.~Ladanyi, A.~Letai, L.~A. Garraway, M.~Loda, D.~G.
+  Beer, L.~D. True, A.~Okamoto, S.~L. Pomeroy, S.~Singer, T.~R. Golub, E.~S.
+  Lander, G.~Getz, W.~R. Sellers, and M.~Meyerson.
+\newblock The landscape of somatic copy-number alteration across human cancers.
+\newblock \emph{Nature}, 463:\penalty0 899--905, 2010.
+
+\bibitem[Bhattacharjee et~al.(2001)Bhattacharjee, Richards, Staunton,
+  et~al.]{Bhattacharjee01}
+A.~Bhattacharjee, W.~G. Richards, J.~Staunton, et~al.
+\newblock Classification of human lung carcinomas by m{RNA} expression
+  profiling reveals distinct adenocarcinoma subclasses.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  98:\penalty0 13790--13795, 2001.
+
+\bibitem[Bicciato et~al.(2009)Bicciato, Spinelli, Zampieri, Mangano, Ferrari,
+  Beltrame, Cifola, Peano, Solari, and Battaglia]{Bicciato09}
+S.~Bicciato, R.~Spinelli, M.~Zampieri, E.~Mangano, F.~Ferrari, L.~Beltrame,
+  I.~Cifola, C.~Peano, A.~Solari, and C.~Battaglia.
+\newblock {A computational procedure to identify significant overlap of
+  differentially expressed and genomic imbalanced regions in cancer datasets}.
+\newblock \emph{Nucleic Acids Research}, 37:\penalty0 5057--5070, 2009.
+
+\bibitem[Bie and Moor(2003)]{Bie03}
+T.~D. Bie and B.~D. Moor.
+\newblock On the regularization of canonical correlation analysis.
+\newblock In S.-I. Amari, A.~Cichocki, S.~Makino, and N.~Murata, editors,
+  \emph{Proceedings of the International Conference on Independent Component
+  Analysis and Blind Source Separation (ICA2003)}. Nara, Japan, April 1--4
+  2003.
+
+\bibitem[{BioPAX workgroup}(2005)]{BioPAX05}
+{BioPAX workgroup}.
+\newblock \emph{BioPAX - Biological Pathways Exchange Language}, 2005.
+\newblock Level 2, Version 1.0 Documentation.
+
+\bibitem[Bishop(2006)]{Bishop06}
+C.~M. Bishop.
+\newblock \emph{Pattern recognition and machine learning}.
+\newblock Springer, Singapore, 2006.
+
+\bibitem[Blake(2004)]{Blake04}
+J.~Blake.
+\newblock Bio-ontologies -- fast and furious.
+\newblock \emph{Nature Biotechnology}, 22:\penalty0 773--774, 2004.
+
+\bibitem[Bolstad et~al.(2003)Bolstad, Irizarry, Astrand, and Speed]{Bolstad03}
+B.~M. Bolstad, R.~A. Irizarry, M.~Astrand, and T.~P. Speed.
+\newblock {A comparison of normalization methods for high density
+  oligonucleotide array data based on variance and bias}.
+\newblock \emph{Bioinformatics}, 19:\penalty0 185--193, 2003.
+
+\bibitem[Boulesteix(2010)]{Boulesteix2010}
+A.-L. Boulesteix.
+\newblock {Over-optimism in bioinformatics research}.
+\newblock \emph{Bioinformatics}, 26:\penalty0 437, 2010.
+
+\bibitem[Boveri(1914)]{Boveri1914}
+T.~Boveri.
+\newblock \emph{{Zur Frage der Entstehung maligner Tumoren}}.
+\newblock {Verlag von Gustav Fischer}, Jena, 1914.
+
+%\bibitem[Box and Draper(1987)]{Box87}
+%G.~E.~P. Box and N.~R. Draper.
+%\newblock \emph{Empirical Model-Building and Response Surfaces}.
+%\newblock John Wiley \& Sons, USA, 1987.
+
+\bibitem[Bradford et~al.(2010)Bradford, Hey, Yates, Li, Pepper, and
+  Miller]{Bradford2010}
+J.~R. Bradford, Y.~Hey, T.~Yates, Y.~Li, S.~D. Pepper, and C.~J. Miller.
+\newblock {A comparison of massively parallel nucleotide sequencing with
+  oligonucleotide microarrays for global transcription profiling}.
+\newblock \emph{BMC Genomics}, 11:\penalty0 282, 2010.
+
+\bibitem[Braga-Neto and Marques(2006)]{Braga-Neto06}
+U.~M. Braga-Neto and E.~T.~A. Marques.
+\newblock From functional genomics to functional immunomics: New challenges,
+  old problems, big rewards.
+\newblock \emph{PLoS Computational Biology}, 2:e81, 2006.
+
+\bibitem[Brazma et~al.(2001)Brazma, Hingamp, Quackenbush, Sherlock, Spellman,
+  Stoeckert, Aach, Ansorge, Ball, Causton, Gaasterland, Glenisson, Holstege,
+  Kim, Markowitz, Matese, Parkinson, Robinson, Sarkans, Schulze-Kremer,
+  Stewart, Taylor, Vilo, and Vingron]{Brazma01}
+A.~Brazma, P.~Hingamp, J.~Quackenbush, G.~Sherlock, P.~Spellman, C.~Stoeckert,
+  J.~Aach, W.~Ansorge, C.~A. Ball, H.~C. Causton, T.~Gaasterland, P.~Glenisson,
+  F.~C.~P. Holstege, I.~F. Kim, V.~Markowitz, J.~C. Matese, H.~Parkinson,
+  A.~Robinson, U.~Sarkans, S.~Schulze-Kremer, J.~Stewart, R.~Taylor, J.~Vilo,
+  and M.~Vingron.
+\newblock {Minimum information about a microarray experiment (MIAME) -- toward
+  standards for microarray data}.
+\newblock \emph{Nature Genetics}, 29:\penalty0 365--371, 2001.
+
+\bibitem[Brazma et~al.(2006)Brazma, Krestyaninova, and Sarkans]{Brazma06}
+A.~Brazma, M.~Krestyaninova, and U.~Sarkans.
+\newblock Standards for systems biology.
+\newblock \emph{Nature Reviews Genetics}, 7:\penalty0 593--605, 2006.
+
+\bibitem[Brent(2008)]{Brent2008}
+M.~R. Brent.
+\newblock {Steady progress and recent breakthroughs in the accuracy of
+  automated genome annotation.}
+\newblock \emph{Nature Reviews Genetics}, 9:\penalty0 62--73, 2008.
+
+\bibitem[Brown(2006)]{Brown06}
+T.~A. Brown.
+\newblock \emph{Genomes}.
+\newblock Garland Science, UK, third edition, 2006.
+
+\bibitem[Broyden(1970)]{Broyden70}
+C.~G. Broyden.
+\newblock The convergence of a class of double-rank minimization algorithms,
+  {II}: {The} new algorithm.
+\newblock \emph{IMA Journal of Applied Mathematics}, 6:\penalty0 222--231,
+  1970.
+
+\bibitem[Butte(2002)]{Butte02a}
+A.~Butte.
+\newblock The use and analysis of microarray data.
+\newblock \emph{Nature Reviews}, 1:\penalty0 951--960, 2002.
+
+\bibitem[Cabusora et~al.(2005)Cabusora, Sutton, Fulmer, and Forst]{Cabusora05}
+L.~Cabusora, E.~Sutton, A.~Fulmer, and C.~V. Forst.
+\newblock {Differential network expression during drug and stress response}.
+\newblock \emph{Bioinformatics}, 21:\penalty0 2898--2905, 2005.
+
+\bibitem[Calin and Croce(2006)]{Calin06}
+G.~A. Calin and C.~M. Croce.
+\newblock {MicroRNA} signatures in human cancers.
+\newblock \emph{Nature Reviews Cancer}, 6:\penalty0 857--866, 2006.
+
+\bibitem[Carey and Stodden(2010)]{Carey2010}
+V.~J. Carey and V.~Stodden.
+\newblock Reproducible Research Concepts and Tools for Cancer
+  Bioinformatics. In M.~F. Ochs, J.~T. Casagrande, and R.~V. Davuluri, editors, \emph{Biomedical Informatics for Cancer Research}, pages 149--175.
+\newblock Springer US, Boston, MA, 2010.
+
+\bibitem[Carninci(2009)]{Carninci2009}
+P.~Carninci.
+\newblock {Is sequencing enlightenment ending the dark age of the
+  transcriptome?}
+\newblock \emph{Nature Methods}, 6:\penalty0 711--713, 2009.
+
+\bibitem[Carroll(2003)]{Carroll03}
+S.~B. Carroll.
+\newblock Genetics and the making of homo sapiens.
+\newblock \emph{Nature}, 422:\penalty0 849--857, 2003.
+
+\bibitem[Caruana(1997)]{Caruana97}
+R.~Caruana.
+\newblock Multitask learning.
+\newblock \emph{Machine Learning}, 28:\penalty0 41--75, 1997.
+
+\bibitem[Carvalho et~al.(2008)Carvalho, Chang, Lucas, Nevins, Wang, and
+  West]{Carvalho08}
+C.~M. Carvalho, J.~Chang, J.~E. Lucas, J.~R. Nevins, Q.~Wang, and M.~West.
+\newblock High-dimensional sparse factor modeling: Applications in gene
+  expression genomics.
+\newblock \emph{Journal of the American Statistical Association}, 103:\penalty0
+  1438--1456, 2008.
+
+\bibitem[Chang et~al.(2009)Chang, Carvalho, Mori, Bild, Gatza, Wang, Lucas,
+  Potti, Febbo, West, and Nevins]{Chang09}
+J.~T. Chang, C.~Carvalho, S.~Mori, A.~H. Bild, M.~L. Gatza, Q.~Wang, J.~E.
+  Lucas, A.~Potti, P.~G. Febbo, M.~West, and J.~R. Nevins.
+\newblock A genomic strategy to elucidate modules of oncogenic pathway
+  signaling networks.
+\newblock \emph{Molecular Cell}, 34:104--114, 2009.
+
+\bibitem[Chari et~al.(2010)Chari, Coe, Vucic, Lockwood, and Lam]{Chari2010a}
+R.~Chari, B.~P. Coe, E.~A. Vucic, W.~W. Lockwood, and W.~L. Lam.
+\newblock {An integrative multi-dimensional genetic and epigenetic strategy to
+  identify aberrant genes and pathways in cancer.}
+\newblock \emph{BMC Systems Biology}, 4:\penalty0 67, 2010.
+
+\bibitem[Chechik et~al.(2005)Chechik, Globerson, Tishby, and Weiss]{Chechik05}
+G.~Chechik, A.~Globerson, N.~Tishby, and Y.~Weiss.
+\newblock {Information Bottleneck for Gaussian variables}.
+\newblock \emph{Journal of Machine Learning Research}, 6:\penalty0 165--188,
+  2005.
+
+\bibitem[Cho et~al.(2004)Cho, Dhillon, Guan, and Sra]{Cho04}
+R.~J. Cho, I.~S. Dhillon, Y.~Guan, and S.~Sra.
+\newblock Minimum sum-squared residue co-clustering of gene expression data.
+\newblock In M.~W. Berry, U.~Dayal, C.~Kamath, and D.~Skillicorn, editors,
+  \emph{Proceedings of the 4th SIAM International Conference on Data Mining}, pages 114--125. Florida, USA, 2004.
+
+\bibitem[Choi et~al.(2007)Choi, Shen, Chinnaiyan, and Ghosh]{Choi07}
+H.~Choi, R.~Shen, A.~M. Chinnaiyan, and D.~Ghosh.
+\newblock A latent variable approach for meta-analysis of gene expression data
+  from multiple microarray experiments.
+\newblock \emph{BMC Bioinformatics}, 8:\penalty0 364, 2007.
+
+\bibitem[Choi et~al.(2003)Choi, Yu, Kim, and Yoo]{Choi03}
+J.~K. Choi, U.~Yu, S.~Kim, and O.~J. Yoo.
+\newblock Combining multiple microarray studies and modeling interstudy
+  variation.
+\newblock \emph{Bioinformatics}, 19:\penalty0 i84--90, 2003.
+
+\bibitem[Church(2005)]{Church05}
+G.~M. Church.
+\newblock The personal genome project.
+\newblock \emph{Molecular Systems Biology}, 1:\penalty0 30, 2005.
+
+\bibitem[Cochrane and Galperin(2010)]{Cochrane2010}
+G.~R. Cochrane and M.~Y. Galperin.
+\newblock {The 2010 Nucleic Acids Research Database Issue and online Database
+  Collection: a community of data resources.}
+\newblock \emph{Nucleic Acids Research}, 38:D1--4, 2010.
+
+\bibitem[Coe et~al.(2008)Coe, Chari, Lockwood, and Lam]{Coe08}
+B.~P. Coe, R.~Chari, W.~W. Lockwood, and W.~L. Lam.
+\newblock Evolving strategies for global gene expression analysis of cancer.
+\newblock \emph{Journal of Cellular Physiology}, 217:\penalty0 590--597, 2008.
+
+\bibitem[Cohen(2004)]{Cohen04}
+J.~E. Cohen.
+\newblock Mathematics is biology's next microscope, only better; biology is
+  mathematics' next physics, only better.
+\newblock \emph{PLoS Biology}, 2:\penalty0 e439, 2004.
+
+\bibitem[Collins et~al.(2003)Collins, Green, Guttmacher, and Guyer]{Collins03}
+F.~S. Collins, E.~D. Green, A.~E. Guttmacher, and M.~S. Guyer.
+\newblock A vision for the future of genomics research.
+\newblock \emph{Nature}, 422:\penalty0 835--847, 2003.
+
+\bibitem[Conlon et~al.(2007)Conlon, Song, and Liu]{Conlon07}
+E.~Conlon, J.~Song, and A.~Liu.
+\newblock Bayesian meta-analysis models for microarray data: a comparative
+  study.
+\newblock \emph{BMC Bioinformatics}, 8:\penalty0 80, 2007.
+
+\bibitem[Consortium(2005)]{Carninci05}
+T.~F. Consortium.
+\newblock {The Transcriptional Landscape of the Mammalian Genome}.
+\newblock \emph{Science}, 309:\penalty0 1559--1563, 2005.
+
+%\bibitem[Coors et~al.(2010)Coors, Glover, Juengst, and Sikela]{Coors2010}
+%M.~E. Coors, J.~J. Glover, E.~T. Juengst, and J.~M. Sikela.
+%\newblock {The ethics of using transgenic non-human primates to study what
+%  makes us human}.
+%\newblock \emph{Nature Reviews Genetics}, 11:\penalty0 658--662, 2010.
+
+\bibitem[Cox(1946)]{Cox46}
+R.~T. Cox.
+\newblock Probability, frequency and reasonable expectation.
+\newblock \emph{American Journal of Physics}, 17:\penalty0 1--13, 1946.
+
+\bibitem[Crick(1970)]{Crick70}
+F.~Crick.
+\newblock Central dogma of molecular biology.
+\newblock \emph{Nature}, 227:\penalty0 561--563, 1970.
+
+\bibitem[Dai et~al.(2005)Dai, Wang, Boyd, Kostov, Athey, Jones, Bunney, Myers,
+  Speed, Akil, Watson, and Meng]{Dai05}
+M.~Dai, P.~Wang, A.~D. Boyd, G.~Kostov, B.~Athey, E.~G. Jones, W.~E. Bunney,
+  R.~M. Myers, T.~P. Speed, H.~Akil, S.~J. Watson, and F.~Meng.
+\newblock {Evolving gene/transcript definitions significantly alter the
+  interpretation of GeneChip data}.
+\newblock \emph{Nucleic Acids Research}, 33:\penalty0 e175, 2005.
+
+\bibitem[Darwin(1859)]{Darwin1859}
+C.~Darwin.
+\newblock \emph{On the Origin of Species by Means of Natural Selection}.
+\newblock Murray, London, 1859.
+
+\bibitem[Davis(2004)]{Davis04}
+R.~H. Davis.
+\newblock The age of model organisms.
+\newblock \emph{Nature Reviews Genetics}, 5:\penalty0 69--76, 2004.
+
+\bibitem[Dempster et~al.(1977)Dempster, Laird, and Rubin]{Dempster77}
+A.~P. Dempster, N.~M. Laird, and D.~B. Rubin.
+\newblock Maximum likelihood from incomplete data via the {EM} algorithm.
+\newblock \emph{Journal of the Royal Statistical Society, Series B},
+  39:\penalty0 1--38, 1977.
+
+\bibitem[DeRisi et~al.(1997)DeRisi, Iyer, and Brown]{DeRisi97}
+J.~L. DeRisi, V.~R. Iyer, and P.~O. Brown.
+\newblock Exploring the metabolic and genetic control of gene expression on a
+  genomic scale.
+\newblock \emph{Science}, 278:\penalty0 680--686, 1997.
+
+\bibitem[Downward(2006)]{Downward06}
+J.~Downward.
+\newblock Cancer biology: Signatures guide drug choice.
+\newblock \emph{Nature}, 439:\penalty0 274--275, 2006.
+
+\bibitem[Draghici et~al.(2007)Draghici, Khatri, Tarca, Amin, Done, Voichita,
+  Georgescu, and Romero]{Draghici07}
+S.~Draghici, P.~Khatri, A.~L. Tarca, K.~Amin, A.~Done, C.~Voichita,
+  C.~Georgescu, and R.~Romero.
+\newblock {A systems biology approach for pathway level analysis}.
+\newblock \emph{Genome Research}, 17:\penalty0 1537--1545, 2007.
+
+\bibitem[Dudley et~al.(2009)Dudley, Tibshirani, Deshpande, and Butte]{Dudley09}
+J.~T. Dudley, R.~Tibshirani, T.~Deshpande, and A.~J. Butte.
+\newblock Disease signatures are robust across tissues and experiments.
+\newblock \emph{Molecular Systems Biology}, 5:\penalty0 307, 2009.
+
+\bibitem[Efron and Tibshirani(1994)]{Efron94}
+B.~Efron and R.~Tibshirani.
+\newblock \emph{An Introduction to the Bootstrap}.
+\newblock Chapman \& Hall/CRC Monographs on Statistics \& Applied Probability,
+  USA, 1994.
+
+\bibitem[Eisen et~al.(1998)Eisen, Spellman, Brown, and Botstein]{Eisen98}
+M.~B. Eisen, P.~T. Spellman, P.~O. Brown, and D.~Botstein.
+\newblock Cluster analysis and display of genome-wide expression patterns.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  95:\penalty0 14863--14868, 1998.
+
+\bibitem[Eisenstein(2006)]{Eisenstein06}
+M.~Eisenstein.
+\newblock More than just 'doing the math'.
+\newblock \emph{Nature Methods}, 3:\penalty0 420--420, 2006.
+
+\bibitem[Elo et~al.(2005)Elo, Lahti, Skottman, Kyl{\"a}niemi, Lahesmaa, and
+  Aittokallio]{Elo05}
+L.~L. Elo, L.~Lahti, H.~Skottman, M.~Kyl{\"a}niemi, R.~Lahesmaa, and
+  T.~Aittokallio.
+\newblock {Integrating probe-level expression changes across generations of
+  Affymetrix arrays}.
+\newblock \emph{Nucleic Acids Research}, 33:\penalty0 e193, 2005.
+
+\bibitem[Enard et~al.(2002)Enard, Khaitovich, Klose, Z\"ollner, Heissig,
+  Giavalisco, Muchmore, Varki, Ravid, Doxiadis, Bontrop, and
+  P\"a\"abo]{Enard02}
+W.~Enard, P.~Khaitovich, J.~Klose, S.~Z\"ollner, F.~Heissig, K.~Giavalisco, P.
+  Nieselt-Struwe, E.~Muchmore, A.~Varki, R.~Ravid, G.~M. Doxiadis, R.~E.
+  Bontrop, and S.~P\"a\"abo.
+\newblock Intra- and inter-specific variation of primate gene expression
+  patterns.
+\newblock \emph{Science}, 296:\penalty0 340--343, 2002.
+
+\bibitem[Espinosa-Soto and Wagner(2010)]{Espinosa-Soto2010}
+C.~Espinosa-Soto and A.~Wagner.
+\newblock {Specialization Can Drive the Evolution of Modularity}.
+\newblock \emph{PLoS Computational Biology}, 6:\penalty0 e1000719, 2010.
+
+\bibitem[Evanko(2006)]{Evanko06}
+D.~Evanko.
+\newblock Hacking the genome.
+\newblock \emph{Nature Methods}, 3:\penalty0 495--495, 2006.
+
+\bibitem[Evanko(2010)]{Evanko10}
+D.~Evanko.
+\newblock Supplement on visualizing biological data.
+\newblock \emph{Nature Methods}, 7\penalty0 (S1), 2010.
+
+\bibitem[Feuk et~al.(2006)Feuk, Carson, and Scherer]{Feuk06}
+L.~Feuk, A.~R. Carson, and S.~W. Scherer.
+\newblock Structural variation in the human genome.
+\newblock \emph{Nature Reviews Genetics}, 7:85--97, 2006.
+
+\bibitem[Fisher(1934)]{Fisher34}
+R.~A. Fisher.
+\newblock \emph{Statistical Methods for Research Workers}.
+\newblock Oliver and Boyd, Edinburgh, fifth edition, 1934.
+
+\bibitem[Fitch(1970)]{Fitch70}
+W.~M. Fitch.
+\newblock Distinguishing homologous from analogous proteins.
+\newblock \emph{Systematic Zoology}, 19:\penalty0 99--113, 1970.
+
+\bibitem[Fletcher(1970)]{Fletcher70}
+R.~Fletcher.
+\newblock A new approach to variable metric algorithms.
+\newblock \emph{The Computer Journal}, 13:\penalty0 317--322, 1970.
+
+\bibitem[Flicek et~al.(2010)Flicek, Aken, Ballester, Beal, Bragin, Brent, Chen,
+  Clapham, Coates, Fairley, Fitzgerald, Fernandez-Banet, Gordon, Gr\"{a}f,
+  Haider, Hammond, Howe, Jenkinson, Johnson, K\"{a}h\"{a}ri, Keefe, Keenan,
+  Kinsella, Kokocinski, Koscielny, Kulesha, Lawson, Longden, Massingham,
+  McLaren, Megy, Overduin, Pritchard, Rios, Ruffier, Schuster, Slater, Smedley,
+  Spudich, Tang, Trevanion, Vilella, Vogel, White, Wilder, Zadissa, Birney,
+  Cunningham, Dunham, Durbin, Fern\'{a}ndez-Suarez, Herrero, Hubbard, Parker,
+  Proctor, Smith, and Searle]{Flicek2010}
+P.~Flicek, B.~L. Aken, B.~Ballester, K.~Beal, E.~Bragin, S.~Brent, Y.~Chen,
+  P.~Clapham, G.~Coates, S.~Fairley, S.~Fitzgerald, J.~Fernandez-Banet,
+  L.~Gordon, S.~Gr\"{a}f, S.~Haider, M.~Hammond, K.~Howe, A.~Jenkinson,
+  N.~Johnson, A.~K\"{a}h\"{a}ri, D.~Keefe, S.~Keenan, R.~Kinsella,
+  F.~Kokocinski, G.~Koscielny, E.~Kulesha, D.~Lawson, I.~Longden,
+  T.~Massingham, W.~McLaren, K.~Megy, B.~Overduin, B.~Pritchard, D.~Rios,
+  M.~Ruffier, M.~Schuster, G.~Slater, D.~Smedley, G.~Spudich, Y.~A. Tang,
+  S.~Trevanion, A.~Vilella, J.~Vogel, S.~White, S.~P. Wilder, A.~Zadissa,
+  E.~Birney, F.~Cunningham, I.~Dunham, R.~Durbin, X.~M. Fern\'{a}ndez-Suarez,
+  J.~Herrero, T.~J.~P. Hubbard, A.~Parker, G.~Proctor, J.~Smith, and S.~M.~J.
+  Searle.
+\newblock {Ensembl's 10th year.}
+\newblock \emph{Nucleic Acids Research}, 38:D557--562, 2010.
+
+\bibitem[Foekens et~al.(2008)Foekens, Wang, Martens, Berns, and
+  Klijn]{Foekens08}
+J.~A. Foekens, Y.~Wang, J.~W. Martens, E.~M. Berns, and J.~G. Klijn.
+\newblock The use of genomic tools for the molecular understanding of breast
+  cancer and to guide personalized medicine.
+\newblock \emph{Drug Discovery Today}, 13:\penalty0 481--487, 2008.
+
+%\bibitem[Franklin and Gosling(1953)]{Franklin1953}
+%R.~Franklin and R.~Gosling.
+%\newblock Molecular configuration in sodium thymonucleate.
+%\newblock \emph{Nature}, 171:\penalty0 740--741, 1953.
+
+\bibitem[Friedman(2003)]{Friedman03}
+N.~Friedman and D.~Koller.
+\newblock Being Bayesian about network structure: A Bayesian approach
+to structure discovery in Bayesian networks.
+\newblock \emph{Machine Learning}, 50:\penalty0 95--126, 2003.
+
+\bibitem[Friedman(2004)]{Friedman04}
+N.~Friedman.
+\newblock Inferring cellular networks using probabilistic graphical models.
+\newblock \emph{Science}, 303:\penalty0 799--805, 2004.
+
+\bibitem[Friedman et~al.(2001)Friedman, Mosenzon, Slonim, and
+  Tishby]{Friedman01}
+N.~Friedman, O.~Mosenzon, N.~Slonim, and N.~Tishby.
+\newblock Multivariate information bottleneck.
+\newblock In J.~S. Breese and D.~Koller, editors, \emph{Proceedings of the 17th
+  Conference on Uncertainty in Artificial Intelligence (UAI)}, pages 152--161.
+  Morgan Kaufmann Publishers, San Francisco, CA, 2001.
+
+\bibitem[Furusawa and Kaneko(2003)]{Furusawa2003}
+C.~Furusawa and K.~Kaneko.
+\newblock {Zipf's} law in gene expression.
+\newblock \emph{Physical Review Letters}, 90:088102, 2003.
+
+\bibitem[{G10KCOS consortium}(2009)]{G10KCOSconsortium2009}
+{G10KCOS consortium}.
+\newblock {Genome 10K: a proposal to obtain whole-genome sequence for 10,000
+  vertebrate species.}
+\newblock \emph{The Journal of Heredity}, 100:\penalty0 659--674, 2009.
+
+\bibitem[Gad et~al.(2000)Gad, Levine, and Domany]{Getz00}
+G.~Gad, E.~Levine, and E.~Domany.
+\newblock Coupled two-way clustering analysis of gene microarray data.
+\newblock \emph{{Proceedings of the National Academy of Sciences, USA}},
+  97:\penalty0 12079--12084, 2000.
+
+\bibitem[Gagneur et~al.(2009)Gagneur, Sinha, Perocchi, Bourgon, Huber, and
+  Steinmetz]{Gagneur2009}
+J.~Gagneur, H.~Sinha, F.~Perocchi, R.~Bourgon, W.~Huber, and L.~M. Steinmetz.
+\newblock {Genome-wide allele- and strand-specific expression profiling.}
+\newblock \emph{Molecular Systems Biology}, 5:\penalty0 274, 2009.
+
+\bibitem[Gautier et~al.(2004)Gautier, Moller, Friis-Hansen, and
+  Knudsen]{Gautier04b}
+L.~Gautier, M.~Moller, L.~Friis-Hansen, and S.~Knudsen.
+\newblock {Alternative mapping of probes to genes for Affymetrix chips}.
+\newblock \emph{BMC Bioinformatics}, 5:\penalty0 111, 2004.
+
+\bibitem[Gelman et~al.(2003)Gelman, Carlin, Stern, and Rubin]{Gelman03}
+A.~Gelman, J.~B. Carlin, H.~S. Stern, and D.~B. Rubin.
+\newblock \emph{Bayesian Data Analysis}.
+\newblock Chapman \& Hall/CRC, Boca Raton, FL, USA, second edition, 2003.
+
+\bibitem[Gerber et~al.(2007)Gerber, Dowell, Jaakkola, and Gifford]{Gerber07}
+G.~K. Gerber, R.~D. Dowell, T.~S. Jaakkola, and D.~K. Gifford.
+\newblock Automated discovery of functional generality of human gene expression
+  programs.
+\newblock \emph{PLoS Computational Biology}, 3:\penalty0 e148, 2007.
+
+\bibitem[Gershon(2005)]{Gershon05}
+D.~Gershon.
+\newblock {DNA microarrays: More than gene expression}.
+\newblock \emph{Nature}, 437:\penalty0 1195--1198, 2005.
+
+\bibitem[Gibney and Nolan(2010)]{Gibney2010}
+E.~R. Gibney and C.~M. Nolan.
+\newblock {Epigenetics and gene expression.}
+\newblock \emph{Heredity}, 105:\penalty0 4--13, 2010.
+
+%\bibitem[Gibson and Copenhaver(2010)]{Gibson2010}
+%G.~Gibson and G.~P. Copenhaver.
+%\newblock {Consent and Internet-enabled human genomics}.
+%\newblock \emph{PLoS Genetics}, 6:\penalty0 e1000965, 2010.
+
+\bibitem[Goeman and Buhlmann(2007)]{Goeman07}
+J.~J. Goeman and P.~Buhlmann.
+\newblock {Analyzing gene expression data in terms of gene sets: methodological
+  issues}.
+\newblock \emph{Bioinformatics}, 23:\penalty0 980--987, 2007.
+
+\bibitem[Goldfarb(1970)]{Goldfarb70}
+D.~Goldfarb.
+\newblock A family of variable-metric methods derived by variational means.
+\newblock \emph{Mathematics of Computation}, 24:\penalty0 23--26, 1970.
+
+\bibitem[Gonz\'{a}lez et~al.(2009)Gonz\'{a}lez, D\'{e}jean, Martin,
+  Gon\c{c}alves, Besse, and {Baccini A}]{Gonzalez2009}
+I.~Gonz\'{a}lez, S.~D\'{e}jean, P.~Martin, O.~Gon\c{c}alves, P.~Besse, and
+  {Baccini A}.
+\newblock {Highlighting relationships between heterogeneous biological data
+  through graphical displays based on regularized canonical correlation
+  analysis}.
+\newblock \emph{Journal of Biological Systems}, 17:\penalty0 173--199, 2009.
+
+%\bibitem[Goujon et~al.(2010)Goujon, McWilliam, Li, Valentin, Squizzato, Paern,
+%  and Lopez]{Goujon2010}
+%M.~Goujon, H.~McWilliam, W.~Li, F.~Valentin, S.~Squizzato, J.~Paern, and
+%  R.~Lopez.
+%\newblock {A new bioinformatics analysis tools framework at EMBL-EBI.}
+%\newblock \emph{Nucleic Acids Research}, 38:W695--699, 2010.
+
+\bibitem[Greco et~al.(2008)Greco, Somervuo, Lieto, Raitila, Nitsch,
+  Castr\'{e}n, and Auvinen]{Greco08}
+D.~Greco, P.~Somervuo, A.~D. Lieto, T.~Raitila, L.~Nitsch, E.~Castr\'{e}n, and
+  P.~Auvinen.
+\newblock Physiology, pathology and relatedness of human tissues from gene
+  expression meta-analysis.
+\newblock \emph{{PLoS One}}, 3:\penalty0 e1880, 2008.
+
+\bibitem[Guyon and Elisseeff(2003)]{Guyon03}
+I.~Guyon and A.~Elisseeff.
+\newblock An introduction to variable and feature selection.
+\newblock \emph{Journal of Machine Learning Research}, 3:\penalty0 1157--1182,
+  2003.
+
+\bibitem[Hanisch et~al.(2002)Hanisch, Zien, Zimmer, and Lengauer]{Hanisch02}
+D.~Hanisch, A.~Zien, R.~Zimmer, and T.~Lengauer.
+\newblock {Co-clustering of biological networks and gene expression data}.
+\newblock \emph{Bioinformatics}, 18:\penalty0 S145--154, 2002.
+
+\bibitem[Hartwell et~al.(1999)Hartwell, Hopfield, Leibler, and
+  Murray]{Hartwell99}
+L.~H. Hartwell, J.~J. Hopfield, S.~Leibler, and A.~W. Murray.
+\newblock From molecular to modular cell biology.
+\newblock \emph{Nature}, 402:\penalty0 C47--52, 1999.
+
+\bibitem[Hastie et~al.(2009)Hastie, Tibshirani, and Friedman]{Hastie09}
+T.~Hastie, R.~Tibshirani, and J.~Friedman.
+\newblock \emph{The Elements of Statistical Learning}.
+\newblock Springer, New York, second edition, 2009.
+
+\bibitem[Hawkins et~al.(2010)Hawkins, Hon, and Ren]{Hawkins2010}
+R.~D. Hawkins, G.~C. Hon, and B.~Ren.
+\newblock {Next-generation genomics: an integrative approach}.
+\newblock \emph{Nature Reviews Genetics}, 11:\penalty0 476--486, 2010.
+
+%\bibitem[Hayden(2008)]{Hayden2008}
+%E.~C. Hayden.
+%\newblock {International genome project launched.}
+%\newblock \emph{Nature}, 451:\penalty0 378--379, 2008.
+
+\bibitem[Heber and Sick(2006)]{Heber06}
+S.~Heber and B.~Sick.
+\newblock Quality assessment of {Affymetrix GeneChip} data.
+\newblock \emph{OMICS: A Journal of Integrative Biology}, 10:\penalty0
+  358--368, 2006.
+
+\bibitem[Hein et~al.(2005)Hein, Richardson, Causton, Ambler, and Green]{Hein05}
+A.-M.~K. Hein, S.~Richardson, H.~C. Causton, G.~K. Ambler, and P.~J. Green.
+\newblock {BGX: a fully Bayesian integrated approach to the analysis of
+  Affymetrix GeneChip data}.
+\newblock \emph{Biostatistics}, 6:\penalty0 349--373, 2005.
+
+
+\bibitem[Hjort et~al.(2010)Hjort, Holmes, M\"uller and Walker]{Hjort10}
+N.~L.~Hjort, C. Holmes, P. M\"uller, and S.~G. Walker, editors.
+\newblock \emph{Bayesian nonparametrics}.
+\newblock Cambridge University Press, USA, 2010.
+
+
+%\bibitem[Henrick et~al.(2008)Henrick, Feng, Bluhm, Dimitropoulos, Doreleijers%,
+%  Dutta, Flippen-Anderson, Ionides, Kamada, Krissinel, Lawson, Markley,
+%  Nakamura, Newman, Shimizu, Swaminathan, Velankar, Ory, Ulrich, Vranken,
+%  Westbrook, Yamashita, Yang, Young, Yousufuddin, and Berman]{Henrick2008}
+%K.~Henrick, Z.~Feng, W.~F. Bluhm, D.~Dimitropoulos, J.~F. Doreleijers,
+%  S.~Dutta, J.~L. Flippen-Anderson, J.~Ionides, C.~Kamada, E.~Krissinel, C.~L%.
+%  Lawson, J.~L. Markley, H.~Nakamura, R.~Newman, Y.~Shimizu, J.~Swaminathan,
+%  S.~Velankar, J.~Ory, E.~L. Ulrich, W.~Vranken, J.~Westbrook, R.~Yamashita,
+%  H.~Yang, J.~Young, M.~Yousufuddin, and H.~M. Berman.
+%\newblock {Remediation of the protein data bank archive.}
+%\newblock \emph{Nucleic Acids Research}, 36:D426--433, 2008.
+
+\bibitem[Hochreiter(2006)]{Hochreiter06}
+S.~Hochreiter, D.-A. Clevert, and K.~Obermayer.
+\newblock A new summarization method for affymetrix probe level data.
+\newblock \emph{Bioinformatics}, 22:\penalty0 943--949, 2006.
+
+\bibitem[Hoheisel(2006)]{Hoheisel06}
+J.~D. Hoheisel.
+\newblock Microarray technology: beyond transcript profiling and genotype
+  analysis.
+\newblock \emph{Nature Reviews Genetics}, 7:\penalty0 200--210, 2006.
+
+\bibitem[Hosack et~al.(2003)Hosack, {Dennis Jr}., Sherman, Lane, and
+  Lempicki]{Hosack03}
+D.~Hosack, G.~{Dennis Jr}., B.~Sherman, H.~Lane, and R.~Lempicki.
+\newblock Identifying biological themes within lists of genes with {EASE}.
+\newblock \emph{Genome Biology}, 4:\penalty0 R70, 2003.
+
+\bibitem[Hotelling(1936)]{Hotelling36}
+H.~Hotelling.
+\newblock Relations between two sets of variates.
+\newblock \emph{Biometrika}, 28:\penalty0 321--377, 1936.
+
+\bibitem[Hu et~al.(2006)Hu, Fan, Oh, Marron, He, Qaqish, Livasy, Carey,
+  Reynolds, Dressler, Nobel, Parker, Ewend, Sawyer, Wu, Liu, Nanda, Tretiakova,
+  Orrico, Dreher, Palazzo, Perreard, Nelson, Mone, Hansen, Mullins,
+  Quackenbush, Ellis, Olopade, Bernard, and Perou]{Hu06}
+Z.~Hu, C.~Fan, D.~Oh, J.~Marron, X.~He, B.~Qaqish, C.~Livasy, L.~Carey,
+  E.~Reynolds, L.~Dressler, A.~Nobel, J.~Parker, M.~Ewend, L.~Sawyer, J.~Wu,
+  Y.~Liu, R.~Nanda, M.~Tretiakova, A.~Orrico, D.~Dreher, J.~Palazzo,
+  L.~Perreard, E.~Nelson, M.~Mone, H.~Hansen, M.~Mullins, J.~Quackenbush,
+  M.~Ellis, O.~Olopade, P.~Bernard, and C.~Perou.
+\newblock The molecular portraits of breast tumors are conserved across
+  microarray platforms.
+\newblock \emph{BMC Genomics}, 7:\penalty0 96, 2006.
+
+
+\bibitem[Hubbell et~al.(2002)Hubbell, Liu, and Mei]{Hubbell2002}
+E. Hubbell, W.-M. Liu, and R. Mei.
+\newblock Robust estimators for expression analysis.
+\newblock \emph{Bioinformatics}, 18:\penalty0 1585--1592, 2002.
+
+
+%\bibitem[Huopaniemi et~al.(2010)Huopaniemi, Suvitaival, Nikkil\"{a},
+%  Ore\v{s}i\v{c}, and Kaski]{Huopaniemi10}
+%I.~Huopaniemi, T.~Suvitaival, J.~Nikkil\"{a}, M.~Ore\v{s}i\v{c}, and S.~Kaski.
+%\newblock Multivariate multi-way analysis of multi source data.
+%\newblock \emph{Bioinformatics}, 26:\penalty0 i391--398, 2010.
+
+\bibitem[Huovilainen and Lahti(2010)]{Lahti10pint}
+O.-P. Huovilainen and L.~Lahti.
+\newblock {pint: Pairwise integration of functional genomics data}.
+\newblock Computer program. BioConductor, 2010.
+%\newblock URL
+%  \url{http://bioconductor.org/packages/release/bioc/html/pint.html}.
+
+
+\bibitem[Hurles et~al.(2008)Hurles, Dermitzakis, and Tyler-Smith]{Hurles08}
+M.~E. Hurles, E.~T. Dermitzakis, and C.~Tyler-Smith.
+\newblock The functional impact of structural variation in humans.
+\newblock \emph{Trends in Genetics}, 24:\penalty0 238--245, 2008.
+
+\bibitem[Huttenhower and Hofmann(2010)]{Huttenhower2010}
+C.~Huttenhower and O.~Hofmann.
+\newblock {A quick guide to large-scale genomic data mining}.
+\newblock \emph{PLoS Computational Biology}, 6:\penalty0 e1000779, 2010.
+
+\bibitem[Huttenhower et~al.(2009)Huttenhower, Haley, Hibbs, Dumeaux, Barrett,
+  Coller, and Troyanskaya]{Huttenhower09}
+C.~Huttenhower, E.~M. Haley, M.~A. Hibbs, V.~Dumeaux, D.~R. Barrett, H.~A.
+  Coller, and O.~G. Troyanskaya.
+\newblock Exploring the human genome with functional maps.
+\newblock \emph{Genome Research}, 19:\penalty0 1093--1106, 2009.
+
+\bibitem[Hwang et~al.(2005)Hwang, Rust, Ramsey, Smith, Leslie, Weston,
+  de~Atauri, Aitchison, Hood, Siegel, and Bolouri]{Hwang05}
+D.~Hwang, A.~G. Rust, S.~Ramsey, J.~J. Smith, D.~M. Leslie, A.~D. Weston,
+  P.~de~Atauri, J.~D. Aitchison, L.~Hood, A.~F. Siegel, and H.~Bolouri.
+\newblock {A data integration methodology for systems biology}.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  102:\penalty0 17296--17301, 2005.
+
+\bibitem[Hwang et~al.(2004)Hwang, Kong, Greenberg, and Park]{Hwang04}
+K.-B. Hwang, S.~W. Kong, S.~A. Greenberg, and P.~J. Park.
+\newblock Combining gene expression data from different generations of
+  oligonucleotide arrays.
+\newblock \emph{BMC Bioinformatics}, 5:\penalty0 159, 2004.
+
+\bibitem[Hyman et~al.(2002)Hyman, Kauraniemi, Hautaniemi, Wolf, Mousses,
+  Rozenblum, Ringner, Sauter, Monni, Elkahloun, Kallioniemi, and
+  Kallioniemi]{Hyman2002}
+E.~Hyman, P.~Kauraniemi, S.~Hautaniemi, M.~Wolf, S.~Mousses, E.~Rozenblum,
+  M.~Ringner, G.~Sauter, O.~Monni, A.~Elkahloun, O.-P. Kallioniemi, and
+  A.~Kallio\-nie\-mi.
+\newblock {Impact of DNA Amplification on Gene Expression Patterns in Breast
+  Cancer}.
+\newblock \emph{Cancer Research}, 62:\penalty0 6240--6245, 2002.
+
+\bibitem[Ideker et~al.(2002)Ideker, Ozier, Schwikowski, and Siegel]{Ideker02}
+T.~Ideker, O.~Ozier, B.~Schwikowski, and A.~F. Siegel.
+\newblock {Discovering regulatory and signalling circuits in molecular
+  interaction networks}.
+\newblock \emph{Bioinformatics}, 18:S233--240, 2002.
+
+\bibitem[Ihmels et~al.(2002)Ihmels, Friedlander, Bergmann, Sarig, Ziv, and
+  Barkai]{Ihmels02}
+J.~Ihmels, G.~Friedlander, S.~Bergmann, O.~Sarig, Y.~Ziv, and N.~Barkai.
+\newblock Revealing modular organization in the yeast transcriptional network.
+\newblock \emph{Nature Genetics}, 31:\penalty0 370--377, 2002.
+
+\bibitem[{International Human Genome Sequencing Consortium}(2004)]{Collins04}
+{International Human Genome Sequencing Consortium}.
+\newblock Finishing the euchromatic sequence of the human genome.
+\newblock \emph{Nature}, 431:\penalty0 931--945, 2004.
+
+\bibitem[{International human genome sequencing consortium}(2001)]{Lander01}
+{International human genome sequencing consortium}.
+\newblock Initial sequencing and analysis of the human genome.
+\newblock \emph{Nature}, 409:\penalty0 860--921, 2001.
+
+\bibitem[Ioannidis et~al.(2009)Ioannidis, Allison, Ball, Coulibaly, Cui,
+  Culhane, Falchi, Furlanello, Game, Jurman, Mangion, Mehta, Nitzberg, Page,
+  Petretto, and van Noort]{Ioannidis09}
+J.~P.~A. Ioannidis, D.~B. Allison, C.~A. Ball, I.~Coulibaly, X.~Cui, A.~C.
+  Culhane, M.~Falchi, C.~Furlanello, L.~Game, G.~Jurman, J.~Mangion, T.~Mehta,
+  M.~Nitzberg, G.~P. Page, E.~Petretto, and V.~van Noort.
+\newblock Repeatability of published microarray gene expression analyses.
+\newblock \emph{Nature Genetics}, 41:\penalty0 149--155, 2009.
+
+\bibitem[Irizarry et~al.(2003{\natexlab{a}})Irizarry, Bolstad, Collin, Cope,
+  Hobbs, and Speed]{Irizarry03rma}
+R.~A. Irizarry, B.~M. Bolstad, F.~Collin, L.~M. Cope, B.~Hobbs, and T.~P.
+  Speed.
+\newblock {Summaries of Affymetrix GeneChip probe level data}.
+\newblock \emph{Nucleic Acids Research}, 31:\penalty0 e15, 2003{\natexlab{a}}.
+
+\bibitem[Irizarry et~al.(2003{\natexlab{b}})Irizarry, Hobbs, Collin,
+  Beazer-Barclay, Antonellis, Scherf, and Speed]{Irizarry03}
+R.~A. Irizarry, B.~Hobbs, F.~Collin, Y.~D. Beazer-Barclay, K.~J. Antonellis,
+  U.~Scherf, and T.~P. Speed.
+\newblock Exploration, normalization, and summaries of high density
+  oligonucleotide array probe level data.
+\newblock \emph{Biostatistics}, 4:\penalty0 249--264, 2003{\natexlab{b}}.
+
+\bibitem[Irizarry et~al.(2005)Irizarry, Warren, Spencer, Kim, Biswal, Frank,
+  Gabrielson, Garcia, Geoghegan, Germino, Griffin, Hilmer, Hoffman, Jedlicka,
+  Kawasaki, Martinez-Murillo, Morsberger, Lee, Petersen, Quackenbush, Scott,
+  Wilson, Yang, Ye, and Yu]{Irizarry05}
+R.~A. Irizarry, D.~Warren, F.~Spencer, I.~F. Kim, S.~Biswal, B.~C. Frank,
+  E.~Gabrielson, J.~G.~N. Garcia, J.~Geoghegan, G.~Germino, C.~Griffin, S.~C.
+  Hilmer, E.~Hoffman, A.~E. Jedlicka, E.~Kawasaki, F.~Martinez-Murillo,
+  L.~Morsberger, H.~Lee, D.~Petersen, J.~Quackenbush, A.~Scott, M.~Wilson,
+  Y.~Yang, S.~Q. Ye, and W.~Yu.
+\newblock Multiple-laboratory comparison of microarray platforms.
+\newblock \emph{Nature Methods}, 2:\penalty0 345--350, 2005.
+
+\bibitem[Irizarry et~al.(2006)Irizarry, Wu, and Jaffee]{Irizarry06}
+R.~A. Irizarry, Z.~Wu, and H.~A. Jaffee.
+\newblock {Comparison of Affymetrix GeneChip expression measures}.
+\newblock \emph{Bioinformatics}, 22:\penalty0 789--794, 2006.
+
+\bibitem[Ishwaran and James(2001)]{Ishwaran01}
+H.~Ishwaran and L.~F. James.
+\newblock Gibbs sampling methods for stick-breaking priors.
+\newblock \emph{Journal of the American Statistical Association}, 96:\penalty0
+  161--173, 2001.
+
+\bibitem[Jain and Dubes(1988)]{Jain88}
+A.~K. Jain and R.~C. Dubes.
+\newblock \emph{Algorithms for Clustering Data}.
+\newblock Prentice Hall, Englewood Cliffs, New Jersey, 1988.
+
+\bibitem[Jim\'enez et~al.(2002)Jim\'enez, Mitchell, and Sgouros]{Jimenez02}
+J.~L. Jim\'enez, M.~P. Mitchell, and J.~G. Sgouros.
+\newblock Microarray analysis of orthologous genes: conservation of the
+  translational machinery across species at the sequence and expression level.
+\newblock \emph{Genome Biology}, 4:\penalty0 R4, 2002.
+
+\bibitem[Johnson et~al.(2005)Johnson, Edwards, Shoemaker, and
+  Schadt]{Johnson05}
+J.~M. Johnson, S.~Edwards, D.~Shoemaker, and E.~E. Schadt.
+\newblock Dark matter in the genome: evidence of widespread transcription
+  detected by microarray tiling experiments.
+\newblock \emph{Trends in Genetics}, 21:\penalty0 93--102, 2005.
+
+\bibitem[Johnson and Tricker(2010)]{Johnson2010}
+L.~J. Johnson and P.~J. Tricker.
+\newblock {Epigenomic plasticity within populations: its evolutionary
+  significance and potential.}
+\newblock \emph{Heredity}, 105:\penalty0 113--121, 2010.
+
+\bibitem[Johnson et~al.(2008)Johnson, Speirs, Curtin, and Hall]{Johnson2008}
+N.~Johnson, V.~Speirs, N.~J. Curtin, and A.~G. Hall.
+\newblock {A comparative study of genome-wide SNP, CGH microarray and protein
+  expression analysis to explore genotypic and phenotypic mechanisms of
+  acquired antiestrogen resistance in breast cancer.}
+\newblock \emph{Breast Cancer Research and Treatment}, 111:\penalty0 55--63,
+  2008.
+
+\bibitem[Jordan et~al.(2005)Jordan, Marino-Ramirez, and Koonin]{Jordan05}
+I.~K. Jordan, L.~Mari{\~n}o-Ramirez, and E.~V. Koonin.
+\newblock Evolutionary significance of gene expression divergence
+\newblock \emph{Gene}, 345:\penalty0 119--126, 2005.
+
+\bibitem[Joyce and Palsson(2006)]{Joyce06}
+A.~R. Joyce and B.~O. Palsson.
+\newblock The model organism as a system: integrating 'omics' data sets.
+\newblock \emph{Nature Reviews Molecular Cell Biology}, 7:\penalty0 198--210,
+  2006.
+
+\bibitem[Kanehisa et~al.(2008)Kanehisa, Araki, Goto, Hattori, Hirakawa, Itoh,
+  Katayama, Kawashima, Okuda, Tokimatsu, and Yamanishi]{Kanehisa08}
+M.~Kanehisa, M.~Araki, S.~Goto, M.~Hattori, M.~Hirakawa, M.~Itoh, T.~Katayama,
+  S.~Kawashima, S.~Okuda, T.~Tokimatsu, and Y.~Yamanishi.
+\newblock {KEGG for linking genomes to life and the environment}.
+\newblock \emph{Nucleic Acids Research}, 36:D480--484,
+  2008.
+
+\bibitem[Kanehisa et~al.(2010)Kanehisa, Goto, Furumichi, Tanabe, and
+  Hirakawa]{Kanehisa2010}
+M.~Kanehisa, S.~Goto, M.~Furumichi, M.~Tanabe, and M.~Hirakawa.
+\newblock {KEGG for representation and analysis of molecular networks involving
+  diseases and drugs.}
+\newblock \emph{Nucleic Acids Research}, 38:D355--360, 2010.
+
+\bibitem[Kaski et~al.(2005)Kaski, Sinkkonen, and Klami]{Kaski05nc}
+S.~Kaski, J.~Sinkkonen, and A.~Klami.
+\newblock Discriminative clustering.
+\newblock \emph{Neurocomputing}, 69:\penalty0 18--41, 2005.
+
+\bibitem[Katz et~al.(2006)Katz, Irizarry, Lin, Tripputi, and Porter]{Katz06}
+S.~Katz, R.~A. Irizarry, X.~Lin, M.~Tripputi, and M.~W. Porter.
+\newblock {A summarization approach for Affymetrix GeneChip data using a
+  reference training set from a large, biologically diverse database}.
+\newblock \emph{{BMC Bioinformatics}}, 7:\penalty0 464, 2006.
+
+\bibitem[Kettenring(1971)]{Kettenring71}
+J.~Kettenring.
+\newblock Canonical analysis of several sets of variables.
+\newblock \emph{Biometrika}, 58:\penalty0 433--451, 1971.
+
+\bibitem[Kilpinen et~al.(2008)Kilpinen, Autio, Ojala, Iljin, Bucher, Sara,
+  Pisto, Saarela, Skotheim, Bjorkman, Mpindi, Haapa-Paananen, Vainio, Edgren,
+  Wolf, Astola, Nees, Hautaniemi, and Kallioniemi]{Kilpinen08}
+S.~Kilpinen, R.~Autio, K.~Ojala, K.~Iljin, E.~Bucher, H.~Sara, T.~Pisto,
+  M.~Saarela, R.~I. Skotheim, M.~Bjorkman, J.-P. Mpindi, S.~Haapa-Paananen,
+  P.~Vainio, H.~Edgren, M.~Wolf, J.~Astola, M.~Nees, S.~Hautaniemi, and
+  O.~Kallioniemi.
+\newblock Systematic bioinformatic analysis of expression levels of 17,330
+  human genes across 9,783 samples from 175 types of healthy and pathological
+  tissues.
+\newblock \emph{Genome Biology}, 9:\penalty0 R139, 2008.
+
+\bibitem[Klami and Kaski(2008)]{Klami08}
+A.~Klami and S.~Kaski.
+\newblock Probabilistic approach to detecting dependencies between data sets.
+\newblock \emph{Neurocomputing}, 72:\penalty0 39--46, 2008.
+
+\bibitem[Klami et~al.(2010)Klami, Virtanen, and Kaski]{Klami10uai}
+A.~Klami, S.~Virtanen, and S.~Kaski.
+\newblock Bayesian exponential family projections for coupled data sources.
+\newblock In P.~Grunwald and P.~Spirtes, editors, \emph{Proceedings of the 26th
+  Conference on Uncertainty in Artificial Intelligence (UAI)}, pages 286--293.
+  AUAI Press, Corvallis, Oregon, 2010. 
+
+\bibitem[Kleinberg(2002)]{Kleinberg02nips}
+J.~Kleinberg.
+\newblock An impossibility theorem for clustering.
+\newblock In S.~Becker, S.~Thrun, and K.~Obermayer, editors, \emph{Advances in
+  Neural Information Processing Systems 15}, pages 446--453. MIT Press, Cambridge, MA, 2002.
+
+%\bibitem[Knoppers(2010)]{Knoppers2010}
+%B.~M. Knoppers.
+%\newblock {Consent to 'personal' genomics and privacy. Direct-to-consumer
+%  genetic tests and population genome research challenge traditional notions of
+%  privacy and consent.}
+%\newblock \emph{EMBO reports}, 11:\penalty0 416--419, 2010.
+
+\bibitem[Kohonen(2001)]{Kohonen01}
+T.~Kohonen.
+\newblock \emph{Self-Organizing Maps}.
+\newblock Springer, Berlin, third edition, 2001.
+
+\bibitem[Kohonen(1982)]{Kohonen82}
+T.~Kohonen.
+\newblock Self-organized formation of topologically correct feature maps.
+\newblock \emph{Biological Cybernetics}, 43:\penalty0 59--69, 1982.
+
+\bibitem[Koller and Friedman(2009)]{Koller09}
+D.~Koller and N.~Friedman.
+\newblock \emph{Probabilistic Graphical Models: Principles and Techniques}.
+\newblock MIT Press, USA, 2009.
+
+\bibitem[Kullback(1959)]{Kullback59}
+S.~Kullback.
+\newblock \emph{Information Theory and Statistics}.
+\newblock Wiley, New York, 1959.
+
+\bibitem[Kurihara et~al.(2007{\natexlab{a}})Kurihara, Welling, and
+  Teh]{Kurihara07}
+K.~Kurihara, M.~Welling, and Y.~W. Teh.
+\newblock Collapsed variational dirichlet process mixture models.
+\newblock In \emph{20th International Joint Conference on Artificial
+  Intelligence (IJCAI 2007)}, pages 2796--2801. Morgan Kaufmann Publishers Inc, San Francisco, CA, USA,
+  2007{\natexlab{a}}. 
+
+\bibitem[Kurihara et~al.(2007{\natexlab{b}})Kurihara, Welling, and
+  Vlassis]{Kurihara07nips}
+K.~Kurihara, M.~Welling, and N.~Vlassis.
+\newblock Accelerated variational {Dirichlet} process mixtures.
+\newblock In B.~Sch\"olkopf, J.~Platt, and T.~Hoffman, editors, \emph{Advances
+  in Neural Information Processing Systems 19}, pages 761--768. MIT Press, Cambridge, MA,
+  2007{\natexlab{b}}. 
+
+\bibitem[Laajala et~al.(2009)Laajala, Aittokallio, Lahesmaa, and
+  Elo]{Laajala2009}
+E.~Laajala, T.~Aittokallio, R.~Lahesmaa, and L.~L. Elo.
+\newblock {Probe-level estimation improves the detection of differential
+  splicing in Affymetrix exon array studies.}
+\newblock \emph{Genome biology}, 10:\penalty0 R77, 2009.
+
+\bibitem[Lage et~al.(2008)Lage, Hansen, Karlberg, Eklund, Roque, Donahoe,
+  Szallasi, Jensen, and Brunak]{Lage08}
+K.~Lage, N.~T. Hansen, E.~O. Karlberg, A.~C. Eklund, F.~S. Roque, P.~K.
+  Donahoe, Z.~Szallasi, T.~S. Jensen, and S.~Brunak.
+\newblock A large-scale analysis of tissue-specific pathology and gene
+  expression of human disease genes and complexes.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  105:\penalty0 20870--20875, 2008.
+
+\bibitem[Lamb et~al.(2006)Lamb, Crawford, Peck, Modell, Blat, Wrobel, Lerner,
+  Brunet, Subramanian, Ross, Reich, Hieronymus, Wei, Armstrong, Haggarty,
+  Clemons, Wei, Carr, Lander, and Golub]{Lamb06}
+J.~Lamb, E.~D. Crawford, D.~Peck, J.~W. Modell, I.~C. Blat, M.~J. Wrobel,
+  J.~Lerner, J.-P. Brunet, A.~Subramanian, K.~N. Ross, M.~Reich, H.~Hieronymus,
+  G.~Wei, S.~A. Armstrong, S.~J. Haggarty, P.~A. Clemons, R.~Wei, S.~A. Carr,
+  E.~S. Lander, and T.~R. Golub.
+\newblock The connectivity map: Using gene-expression signatures to connect
+  small molecules, genes, and disease.
+\newblock \emph{Science}, 313:\penalty0 1929--1935, 2006.
+
+\bibitem[Lander(1996)]{Lander96}
+E.~Lander.
+\newblock The new genomics: Global views of biology.
+\newblock \emph{Science}, 274:\penalty0 536--539, 1996.
+
+\bibitem[Lauffenburger(2000)]{Lauffenburger00}
+D.~A. Lauffenburger.
+\newblock Cell signaling pathways as control modules: Complexity for
+  simplicity.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  97:\penalty0 5031--5033, 2000.
+
+\bibitem[Law et~al.(2004)Law, Figueiredo, and Jain]{Law04}
+M.~Law, M.~Figueiredo, and A.~Jain.
+\newblock Simultaneous feature selection and clustering using mixture models.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, 26:\penalty0 1154--1166, 2004.
+
+\bibitem[Lazzeroni and Owen(2002)]{Lazzeroni02}
+L.~Lazzeroni and A.~Owen.
+\newblock Plaid models for gene expression data.
+\newblock \emph{Statistica Sinica}, 12:\penalty0 61--86, 2002.
+
+\bibitem[{L\^{e} Cao} et~al.(2009){L\^{e} Cao}, Gonz\'{a}lez, and
+  D\'{e}jean]{LeCao2009}
+K.-A. {L\^{e} Cao}, I.~Gonz\'{a}lez, and S.~D\'{e}jean.
+\newblock {integrOmics: an R package to unravel relationships between two omics
+  datasets.}
+\newblock \emph{Bioinformatics}, 25:\penalty0 2855--2856, 2009.
+
+\bibitem[Ledford(2010)]{Ledford2010}
+H.~Ledford.
+\newblock {The cancer genome challenge.}
+\newblock \emph{Nature}, 464:\penalty0 972--974, 2010.
+
+\bibitem[Lee et~al.(2008)Lee, Chuang, Kim, Ideker, and Lee]{Lee08c}
+E.~Lee, H.-Y. Chuang, J.-W. Kim, T.~Ideker, and D.~Lee.
+\newblock Inferring pathway activity toward precise disease classification.
+\newblock \emph{PLoS Computational Biology}, 4:\penalty0 e1000217, 2008.
+
+\bibitem[Levine et~al.(2006)Levine, Haynor, Castle, Stepaniants, Pellegrini,
+  Mao, and Johnson]{Levine06}
+D.~Levine, D.~Haynor, J.~Castle, S.~Stepaniants, M.~Pellegrini, M.~Mao, and
+  J.~Johnson.
+\newblock Pathway and gene-set activation measurement from {mRNA} expression
+  data: the tissue distribution of human pathways.
+\newblock \emph{Genome Biology}, 7:\penalty0 R93, 2006.
+
+\bibitem[Lezon et~al.(2006)Lezon, Banavar, Cieplak, Maritan, and
+  Fedoroff]{Lezon06}
+T.~R. Lezon, J.~R. Banavar, M.~Cieplak, A.~Maritan, and N.~V. Fedoroff.
+\newblock {From the Cover: Using the principle of entropy maximization to infer
+  genetic interaction networks from gene expression patterns}.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  103:\penalty0 19033--19038, 2006.
+
+\bibitem[Li and Wong(2001)]{Li01mbei}
+C.~Li and W.~H. Wong.
+\newblock Model-based analysis of oligonucleotide arrays: Expression index
+  computation and outlier detection.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  98:\penalty0 31--36, 2001.
+
+\bibitem[Li et~al.(2005)Li, He, and Zhou]{Li05}
+X.~Li, Z.~He, and J.~Zhou.
+\newblock Selection of optimal oligonucleotide probes for microarrays using
+  multiple criteria, global alignment and parameter estimation.
+\newblock \emph{Nucleic Acids Research}, 33:\penalty0 6114--6123, 2005.
+
+\bibitem[Li et~al.(2008)Li, Agarwal, and Rajagopalan]{Li08c}
+Y.~Li, P.~Agarwal, and D.~Rajagopalan.
+\newblock {A global pathway crosstalk network}.
+\newblock \emph{Bioinformatics}, 24:\penalty0 1442--1447, 2008.
+
+\bibitem[Liang et~al.(2006)Liang, Li, Be, Howes, and Liu]{Liang06}
+S.~Liang, Y.~Li, X.~Be, S.~Howes, and W.~Liu.
+\newblock Detecting and profiling tissue-selective genes.
+\newblock \emph{Physiological Genomics}, 26:\penalty0 158--162, 2006.
+
+\bibitem[Lieberman-Aiden et~al.(2009)Lieberman-Aiden, van Berkum, Williams,
+  Imakaev, Ragoczy, Telling, Amit, Lajoie, Sabo, Dorschner, Sandstrom,
+  Bernstein, Bender, Groudine, Gnirke, Stamatoyannopoulos, Mirny, Lander, and
+  Dekk]{Lieberman-Aiden2009}
+E.~Lieberman-Aiden, N.~L. van Berkum, L.~Williams, M.~Imakaev, T.~Ragoczy,
+  A.~Telling, I.~Amit, B.~R. Lajoie, P.~J. Sabo, M.~O. Dorschner, R.~Sandstrom,
+  B.~Bernstein, M.~A. Bender, M.~Groudine, A.~Gnirke, J.~Stamatoyannopoulos,
+  L.~A. Mirny, E.~S. Lander, and J.~Dekk.
+\newblock {Comprehensive Mapping of Long-Range Interactions Reveals Folding
+  Principles of the Human Genome}.
+\newblock \emph{Science}, 326:\penalty0 289--293, 2009.
+
+\bibitem[Liu et~al.(2005)Liu, Milo, Lawrence, and Rattray]{Liu05}
+X.~Liu, M.~Milo, N.~D. Lawrence, and M.~Rattray.
+\newblock {A tractable probabilistic model for Affymetrix probe-level analysis
+  across multiple chips}.
+\newblock \emph{Bioinformatics}, 21:\penalty0 3637--3644, 2005.
+
+\bibitem[Lockhart et~al.(1996)Lockhart, Dong, Byrne, Follettie, Gallo, Chee,
+  Mittmann, Wang, Kobayashi, Horton, and Brown]{Lockhart96}
+D.~Lockhart, H.~Dong, M.~Byrne, M.~Follettie, M.~Gallo, M.~Chee, M.~Mittmann,
+  C.~Wang, M.~Kobayashi, H.~Horton, and E.~Brown.
+\newblock Expression monitoring by hybridization to high-density
+  oligonucleotide arrays.
+\newblock \emph{Nature Biotechnology}, 14:\penalty0 1675--1680, 1996.
+
+\bibitem[Lucas et~al.(2009)Lucas, Carvalho, Chen, Chi, and West]{Lucas09}
+J.~E. Lucas, C.~M. Carvalho, J.~L.-Y. Chen, J.-T. Chi, and M.~West.
+\newblock Cross-study projections of genomic biomarkers: An evaluation in
+  cancer genomics.
+\newblock \emph{PLoS ONE}, 4:\penalty0 e4523, 2009.
+
+\bibitem[Lukk et~al.(2010)Lukk, Kapushesky, Nikkil{\"a}, Parkinson, Goncalves,
+  Huber, Ukkonen, and Brazma]{Lukk10}
+M.~Lukk, M.~Kapushesky, J.~Nikkil{\"a}, H.~Parkinson, A.~Goncalves, W.~Huber,
+  E.~Ukkonen, and A.~Brazma.
+\newblock A global map of human gene expression.
+\newblock \emph{Nature Biotechnology}, 28:\penalty0 322--324, 2010.
+
+\bibitem[Madeira and Oliveira(2004)]{Madeira04}
+S.~C. Madeira and A.~L. Oliveira.
+\newblock Biclustering algorithms for biological data analysis: a survey.
+\newblock \emph{IEEE/ACM Transactions on Computational Biology and
+  Bioinformatics}, 1:\penalty0 24--45, 2004.
+
+\bibitem[{MAQC Consortium}(2006)]{Shi06}
+{MAQC Consortium}.
+\newblock The microarray quality control ({MAQC}) project shows inter- and
+  intraplatform reproducibility of gene expression measurements.
+\newblock \emph{Nature Biotechnology}, 24:\penalty0 1151--1161, 2006.
+
+%\bibitem[Mascalzoni et~al.(2008)Mascalzoni, Hicks, Pramstaller, and
+%  Wjst]{Mascalzoni08}
+%D.~Mascalzoni, A.~Hicks, P.~Pramstaller, and M.~Wjst.
+%\newblock Informed consent in the genomics era.
+%\newblock \emph{PLoS Medicine}, 5:e192, 2008.
+
+\bibitem[Mayr(2004)]{Mayr04}
+E.~Mayr.
+\newblock \emph{What makes biology unique?: considerations on the autonomy of a
+  scientific discipline}.
+\newblock Cambridge University Press, New York, 2004.
+
+\bibitem[McCall et~al.(2010)McCall, Bolstad, and Irizarry]{McCall2010}
+M.~N. McCall, B.~M. Bolstad, and R.~A. Irizarry.
+\newblock {Frozen robust multiarray analysis (fRMA).}
+\newblock \emph{Biostatistics}, 11:\penalty0 242--53, 2010.
+
+%\bibitem[McGuire et~al.(2008)McGuire, Caulfield, and Cho]{McGuire08}
+%A.~L. McGuire, T.~Caulfield, and M.~K. Cho.
+%\newblock Research ethics and the challenge of whole-genome sequencing.
+%\newblock \emph{Nature Reviews Genetics}, 2008:\penalty0 152--156, 2008.
+
+\bibitem[McPherson(2009)]{McPherson2009}
+J.~D. McPherson.
+\newblock {Next-generation gap.}
+\newblock \emph{Nature Methods}, 6\penalty0 (S11):\penalty0 S2--5, 2009.
+
+\bibitem[Mecham et~al.(2004{\natexlab{a}})Mecham, Klus, Strovel, Augustus,
+  Byrne, Bozso, Wetmore, Mariani, Kohane, and Szallasi]{Mecham04a}
+B.~H. Mecham, G.~T. Klus, J.~Strovel, M.~Augustus, D.~Byrne, P.~Bozso, D.~Z.
+  Wetmore, T.~J. Mariani, I.~S. Kohane, and Z.~Szallasi.
+\newblock {Sequence-matched probes produce increased cross-platform consistency
+  and more reproducible biological results in microarray-based gene expression
+  measurements}.
+\newblock \emph{Nucleic Acids Research}, 32:\penalty0 e74, 2004{\natexlab{a}}.
+
+\bibitem[Mecham et~al.(2004{\natexlab{b}})Mecham, Wetmore, Szallasi, Sadovsky,
+  Kohane, and Mariani]{Mecham04b}
+B.~H. Mecham, D.~Z. Wetmore, Z.~Szallasi, Y.~Sadovsky, I.~Kohane, and T.~J.
+  Mariani.
+\newblock {Increased measurement accuracy for sequence-verified microarray
+  probes}.
+\newblock \emph{Physiological Genomics}, 18:\penalty0 308--315,
+  2004{\natexlab{b}}.
+
+\bibitem[Mei et~al.(2003)Mei, Hubbell, Bekiranov, Mittmann, Christians, Shen,
+  Lu, Fang, Liu, Ryder, Kaplan, Kulp, and Webster]{Mei03}
+R.~Mei, E.~Hubbell, S.~Bekiranov, M.~Mittmann, F.~C. Christians, M.-M. Shen,
+  G.~Lu, J.~Fang, W.-M. Liu, T.~Ryder, P.~Kaplan, D.~Kulp, and T.~A. Webster.
+\newblock {Probe selection for high-density oligonucleotide arrays}.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  100:\penalty0 11237--11242, 2003.
+
+\bibitem[Milo et~al.(2003)Milo, Fazeli, Niranjan, and Lawrence]{Milo03}
+M.~Milo, A.~Fazeli, M.~Niranjan, and N.~Lawrence.
+\newblock A probabilistic model for the extraction of expression levels from
+  oligonucleotide arrays.
+\newblock \emph{Biochemical Society Transactions}, 31:\penalty0 1510--1512,
+  2003.
+
+\bibitem[Montaner and Dopazo(2010)]{Montaner2010}
+D.~Montaner and J.~Dopazo.
+\newblock Multidimensional gene set analysis of genomic data.
+\newblock \emph{PLoS One}, 5:\penalty0 e10348, 2010.
+
+\bibitem[Montaner et~al.(2009)Montaner, Minguez, Al-Shahrour, and
+  Dopazo]{Montaner09}
+D.~Montaner, P.~Minguez, F.~Al-Shahrour, and J.~Dopazo.
+\newblock Gene set internal coherence in the context of functional profiling.
+\newblock \emph{BMC Genomics}, 10:\penalty0 197, 2009.
+
+\bibitem[{Mouse Genome Sequencing Consortium}(2002)]{Waterston02}
+{Mouse Genome Sequencing Consortium}.
+\newblock Initial sequencing and comparative analysis of the mouse genome.
+\newblock \emph{Nature}, 420:\penalty0 520--562, 2002.
+
+\bibitem[M\"{u}ller and Quintana(2004)]{Muller2004}
+P.~M\"{u}ller and F.~A. Quintana.
+\newblock {Nonparametric Bayesian Data Analysis}.
+\newblock \emph{Statistical Science}, 19:\penalty0 95--110, 2004.
+
+\bibitem[Myers et~al.(2005)Myers, Robson, Wible, Hibbs, Chiriac, Theesfeld,
+  Dolinski, and Troyanskaya]{Myers05}
+C.~Myers, D.~Robson, A.~Wible, M.~Hibbs, C.~Chiriac, C.~Theesfeld, K.~Dolinski,
+  and O.~Troyanskaya.
+\newblock Discovery of biological networks from diverse functional genomic
+  data.
+\newblock \emph{Genome Biology}, 6:\penalty0 R114, 2005.
+
+\bibitem[Myllykangas et~al.(2008)Myllykangas, Junnila, Kokkola, Autio,
+  Scheinin, Kiviluoto, Karjalainen-Lindsberg, Hollmén, Knuutila, Puolakkainen,
+  and Monni]{Myllykangas08jc}
+S.~Myllykangas, S.~Junnila, A.~Kokkola, R.~Autio, I.~Scheinin, T.~Kiviluoto,
+  M.-L. Karjalainen-Lindsberg, J.~Hollm{\'e}n, S.~Knuutila, P.~Puolakkainen, and
+  O.~Monni.
+\newblock Integrated gene copy number and expression microarray analysis of
+  gastric cancer highlights potential target genes.
+\newblock \emph{International Journal of Cancer}, 123:\penalty0 817--825, 2008.
+
+\bibitem[Nacu et~al.(2007)Nacu, Critchley-Thorne, Lee, and Holmes]{Nacu07}
+S.~Nacu, R.~Critchley-Thorne, P.~Lee, and S.~Holmes.
+\newblock {Gene expression network analysis and applications to immunology}.
+\newblock \emph{Bioinformatics}, 23:\penalty0 850--858, 2007.
+
+\bibitem[Naef and Magnasco(2003)]{Naef03}
+F.~Naef and M.~O. Magnasco.
+\newblock Solving the riddle of the bright mismatches: Labeling and effective
+  binding in oligonucleotide arrays.
+\newblock \emph{Physical Review E}, 68:\penalty0 011906, 2003.
+
+\bibitem[Nam and Kim(2008)]{Nam08}
+D.~Nam and S.-Y. Kim.
+\newblock {Gene-set approach for expression pattern analysis}.
+\newblock \emph{Briefings in Bioinformatics}, 9:\penalty0 189--197, 2008.
+
+\bibitem[Noirel et~al.(2008)Noirel, Sanguinetti, and Wright]{Noirel08}
+J.~Noirel, G.~Sanguinetti, and P.~C. Wright.
+\newblock {Identifying differentially expressed subnetworks with MMG}.
+\newblock \emph{Bioinformatics}, 24:\penalty0 2792--2793, 2008.
+
+\bibitem[Novak and Jain(2006)]{Novak06}
+B.~A. Novak and A.~N. Jain.
+\newblock {Pathway recognition and augmentation by computational analysis of
+  microarray expression data}.
+\newblock \emph{Bioinformatics}, 22:\penalty0 233--241, 2006.
+
+\bibitem[Nuyten and {van de Vijver}(2008)]{Nuyten08}
+D.~Nuyten and M.~{van de Vijver}.
+\newblock Using microarray analysis as a prognostic and predictive tool in
+  oncology: focus on breast cancer and normal tissue toxicity.
+\newblock \emph{Seminars in Radiation Oncology}, 18:\penalty0 105--114, 2008.
+
+\bibitem[Nymark et~al.(2007)Nymark, Lindholm, Korpela, Lahti, Ruosaari, Kaski,
+  Hollm{\'e}n, Anttila, Kinnula, and Knuutila]{Nymark07}
+P.~Nymark, P.~M. Lindholm, M.~V. Korpela, L.~Lahti, S.~Ruosaari, S.~Kaski,
+  J.~Hollm{\'e}n, S.~Anttila, V.~L. Kinnula, and S.~Knuutila.
+\newblock Gene expression profiles in asbestos-exposed epithelial and
+  mesothelial lung cell lines.
+\newblock \emph{BMC Genomics}, 8:62, 2007.
+
+%\bibitem[Oberhardt et~al.(2009)Oberhardt, Palsson, and Papin]{Oberhardt2009}
+%M.~A. Oberhardt, B.~O. Palsson, and J.~A. Papin.
+%\newblock {Applications of genome-scale metabolic reconstructions.}
+%\newblock \emph{Molecular Systems Biology}, 5:\penalty0 320, 2009.
+
+\bibitem[Ocana and Pandiella(2010)]{Ocana2010}
+A.~Ocana and A.~Pandiella.
+\newblock {Personalized therapies in the cancer "omics" era.}
+\newblock \emph{Molecular Cancer}, 9:\penalty0 202, 2010.
+
+\bibitem[Pan et~al.(2008)Pan, Shai, Lee, Frey, and Blencowe]{Pan2008}
+Q.~Pan, O.~Shai, L.~J. Lee, B.~J. Frey, and B.~J. Blencowe.
+\newblock {Deep surveying of alternative splicing complexity in the human
+  transcriptome by high-throughput sequencing.}
+\newblock \emph{Nature Genetics}, 40:\penalty0 1413--1415, 2008.
+
+\bibitem[Parker et~al.(2009)Parker, Hansen, Abaan, Tullius, and
+  Margulies]{Parker2009}
+S.~C.~J. Parker, L.~Hansen, H.~O. Abaan, T.~D. Tullius, and E.~H. Margulies.
+\newblock Local {DNA} topography correlates with functional noncoding regions
+  of the human genome.
+\newblock \emph{Science}, 324:\penalty0 389--392, 2009.
+
+\bibitem[Parkhomenko et~al.(2009)Parkhomenko, Tritchler, and
+  Beyene]{Parkhomenko2009}
+E.~Parkhomenko, D.~Tritchler, and J.~Beyene.
+\newblock Sparse canonical correlation analysis with application to genomic
+  data integration.
+\newblock \emph{Statistical Applications in Genetics and Molecular Biology},
+  8:\penalty0 1, 2009.
+
+\bibitem[Parkinson et~al.(2009)Parkinson, Kapushesky, Kolesnikov, Rustici,
+  Shojatalab, Abeygunawardena, Berube, Dylag, Emam, Farne, Holloway, Lukk,
+  Malone, Mani, Pilicheva, Rayner, Rezwan, Sharma, Williams, Bradley,
+  Adamusiak, Brandizi, Burdett, Coulson, Krestyaninova, Kurnosov, Maguire,
+  Neogi, Rocca-Serra, Sansone, Sklyar, Zhao, Sarkans, and
+  Brazma]{Parkinson2009}
+H.~Parkinson, M.~Kapushesky, N.~Kolesnikov, G.~Rustici, M.~Shojatalab,
+  N.~Abeygunawardena, H.~Berube, M.~Dylag, I.~Emam, A.~Farne, E.~Holloway,
+  M.~Lukk, J.~Malone, R.~Mani, E.~Pilicheva, T.~F. Rayner, F.~Rezwan,
+  A.~Sharma, E.~Williams, X.~Z. Bradley, T.~Adamusiak, M.~Brandizi, T.~Burdett,
+  R.~Coulson, M.~Krestyaninova, P.~Kurnosov, E.~Maguire, S.~G. Neogi,
+  P.~Rocca-Serra, S.-A. Sansone, N.~Sklyar, M.~Zhao, U.~Sarkans, and A.~Brazma.
+\newblock {ArrayExpress update--from an archive of functional genomics
+  experiments to the atlas of gene expression.}
+\newblock \emph{Nucleic Acids Research}, 37:D868--872, 2009.
+
+\bibitem[Parsons et~al.(2004)Parsons, Haque, and Liu]{Parsons04}
+L.~Parsons, E.~Haque, and H.~Liu.
+\newblock Subspace clustering for high dimensional data: A review.
+\newblock \emph{Sigkdd Explorations}, 6:\penalty0 90--105, 2004.
+
+\bibitem[Pearson(2006)]{Pearson2006}
+H.~Pearson.
+\newblock {Genetics: what is a gene?}
+\newblock \emph{Nature}, 441:\penalty0 398--401, 2006.
+
+\bibitem[Phillips et~al.(2001)Phillips, Hayward, Wang, Vasselli, Pavlovich,
+  Padilla-Nash, Pezullo, Ghadimi, Grossfeld, Rivera, Linehan, Cunha, and
+  Ried]{Phillips2001}
+J.~L. Phillips, S.~W. Hayward, Y.~Wang, J.~Vasselli, C.~Pavlovich,
+  H.~Padilla-Nash, J.~R. Pezullo, B.~M. Ghadimi, G.~D. Grossfeld, A.~Rivera,
+  W.~M. Linehan, G.~R. Cunha, and T.~Ried.
+\newblock {The Consequences of Chromosomal Aneuploidy on Gene Expression
+  Profiles in a Cell Line Model for Prostate Carcinogenesis}.
+\newblock \emph{Cancer Research}, 61:\penalty0 8143--8149, 2001.
+
+\bibitem[Pinkel and Albertson(2005)]{Pinkel2005}
+D.~Pinkel and D.~G. Albertson.
+\newblock {Array comparative genomic hybridization and its applications in
+  cancer}.
+\newblock \emph{Nature Genetics}, 37:\penalty0 S11--17, 2005.
+
+\bibitem[Polanski and Kimmel(2007)]{Polanski07}
+A.~Polanski and M.~Kimmel.
+\newblock \emph{Bioinformatics}.
+\newblock Springer, Germany, 2007.
+
+\bibitem[Prak and {Kazazian Jr.}(2000)]{Prak00}
+E.~Prak and H.~{Kazazian Jr.}
+\newblock Mobile elements and the human genome.
+\newblock \emph{Nature Reviews Genetics}, 1:\penalty0 134--144, 2000.
+
+\bibitem[Przytycka et~al.(2010)Przytycka, Singh, and Slonim]{Przytycka2010}
+T.~M. Przytycka, M.~Singh, and D.~K. Slonim.
+\newblock {Toward the dynamic interactome: it's about time.}
+\newblock \emph{Briefings in Bioinformatics}, 11:\penalty0 15--29, 2010.
+
+\bibitem[Qin(2008)]{Qin2008}
+L.-X. Qin.
+\newblock {An integrative analysis of microRNA and mRNA Expression - a case
+  study}.
+\newblock \emph{Cancer Informatics}, 6:\penalty0 369--379, 2008.
+
+\bibitem[Quackenbush(2001)]{Quackenbush01}
+J.~Quackenbush.
+\newblock Computational analysis of microarray data.
+\newblock \emph{Nature Reviews Genetics}, 2:\penalty0 418--427, 2001.
+
+\bibitem[Rachlin et~al.(2006)Rachlin, Cohen, Cantor, and Kasif]{Rachlin06}
+J.~Rachlin, D.~D. Cohen, C.~Cantor, and S.~Kasif.
+\newblock Biological context networks: a mosaic view of the interactome.
+\newblock \emph{Molecular Systems Biology}, 2:66, 2006.
+
+\bibitem[Ramasamy et~al.(2008)Ramasamy, Mondry, Holmes, and
+  Altman]{Ramasamy08b}
+A.~Ramasamy, A.~Mondry, C.~C. Holmes, and D.~G. Altman.
+\newblock Key issues in conducting a meta-analysis of gene expression
+  microarray datasets.
+\newblock \emph{PLoS Medicine}, 5:e184, 2008.
+
+\bibitem[Rasmussen(2000)]{Rasmussen00}
+C.~E. Rasmussen.
+\newblock The infinite gaussian mixture model.
+\newblock In S.~A. Solla, T.~K. Leen, and K.-R. M{\"u}ller, editors,
+  \emph{Advances in Neural Information Processing Systems 12}, pages 554--560. MIT Press, Cambridge, MA, 2000.
+
+\bibitem[Reed et~al.(2006)Reed, Famili, Thiele, and Palsson]{Reed2006}
+J.~L. Reed, I.~Famili, I.~Thiele, and B.~O. Palsson.
+\newblock {Towards multidimensional genome annotation.}
+\newblock \emph{Nature Reviews Genetics}, 7:\penalty0 130--141, 2006.
+
+\bibitem[Reimers(2010)]{Reimers2010}
+M.~Reimers.
+\newblock Making informed choices about microarray data analysis.
+\newblock \emph{PLoS Computational Biology}, 6:\penalty0 e1000786, 2010.
+
+\bibitem[Reiss et~al.(2006)Reiss, Baliga, and Bonneau]{Reiss06}
+D.~Reiss, N.~Baliga, and R.~Bonneau.
+\newblock Integrated biclustering of heterogeneous genome-wide datasets for the
+  inference of global regulatory networks.
+\newblock \emph{BMC Bioinformatics}, 7:\penalty0 280, 2006.
+
+%\bibitem[Rhodes et~al.(2007)Rhodes, Kalyana-Sundaram, Mahavisno, Varambally,
+%  Yu, Briggs, Barrette, Anstet, Kincead-Beal, Kulkarni, Varambally, Ghosh, an%d
+%  Chinnaiyan]{Rhodes07}
+%D.~R. Rhodes, S.~Kalyana-Sundaram, V.~Mahavisno, R.~Varambally, J.~Yu, B.~B.
+%  Briggs, T.~R. Barrette, M.~J. Anstet, C.~Kincead-Beal, P.~Kulkarni,
+%  S.~Varambally, D.~Ghosh, and A.~M. Chinnaiyan.
+%\newblock Oncomine 3.0: Genes, pathways, and networks in a collection of 18,0%00
+%  cancer gene expression profiles.
+%\newblock \emph{Oncomine}, 9:\penalty0 166--180, 2007.
+
+\bibitem[Rogers et~al.(2005)Rogers, Girolami, Campbell, and
+  Breitling]{Rogers05}
+S.~Rogers, M.~Girolami, C.~Campbell, and R.~Breitling.
+\newblock The latent process decomposition of {cDNA} microarray data sets.
+\newblock \emph{IEEE/ACM Transactions on Computational Biology and
+  Bioinformatics}, 2:143--156, 2005.
+
+\bibitem[Rogers et~al.(2010)Rogers, Klami, Sinkkonen, Girolami, and
+  Kaski]{Rogers2010}
+S.~Rogers, A.~Klami, J.~Sinkkonen, M.~Girolami, and S.~Kaski.
+\newblock {Infinite factorization of multiple non-parametric views}.
+\newblock \emph{Machine Learning}, 79:\penalty0 201, 2010.
+
+\bibitem[Roth et~al.(2006)Roth, Hevezi, Lee, Willhite, Lechner, Foster, and
+  Zlotnik]{Roth06}
+R.~Roth, P.~Hevezi, J.~Lee, D.~Willhite, S.~Lechner, A.~Foster, and A.~Zlotnik.
+\newblock {Gene expression analyses reveal molecular relationships among 20
+  regions of the human CNS}.
+\newblock \emph{Neurogenetics}, 7:\penalty0 67--80, 2006.
+
+\bibitem[Roth and Lange(2004)]{Roth04}
+V.~Roth and T.~Lange.
+\newblock Feature selection in clustering problems.
+\newblock In S.~Thrun, L.~Saul, and B.~Sch{\"o}lkopf, editors, \emph{Advances
+  in Neural Information Processing Systems 16}, pages 473--480. MIT Press, Cambridge, MA, 2004.
+
+\bibitem[Russ and Futschik(2010)]{Russ10}
+J.~Russ and M.~E. Futschik.
+\newblock {Comparison and consolidation of microarray data sets of human tissue
+  expression.}
+\newblock \emph{BMC Genomics}, 11:\penalty0 305, 2010.
+
+\bibitem[Sadikovic et~al.(2008)Sadikovic, Yoshimoto, Al-Romaih, Maire,
+  Zielenska, and Squire]{Sadikovic2008}
+B.~Sadikovic, M.~Yoshimoto, K.~Al-Romaih, G.~Maire, M.~Zielenska, and J.~A.
+  Squire.
+\newblock {In vitro analysis of integrated global high-resolution DNA
+  methylation profiling with genomic imbalance and gene expression in
+  osteosarcoma.}
+\newblock \emph{PLoS One}, 3:\penalty0 e2834, 2008.
+
+\bibitem[Saeys et~al.(2007)Saeys, Inza, and Larra\~{n}aga]{Saeys2007}
+Y.~Saeys, I.~Inza, and P.~Larra\~{n}aga.
+\newblock {A review of feature selection techniques in bioinformatics.}
+\newblock \emph{Bioinformatics}, 23:\penalty0 2507--2517, 2007.
+
+\bibitem[Salari et~al.(2010)Salari, Tibshirani, and Pollack]{Salari2010}
+K.~Salari, R.~Tibshirani, and J.~R. Pollack.
+\newblock {DR-Integrator: a new analytic tool for integrating DNA copy number
+  and gene expression data.}
+\newblock \emph{Bioinformatics}, 26:\penalty0 414--416, 2010.
+
+\bibitem[Sara et~al.(2010)Sara, Kallioniemi, and Nees]{Sara2010}
+H.~Sara, O.~Kallioniemi, and M.~Nees.
+\newblock {A decade of cancer gene profiling: from molecular portraits to
+  molecular function.}
+\newblock \emph{Methods in Molecular Biology}, 576:\penalty0 61--87, 2010.
+
+\bibitem[Savage et~al.(2010)Savage, Ghahramani, Griffin, de~la Cruz, and
+  Wild]{Savage2010}
+R.~S. Savage, Z.~Ghahramani, J.~E. Griffin, B.~J. de~la Cruz, and D.~L. Wild.
+\newblock {Discovering transcriptional modules by Bayesian data integration}.
+\newblock \emph{Bioinformatics}, 26:\penalty0 i158--167, 2010.
+
+\bibitem[Schadt(2009)]{Schadt2009}
+E.~E. Schadt.
+\newblock {Molecular networks as sensors and drivers of common human diseases.}
+\newblock \emph{Nature}, 461:\penalty0 218--223, 2009.
+
+\bibitem[Sch{\"a}fer et~al.(2009)Sch{\"a}fer, Schwender, Merk, Haferlach,
+  Ickstadt, and Dugas]{Schafer09}
+M.~Sch{\"a}fer, H.~Schwender, S.~Merk, C.~Haferlach, K.~Ickstadt, and M.~Dugas.
+\newblock {Integrated analysis of copy number alterations and gene expression:
+  a bivariate assessment of equally directed abnormalities}.
+\newblock \emph{Bioinformatics}, 25:\penalty0 3228--3235, 2009.
+
+\bibitem[Scheinin et~al.(2008)Scheinin, Myllykangas, Borze, Bohling, Knuutila,
+  and Saharinen]{Scheinin08}
+I.~Scheinin, S.~Myllykangas, I.~Borze, T.~Bohling, S.~Knuutila, and
+  J.~Saharinen.
+\newblock {CanGEM: mining gene copy number changes in cancer}.
+\newblock \emph{Nucleic Acids Research}, 36:D830--835,
+  2008.
+
+%\bibitem[Schena et~al.(1995)Schena, Shalon, Davis, and Brown]{Schena95}
+%M.~Schena, D.~Shalon, R.~Davis, and P.~Brown.
+%\newblock Quantitative monitoring of gene expression patterns with a
+%  complementary {DNA} microarray.
+%\newblock \emph{Science}, 270:\penalty0 467--470, 1995.
+
+\bibitem[Scherf et~al.(2000)Scherf, Ross, Waltham, Smith, Lee, Tanabe, Kohn,
+  Reinhold, Myers, Andrews, Scudiero, Eisen, Sausville, Pommier, Botstein,
+  Brown, and Weinstein]{Scherf2000}
+U.~Scherf, D.~T. Ross, M.~Waltham, L.~H. Smith, J.~K. Lee, L.~Tanabe, K.~W.
+  Kohn, W.~C. Reinhold, T.~G. Myers, D.~T. Andrews, D.~A. Scudiero, M.~B.
+  Eisen, E.~A. Sausville, Y.~Pommier, D.~Botstein, P.~O. Brown, and J.~N.
+  Weinstein.
+\newblock {A gene expression database for the molecular pharmacology of
+  cancer.}
+\newblock \emph{Nature Genetics}, 24:\penalty0 236--44, 2000.
+
+\bibitem[Sch{\"o}lkopf and Smola(2002)]{Scholkopf02}
+B.~Sch{\"o}lkopf and A.~J. Smola.
+\newblock \emph{Learning with kernels: support vector machines, regularization,
+  optimization, and beyond}.
+\newblock MIT Press, USA, 2002.
+
+\bibitem[Schopf(2006)]{Schopf2006}
+J.~W. Schopf.
+\newblock {Fossil evidence of Archaean life.}
+\newblock \emph{Philosophical Transactions of the Royal Society of London.} Series B, 361:\penalty0 869--885, 2006.
+
+\bibitem[Schr{\"o}dinger(1944)]{Schrodinger44}
+E.~Schr{\"o}dinger.
+\newblock \emph{What is life? Mind and Matter}.
+\newblock Cambridge University Press, 1944.
+
+\bibitem[Sebat(2007)]{Sebat07}
+J.~Sebat.
+\newblock Major changes in our dna lead to major changes in our thinking.
+\newblock \emph{Nature Genetics}, 39:\penalty0 S3--5, 2007.
+
+\bibitem[Segal et~al.(2003{\natexlab{a}})Segal, Battle, and Koller]{Segal03psb}
+E.~Segal, A.~Battle, and D.~Koller.
+\newblock Decomposing gene expression into cellular processes.
+\newblock In R.~B. Altman, A.~K. Dunker, L.~Hunter, T.~A. Jung, and T.~E.
+  Klein, editors, \emph{Proceedings of Pacific Symposium on Biocomputing (PSB
+  2003)}, pages 89--100. World
+  Scientific, Singapore, 2003{\natexlab{a}}. 
+
+
+\bibitem[Segal et~al.(2003{\natexlab{b}})Segal, Shapira, Regev, Pe'er,
+  Botstein, Koller, and Friedman]{Segal03nature}
+E.~Segal, M.~Shapira, A.~Regev, D.~Pe'er, D.~Botstein, D.~Koller, and
+  N.~Friedman.
+\newblock Module networks: identifying regulatory modules and their
+  condition-specific regulators from gene expression data.
+\newblock \emph{Nature Genetics}, 34:\penalty0 166--176, 2003{\natexlab{b}}.
+
+\bibitem[Segal et~al.(2003{\natexlab{c}})Segal, Taskar, Gasch, Friedman, and
+  Koller]{Segal03a}
+E.~Segal, B.~Taskar, A.~Gasch, N.~Friedman, and D.~Koller.
+\newblock Rich probabilistic models for gene expression.
+\newblock \emph{Bioinformatics}, 17\penalty0 (S1):\penalty0 i243--252,
+  2003{\natexlab{c}}.
+
+\bibitem[Segal et~al.(2003{\natexlab{d}})Segal, Wang, and Koller]{Segal03b}
+E.~Segal, H.~Wang, and D.~Koller.
+\newblock Discovering molecular pathways from protein interaction and gene
+  expression data.
+\newblock \emph{Bioinformatics}, 19\penalty0 (S1):\penalty0 i264--272,
+  2003{\natexlab{d}}.
+
+\bibitem[Segal et~al.(2004)Segal, Friedman, Koller, and Regev]{Segal04nature}
+E.~Segal, N.~Friedman, D.~Koller, and A.~Regev.
+\newblock A module map showing conditional activity of expression modules in
+  cancer.
+\newblock \emph{Nature Genetics}, 36:\penalty0 1090--1098, 2004.
+
+\bibitem[Shanno(1970)]{Shanno70}
+D.~F. Shanno.
+\newblock Conditioning of quasi-{N}ewton methods for function minimization.
+\newblock \emph{Mathematics of Computation}, 24:\penalty0 647--656, 1970.
+
+\bibitem[Shannon(1948)]{Shannon48}
+C.~E. Shannon.
+\newblock A mathematical theory of communication.
+\newblock \emph{Bell System Technical Journal}, 27:\penalty0 379--423,
+  623--656, 1948.
+
+\bibitem[Sharp et~al.(2006)Sharp, Cheng, and Eichler]{Sharp06}
+A.~J. Sharp, Z.~Cheng, and E.~E. Eichler.
+\newblock Structural variation of the human genome.
+\newblock \emph{Annual Review of Genomics and Human Genetics}, 7:\penalty0
+  407--442, 2006.
+
+\bibitem[Shen et~al.(2009)Shen, Olshen, and Ladanyi]{Shen09}
+R.~Shen, A.~Olshen, and M.~Ladanyi.
+\newblock Integrative clustering of multiple genomic data types using a joint
+  latent variable model with application to breast and lung cancer subtype
+  analysis.
+\newblock \emph{Bioinformatics}, 25:\penalty0 2906--2912, 2009.
+
+\bibitem[Shiga et~al.(2007)Shiga, Takigawa, and Mamitsuka]{Shiga07}
+M.~Shiga, I.~Takigawa, and H.~Mamitsuka.
+\newblock {Annotating gene function by combining expression data with a modular
+  gene network}.
+\newblock \emph{Bioinformatics}, 23:\penalty0 i468--478, 2007.
+
+\bibitem[Sigg et~al.(2007)Sigg, Fischer, Ommer, Roth, and Buhmann]{Sigg07}
+C.~Sigg, B.~Fischer, B.~Ommer, V.~Roth, and J.~Buhmann.
+\newblock Nonnegative {CCA} for audiovisual source separation.
+\newblock In \emph{Proceedings MLSP'07 IEEE International Workshop on Machine
+  Learning for Signal Processing}, pages 253--258. IEEE Signal
+  Processing Society, Zurich, 2007. 
+
+\bibitem[Sinkkonen et~al.(2002)Sinkkonen, Kaski, and
+  Nikkil\"{a}]{Sinkkonen02ecml}
+J.~Sinkkonen, S.~Kaski, and J.~Nikkil\"{a}.
+\newblock Discriminative clustering: Optimal contingency tables by learning
+  metrics.
+\newblock In T.~Elomaa, H.~Mannila, and H.~Toivonen, editors, \emph{Proceedings
+  of the ECML'02, 13th European Conference on Machine Learning}, pages
+  418--430. Springer, Berlin, 2002.
+
+\bibitem[Sinkkonen et~al.(2003)Sinkkonen, Nikkil\"{a}, Lahti, and
+  Kaski]{Sinkkonen03tr}
+J.~Sinkkonen, J.~Nikkil\"{a}, L.~Lahti, and S.~Kaski.
+\newblock Associative clustering by maximizing a {B}ayes factor.
+\newblock Technical Report A68, Helsinki University of Technology, Laboratory
+  of Computer and Information Science, Espoo, Finland, 2003.
+
+\bibitem[Sinkkonen et~al.(2005)Sinkkonen, Kaski, Nikkil{\"a}, and
+  Lahti]{Sinkkonen05tr}
+J.~Sinkkonen, S.~Kaski, J.~Nikkil{\"a}, and L.~Lahti.
+\newblock {Associative Clustering (AC): Technical Details}.
+\newblock Technical Report A84, Helsinki University of Technology, Espoo,
+  Finland, 2005.
+
+\bibitem[Sliwerska et~al.(2007)Sliwerska, Meng, Speed, Jones, Bunney, Akil,
+  Watson, and Burmeister]{Sliwerska07}
+E.~Sliwerska, F.~Meng, T.~Speed, E.~Jones, W.~Bunney, H.~Akil, S.~Watson, and
+  M.~Burmeister.
+\newblock {SNPs on chips: the hidden genetic code in expression arrays}.
+\newblock \emph{Bio\-logical Psychiatry}, 61:\penalty0 13--16, 2007.
+
+\bibitem[Sommer(2010)]{Sommer2010}
+J.~Sommer.
+\newblock {The delay in sharing research data is costing lives.}
+\newblock \emph{Nature Medicine}, 16:\penalty0 744, 2010.
+
+\bibitem[Soneson et~al.(2010)Soneson, Lilljebjorn, Fioretos, and
+  Fontes]{Soneson2010}
+C.~Soneson, H.~Lilljebjorn, T.~Fioretos, and M.~Fontes.
+\newblock {Integrative analysis of gene expression and copy number alterations
+  using canonical correlation analysis.}
+\newblock \emph{BMC Bioinformatics}, 11:\penalty0 191, 2010.
+
+\bibitem[Sonnenburg et~al.(2007)Sonnenburg, Braun, Ong, Bengio, Bottou, Holmes,
+  LeCun, M\"{u}ller, Pereira, Rasmussen, R\"{a}tsch, Sch\"{o}lkopf, Smola,
+  Vincent, Weston, and Williamson]{Sonnenburg2007}
+S.~Sonnenburg, M.~L. Braun, C.~S. Ong, S.~Bengio, L.~Bottou, G.~Holmes,
+  Y.~LeCun, K.-R. M\"{u}ller, F.~Pereira, C.~E. Rasmussen, G.~R\"{a}tsch,
+  B.~Sch\"{o}lkopf, A.~Smola, P.~Vincent, J.~Weston, and R.~Williamson.
+\newblock The need for open source software in machine learning.
+\newblock \emph{The Journal of Machine Learning Research}, 8:\penalty0
+  2443--2466, 2007.
+
+\bibitem[S{\o}rlie et~al.(2001)S{\o}rlie, Perou, Tibshirani, Aas, Geislerg,
+  Johnsen, Hastie, Eisen, {van de Rijn}, Jeffrey, Thorsen, Quist, Matese,
+  Brown, Botstein, L{\o}nning, and B{\o}rresen-Daleb]{Sorlie01}
+T.~S{\o}rlie, C.~M. Perou, R.~Tibshirani, T.~Aas, S.~Geislerg, H.~Johnsen,
+  T.~Hastie, M.~B. Eisen, M.~{van de Rijn}, S.~S. Jeffrey, T.~Thorsen,
+  H.~Quist, J.~C. Matese, P.~O. Brown, D.~Botstein, P.~E. L{\o}nning, and A.-L.
+  B{\o}rresen-Daleb.
+\newblock Gene expression patterns of breast carcinomas distinguish tumor
+  subclasses with clinical implications.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  98:\penalty0 10869--10874, 2001.
+
+\bibitem[Stetefeld and Ruegg(2005)]{Stetefeld2005}
+J.~Stetefeld and M.~A. Ruegg.
+\newblock {Structural and functional diversity generated by alternative mRNA
+  splicing.}
+\newblock \emph{Trends in Biochemical Sciences}, 30:\penalty0 515--521, 2005.
+
+%\bibitem[Stodden(2009)]{Stodden2009}
+%V.~Stodden.
+%\newblock Enabling reproducible research: Open licensing for scientific
+%  innovation. \emph{International Journal of Communications Law and Policy}, 13:%1--25, 2009.
+
+\bibitem[Stodden(2010)]{Stodden2010}
+V.~Stodden.
+\newblock The scientific method in practice: Reproducibility in the
+  computational sciences. {\it MIT Sloan Research Paper}, 4773--10, 2010.
+
+\bibitem[Stratton et~al.(2009)Stratton, Campbell, and Futreal]{Stratton09}
+M.~R. Stratton, P.~J. Campbell, and P.~A. Futreal.
+\newblock The cancer genome.
+\newblock \emph{Nature}, 458:\penalty0 719--724, 2009.
+
+\bibitem[Str\"omb\"ack and Lambrix(2005)]{Stromback05}
+L.~Str\"omb\"ack and P.~Lambrix.
+\newblock {Representations of molecular pathways: an evaluation of SBML, PSI MI
+  and BioPAX}.
+\newblock \emph{Bioinformatics}, 21:\penalty0 4401--4407, 2005.
+
+\bibitem[Stuart et~al.(2003)Stuart, Segal, Koller, and Kim]{Stuart03}
+J.~M. Stuart, E.~Segal, D.~Koller, and S.~K. Kim.
+\newblock A gene-coexpression network for global discovery of conserved genetic
+  modules.
+\newblock \emph{Science}, 302:\penalty0 249--255, 2003.
+
+\bibitem[Su et~al.(2002)Su, Cooke, Ching, Hakak, Walker, Wiltshire, Orth, Vega,
+  Sapinoso, Moqrich, Patapoutian, Hampton, Schultz, and Hogenesch]{Su02}
+A.~I. Su, M.~P. Cooke, K.~A. Ching, Y.~Hakak, J.~R. Walker, T.~Wiltshire, A.~P.
+  Orth, R.~G. Vega, L.~M. Sapinoso, A.~Moqrich, A.~Patapoutian, G.~M. Hampton,
+  P.~G. Schultz, and J.~B. Hogenesch.
+\newblock Large-scale analysis of the human and mouse transcriptomes.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  99:\penalty0 4465--4470, 2002.
+
+\bibitem[Su et~al.(2004)Su, Wiltshire, Batalov, Lapp, Ching, Block, Zhang,
+  Soden, Hayakawa, Kreiman, Cooke, Walker, and Hogenesch]{Su04}
+A.~I. Su, T.~Wiltshire, S.~Batalov, H.~Lapp, K.~A. Ching, D.~Block, J.~Zhang,
+  R.~Soden, M.~Hayakawa, G.~Kreiman, M.~P. Cooke, J.~R. Walker, and J.~B.
+  Hogenesch.
+\newblock {A gene atlas of the mouse and human protein-encoding
+  transcriptomes}.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  101:\penalty0 6062--6067, 2004.
+
+\bibitem[Su et~al.(2009)Su, Yoon, and Dougherty]{Su09}
+J.~Su, B.-J. Yoon, and E.~R. Dougherty.
+\newblock Accurate and reliable cancer classification based on probabilistic
+  inference of pathway activity.
+\newblock \emph{PLoS ONE}, 4:\penalty0 e8161, 2009.
+
+\bibitem[Subramanian et~al.(2005)Subramanian, Tamayo, Mootha, Mukherjee, Ebert,
+  Gillette, Paulovich, Pomeroy, Golub, Lander, and Mesirov]{Subramanian05}
+A.~Subramanian, P.~Tamayo, V.~K. Mootha, S.~Mukherjee, B.~L. Ebert, M.~A.
+  Gillette, A.~Paulovich, S.~L. Pomeroy, T.~R. Golub, E.~S. Lander, and J.~P.
+  Mesirov.
+\newblock {Gene set enrichment analysis: A knowledge-based approach for
+  interpreting genome-wide expression profiles}.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA}, 102:15545--15550, 2005.
+
+\bibitem[Suthram et~al.(2010)Suthram, Dudley, Chiang, Chen, Hastie, and
+  Butte]{Suthram10}
+S.~Suthram, J.~T. Dudley, A.~P. Chiang, R.~Chen, T.~J. Hastie, and A.~J. Butte.
+\newblock Network-based elucidation of human disease similarities reveals
+  common functional modules enriched for pluripotent drug targets.
+\newblock \emph{PLoS Computational Biology}, 6:\penalty0 e1000662, 2010.
+
+\bibitem[{'t Hoen} et~al.(2008){'t Hoen}, Ariyurek, Thygesen, Vreugdenhil,
+  Vossen, {de Menezes}, Boer, {van Ommen}, and {den Dunnen}]{Hoen08}
+P.~A.~C. {'t Hoen}, Y.~Ariyurek, H.~H. Thygesen, E.~Vreugdenhil, R.~H. A.~M.
+  Vossen, R.~X. {de Menezes}, J.~M. Boer, G.-J.~B. {van Ommen}, and J.~T. {den
+  Dunnen}.
+\newblock {Deep sequencing-based expression analysis shows major advances in
+  robustness, resolution and inter-lab portability over five microarray
+  platforms}.
+\newblock \emph{Nucleic Acids Research}, 36:\penalty0 e141, 2008.
+
+\bibitem[Tamayo et~al.(1999)Tamayo, Slonim, Mesirov, Zhu, Kitareewan,
+  Dmitrowsky, Lander, and Golub]{Tamayo99}
+P.~Tamayo, D.~Slonim, J.~Mesirov, Q.~Zhu, S.~Kitareewan, E.~Dmitrowsky, E.~S.
+  Lander, and T.~R. Golub.
+\newblock Interpreting patterns of gene expression with self-organizing maps:
+  Methods and application to hematopoietic differentiation.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  96:\penalty0 2907--2912, 1999.
+
+\bibitem[Tanay et~al.(2002)Tanay, Sharan, and Shamir]{Tanay02bioinf}
+A.~Tanay, R.~Sharan, and R.~Shamir.
+\newblock Discovering statistically significant biclusters in gene expression
+  data.
+\newblock \emph{Bioinformatics}, 18:S136--144, 2002.
+
+\bibitem[Tanay et~al.(2004)Tanay, Sharan, Kupiec, and Shamir]{Tanay04}
+A.~Tanay, R.~Sharan, M.~Kupiec, and R.~Shamir.
+\newblock {Revealing modularity and organization in the yeast molecular network
+  by integrated analysis of highly heterogeneous genomewide data}.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 101:\penalty0
+  2981--2986, 2004.
+
+\bibitem[Tanay et~al.(2005)Tanay, Steinfeld, Kupiec, and Shamir]{Tanay05msb}
+A.~Tanay, I.~Steinfeld, M.~Kupiec, and R.~Shamir.
+\newblock Integrative analysis of genome-wide experiments in the context of a
+  large high-throughput data compendium.
+\newblock \emph{Molecular Systems Biology}, 1:\penalty0 0002, 2005.
+
+\bibitem[Tarca et~al.(2009)Tarca, Draghici, Khatri, Hassan, Mittal, Kim, Kim,
+  Kusanovic, and Romero]{Tarca09}
+A.~L. Tarca, S.~Draghici, P.~Khatri, S.~S. Hassan, P.~Mittal, J.-S. Kim, C.~J.
+  Kim, J.~P. Kusanovic, and R.~Romero.
+\newblock {A novel signaling pathway impact analysis}.
+\newblock \emph{Bioinformatics}, 25:\penalty0 75--82, 2009.
+
+\bibitem[Taylor et~al.(2008)Taylor, Barretina, Socci, DeCarolis, Ladanyi,
+  Meyerson, Singer, and Sander]{Taylor08}
+B.~S. Taylor, J.~Barretina, N.~D. Socci, P.~DeCarolis, M.~Ladanyi, M.~Meyerson,
+  S.~Singer, and C.~Sander.
+\newblock Functional copy-number alterations in cancer.
+\newblock \emph{PLoS ONE}, 3:\penalty0 e3179, 2008.
+
+\bibitem[{The Cancer Genome Atlas Research Network}(2008)]{tcga08}
+{The Cancer Genome Atlas Research Network}.
+\newblock Comprehensive genomic characterization defines human glioblastoma
+  genes and core pathways.
+\newblock \emph{Nature}, 455:\penalty0 1061--1068, 2008.
+
+\bibitem[{The ENCODE Project Consortium}(2007)]{encode07}
+{The ENCODE Project Consortium}.
+\newblock {Identification and analysis of functional elements in 1\% of the
+  human genome by the ENCODE pilot project}.
+\newblock \emph{Nature}, 447:\penalty0 799--816, 2007.
+
+\bibitem[Tibshirani et~al.(2002)Tibshirani, Hastie, Narasimhan, and
+  Chu]{Tibshirani02}
+R.~Tibshirani, T.~Hastie, B.~Narasimhan, and G.~Chu.
+\newblock Diagnosis of multiple cancer types by shrunken centroids of gene
+  expression.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  99:\penalty0 6567--6572, 2002.
+
+\bibitem[Tice and Lowe(2004)]{Tice2004}
+M.~M. Tice and D.~R. Lowe.
+\newblock {Photosynthetic microbial mats in the 3,416-Myr-old ocean.}
+\newblock \emph{Nature}, 431:\penalty0 549--552, 2004.
+
+\bibitem[Tilstone(2003)]{Tilstone03}
+C.~Tilstone.
+\newblock Vital statistics.
+\newblock \emph{Nature}, 424:\penalty0 610--612, 2003.
+
+\bibitem[Tishby et~al.(1999)Tishby, Pereira, and Bialek]{Tishby99}
+N.~Tishby, F.~C. Pereira, and W.~Bialek.
+\newblock The information bottleneck method.
+\newblock In \emph{37th Annual Allerton Conference on Communication, Control,
+  and Computing}, pages 368--377. University of Illinois, Urbana, Illinois,
+  1999.
+
+\bibitem[T{\"o}r{\"o}nen et~al.(1999)T{\"o}r{\"o}nen, Kolehmainen, Wong, and
+  Castr{\'e}n]{Toronen99}
+P.~T{\"o}r{\"o}nen, M.~Kolehmainen, G.~Wong, and E.~Castr{\'e}n.
+\newblock Analysis of gene expression data using self-organizing maps.
+\newblock \emph{FEBS Letters}, 451:\penalty0 142--146, 1999.
+
+\bibitem[Troyanskaya(2005)]{Troyanskaya05}
+O.~G. Troyanskaya.
+\newblock {Putting microarrays in a context: Integrated analysis of diverse
+  biological data}.
+\newblock \emph{Briefings in Bioinformatics}, 6:\penalty0 34--43, 2005.
+
+\bibitem[Tu et~al.(2002)Tu, Stolovitzky, and Klein]{Tu02}
+Y.~Tu, G.~Stolovitzky, and U.~Klein.
+\newblock {Quantitative noise analysis for gene expression microarray
+  experiments}.
+\newblock \emph{Proceedings of the National Academy of Sciences, USA},
+  99:\penalty0 14031--14036, 2002.
+
+\bibitem[Tukey(1977)]{Tukey77}
+J.~Tukey.
+\newblock \emph{Exploratory data analysis}.
+\newblock Addison-Wesley, Reading, MA, 1977.
+
+\bibitem[Ulitsky and Shamir(2007)]{Ulitsky07}
+I.~Ulitsky and R.~Shamir.
+\newblock Identification of functional modules using network topology and
+  high-throughput data.
+\newblock \emph{BMC Systems Biology}, 1:\penalty0 8, 2007.
+
+\bibitem[Ulitsky and Shamir(2009)]{Ulitsky09}
+I.~Ulitsky and R.~Shamir.
+\newblock {Identifying functional modules using expression profiles and
+  confidence-scored protein interactions}.
+\newblock \emph{Bioinformatics}, 25:\penalty0 1158--1164, 2009.
+
+\bibitem[{van 't Veer} and Bernards(2008)]{vantVeer08}
+L.~J. {van 't Veer} and R.~Bernards.
+\newblock Enabling personalized cancer medicine through analysis of
+  gene-expression patterns.
+\newblock \emph{Nature}, 452:\penalty0 564--570, 2008.
+
+\bibitem[van Wieringen and van~de Wiel(2009)]{Wieringen09}
+W.~N. van Wieringen and M.~A. van~de Wiel.
+\newblock {Nonparametric testing for DNA copy number induced differential mRNA
+  gene expression}.
+\newblock \emph{Biometrics}, 65:\penalty0 19--29, 2009.
+
+\bibitem[Vaske et~al.(2010)Vaske, Benz, Sanborn, Earl, Szeto, Zhu, Haussler,
+  and Stuart]{Vaske2010}
+C.~J. Vaske, S.~C. Benz, J.~Z. Sanborn, D.~Earl, C.~Szeto, J.~Zhu, D.~Haussler,
+  and J.~M. Stuart.
+\newblock {Inference of patient-specific pathway activities from
+  multi-dimensional cancer genomics data using PARADIGM}.
+\newblock \emph{Bioinformatics}, 26:\penalty0 i237--245, 2010.
+
+\bibitem[Vastrik et~al.(2007)Vastrik, D'Eustachio, Schmidt, Joshi-Tope,
+  Gopinath, Croft, de~Bono, Gillespie, Jassal, Lewis, Matthews, Wu, Birney, and
+  Stein]{Vastrik07}
+I.~Vastrik, P.~D'Eustachio, E.~Schmidt, G.~Joshi-Tope, G.~Gopinath, D.~Croft,
+  B.~de~Bono, M.~Gillespie, B.~Jassal, S.~Lewis, L.~Matthews, G.~Wu, E.~Birney,
+  and L.~Stein.
+\newblock Reactome: a knowledge base of biologic pathways and processes.
+\newblock \emph{Genome Biology}, 8:\penalty0 R39, 2007.
+
+\bibitem[Venter et~al.(2001)Venter, Adams, Myers, Li, Mural, Sutton, Smith,
+  Yandell, Evans, Holt, Gocayne, Amanatides, Ballew, Huson, Wortman, Zhang,
+  Kodira, Zheng, Chen, Skupski, Subramanian, Thomas, Zhang, Gabor~Miklos,
+  Nelson, Broder, Clark, Nadeau, McKusick, Zinder, Levine, Roberts, Simon,
+  Slayman, Hunkapiller, Bolanos, Delcher, Dew, Fasulo, Flanigan, Florea,
+  Halpern, Hannenhalli, Kravitz, Levy, Mobarry, Reinert, Remington,
+  Abu-Threideh, Beasley, Biddick, Bonazzi, Brandon, Cargill,
+  Chandramouliswaran, Charlab, Chaturvedi, Deng, Francesco, Dunn, Eilbeck,
+  Evangelista, Gabrielian, Gan, Ge, Gong, Gu, Guan, Heiman, Higgins, Ji, Ke,
+  Ketchum, Lai, Lei, Li, Li, Liang, Lin, Lu, Merkulov, Milshina, Moore, Naik,
+  Narayan, Neelam, Nusskern, Rusch, Salzberg, Shao, Shue, Sun, Wang, Wang,
+  Wang, Wang, Wei, Wides, Xiao, Yan, Yao, Ye, Zhan, Zhang, Zhang, Zhao, Zheng,
+  Zhong, Zhong, Zhu, Zhao, Gilbert, Baumhueter, Spier, Carter, Cravchik,
+  Woodage, Ali, An, Awe, Baldwin, Baden, Barnstead, Barrow, Beeson, Busam,
+  Carver, Center, Cheng, Curry, Danaher, Davenport, Desilets, Dietz, Dodson,
+  Doup, Ferriera, Garg, Gluecksmann, Hart, Haynes, Haynes, Heiner, Hladun,
+  Hostin, Houck, Howland, Ibegwam, Johnson, Kalush, Kline, Koduru, Love, Mann,
+  May, McCawley, McIntosh, McMullen, Moy, Moy, Murphy, Nelson, Pfannkoch,
+  Pratts, Puri, Qureshi, Reardon, Rodriguez, Rogers, Romblad, Ruhfel, Scott,
+  Sitter, Smallwood, Stewart, Strong, Suh, Thomas, Tint, Tse, Vech, Wang,
+  Wetter, Williams, Williams, Windsor, Winn-Deen, Wolfe, Zaveri, Zaveri, Abril,
+  Guigo, Campbell, Sjolander, Karlak, Kejariwal, Mi, Lazareva, Hatton,
+  Narechania, Diemer, Muruganujan, Guo, Sato, Bafna, Istrail, Lippert,
+  Schwartz, Walenz, Yooseph, Allen, Basu, Baxendale, Blick, Caminha,
+  Carnes-Stine, Caulk, Chiang, Coyne, Dahlke, Mays, Dombroski, Donnelly, Ely,
+  Esparham, Fosler, Gire, Glanowski, Glasser, Glodek, Gorokhov, Graham,
+  Gropman, Harris, Heil, Henderson, Hoover, Jennings, Jordan, Jordan, Kasha,
+  Kagan, Kraft, Levitsky, Lewis, Liu, Lopez, Ma, Majoros, McDaniel, Murphy,
+  Newman, Nguyen, Nguyen, Nodell, Pan, Peck, Peterson, Rowe, Sanders, Scott,
+  Simpson, Smith, Sprague, Stockwell, Turner, Venter, Wang, Wen, Wu, Wu, Xia,
+  Zandieh, and Zhu]{Venter01}
+J.~C. Venter, M.~D. Adams, E.~W. Myers, P.~W. Li, R.~J. Mural, G.~G. Sutton,
+  H.~O. Smith, M.~Yandell, C.~A. Evans, R.~A. Holt, J.~D. Gocayne,
+  P.~Amanatides, R.~M. Ballew, D.~H. Huson, J.~R. Wortman, Q.~Zhang, C.~D.
+  Kodira, X.~H. Zheng, L.~Chen, M.~Skupski, G.~Subramanian, P.~D. Thomas,
+  J.~Zhang, G.~L. Gabor~Miklos, C.~Nelson, S.~Broder, A.~G. Clark, J.~Nadeau,
+  V.~A. McKusick, N.~Zinder, A.~J. Levine, R.~J. Roberts, M.~Simon, C.~Slayman,
+  M.~Hunkapiller, R.~Bolanos, A.~Delcher, I.~Dew, D.~Fasulo, M.~Flanigan,
+  L.~Florea, A.~Halpern, S.~Hannenhalli, S.~Kravitz, S.~Levy, C.~Mobarry,
+  K.~Reinert, K.~Remington, J.~Abu-Threideh, E.~Beasley, K.~Biddick,
+  V.~Bonazzi, R.~Brandon, M.~Cargill, I.~Chandramouliswaran, R.~Charlab,
+  K.~Chaturvedi, Z.~Deng, V.~D. Francesco, P.~Dunn, K.~Eilbeck, C.~Evangelista,
+  A.~E. Gabrielian, W.~Gan, W.~Ge, F.~Gong, Z.~Gu, P.~Guan, T.~J. Heiman, M.~E.
+  Higgins, R.-R. Ji, Z.~Ke, K.~A. Ketchum, Z.~Lai, Y.~Lei, Z.~Li, J.~Li,
+  Y.~Liang, X.~Lin, F.~Lu, G.~V. Merkulov, N.~Milshina, H.~M. Moore, A.~K.
+  Naik, V.~A. Narayan, B.~Neelam, D.~Nusskern, D.~B. Rusch, S.~Salzberg,
+  W.~Shao, B.~Shue, J.~Sun, Z.~Y. Wang, A.~Wang, X.~Wang, J.~Wang, M.-H. Wei,
+  R.~Wides, C.~Xiao, C.~Yan, A.~Yao, J.~Ye, M.~Zhan, W.~Zhang, H.~Zhang,
+  Q.~Zhao, L.~Zheng, F.~Zhong, W.~Zhong, S.~C. Zhu, S.~Zhao, D.~Gilbert,
+  S.~Baumhueter, G.~Spier, C.~Carter, A.~Cravchik, T.~Woodage, F.~Ali, H.~An,
+  A.~Awe, D.~Baldwin, H.~Baden, M.~Barnstead, I.~Barrow, K.~Beeson, D.~Busam,
+  A.~Carver, A.~Center, M.~L. Cheng, L.~Curry, S.~Danaher, L.~Davenport,
+  R.~Desilets, S.~Dietz, K.~Dodson, L.~Doup, S.~Ferriera, N.~Garg,
+  A.~Gluecksmann, B.~Hart, J.~Haynes, C.~Haynes, C.~Heiner, S.~Hladun,
+  D.~Hostin, J.~Houck, T.~Howland, C.~Ibegwam, J.~Johnson, F.~Kalush, L.~Kline,
+  S.~Koduru, A.~Love, F.~Mann, D.~May, S.~McCawley, T.~McIntosh, I.~McMullen,
+  M.~Moy, L.~Moy, B.~Murphy, K.~Nelson, C.~Pfannkoch, E.~Pratts, V.~Puri,
+  H.~Qureshi, M.~Reardon, R.~Rodriguez, Y.-H. Rogers, D.~Romblad, B.~Ruhfel,
+  R.~Scott, C.~Sitter, M.~Smallwood, E.~Stewart, R.~Strong, E.~Suh, R.~Thomas,
+  N.~N. Tint, S.~Tse, C.~Vech, G.~Wang, J.~Wetter, S.~Williams, M.~Williams,
+  S.~Windsor, E.~Winn-Deen, K.~Wolfe, J.~Zaveri, K.~Zaveri, J.~F. Abril,
+  R.~Guigo, M.~J. Campbell, K.~V. Sjolander, B.~Karlak, A.~Kejariwal, H.~Mi,
+  B.~Lazareva, T.~Hatton, A.~Narechania, K.~Diemer, A.~Muruganujan, N.~Guo,
+  S.~Sato, V.~Bafna, S.~Istrail, R.~Lippert, R.~Schwartz, B.~Walenz,
+  S.~Yooseph, D.~Allen, A.~Basu, J.~Baxendale, L.~Blick, M.~Caminha,
+  J.~Carnes-Stine, P.~Caulk, Y.-H. Chiang, M.~Coyne, C.~Dahlke, A.~D. Mays,
+  M.~Dombroski, M.~Donnelly, D.~Ely, S.~Esparham, C.~Fosler, H.~Gire,
+  S.~Glanowski, K.~Glasser, A.~Glodek, M.~Gorokhov, K.~Graham, B.~Gropman,
+  M.~Harris, J.~Heil, S.~Henderson, J.~Hoover, D.~Jennings, C.~Jordan,
+  J.~Jordan, J.~Kasha, L.~Kagan, C.~Kraft, A.~Levitsky, M.~Lewis, X.~Liu,
+  J.~Lopez, D.~Ma, W.~Majoros, J.~McDaniel, S.~Murphy, M.~Newman, T.~Nguyen,
+  N.~Nguyen, M.~Nodell, S.~Pan, J.~Peck, M.~Peterson, W.~Rowe, R.~Sanders,
+  J.~Scott, M.~Simpson, T.~Smith, A.~Sprague, T.~Stockwell, R.~Turner,
+  E.~Venter, M.~Wang, M.~Wen, D.~Wu, M.~Wu, A.~Xia, A.~Zandieh, and X.~Zhu.
+\newblock {The Sequence of the Human Genome}.
+\newblock \emph{Science}, 291:\penalty0 1304--1351, 2001.
+
+\bibitem[Vinod(1976)]{Vinod76}
+H.~Vinod.
+\newblock Canonical ridge and the econometrics of joint production.
+\newblock \emph{Journal of Econometrics}, 4:\penalty0 147--166, 1976.
+
+\bibitem[Volinia et~al.(2010)Volinia, Galasso, Costinean, Tagliavini,
+  Gamberoni, Drusco, Marchesini, Mascellani, Sana, {Abu Jarour}, Desponts,
+  Teitell, Baffa, Aqeilan, Iorio, Taccioli, Garzon, {Di Leva}, Fabbri, Catozzi,
+  Previati, Ambs, Palumbo, Garofalo, Veronese, Bottoni, Gasparini, Harris,
+  Visone, Pekarsky, de~la Chapelle, Bloomston, Dillhoff, Rassenti, Kipps,
+  Huebner, Pichiorri, Lenze, Cairo, Buendia, Pineau, Dejean, Zanesi, Rossi,
+  Calin, Liu, Palatini, Negrini, Vecchione, Rosenberg, and Croce]{Volinia2010}
+S.~Volinia, M.~Galasso, S.~Costinean, L.~Tagliavini, G.~Gamberoni, A.~Drusco,
+  J.~Marchesini, N.~Mascellani, M.~E. Sana, R.~{Abu Jarour}, C.~Desponts,
+  M.~Teitell, R.~Baffa, R.~Aqeilan, M.~V. Iorio, C.~Taccioli, R.~Garzon, G.~{Di
+  Leva}, M.~Fabbri, M.~Catozzi, M.~Previati, S.~Ambs, T.~Palumbo, M.~Garofalo,
+  A.~Veronese, A.~Bottoni, P.~Gasparini, C.~C. Harris, R.~Visone, Y.~Pekarsky,
+  A.~de~la Chapelle, M.~Bloomston, M.~Dillhoff, L.~Z. Rassenti, T.~J. Kipps,
+  K.~Huebner, F.~Pichiorri, D.~Lenze, S.~Cairo, M.~A. Buendia, P.~Pineau,
+  A.~Dejean, N.~Zanesi, S.~Rossi, G.~A. Calin, C.~G. Liu, J.~Palatini,
+  M.~Negrini, A.~Vecchione, A.~Rosenberg, and C.~M. Croce.
+\newblock {Reprogramming of miRNA networks in cancer and leukemia}.
+\newblock \emph{Genome Research}, 20:\penalty0 589--599, 2010.
+
+\bibitem[Waaijenborg et~al.(2008)Waaijenborg, Verselewel, Hamer, and
+  Zwinderman]{Waaijenborg2008}
+S.~Waaijenborg, P.~C. Verselewel, d.~W. Hamer, and A.~H. Zwinderman.
+\newblock {Quantifying the Association between Gene Expressions and DNA-Markers
+  by Penalized Canonical Correlation Analysis}.
+\newblock \emph{Statistical Applications in Genetics and Molecular Biology},
+  7:\penalty0 3, 2008.
+
+\bibitem[Watson and Crick(1953)]{Watson53nature}
+J.~Watson and F.~Crick.
+\newblock A structure for deoxyribose nucleic acid.
+\newblock \emph{Nature}, 171:\penalty0 737--738, 1953.
+
+\bibitem[West(2003)]{West03}
+M.~West.
+\newblock Bayesian factor regression models in the 'large p, small n' paradigm.
+\newblock \emph{Bayesian statistics}, 7:\penalty0 723--732, 2003.
+
+\bibitem[Wheeler et~al.(2005)Wheeler, Barrett, Benson, Bryant, Canese, Church,
+  DiCuccio, Edgar, Federhen, Helmberg, Kenton, Khovayko, Lipman, Madden,
+  Maglott, Ostell, Pontius, Pruitt, Schuler, Schriml, Sequeira, Sherry,
+  Sirotkin, Starchenko, Suzek, Tatusov, Tatusova, Wagner, , and
+  Yaschenko]{Wheeler05}
+D.~L. Wheeler, T.~Barrett, D.~A. Benson, S.~H. Bryant, K.~Canese, D.~M. Church,
+  M.~DiCuccio, R.~Edgar, S.~Federhen, W.~Helmberg, D.~L. Kenton, O.~Khovayko,
+  D.~J. Lipman, T.~L. Madden, D.~R. Maglott, J.~Ostell, J.~U. Pontius, K.~D.
+  Pruitt, G.~D. Schuler, L.~M. Schriml, E.~Sequeira, S.~T. Sherry, K.~Sirotkin,
+  G.~Starchenko, T.~O. Suzek, R.~Tatusov, T.~A. Tatusova, L.~Wagner, , and
+  E.~Yaschenko.
+\newblock Database resources of the national center for biotechnology
+  information.
+\newblock \emph{Nucleic Acids Research}, 33:D39--45, 2005.
+
+\bibitem[Wilkinson(2007)]{Wilkinson2007}
+D.~J. Wilkinson.
+\newblock {Bayesian methods in bioinformatics and computational systems
+  biology.}
+\newblock \emph{Briefings in Bioinformatics}, 8:\penalty0 109--116, 2007.
+
+\bibitem[Witten et~al.(2009)Witten, Tibshirani, and Hastie]{Witten09}
+D.~M. Witten, R.~Tibshirani, and T.~Hastie.
+\newblock {A penalized matrix decomposition, with applications to sparse
+  principal components and canonical correlation analysis}.
+\newblock \emph{Biostatistics}, 10:\penalty0 515--534, 2009.
+
+\bibitem[Wu et~al.(2005)Wu, Carta, and Zhang]{Wu05}
+C.~Wu, R.~Carta, and L.~Zhang.
+\newblock {Sequence dependence of cross-hybridization on short oligo
+  microarrays}.
+\newblock \emph{Nucleic Acids Research}, 33:\penalty0 e84, 2005.
+
+\bibitem[Wu and Irizarry(2004)]{Wu04}
+Z.~Wu and R.~Irizarry.
+\newblock Stochastic models inspired by hybridization theory for short
+  oligonucleotide arrays.
+\newblock In P.~E. Bourne and D.~Gusfield, editors, \emph{{Proceedings of the
+  8th Annual International Conference on Computational Molecular Biology
+  (RECOMB'04)}}, pages 98--106. ACM Press, New York, 2004.
+
+\bibitem[Wunderlich(2007)]{Wunderlich2007}
+V.~Wunderlich.
+\newblock {Early references to the mutational origin of cancer.}
+\newblock \emph{International Journal of Epidemiology}, 36:\penalty0 246--247,
+  2007.
+
+\bibitem[Yamanishi et~al.(2003)Yamanishi, Vert, Nakaya, and
+  Kanehisa]{Yamanishi03}
+Y.~Yamanishi, J.-P. Vert, A.~Nakaya, and M.~Kanehisa.
+\newblock Extraction of correlated gene clusters from multiple genomic data by
+  generalized kernel canonical correlation analysis.
+\newblock \emph{Bioinformatics}, 19:\penalty0 i323--330, 2003.
+
+\bibitem[Yamanishi et~al.(2010)Yamanishi, Kotera, Kanehisa, and
+  Goto]{Yamanishi2010}
+Y.~Yamanishi, M.~Kotera, M.~Kanehisa, and S.~Goto.
+\newblock {Drug-target interaction prediction from chemical, genomic and
+  pharmacological data in an integrated framework.}
+\newblock \emph{Bioinformatics}, 26:\penalty0 i246--254, 2010.
+
+\bibitem[Yates(1934)]{Yates34}
+F.~Yates.
+\newblock Contingency tables involving small numbers and the $\chi^2$ test.
+\newblock \emph{Journal of the Royal Statistical Society Supplement},
+  1:\penalty0 217--239, 1934.
+
+\bibitem[Yauk et~al.(2004)Yauk, Berndt, Williams, and Douglas]{Yauk04}
+C.~L. Yauk, M.~L. Berndt, A.~Williams, and G.~R. Douglas.
+\newblock {Comprehensive comparison of six microarray technologies}.
+\newblock \emph{Nucleic Acids Research}, 32:\penalty0 e124, 2004.
+
+\bibitem[Zhang et~al.(2005)Zhang, Finney, Clifford, Derr, and Buetow]{Zhang05}
+J.~Zhang, R.~P. Finney, R.~J. Clifford, L.~K. Derr, and K.~H. Buetow.
+\newblock Detecting false expression signals in high-density oligonucleotide
+  arrays by an in silico approach.
+\newblock \emph{Genomics}, 85:\penalty0 297--308, 2005.
+
+\bibitem[Zhang et~al.(2002)Zhang, Wang, Ravindranathan, and Miles]{Zhang02}
+L.~Zhang, L.~Wang, A.~Ravindranathan, and M.~Miles.
+\newblock A new algorithm for analysis of oligonucleotide arrays: Application
+  to expression profiling in mouse brain regions.
+\newblock \emph{{Journal of Molecular Biology}}, 317:\penalty0 225--235, 2002.
+
+\bibitem[Zhang et~al.(2004)Zhang, Morris, Chang, Shai, Bakowski, Mitsakakis,
+  Mohammad, Robinson, Zirngibl, Somogyi, Laurin, Eftekharpour, Sat, Grigull,
+  Pan, Peng, Krogan, Greenblatt, Fehlings, van~der Kooy, Aubin, Bruneau,
+  Rossant, Blencowe, Frey, and Hughes]{Zhang04b}
+W.~Zhang, Q.~Morris, R.~Chang, O.~Shai, M.~Bakowski, N.~Mitsakakis,
+  N.~Mohammad, M.~Robinson, R.~Zirngibl, E.~Somogyi, N.~Laurin,
+  E.~Eftekharpour, E.~Sat, J.~Grigull, Q.~Pan, W.-T. Peng, N.~Krogan,
+  J.~Greenblatt, M.~Fehlings, D.~van~der Kooy, J.~Aubin, B.~Bruneau,
+  J.~Rossant, B.~Blencowe, B.~Frey, and T.~Hughes.
+\newblock The functional landscape of mouse gene expression.
+\newblock \emph{Journal of Biology}, 3:\penalty0 21, 2004.
+
+\bibitem[Zhou and Gibson(2004)]{Zhou04}
+X.~Zhou and G.~Gibson.
+\newblock Cross-species comparison of genome-wide expression patterns.
+\newblock \emph{Genome Biology}, 5:\penalty0 232, 2004.
+
+\bibitem[Zhu et~al.(2005)Zhu, Hero, Cheng, Khanna, and Swaroop]{Zhu05}
+D.~Zhu, A.~O. Hero, H.~Cheng, R.~Khanna, and A.~Swaroop.
+\newblock {Network constrained clustering for gene microarray data}.
+\newblock \emph{Bioinformatics}, 21:\penalty0 4014--4020, 2005.
+
+\end{thebibliography}

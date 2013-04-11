@@ -1,0 +1,172 @@
+\chapter{Introduction}
+\label{chap:intro}
+
+Revolutions in measurement technologies have led to revolutions in
+science and society. Introduction of the microscope in the 17th
+century opened a new view to the world of living organisms and enabled
+the study of life processes at cellular level. Since then, new
+techniques have been developed to investigate ever smaller objects.
+The discovery of the molecular structure of the DNA in 1953
+\citep{Watson53nature} led to the establishment of genes as
+fundamental units of genetic information that is passed on between
+generations. The draft sequence of the human genome, covering three
+billion DNA base pairs, was published in 2001 \citep{Lander01,
+  Venter01}. Modern measurement technologies provide researchers with
+large volumes of data concerning the structure, function, and
+interactions of genes and their products.  Rapid accumulation of
+genomic data in shared community databases has accelerated biological
+research \citep{Cochrane2010}, but the structural and functional
+organization of genetic information is still poorly understood.  While
+functional roles of individual genes have been characterized, little
+is known regarding the higher-level regularities and interactions from
+which the complexity and diversity of life emerges. The quest for
+systems-level understanding of genome function is a major paradigm in
+modern biology \citep{Collins03}.
+
+Computational science has a key role in transforming the genomic data
+collections into new biological knowledge \citep{Cohen04}. New
+observations allow the formulation of new research questions, but also
+bring new challenges \citep{Barbour05}.  The sheer size of
+high-throughput data sets makes them incomprehensible for human mind,
+and the complexity of biological phenomena and high levels of
+uncontrolled variation set specific challenges for computational
+analysis \citep{Tilstone03, Troyanskaya05}. Filtering relevant
+information from statistically uncertain high-dimensional data is a
+challenging task where new computational methods are needed to
+organize and summarize the overwhelming volumes of observational data
+into a comprehensible form to make new discoveries about the structure
+of life; computation is a new microscope for studying massive data
+sets.
+
+This thesis develops principled exploratory methods to investigate the
+{\it human transcriptome}. It is a central functional layer of the
+genome and a significant source of phenotypic variation.  The
+transcriptome refers to the complete collection of messenger-RNA
+transcripts of an organism. The essentially static genome sequence
+regulates the time- and context-specific patterns of transcriptional
+activity of the genes, and subsequently the function of living cells
+through protein synthesis. An average cell contains over 300,000 mRNA
+molecules and the expression levels of individual genes span 4-5
+orders of magnitude \citep{Carninci2009}.  A wealth of associated
+genomic information resources are available in public repositories
+\citep{Cochrane2010}. By combining heterogeneous information sources
+and utilizing the wealth of background information in public
+repositories, it is possible to solve some of the problems that are
+related to the statistical uncertainties and small sample size of
+individual data sets, as well as to form a holistic picture of the
+genome \citep{Huttenhower2010}.
+
+The observational data can provide the starting point to discover
+novel research hypotheses of poorly characterized large-scale systems;
+the analysis proceeds from general observations of the data toward
+more detailed investigations and hypotheses.  This differs from
+traditional hypothesis testing where the investigation proceeds from
+hypotheses to measurements that target particular research questions,
+in order to support or reject a given hypothesis. \emph{Exploratory
+  data analysis} refers to the use of computational tools to summarize
+and visualize the data in order to identify potentially interesting
+structure, and to facilitate the generation of new research hypotheses
+when the search space would be otherwise exhaustively large
+\citep{Tukey77}.  When the system is poorly characterized, there is a
+need for methods that can adapt to the data and extract features in an
+automated way. This is useful since application-oriented models often
+require careful preprocessing of the data and a timely model fitting
+process. They may also require prior knowledge of the investigated
+system, which is often not available. \emph{Statistical learning}
+investigates solutions to these problems.
+
+\section{Contributions and organization of the thesis}
+
+This thesis introduces computational strategies for genome- and
+organism-wide analysis of the human transcriptome. The thesis provides
+novel tools (i) to increase the reliability of high-throughput
+microarray measurements by combining statistical evidence from genome
+sequence databases and across multiple microarray experiments, (ii) to
+model context-specific transcriptional activation patterns of
+genome-scale interaction networks across normal human body by using
+background information of genetic interactions to guide the analysis,
+and (iii) to integrate measurements of the human transcriptome to
+other layers of genomic information with novel dependency modeling
+techniques for co-occurring data sources. The three strategies address
+widely recognized challenges in functional genomics
+\citep{Collins03,Troyanskaya05}. 
+
+Obtaining reliable measurements is the crucial starting point for any
+data analysis task. The first contribution of this thesis is to
+develop computational strategies that utilize side information in
+genomic sequence and microarray data collections in order to reduce
+noise and improve the quality of high-throughput
+observations. Publication~\ref{PECA} introduces a probe-level strategy
+for microarray preprocessing, where updated genomic sequence databases
+are used in order to remove erroneously targeted probes to reduce
+measurement noise. The work is extended in Publication~\ref{RPA},
+which introduces a principled probabilistic framework for probe-level
+analysis. A generative model for probe-level observations combines
+evidence across multiple experiments, and allows the estimation of
+probe performance directly from microarray measurements. The model
+detects a large number of unreliable probes contaminated by known
+probe-level error sources, as well as many poorly performing probes
+where the source of contamination is unknown and could not be
+controlled based on existing probe-level information. The model
+provides a principled framework to incorporate prior information of
+probe performance. The introduced algorithms outperform widely used
+alternatives in differential gene expression studies.
+
+A novel strategy for organism-wide analysis of transcriptional
+activity in genome-scale interaction networks in Publication~\ref{NR}
+forms the second main contribution of this thesis. The method searches
+for local regions in a network exhibiting coordinated transcriptional
+response in a subset of conditions.  Constraints derived from genomic
+interaction databases are used to focus the modeling on those parts of
+the data that are supported by known or potential interactions between
+the genes. Nonparametric inference is used to detect a number of
+physiologically coherent and reproducible transcriptional responses,
+as well as context-specific regulation of the genes. The findings
+provide a global view on transcriptional activity in cell-biological
+networks and functional relatedness between tissues.
+
+The third contribution of the thesis is to integrate measurements of
+the human transcriptome to other layers of genomic information.  Novel
+dependency modeling techniques for co-occurrence data are used to
+reveal regularities and interactions, which could not be detected in
+individual observations. The regularized dependency modeling framework
+of Publication~\ref{MLSP} is used to detect associations between
+chromosomal mutations and transcriptional activity. Prior biological
+knowledge is used to constrain the latent variable model and shown to
+improve cancer gene detection performance. The associative clustering,
+introduced in Publications~\ref{ECML} and~\ref{AC}, provides tools to
+investigate evolutionary divergence of transcriptional activity.
+
+Open source implementations of the key methodological contributions of
+this thesis have been released in order to guarantee wide access to
+the developed algorithmic tools and to comply with the emerging
+standards of transparency and reproducibility in computational
+science, where an increasing proportion of research details are
+embedded in code and data accompanying traditional publications
+\citep{Boulesteix2010, Carey2010, Ioannidis09} and transparent sharing
+of these resources can form valuable contributions to public knowledge
+\citep{Sommer2010, Sonnenburg2007, Stodden2010}. 
+
+The thesis is organized as follows: In Chapter~\ref{ch:bio}, there is
+an overview of functional genomics, related measurement techniques,
+and genomic data resources. General methodological background, in
+particular of exploratory data analysis and the probabilistic modeling
+paradigm, is provided in Chapter~\ref{ch:meth}. The methodological
+contributions of the thesis are presented in
+Chapters~\ref{ch:preproc}-\ref{ch:integration}.  In
+Chapter~\ref{ch:preproc}, strategies to improve the reliability of
+high-throughput microarray measurements are presented. In
+Chapter~\ref{ch:atlases} methods for organism-wide analysis of the
+transcriptome are considered. In Chapter~\ref{ch:integration}, two
+general-purpose algorithms for dependency modeling are introduced and
+applied in investigating functional effects of chromosomal mutations
+and evolutionary divergence of transcriptional activity. The
+conclusions of the thesis are summarized in
+Chapter~\ref{ch:conclusion}.
+
+% This thesis is published under Creative Commons license to guarantee
+% everyone the freedom to copy, distribute, display, perform, remix,
+% tweak, and build upon the work, assuming that the original author is
+% given credit. For further discussion on open licensing, see
+% \citep{Hietanen08, Oksanen08, Stodden2009}.
+

@@ -1,0 +1,1017 @@
+\chapter{Statistical learning and exploratory data analysis}\label{ch:meth}
+
+\begin{quotation}
+\emph{Essentially, all models are wrong, but some are useful.}
+\begin{flushright}
+G.E.P. Box and N.R. Draper (1987)
+%\cite{Box87}
+\end{flushright}
+\end{quotation}
+
+Models are condensed, simplified representations of observed
+phenomena. Models can be used to describe observations and to predict
+future events. Two key aspects in modeling are the construction and
+learning of formal representations of the observed data. Complex
+real-world observations contain large amounts of uncontrolled
+variation, which is often called {\it noise}; all aspects of the data
+cannot be described within a single model. Therefore, a {\it modeling
+compromise} is needed to decide what aspects of data to describe and
+what to ignore. The second step in modeling is to fill in, to {\it
+learn}, details of the formal representation based on the actual
+empirical observations. Various learning algorithms are typically
+available that differ in efficiency and accuracy. For instance,
+improvements in computation time can often be achieved by potential
+decrease in accuracy. An {\it inference compromise} is needed to
+decide how to balance between these and other potentially conflicting
+objectives of the learning algorithm; the relative importance of each
+factor depends on the particular application and available resources,
+and affects the choice of the learning procedure. The modeling and
+inference compromises are at the heart of data analysis. Ultimately,
+the value of a model is determined by its ability to advance the
+solving of practical problems. 
+
+This chapter gives an overview of the key concepts in statistical
+modeling central to the topics of this thesis. The objectives of
+exploratory data analysis and statistical learning are considered in
+Section~\ref{sec:tasks}. The methodological framework is introduced in
+Section~\ref{sec:prob}, which contains an overview of central concepts
+in probabilistic modeling and the Bayesian analysis paradigm. Key
+issues in implementing and validating the models are discussed in
+Section~\ref{sec:learning}.
+
+
+\section{Modeling tasks}\label{sec:tasks}
+
+Understanding requires generalization beyond particular observations.
+While empirical observations contain information of the underlying
+process that generated the data, a major challenge in computational
+modeling is that empirical data is always finite and contains only
+limited information of the system. Traditional statistical models are
+based on careful hypothesis formulation and systematic collection of
+data to support or reject a given hypothesis. However, successful
+hypothesis formulation may require substantial prior knowledge. When
+minimal knowledge of the system is available, there is a need for {\it
+  exploratory methods} that can recognize complex patterns and extract
+features from empirical data in an automated way \citep{Baldi99}.
+This is a central challenge in computational biology, where the
+investigated systems are extremely complex and contain large amounts
+of poorly characterized and uncontrolled sources of
+variation. Moreover, the data of genomic systems is often very limited
+and incomplete. General-purpose algorithms that can learn relevant
+features from the data with minimal assumptions are therefore needed,
+and they provide valuable tools in functional genomics
+studies. Classical examples of such exploratory methods include
+clustering, classification and visualization techniques. The extracted
+features can provide hypotheses for more detailed experimental testing
+and reveal new, unexpected findings. In this work, general-purpose
+exploratory tools are developed for central modeling tasks in
+functional genomics.
+
+\subsection{Central concepts in data analysis}
+
+Let us start by defining some of the basic concepts and terminology.
+\emph{Data set} in this thesis refers to a finite collection of
+observations, or {\it samples}. In experimental studies, as in
+biology, a sample typically refers to the particular object of study,
+for instance a patient or a tissue sample. In computational studies,
+sample refers to a numerical observation, or a subset of observations,
+represented by a numerical {\it feature vector}. Each element of the
+feature vector describes a particular {\it feature} of the
+observation. Given \(D\) features and \(N\) samples, the data set is
+presented as a matrix $\X \in \Real^{D \times N}$, where each column
+vector $\x \in \Real^D$ represents a sample and each row corresponds
+to a particular feature. The features can represent for instance
+different experimental conditions, time points, or particular
+summaries about the observations. This is the general structure of the
+observations investigated in this work.
+
+The observations are modeled in terms of probability densities; the
+samples are modeled as independent instances of a random variable.  A
+central modeling task is to characterize the underlying probability
+density of the observations, \(p(\x)\). This defines a topology in the
+sample space and provides the basis for generalization beyond
+empirical observations. As explained in more detail in
+Section~\ref{sec:prob}, the models are formulated in terms of
+observations \(\X\), model parameters $\bth$, and {\it latent
+  variables} \(\Z\) that are not directly observed, but characterize
+the underlying process that generated the data.
+
+Ultimately, all models describe relationships between objects.  {\it
+Similarity} is therefore a key concept in data analysis; the basis for
+characterizing the relations, for summarizing the observations, and
+for predicting future events. Measures of similarity can be defined
+for different classes of objects such as feature vectors, data sets,
+or random variables. Similarity in general is a vague concept. {\it
+Euclidean distance}, induced by the Euclidean metrics, is a common
+(dis-)similarity measure for multivariate observations. {\it
+Correlation} is a standard choice for univariate random variables.
+{\it Mutual information} is an information-theoretic measure of
+statistical dependency between two random variables, characterizing
+the decrease in the uncertainty concerning the realization of one
+variable, given the other one. The uncertainty of a random variable
+\(\Xcal\) is measured in terms of {\it entropy}\footnote{Entropy is
+defined as \(H(\Xcal) = - \int_{\x} p(\x)\log p(\x) d\x\) for a
+continuous variable.} \citep{Shannon48}. The mutual information
+between two random variables is then given by \(I(\Xcal, \Ycal) =
+H(\Xcal) - H(\Xcal|\Ycal)\) \citep[see e.g.][]{Gelman03}. The
+Kullback-Leibler divergence, or {\it KL--divergence}, is a closely
+related non-symmetric dissimilarity measure for probability
+distributions \(p, q\), defined as \(d_{KL} (p,q) = \int_{\x} p(\x)
+\log \frac{p(\x)}{q(\x)}d\x\) \citep[see e.g.][]{Bishop06}. Mutual
+information between two random variables can be alternatively
+formulated as the KL--divergence between their joint density
+\(p(\x,\y)\) and the product of their independent marginal densities,
+\(q(\x,\y) = p_x(\x)p_y(\y)\), which gives the connection \(I(\Xcal,
+\Ycal) = d_{KL}(p(\x,\y),p_x(\x)p_y(\y))\). Mutual information and
+KL-divergence are central information-theoretic measures of dependency
+employed in the models of this thesis.
+
+It is important to notice that measures of similarity are inherently
+coupled to the statistical representation of data and to the goals of
+the analysis; different representations can reveal different
+relationships between observations. For instance, the Euclidean
+distance is sensitive to scaling of the features; representation in
+natural or logarithmic scale, or with different units can potentially
+lead to very different analysis results. Not all measures are equally
+sensitive; mutual information can naturally detect non-linear
+relationships, and it is invariant to the scale of the variables. On
+the other hand, estimating mutual information is computationally
+demanding.
+
+{\it Feature selection} refers to computational techniques for
+selecting, scaling and transforming the data into a suitable form for
+further analysis. Feature selection has a central role in data
+analysis, and it is implicitly present in all analysis tasks in
+selecting the investigated features for the analysis. 
+
+There are no universally optimal stand-alone feature selection
+techniques, since the problem is inherently entangled with the
+analysis task and multiple equally optimal feature sets may be
+available for instance in classification or prediction tasks
+\cite{Guyon03, Saeys2007}. Successful feature selection can reduce the
+dimensionality of the data with minimal loss of relevant information,
+and focus the analysis on particular features. This can reduce model
+complexity, which is expected to yield more efficient, generalizable
+and interpretable models. Feature selection is particularly important
+in genome-wide profiling studies, where the dimensionality of the data
+is large compared to the number of available samples, and only a small
+number of features are relevant for the studied phenomenon. This is
+also known as the {\it large p, small n} problem \citep{West03}.
+Advanced feature selection techniques can take into account
+dependencies between the features, consider weighted combinations of
+them, and can be designed to interact with the more general modeling
+task, as for instance in the nearest shrunken centroids classifier of
+\cite{Tibshirani02}. The constrained subspace clustering model of
+Publication~\ref{NR} can be viewed as a feature selection procedure,
+where high-dimensional genomic observations are decomposed into
+distinct feature subsets, each of which reveals different
+relationships of the samples. In Publication~\ref{MLSP},
+identification of maximally informative features between two data sets
+forms a central part of a regularized dependency modeling
+framework. In Publications~\ref{NR}-\ref{MLSP} the procedure and
+representations are motivated by biological reasoning and analysis
+goals.
+
+\subsection{Exploratory data analysis}
+
+{\it Exploratory data analysis} refers to the use of computational
+techniques to summarize and visualize data in order to facilitate the
+generation of new hypotheses for further study when the search space
+would be otherwise exhaustively large \citep{Tukey77}. The analysis
+strategy takes the observations as the starting point for discovering
+interesting regularities and novel research hypotheses for poorly
+characterized large-scale systems without prior knowledge. The
+analysis can then proceed from general observations of the data toward
+\emph{confirmatory data analysis}, more detailed investigations and
+hypotheses that can be tested in independent data sets with standard
+statistical procedures. Exploratory data analysis differs from
+traditional hypothesis testing where the hypothesis is
+given. Light-weight exploratory tools are particularly useful with
+large data sets when prior knowledge on the system is
+minimal. Standard exploratory approaches in computational biology
+include for instance clustering, classification and visualization
+techniques \citep{Evanko10, Polanski07}.
+
+{\it Cluster analysis} refers to a versatile family of methods that
+partition data into internally homogeneous groups of similar data
+points, and often at the same time minimize the similarity between
+distinct clusters. Clustering techniques enable {\it class discovery}
+from the data. This differs from classification where the target is to
+assign new observations into known classes. The partitions provided by
+clustering can be nested, partially overlapping or mutually exclusive,
+and many clustering methods generalize the partitioning to cover
+previously unseen data points \citep{Jain88}.  Clustering can provide
+compressed representations of the data based on a shared parametric
+representation of the observations within each cluster, as for
+instance in K-means or Gaussian mixture modeling \citep[see
+e.g.][]{Bishop06}. Certain clustering approaches, such as the
+hierarchical clustering \citep[see e.g.][]{Hastie09}, apply recursive
+schemes that partition the data into internally homogeneous groups
+without providing a parametric representation of the clusters.
+Cluster structure can be also discovered by linear algebraic
+operations on the distance matrices, as for instance in spectral
+clustering. The different approaches often have close theoretical
+connections. Clustering in general is an ill-defined concept that
+refers to a set of related but mutually incompatible objectives
+\citep{Ben-David08, Kleinberg02nips}. Cluster analysis has been
+tremendously popular in computational biology, and a comprehensive
+review of the different applications are beyond the scope of this
+thesis. It has been observed, for instance, that genes with related
+functions have often similar expression profiles and are clustered
+together, suggesting that clustering can be used to formulate
+hypotheses concerning the function of previously uncharacterized genes
+\citep{DeRisi97, Eisen98}, or to discover novel cancer subtypes with
+biomedical implications \citep{Sorlie01}.
+
+{\it Visualization techniques} are another widely used exploratory
+approach in computational biology. Visualizations can provide compact
+and intuitive summaries of complex, high-dimensional observations on a
+lower-dimensional display, for instance by linear projection methods
+such as principal component analysis, or by explicitly optimizing a
+lower-dimensional representation as in the self-organizing map
+\citep[][]{Kohonen82}. Visualization can provide the first step in
+investigating large data sets \citep{Evanko10}.
+
+\subsection{Statistical learning}
+
+\emph{Statistical learning} refers to computational models that can
+learn to recognize structure and patterns from empirical data in an
+automated way. Unsupervised and supervised models form two main
+categories of learning algorithms.
+
+{\it Unsupervised learning} approaches seek compact descriptions of
+the data without prior knowledge. In probabilistic modeling,
+unsupervised learning can be formulated as the task of finding a
+probability distribution that describes the observed data and
+generalizes to new observations.  This is also called {\it density
+estimation}.  The parameter values of the model can be used to provide
+compact representations of the data. Examples of unsupervised analysis
+tasks include methods for clustering, visualization and dimensionality
+reduction.  In cluster analysis, groups of similar observations are
+sought from the data. Dimensionality reduction techniques provide
+compact lower-dimensional representations of the original data, which
+is often useful for subsequent modeling steps. Not all observations of
+the data are equally valuable, and assessing the relevance of the
+observed regularities is problematic in fully unsupervised analysis.
+
+In {\it supervised learning} the task is to learn a function that maps
+the inputs \(\x\) to the desired outputs \(\y\) based on a set of
+training examples in a generalizable fashion, as in regression for
+continuous outputs, and classification for discrete output variables.
+The supervised learning tasks are inherently asymmetric; the inference
+proceeds from inputs to outputs, and prior information of the modeling
+task is used to supervise the analysis; the training examples also
+include a desired output of the model.
+
+The models developed in this thesis can be viewed as unsupervised
+exploratory techniques. However, the distinction between supervised
+and unsupervised models is not strict, and the models in this thesis
+borrow ideas from both categories. The models in
+Publications~\ref{RPA}-\ref{NR} are unsupervised algorithms that
+utilize prior information derived from background databases to guide
+the modeling by constraining the solutions.  However, since no desired
+outputs are available for these models, the modeling tasks differ from
+supervised analysis. The dependency modeling algorithms of
+Publications~\ref{MLSP}-\ref{AC} have close theoretical connections to
+the supervised learning task. In contrast to supervised learning, the
+learning task in these algorithms is symmetric; modeling of the
+co-occurring data sets is unsupervised, but coupled. Each data set
+affects the modeling of the other data set in a symmetric fashion,
+and, in analogy to supervised learning, prediction can then proceed to
+either direction. Compared to supervised analysis tasks, the emphasis
+in the dependency detection algorithms introduced in this thesis is in
+the discovery and characterization of symmetric dependencies, rather
+than in the construction of asymmetric predictive models.
+
+\section{Probabilistic modeling paradigm}\label{sec:prob}
+
+The main contributions of this thesis follow the generative
+probabilistic modeling paradigm.  Generative probabilistic models
+describe the observed data in terms of probability distributions. This
+allows the calculation of expectations, variances and other standard
+summaries of the model parameters, and at the same time allows to
+describe the independence assumptions and relations between variables,
+and uncertainty in the modeling process in an explicit manner.
+Measurements are regarded as noisy observations of the general,
+underlying processes; generative models are used to characterize the
+processes that generated the observations.
+
+The first task in modeling is the selection of a \emph{model family} -
+a set of potential formal representations of the data. As discussed in
+Section~\ref{sec:nonparametric}, the representations can also to some
+extent be learned from the data. The second task is to define the
+\emph{objective function}, or cost function, which is used to measure
+the descriptive power of the models. The third task is to identify the
+optimal model within the model family that best describes the observed
+data with respect to the objective function. This is called {\it
+  learning} or {\it model fitting}. The details of the modeling
+process are largely determined by the exact modeling task and
+particular nature of the observations.  The objectives of the modeling
+task are encoded in the selected model family, the objective function
+and to some extent to the model fitting procedure. The model family
+determines the space of possible descriptions for the data and has
+therefore a major influence on the final solution. The objective
+function can be used to prefer simple models or other aspects in the
+modeling process. The model fitting procedure affects the efficiency
+and accuracy of the learning process.  For further information of
+these and related concepts, see \cite{Bishop06}. A general overview of
+the probabilistic modeling framework is given in the remainder of this
+section.
+
+\subsection{Generative modeling}\label{sec:generative}
+
+\emph{Generative probabilistic models} view the observations as random
+samples from an underlying probability distribution. The model defines
+a probability distribution \(p(\x)\) over the feature space.  The
+model can be parameterized by model parameters $\bth$ that specify a
+particular model within the model family.  For convenience, we assume
+that the model family is given, and leave it out from the notation. In
+this thesis, the appropriate model families are selected based on
+biological hypotheses and analysis goals. Generative models allow
+efficient representation of dependencies between variables,
+independence assumptions and uncertainty in the inference
+\citep{Koller09}. Let us next consider central analysis tasks in
+generative modeling.
+
+
+\subsubsection{Finite mixture models}\label{sec:finitemixtures}
+
+Classical probability distributions provide well-justified and
+convenient tools for probabilistic modeling, but in many practical
+situations the observed regularities in the data cannot be described
+with a single standard distribution. However, a sufficiently rich
+mixture of standard distributions can provide arbitrarily accurate
+approximations of the observed data. In {\it mixture models}, a set of
+distinct, latent processes, or {\it components}, is used to describe
+the observations. The task is to identify and characterize the
+components and their associations to the individual observations. The
+standard formulation assumes independent and identically distributed
+observations where each observation has been generated by exactly one
+component. In a standard mixture model the overall probability density
+of the data is modeled as a weighted sum of component distributions:
+
+\begin{equation}\label{eq:mixture}
+   p(\x) = \sum_{r=1}^R \pi_r p_r(\x | \bth_r),
+\end{equation}
+
+\noindent where the components are indexed by \(r\), and $\int p(\x)
+d\x = 1$. Each mixture component can have a different distributional
+form.  The mixing proportion, or weight, and model parameters of each
+component are denoted by $\pi_r$ and \(\bth_r\), respectively, with
+$\sum_r \pi_r = 1$. Many applications utilize convenient standard
+distributions, such as Gaussians, or other distributions from the
+exponential family. Then the mixture model can be learned for instance
+with the EM algorithm described in Section~\ref{sec:em}.
+
+In practice, the mixing proportions of the components are often
+unknown. The mixing proportions can be estimated from the data by
+considering them as standard model parameters to be fitted with a ML
+estimate. However, the procedure is potentially prone to overfitting
+and local optima, i.e., it may learn to describe the training data
+well, but fails to generalize to new observations. An alternative,
+probabilistic way to determine the weights is to treat the mixing
+proportions as latent variables with a prior distribution
+\(p(\bpi)\). A standard choice is a symmetric Dirichlet
+prior\footnote{{\it Dirichlet distribution} is the probability density
+  \(Dir(\bpi | \n) \sim \prod_r \pi_r^{n_r - 1}\) where the
+  multivariate random variable \(\bpi\) and the positive parameter
+  vector \(\n\) have their elements indexed by \(r\), \(0 < \pi_r <
+  1\), and \(\sum_r \pi_r = 1\).}  \(\bpi \sim
+Dir(\frac{\alp}{R})\). This gives an equal prior weight for each
+component and guarantees the standard exchangeability assumption of
+the mixture component labels. A label determines cluster
+identity. Intuitively, exchangeability corresponds to the assumption
+that the analysis is invariant to the ordering of the data samples and
+mixture components. Compared to standard mixture models, probabilistic
+mixture models have increased computational complexity.
+
+Further prior knowledge can be incorporated in the model by defining
+prior distributions for the other parameters of the mixture
+model. This can also be used to regularize the learning process to
+avoid overfitting.  A typical prior distribution for the components of
+a Gaussian mixture model, parameterized by \(\bth_r = \{\bmu_r,
+\bSigma_r\}\), is the normal-inverse-Gamma prior \citep[see
+e.g.][]{Gelman03}.
+
+Interpreting the mixture components as clusters provides an
+alternative, probabilistic formulation of the clustering task. This
+has made probabilistic mixture models a popular choice in the analysis
+of functional genomics data sets that typically have high
+dimensionality but small sample size.  Probabilistic analysis takes
+the uncertainties into account in a rigorous manner, which is
+particularly useful when the sample size is small. The number of
+mixture components is often unknown in practical modeling tasks,
+however, and has to be inferred based on the data. A straightforward
+solution can be obtained by employing a sufficiently large number of
+components in learning the mixture model, and selecting the components
+having non-zero weights as a post-processing step. An alternative,
+model-based treatment for learning the number of mixture components
+from the data is provided by infinite mixture models considered in
+Section~\ref{sec:nonparametric}.
+
+
+\subsubsection{Latent variables and marginalization}
+
+The observed variables are often affected by {\it latent variables}
+that describe relevant structure in the model, but are not directly
+observed. The latent variable values can be, to some extent, inferred
+based on the observed variables. Combination of latent and observed
+variables allows the description of complex probability spaces in
+terms of simple component distributions and their relations. Use of
+simple component distributions can provide an intuitive and
+computationally tractable characterization of complex generative
+processes underlying the observations.
+
+A generative latent variable model specifies the distributional form
+and relationships of the latent and observed variables. As a simple
+example, consider the probabilistic interpretation of probabilistic
+component analysis (PCA), where the observations \(\x\) are modeled
+with a linear model \(\x = \W\z + \Epsilon\) where a normally
+distributed latent variable \(\z \sim N(\0, \I)\) is transformed with
+the parameter matrix \(\W\) and isotropic Gaussian noise
+(\(\Epsilon\)) is assumed on the observations. More complex models can
+be constructed by analogous reasoning. A {\it complete-data
+  likelihood} \(p(\X,\Z|\bth)\) defines a joint density for the
+observed and latent variables. Only a subset of variables in the model
+is typically of interest for the actual analysis task. For instance,
+the latent variables may be central for describing the generative
+process of the data, but their actual values may be irrelevant. Such
+variables are called {\it nuisance variables}. Their integration, or
+{\em marginalization}, provides probabilistic averaging over the
+potential realizations.  Marginalization over the latent variables in
+the complete-data likelihood gives the likelihood
+
+\begin{equation}\label{eq:marginalization}
+  p(\X|\bth)=\int_{\Z} p(\X,\Z|\bth)d\Z.
+\end{equation}
+
+Marginalization over the latent variables collapses the modeling task
+to finding optimal values for model parameters \(\bth\), in a way that
+takes into account the uncertainty in latent variable values. This can
+reduce the number of variables in the learning phase, yield more
+straightforward and robust inferences, as well as speed up
+computation. However, marginalization may lead to analytically
+intractable integrals. As certain latent variables may be directly
+relevant, marginalization depends on the overall goals of the analysis
+and may cover only a subset of the latent variables. In this thesis
+latent variables are utilized for instance in Publication~\ref{NR},
+which treats the sample-cluster assignments as discrete latent
+variables, as well as in Publication~\ref{MLSP}, where a regularized
+latent variable model is introduced to model dependencies between
+co-occurring observations.
+
+
+\subsection{Nonparametric models}\label{sec:nonparametric}
+
+Finite mixture models and latent variable models require the
+specification of model structure prior to the analysis. This can be
+problematic since for instance the number and distributional shape of
+the generative processes is unknown in many practical tasks. However,
+the model structure can also to some extent be learned from the data.
+Non-parametric models provide principled approaches to learn the model
+structure from the data.  In contrast to parametric models, the number
+and use of the parameters in nonparametric models is flexible
+\citep[see e.g.][]{Hjort10, Muller2004}. The infinite mixture of
+Gaussians, used as a part of the modeling process in
+Publication~\ref{NR}, is an example of a non-parametric model where
+both the number of components, as well as mixture proportions of the
+component distributions are inferred from the data. Learning of
+Bayesian network structure is another example of nonparametric
+inference, where relations between the model variables are learned
+from the data \citep[see e.g.][]{Friedman03}. While more complex
+models can describe the training data more accurately, an increasing
+model complexity needs to be penalized to avoid overfitting and to
+ensure generalizability of the model.
+
+Nonparametric models provide flexible and theoretically principled
+approaches for data-driven exploratory analysis. However, the
+flexibility often comes with an increased computational cost, and the
+models are potentially more prone to overfitting than less flexible
+parametric models. Moreover, complex models can be difficult to
+interpret.
+
+Many nonparametric probabilistic models are defined by using the
+theory of stochastic processes to impose priors over potential model
+structures. Stochastic processes can be used to define priors over
+function spaces. For instance, the {\it Dirichlet process (DP)}
+defines a probability density over the function space of Dirichlet
+distributions\footnote{If \(G\) is a distribution drawn from a
+  Dirichlet process with the probability measure \(P\) over the sample
+  space, \(G \sim \mathrm{DP}(P)\), then each finite partition
+  \(\{A_k\}_k\) of the sample space is distributed as
+  \((G(A_1),...,G(A_k)) \sim Dir(P(A_1),..., P(A_k))\).}. The {\it
+  Chinese Restaurant Process (CRP)} provides an intuitive description
+of the Dirichlet process in the cluster analysis context. The CRP
+defines a prior distribution over the number of clusters and their
+size distribution. The CRP is a random process in which $n$ customers
+arrive in a restaurant, which has an infinite number of tables. The
+process goes as follows: The first customer chooses the first
+table. Each subsequent customer \(m\) will select a table based on the
+state \(F_{m-1}\) of the restaurant tables after $m-1$ customers have
+arrived. The new customer \(m\) will select a previously occupied
+table $i$ with a probability which is proportional to the number of
+customers seated at table $i$, i.e. \(p(i|F_{m-i}) \propto
+n_i\). Alternatively, the new customer will select an empty table with
+a probability which is proportional to a constant \(\alpha\). The
+model prefers tables with a larger number of customers, and is
+analogous to clustering, where the customers and tables correspond to
+samples and clusters, respectively. This provides an intuitive prior
+distribution for clustering tasks. The prior prefers compact models
+with relatively few clusters, but the number of clusters is
+potentially infinite, and ultimately determined based on the data.
+
+\subsubsection{Infinite mixture models}
+
+{\it Infinite mixture models} are a general class of nonparametric
+methods where the number of mixture components are determined in a
+data-driven manner; the number of components is potentially infinite
+\citep[see e.g.][]{Muller2004, Rasmussen00}. An infinite mixture is
+obtained by letting \(R \rightarrow \infty\) in the finite mixture
+model of Equation~\ref{eq:mixture} and replacing the Dirichlet
+distribution prior of the mixing proportions \(\bpi\) by a Dirichlet
+process. The formal probability distribution of the Dirichlet process
+can be intuitively derived with the so-called {\it stick-breaking
+presentation}.  Consider a unit length stick and a stick-breaking
+process, where the breakpoint \(\beta\) is stochastically determined,
+following the beta distribution $\beta \sim Beta(1, \alpha)$, where
+\(\alpha\) tunes the expected breaking point. The process can be
+viewed as consecutively breaking off portions of a unit length stick
+to obtain an infinite sequence of stick lengths \(\pi_1 = \beta_1\);
+\(\pi_i = \beta_i \prod_{l=1}^{i-1} (1-\beta_l)\), with
+$\sum_{i=1}^\infty \pi_i = 1$~\citep{Ishwaran01}.  This defines the
+probability distribution \(\text{Stick}(\alpha)\) over potential
+partitionings of the unit stick. A truncated stick-breaking
+representation considers only the first $T$ elements. Setting the
+prior \(\bpi \sim \text{Stick}(\alpha)\), defined by the
+stick-breaking representation in Equation~\ref{eq:mixture} assigns a
+prior on the number of mixture components and their mixing proportions
+that are ultimately learned from the observed data. The prior helps to
+find a compromise between increasing model complexity and likelihood
+of the observations.
+
+Traditional approaches used to determine the number mixture components
+are based on objective functions that penalize increasing model
+complexity, for instance in certain variants of the K-means or in
+spectral clustering \citep[see e.g.][]{Hastie09}. Other model
+selection criteria include cross-validation and comparison of the
+models in terms of their likelihood or various information-theoretic
+criteria that seek a compromise between model complexity and fit
+\citep[see e.g.][]{Gelman03}. However, the sample size may be
+insufficient for such approaches, and the models may lack a rigorous
+framework to account for uncertainties in the observations and model
+parameters. Modeling uncertainty in the parameters while learning the
+model structure can lead to more robust inference in nonparametric
+probabilistic models but also adds inherent computational complexity
+in the learning process.
+
+\subsection{Bayesian analysis}\label{sec:bayes}
+
+The term 'Bayesian' refers to interpretation of model parameters as
+variables. The uncertainty over the parameter values, arising from
+limited empirical evidence, is described in terms of probability
+distributions. This is in contrast to the traditional view where
+parameters have fixed values with no distribution and the uncertainty
+is ignored. The Bayesian approach leads to a learning task where the
+objective is to estimate the \emph{posterior distribution} $p(\bth|\X)$
+of the model parameters \(\bth\), given the observations \(\X\). The
+posterior is given by the \emph{Bayes' rule} \citep{Bayes63}:
+
+\begin{equation}\label{eq:bayesrule}
+  p(\bth|\X) = \frac{p(\X|\bth)p(\bth)}{p(\X)}.
+\end{equation}
+
+\noindent The two key elements of the posterior are {\it the
+likelihood} and {\it the prior}. The likelihood \(p(\X|\bth)\)
+describes the probability of the observations, given the parameter
+values \(\bth\). The parameters can also characterize alternative
+model structures. The prior \(p(\bth)\) encodes prior beliefs about
+the model and rewards solutions that match with the prior assumptions or
+yield simpler models. Such regularizing properties can be particularly
+useful when training data is scarce and there is considerable
+uncertainty in the parameter estimates. With strong, informative
+priors, new observations have little effect on the posterior. In the
+limit of large sample size the posterior converges to the ordinary
+likelihood \(p(\X|\bth)\). The Bayesian inference provides a robust
+framework for taking the uncertainties into account when the data is
+scarce, as it often is in practical modeling tasks.  Moreover, the
+Bayes' rule provides a formal framework for sequential update of
+beliefs based on accumulating evidence. The prior predictive density
+$p(\X) = \int p(\X,\bth) d\bth$ is a normalizing constant, which is
+independent of the parameters $\bth$ and can often be ignored during
+model fitting. 
+
+The involved distributions can have complex non-standard forms and
+limited empirical data can only provide partial evidence regarding the
+different aspects of the data-generating process.  Often only a subset
+of the parameters and other variables and their interdependencies can
+be directly observed. The Bayesian approach provides a framework for
+making inferences on the unobserved quantities through hierarchical
+models, where the probability distribution of each variable is
+characterized by higher-level parameters, so-called {\it
+hyperparameters}. A similar reasoning can be used to model the
+uncertainty in the hyperparameters, until the uncertainties become
+modeled at an appropriate detail. Prior information can help to
+compensate the lack of data on certain aspects of a model, and
+explicit models for the noise can characterize uncertainty in the
+empirical observations. Distributions can also share parameters, which
+provides a basis for pooling evidence from multiple sources, as for
+instance in Publication~\ref{MLSP}. In many applications only a subset
+of the parameters in the model are of interest and the modeling
+process can be considerably simplified by marginalizing over the less
+interesting nuisance variables to obtain an expectation over their
+potential values. 
+
+The Bayesian paradigm provides a principled framework for modeling the
+uncertainty at all levels of statistical inference, including the
+parameters, the observed and latent variables and the model structure;
+all information of the model is incorporated in the posterior
+distribution, which summarizes empirical evidence and prior knowledge,
+and provides a complete description of the expected outcomes of the
+data-generating process. When the data does not contain sufficient
+information to decide between the alternative model structures and
+parameter values, the Bayesian framework provides tools to take
+expectations over all potential models, weighted by their relative
+evidence.
+
+A central challenge in the Bayesian analysis is that the models often
+include analytically intractable posterior distributions, and learning
+of the models can be computationally demanding. Widely-used approaches
+for estimating posterior distributions include {\it Markov Chain Monte
+Carlo (MCMC)} methods and variational learning. Stochastic MCMC
+methods provide a widely-used family of algorithms to estimate
+intractable distributions by drawing random samples from these
+distributions \citep[see e.g.][]{Gelman03}; a sufficiently large pool
+of random samples will converge to the underlying distribution, and
+sample statistics can then be used to characterize the distribution.
+However, sampling-based methods are computationally intensive and
+slow. In variational learning, considered in
+Section~\ref{sec:variational}, the intractable distributions are
+approximated by more convenient tractable distributions, which yields
+faster learning procedure, but potentially less accurate results.
+While analysis of the full posterior distribution will provide a
+complete description of the uncertainties regarding the parameters,
+simplified summary statistics, such as the mean, variance and
+quantiles of the posterior can provide a sufficient characterization
+of the posterior in many practical applications. They can be obtained
+for instance by summarizing the output of sampling-based or
+variational methods. Moreover, when the uncertainty in the results can
+be ignored, point estimates can provide simple, interpretable
+summaries that are often useful in further biomedical analysis, as for
+instance in Publication~\ref{RPA}. Point estimates are single optimal
+values with no distribution.  However, point estimates are not
+necessarily sufficient for instance in biomedical diagnostics and
+other prediction tasks, where different outcomes are associated with
+different costs and it may be crucial to assess the probabilities of
+the alternative outcomes. For further discussion on learning the
+Bayesian models, see Section~\ref{sec:fitting}.
+
+In this thesis the Bayesian approach provides a formal framework to
+perform robust inference based on incomplete functional genomics data
+sets and to incorporate prior information of the models in the
+analysis. The Bayesian paradigm can alternatively be interpreted as a
+philosophical position, where probability is viewed as a subjective
+concept \citep{Cox46}, or considered a direct consequence of making
+rational decisions under uncertainty \citep{Bernardo00}. For further
+concepts in model selection, comparison and averaging in the Bayesian
+analysis, see \cite{Gelman03}. For applications in computational
+biology, see \cite{Wilkinson2007}.
+
+
+\section{Learning and inference}\label{sec:learning}
+
+The final stage in probabilistic modeling is to learn the optimal
+statistical presentation for the data, given the model family and the
+objective function. This section highlights central challenges and
+methodological issues in statistical learning. 
+
+\subsection{Model fitting}\label{sec:fitting}
+
+{\it Learning} in probabilistic models often focuses on optimizing the
+model parameters \(\bth\). In addition, posterior distribution of the
+latent variables, \(p(\z|\x, \bth)\), can be calculated. Estimating
+the latent variable values is called statistical {\it inference}. In
+the Bayesian analysis, the model parameters can also be treated as
+latent variables with a prior probability density, in which case the
+distinction between model parameters and latent variables will
+disappear.  A comprehensive characterization of the variables and
+their uncertainty would be achieved by estimating the full posterior
+distribution. However, this can be computationally very demanding, in
+particular when the posterior is not analytically tractable.  The
+posterior is often approximated with stochastic or analytical
+procedures, such as stochastic MCMC sampling methods or variational
+approximations, and appropriate summary statistics. In many practical
+settings, it is sufficient to summarize the full posterior
+distribution with a point estimate. Point estimates do not
+characterize the uncertainties in the analysis result, but are often
+more convenient to interpret than full posterior distributions.
+
+Various optimization algorithms are available to learn statistical
+models, given the learning procedure. The potential challenges in the
+optimization include {\it computational complexity} and the presence
+of {\it local optima} on complex probability density topologies, as
+well as {\it unidentifiability} of the models. Finding a global
+optimum of a complex model can be computationally exhaustive, and it
+can become intractable with increasing sample size. In unidentifiable
+models, the data does not contain sufficient information to choose
+between alternative models with equal statistical
+evidence. Ultimately, the uncertainty in inference arises from limited
+sample size and the lack of computational resources.
+
+In the remainder of this section, let us consider more closely the
+particular learning procedures central to this thesis: point estimates
+and variational approximation, and the standard optimization
+algorithms used to learn such representations.
+
+\subsubsection{Point estimates}\label{sec:point}
+
+Assuming independent and identically distributed observations, the
+{\it likelihood} of the data, given model parameters, is \(p(\X|\bth)
+= \prod_i p(\x_i|\bth)\). This provides a probabilistic measure of
+model fit and the objective function to maximize.  Maximization of the
+likelihood \(p(\X|\bth)\) with respect to \(\bth\) yields a {\it
+  maximum likelihood (ML)} estimate of the model parameters, and
+specifies an optimal model that best describes the data. This is a
+standard point estimate used in probabilistic modeling. Practical
+implementations typically operate on {\it log-likelihood}, the
+logarithm of the likelihood function. As a monotone function, this
+yields the same optima, but has additional desirable properties: it
+factorizes the product into a sum and is less prone to numerical
+overflows during optimization.
+
+The {\it maximum a posteriori (MAP)} estimate additionally takes prior
+information of the model parameters into account. While the ML
+estimate maximizes the likelihood \(p(\X|\bth)\) of the observations,
+the MAP estimate maximizes the posterior \(p(\bth|\X) \sim
+p(\X|\bth)p(\bth)\) of the model parameters. The objective function to
+maximize is the log-likelihood
+
+\begin{equation}\label{eq:map}
+  log p(\bth|\X) \sim log p(\X|\bth) + log p(\bth).
+\end{equation}
+
+The prior is explicit in MAP estimation and the model contains the ML
+estimate as a special case; assuming large sample size, or
+non-informative, uniform prior $p(\bth) \sim 1$, the likelihood of the
+data \(p(\X|\bth)\) will dominate and the MAP estimation becomes
+equivalent to optimizing \(p(\X|\bth)\), yielding the traditional ML
+estimate. The ML and MAP estimates are asymptotically consistent
+approximations of the posterior distribution, since the posterior will
+converge a point distribution with a large sample size. The
+computation and interpretation of point estimates is straightforward
+compared to the use of posterior distributions in the full Bayesian
+treatment. The differences between ML and MAP estimates highlight the
+role of prior information in the modeling when training data is
+limited.
+
+\subsubsection{Variational inference}\label{sec:variational}
+
+In certain modeling tasks the uncertainty in the model parameters
+needs to be taken into account. Then point estimates are not
+sufficient. The uncertainty is characterized by the posterior
+distribution \(p(\bth|\X)\). However, the posterior distributions are
+often intractable and need to be estimated by approximative methods.
+{\it Variational approximations} provide a fast and principled
+optimization scheme \citep[see e.g.][]{Bishop06} that yields only
+approximative solutions, but can accelerate posterior inference by
+orders of magnitude compared to stochastic, sampling-based MCMC
+methods that can in principle provide exact solutions, assuming that
+infinite computational resources are available. The potential decrease
+in accuracy in variational approximations is often acceptable, given
+the gains in efficiency. Variational approximation characterizes the
+uncertainty in \(\bth\) with a tractable distribution \(q(\bth)\) that
+approximates the full, potentially intractable posterior
+\(p(\bth|\X)\),
+
+Variational inference is formulated as an optimization problem where
+an intractable posterior distribution \(p(\Z, \bth|\X)\) is
+approximated by a more easily tract-able distribution \(q(\Z, \bth)\)
+by minimizing the KL--divergence between the two distributions. This
+is also shown to maximize a lower bound of the marginal likelihood
+$p(\X)$, and subsequently the likelihood of the data, yielding an
+approximation of the overall model.  The log-likelihood of the data
+can be decomposed into a sum of the lower bound \(\L(q)\) of the
+observed data and the KL--divergence \(d_{KL}(q, p)\) between the
+approximative and the exact posterior distributions:
+
+\begin{equation}\label{eq:variational}
+            log p(\X) = \L(q) + d_{KL}(q,p),
+\end{equation}
+
+where 
+
+\begin{flalign}
+   \begin{array}{cll}
+     \L(q) &=& \int_{\z} q(\Z, \bth) log \frac{p(\Z, \bth, \X)}{q(\Z,
+     \bth)};\\
+     d_{KL}(q,p) &=&-\int_{\z} q(\Z, \bth) log \frac{p(\Z,  \bth|\X)}{q(\Z, \bth)}.
+  \end{array}
+\end{flalign}
+
+The KL-divergence is non-negative, and equals to zero if and only if
+the approximation and the exact distribution are identical. Therefore
+\(\L(q)\) gives a lower bound for the log-likelihood \(log p(\X)\) in
+Equation~\ref{eq:variational}.  Minimization of \(d_{KL}\) with
+respect to \(q\) will provide an analytically tractable approximation
+$q(\Z, \bth)$ of $p(\Z, \bth | \X)$.  Minimization of \(d_{KL}\) will
+also maximize the lower bound \(\L(q)\) since the log-likelihood \(log
+p(\X)\) is independent of \(q\). The approximation typically assumes
+independent parameters and latent variables, yielding a {\it
+  factorized} approximation \(q(\Z, \bth) = q_{\z}(\Z)q_{\bth}(\bth)\)
+based on tractable standard distributions. It is also possible to
+factorize \(q_{\z}\) and \(q_{\bth}\) into further
+components. Variational approximations are used for efficient learning
+of infinite multivariate Gaussian mixture models in
+Publication~\ref{NR}. 
+
+\subsubsection{Expectation--Maximization (EM)}\label{sec:em}
+
+The {\it EM algorithm} is a general procedure for learning
+probabilistic latent variable models \citep{Dempster77}, and a special
+case of variational inference. The algorithm provides an efficient
+algorithm for finding point estimates for model parameters in latent
+variable models. The objective of the EM algorithm is to maximize the
+marginal likelihood
+
+\begin{equation}\label{eq:emlikelihood}
+           p(\X|\bth) = \int_{\z} p(\X,\Z|\bth) d\Z
+\end{equation}
+of the observations \(\X\) with respect to the model parameters
+\(\bth\). Marginalization over the probability density of the latent
+variables provides an inference procedure that is robust to
+uncertainty in the latent variable values. The algorithm iterates
+between estimating the posterior of the latent variables, and
+optimizing the model parameters \citep[see e.g.][]{Bishop06}.  Given
+initial values \(\bth_0\) of the model parameters, the {\it
+  expectation step} evaluates the posterior density of the latent
+variables, \(p(\z|\x,\bth_t)\), keeping \(\bth_t\) fixed. If the
+posterior is not analytically tractable, variational approximation
+\(q(\z)\) can be used to obtain a lower bound for the likelihood in
+Equation~\ref{eq:emlikelihood}. The {\it maximization step} optimizes
+the model parameters \(\bth\) with respect to the following objective
+function:
+\begin{equation}\label{EMQ}
+  Q(\bth, \bth_t) = \int_{\z} p(\Z|\X, \bth_t) log p(\X, \Z| \bth) d\Z.
+\end{equation}
+This is the expectation of the {\it complete-data log-likelihood}
+\(log p(\X, \Z| \bth)\) over the latent variable density \(p(\Z|\X,
+\bth_t)\), obtained from the previous expectation step. The new
+parameter estimate is then
+
+\[ 
+   \bth_{t+1} = argmax_{\bth} Q(\bth, \bth_t).
+\] 
+
+The expectation and maximization steps determine an iterative learning
+procedure where the latent variable density and model parameters are
+iteratively updated until convergence.  The maximization step will
+also increase the target likelihood of Equation~\ref{eq:emlikelihood},
+but potentially with a remarkably smaller computational cost
+\citep{Dempster77}.  In contrast to the marginal likelihood in
+Equation~\ref{eq:emlikelihood}, the complete-data likelihood in
+Equation~\ref{EMQ} is logarithmized before integration in the
+maximization step. When the joint distribution \(p(\x,\z|\bth)\)
+belongs to the exponential family, the logarithm will cancel the
+exponential in algebraic manipulations. This can considerably simplify
+the maximization step. When the likelihoods in the optimization are of
+suitable form, the iteration steps can be solved analytically, which
+can considerably reduce required evaluations of the objective
+function. Convergence is guaranteed, if the optimization can increase
+the likelihood at each iteration. However, the identification of a
+global optimum is not guaranteed in the EM algorithm.
+
+Incorporating prior information of the parameter values through
+Bayesian priors can be used to avoid overfitting and focus the
+modeling on particular features in the data, as in the regularized
+dependency modeling framework of Publication~\ref{MLSP}, where the EM
+algorithm is used to learn Gaussian latent variable models.  
+
+\subsubsection{Standard optimization methods}\label{sec:optim}
+
+Optimization methods provide standard tools to implement selected
+learning procedures. Optimization algorithms are used to identify
+parameter values that minimize or maximize the objective function,
+either globally, or in local surroundings of the optimized
+value. Selection of optimization method depends on smoothness and
+continuity properties of the objective function, required accuracy,
+and available resources.  
+
+{\it Gradient-based approaches} optimize the objective function by
+assuming smooth, continuous topology over the probability density
+where setting the derivatives to zero will yield local optima. If a
+closed form solution is not available, it is often possible to
+estimate gradient directions in a given point. Optimization can then
+proceed by updating the parameters towards the desired direction along
+the gradient, gradually improving the objective function value in
+subsequent gradient ascent steps. So-called {\it quasi-Newton methods}
+use function values and gradients to characterize the optimized
+manifold, and to optimize the parameters along the approximated
+gradients. An appropriate step length is identified automatically
+based on the curvature of the objection function surface. The
+Broyden-Fletcher-Goldfarb-Shanno (BFGS) \citep{Broyden70, Fletcher70,
+  Goldfarb70, Shanno70} method is a quasi-Newton approach used for
+standard optimization tasks in this thesis.
+
+\subsection{Generalizability and overlearning}\label{sec:generalizability}
+
+Probabilistic models are formulated in terms of probability
+distributions over the sample space and parameter values. This forms
+the basis for generalization to new, unobserved events. A
+generalizable model can describe essential characteristics of the
+underlying process that generated the observations; a generalizable
+model is also able to characterize future observations. {\it
+  Overlearning}, or {\it overfitting} refers to models that describe
+the training data well, but do not generalize to new
+observations. Such models describe not only the general processes
+underlying the observations, but also noise in the particular
+observations. Avoiding overfitting is a central aspect in modeling.
+Overlearning is particularly likely when training data is scarce. While
+overfitting could in principle be avoided by collecting more data,
+this is often not feasible since the cost of data collection can be
+prohibitively large.
+
+Generalizability can be measured by investigating how accurately the
+model describes new observations.  A standard approach is to split the
+data into a {\it training set}, used to learn the model, and a {\it
+  test set}, used to measure model performance on unseen observations
+that were not used for training. In \emph{cross-validation} the test
+is repeated with several different learning and test sets to assess
+the variability in the testing procedure.  Cross-validation is used
+for instance in Publication~\ref{ECML} of this thesis. \emph{Bootstrap
+  analysis} \citep[see, for instance,][]{Efron94} is another widely
+used approach to measure model performance. The observed data is
+viewed as a finite realization of an underlying probability
+density. New samples from the underlying density are obtained by
+re-sampling the observed data points with replacement to simulate
+variability in the original data; observations from the more dense
+regions of the probability space become re-sampled more often than
+rare events. Each bootstrap sample resembles the probability density
+of the original data. Modeling multiple data sets obtained with the
+bootstrap helps to estimate the sensitivity of the model to variations
+in the data. Bootstrap is used to assess model performance in
+Publication~\ref{AC}.
+
+\subsection{Regularization and model selection}
+
+In general, increasing model complexity will yield more flexible
+models, which have higher descriptive power but are, on the other hand, more likely
+to overfit. Therefore relatively simple models can often outperform
+more complex models in terms of generalizability. A compromise between
+simplicity and descriptive power can be obtained by imposing
+additional constraints or soft penalties in the modeling to prefer
+compact solutions, but at the same time retain the descriptive power
+of the original, flexible model family.  This is called {\it
+  regularization}. Regularization is particularly important when the
+sample size is small, as demonstrated for instance in
+Publication~\ref{MLSP}, where explicit and theoretically principled
+regularization is achieved by setting appropriate priors on the model
+structure and parameter values. The priors will then affect the MAP
+estimate of the model parameters. One commonly used approach is to
+prefer {\it sparse} solutions that allow only a small number of the
+potential parameters to be employed at the same time to model the data
+\citep[see e.g.][]{Archambeau08}. A family of probabilistic approaches
+to balance between model fit and model complexity is provided by
+information-theoretic criteria \citep[see e.g.][]{Gelman03}. The {\it
+  Bayesian Information Criterion (BIC)} is a widely used information
+criterion that introduces a penalty term on the number of model
+parameters to prefer simpler models. The log-likelihood \(\L\) of the
+data, given the model, is balanced by a measure of model complexity,
+\(q log(N)\), in the final objective function \(- 2\L + q
+log(N)\). Here \(q\) denotes the number of model parameters and \(N\)
+is the constant sample size of the investigated data set. The BIC has
+been criticized since it does not address changes in prior
+distributions, and its derivation is based on asymptotic
+considerations that hold only approximately with finite sample size
+\citep[see e.g.][]{Bishop06}. On the other hand, BIC provides a
+principled regularization procedure that is easy to implement. In this
+thesis, the BIC has been used to regularize the algorithms in
+Publication~\ref{NR}.
+
+\subsection{Validation}
+
+After learning a probabilistic model, it is necessary to confirm the
+quality of the model and verify potential findings in further,
+independent experiments. {\it Validation} refers to a versatile set of
+approaches used to investigate model performance, as well as in model
+criticism, comparison and selection.  Internal and external approaches
+provide two complementary categories for model validation. {\it
+  Internal validation} refers to procedures to assess model
+performance based on training data alone. For instance, it is possible
+to estimate the sensitivity of the model to initialization,
+parameterization, and variations in the data, or convergence of the
+learning process. Internal analysis can help to estimate the
+weaknesses and generalizability of the model, and to compare
+alternative models. Bootstrap and cross-validation are widely used
+approaches for internal validation and the analysis of model
+performance \citep[see e.g.][]{Bishop06}. Bootstrap can provide
+information about the sensitivity of the results to sampling effects
+in the data. Cross-validation provides information about the model
+generalization performance and robustness by comparing predictions of
+the model to real outcomes. {\it External validation} approaches
+investigate model predictions and fit on new, independent data sets
+and experiments. Exploratory analysis of high-throughput data sets
+often includes massive multiple testing, and provides potentially
+thousands of automatically generated hypotheses. Only a small set of
+the initial findings can be investigated more closely by human
+intervention and costly laboratory experiments. This highlights the
+need to prioritize the results and assess the uncertainty in the
+models.

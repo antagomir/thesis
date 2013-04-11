@@ -1,0 +1,6 @@
+\newcommand{\bibalias}[2]{%
+  \if@filesw\immediate\write\@auxout{%
+    \string\@bibalias{#1}{#2}}%
+  \fi\ignorespaces}
+\newcommand{\@bibalias}[2]{%
+  \global\@namedef{b@#1}{\csname b@#2\endcsname}}

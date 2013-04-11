@@ -1,0 +1,106 @@
+\chapter{Human transcriptome and other layers of genomic information}\label{ch:integration}
+
+\begin{quotation}
+  \emph{The way to deal with the problem of big data is to beat it
+    senseless with other big data.}
+\begin{flushright}
+J. Quackenbush (2006) %\cite{Eisenstein06b}
+\end{flushright}
+\end{quotation}
+
+
+This chapter presents the third main contribution of the thesis,
+computational strategies to integrate measurements of human
+transcriptome to other layers of genomic information.  Genomic,
+transcriptomic, proteomic, epigenomic and other sources of measurement
+data characterize different aspects of genome organization
+\citep{Hawkins2010, Montaner2010, Sara2010}; any single source
+provides only a limited view to the cellular system. Understanding
+functional organization of the genome and ultimately the cell function
+requires integration of data from the various levels of genome
+organization and modeling of their dynamical interplay.  Such an
+holistic approach, which is also called {\it systems biology}, is a
+key to understanding living organisms, which are ``rich in emergent
+properties because forever new groups of properties emerge at every
+level of integration'' \citep{Mayr04}. Combining evidence across
+multiple sources can help to discover functional mechanisms and
+interactions, which are not seen in the individual data sets, and to
+increase statistical power in noisy and incomplete high-throughput
+experiments \citep{Huttenhower2010, Reed2006}.
+
+Integration of heterogeneous genomic data comes with a variety of
+technical and methodological challenges \citep{Hwang05,
+  Troyanskaya05}, and the particular modeling approaches vary
+according to the analysis task and particular properties of the
+investigated measurement sources.  Integrative studies have been
+limited by poor availability of co-occurring genomic observations, but
+suitable data sets are now becoming increasingly available in both
+in-house and public biomedical data repositories \citep{tcga08}.  New
+observations highlight the need for novel, integrative approaches in
+functional genomics \citep{Coe08}. Recent studies have proposed for
+instance methods to integrate epigenetic modifications
+\citep{Sadikovic2008}, micro-RNA \citep{Qin2008}, transcription factor
+binding \citep{Savage2010}, as well as protein expression
+\citep{Johnson2008}.  Given the complex stochastic nature of
+biological systems, computational efficiency, robustness against
+uncertainty and interpretability of the results are key issues. Prior
+information of biological systems is often incomplete, and subject to
+high levels of uncontrolled variation and complex interdependencies
+between different parts of the cellular system \citep{Troyanskaya05}.
+These issues emphasize the need for principled approaches requiring
+minimal prior knowledge about the data, as well as minimal model
+fitting procedures. Section~\ref{sec:traditionaldep} gives an overview
+of the standard models for high-throughput data integration methods,
+which have close connections to the modeling approaches developed in
+this work.
+
+\section{Standard approaches for genomic data integration}\label{sec:traditionaldep}
+
+The integrative approaches can be roughly classified in three
+categories: methods that (i) combine statistical evidence across
+related studies in order to obtain more accurate inferences of target
+variables, (ii) utilize side information in order to guide the
+analysis of a single, primary data source, and (iii) detect and
+characterize dependencies between the measurement sources in order to
+discover new functional connections between the different layers of
+genomic information. The contributions in Chapters~\ref{ch:preproc}
+and~\ref{ch:atlases} are associated with the first two categories; the
+contributions presented in this chapter, the regularized dependency
+detection framework of Publication~\ref{MLSP}, and associative
+clustering of Publications~\ref{ECML} and~\ref{AC}, belong to the
+third category.
+
+\input{traditionaldep}
+
+\section{Regularized dependency detection}\label{sec:pairwise}
+\input{pairwise}
+
+\section{Associative clustering}
+\input{ac}
+
+\section{Conclusion}
+
+The models introduced in Publications~\ref{MLSP}-\ref{AC} provide
+general exploratory tools for the discovery and analysis of
+statistical dependencies between co-occurring data sources and tools
+to guide modeling through Bayesian priors. In particular, the models
+consider linear dependencies (Publication~\ref{MLSP}) and
+cluster-based dependency structures (Publications~\ref{ECML}-\ref{AC})
+between the data sources. The models are readily applicable to data
+integration tasks in functional genomics. In particular, the models
+have been applied to investigate dependencies between chromosomal
+mutations and transcriptional activity in cancer, and evolutionary
+divergence of transcriptional activity between human and mouse.
+Biomedical studies provide a number of other potential applications
+for such general-purpose methods. An increasing number of co-occurring
+observations across the various regulatory layers of the genome are
+available concerning epigenetic mechanisms, micro-RNAs, polymorphisms
+and other genomic features \citep{tcga08}. Simultaneous observations
+provide a valuable resource for investigating the functional
+properties that emerge from the interactions between the different
+layers of genomic information. An open source implementation in
+BioConductor\footnote{http://www.bioconductor.org/packages/release/bioc/html/pint.html}
+provides accessible computational tools for related data integration
+tasks, helping to guarantee the utility of the developed models for
+the computational biology community.
+
