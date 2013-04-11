@@ -1,5 +1,10 @@
+### Reproducing the thesis 
+* Clone this repository: git clone git@github.com:antagomir/thesis.git
+* Go to subdirectory [sources/latex/](latex)
+* Run ./thesis.sh
+* This creates the complete thesis in [publications/thesis-LeoLahti-2010.pdf](publications/thesis-LeoLahti-2010.pdf)
 
-### Doctoral thesis source files
+### Thesis source files
 
 * [cover/](cover) front cover material
 * [latex/](latex) latex sources and shell script to create the thesis pdf
@@ -15,17 +20,11 @@ separate copyright notices.
 * [publications/Publication?.pdf](publications/) (publications of the thesis)
 
 
-### Creating the thesis 
-* Clone this repository: git clone git@github.com:antagomir/thesis.git
-* go to subdirectory [sources/latex/](latex)
-* run ./thesis.sh
-* this creates the complete thesis in [publications/thesis-LeoLahti-2010.pdf](publications/thesis-LeoLahti-2010.pdf)
-
-### Front cover source material
-* located in the subfolder [cover/](cover)
+### Front cover material
+* Located in the subfolder [cover/](cover)
 * Adobe Illustrator file: [full_cover.ai](cover/full_cover.ai)
-* back cover original for the full cover: [cover/takakansitekstit_TKK-ICS-D.doc](takakansitekstit_TKK-ICS-D.doc)
-* original front cover image: [IMG_1733.JPG](cover/IMG_1733.JPG) (C) Leo Lahti 2009, published under [CC-BY license]((http://www.creativecommons.org/))
+* Back cover original for the full cover: [cover/takakansitekstit_TKK-ICS-D.doc](takakansitekstit_TKK-ICS-D.doc)
+* Original front cover image: [IMG_1733.JPG](cover/IMG_1733.JPG) (C) Leo Lahti 2009, published under [CC-BY license]((http://www.creativecommons.org/))
 
 ### License 
 
