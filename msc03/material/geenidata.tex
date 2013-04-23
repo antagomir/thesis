@@ -1,0 +1,278 @@
+\chapter{Ihmisen ja hiiren vastingeenien tarkastelu}\label{sec:geenidata}
+
+Ihminen ja hiiri eriytyivät yhteisestä kantamuodostaan noin 75
+miljoonaa vuotta sitten. Noin 80 prosentilla hiiren geeneistä on
+sekvenssihomologian nojalla yksikäsitteinen vastingeeni ihmisen
+genomissa, ja ainoastaan yhdellä prosentilla hiiren geeneistä ei ole
+tällä hetkellä havaittavaa sekvenssihomologiaa ihmisen geenien kanssa
+\cite{Waterston02}. Ihmisen ja hiiren proteiineja koodaavien geenien
+määräksi arvioidaan yleisesti noin 30 000, mutta arvioiden
+vaihteluväli on melko suuri. Geenien lisäksi perimässä on
+lukuisa joukko muita elimistön toiminnan säätelyn kannalta
+tarpeellisia osia. 
+
+Lajien geneettisten yhteyksien ansiosta ihmisen geenien toiminnasta
+voidaan saada tietoa tutkimalla geenien toimintaa malliorganismeissa
+kuten hiiressä. Hiiren käyttöä malliorganismina puoltavat vuosisadan
+ajan jatkuneen geneettisen tutkimuksen tuottama tieto, sekä
+mahdollisuudet hiiren perimän manipulointiin ja koeolosuhteiden
+kontrollointiin. Vastingeenien tutkimista voi käyttää lähtökohtana
+lajien vertailulle geneettisellä tasolla.
+
+\section{Vertaileva toiminnallinen genomianalyysi}
+
+Ihmisen elimistön toiminnasta on saatu lisätietoa jo pitkään
+tutkimalla fysiologisten systeemien toimintaa
+malliorganismeissa. Vertailun ulottaminen geenien toiminnan tasolle
+genominlaajuisessa mittakaavaassa on uusi tutkimusalue. Tämä {\it
+vertaileva toiminnallinen genomiikka} on erotettava vertailevasta
+genomiikasta, jossa vertailu kohdistuu geenien toiminnan sijasta
+genomien rakenteisiin (ks. esim. \cite{Waterston02}).
+
+Lajien sisäisillä tarkasteluilla löydettyjen geeniryhmien
+toiminnallinen vertailu lajien välillä on ensiaskel geenien toiminnan
+vertailevaan tutkimukseen. Toiminnallisesti samankaltaisten geenien
+ryhmiä on etsitty sekvenssihomologian perusteella mm. hiivalajeissa
+\cite{Gaillardin00}. Sekvenssitiedon ohella vertailuissa on käytetty
+ortologisten geenien ilmenemisdataa \cite{Jimenez02}. Pelkän
+geenisirudatan perusteella muodostettuja lajien sisäisiä geeniryhmiä
+on vertailtu ainakin hiiressä ja hiivassa \cite{Bono02}. Genomisessa
+mittakaavassa geenisiruilla tuotettua dataa on käytetty geenien
+luokitteluun perustuvissa tutkimuksissa myös yksittäisen lajin eri kantojen
+vertailuun bakteereilla ja hiivalla
+\cite{Behr99,Kato-Maeda01,Schoolnik02,Townsend03} sekä
+taudinaiheuttajan isäntälajissa aiheuttamien infektioiden tutkimiseen
+\cite{Diehn01}. 
+Vastingeenien ilmenemisdatan tutkimuksessa on löydetty viitteitä
+siitä, että lajien säilymiselle tärkeiden vastingeenien ilmenemisessä
+tapahtuu evoluution aikana vähemmän eriytymistä kuin muiden
+vastingeenien ilmenemisessä \cite{Stuart03}.
+
+Vertailevaa toiminnallista analyysia on tehty geenisekvenssien ja
+ilmenemisdatan lisäksi myös muilla genomisilla
+datajoukoilla. Esimerkkejä ovat aineenvaihduntaverkostojen analysointi
+singulaariarvohajotelmalla \cite{Famili03} ja proteiinien
+vuorovaikutusdatan tutkiminen valmiilla visualisointimenetelmillä
+\cite{Werner-Washburne02}. Valmiit menetelmäpaketit ovat
+helppokäyttöisiä, mutta niiden varjopuolena on usein se, että
+menetelmän sovittaminen tutkimusaineistoon jää helposti
+puutteelliseksi, ja tulkinnan kannalta oleelliset tekniset
+yksityiskohdat saattavat jäädä loppukäyttäjälle epäselviksi.
+
+Mainituissa tutkimuksissa on geenien ilmenemisdatan analysoimisen
+osalta turvauduttu tilastollisiin perusmenetelmiin kuten
+korrelaatiomittojen käyttöön tai tavanomaisilla ryhmittelymenetelmillä
+tuotettujen ryhmien vertailuun. Geenisiruilla tuotettujen laajojen
+datajoukkojen vertailevaan analyysiin on kehitelty toistaiseksi vähän
+menetelmiä, jotka yhdistävät aineistojen sisältämää tietoa jo
+analyysin laskennallisessa vaiheessa. Joitakin menetelmiä on kuitenkin
+olemassa. Yleistetyn singulaariarvohajotelman lähtökohtana ovat
+geenien ilmenemisdataa sisältävät matriisit $\e_1$ ja $\e_2$. Näissä
+on tietoa kahden eri lajin geenien ilmenemisestä yhteisissä
+koeasetelmissa.  Matriiseille muodostettavat hajotelmat ovat muotoa
+$\e_1 = \u_1 \v_1 \xk^{-1}$ ja $\e_2 = \u_2
+\v_2 \xk^{-1}$, missä $\v_1$ ja $\v_2$ ovat diagonaalisia.
+Kaksi datajoukkoa voidaan esittää tiivistetyssä esitysmuodossa, kun
+niille tehdään kytketty lineaarinen muunnos muunnosmatriisin $\{\xk^{-1}\}$ esittämien kantavektoreiden määrittelemään aliavaruuteen.
+Singulaariarvohajotelma on perusteltu tapa kahdelle datajoukolle
+yhteisten piirteiden esittämiseksi, ja tuloksille on olemassa myös
+biologinen tulkinta. Yleistetty singulaariarvohajotelma paljastaa
+solubiologisten prosessien yhteyksiä lajien välillä \cite{Alter03}, ja
+menetelmän avulla voidaan luokitella geenejä niihin liittyvien
+prosessien mukaisesti.
+
+Biologisten datajoukkojen yhdistämiseksi ja tulkitsemiseksi on
+kehitelty myös rakenteeltaan monimutkaisempia malleja
+(ks. esim. \cite{Barash02,Hartemink02,Segal03,Troyanskaya03}).
+Rakenteellisemmat mallit kuvaavat usein tutkimuskohdetta paremmin kuin
+semiparametriset ryhmittelymallit, mutta niiden käyttäminen edellyttää
+tavallisesti huolellista sovittamista tutkimusaiheeseen ja runsasta
+etukäteistietoa aineistosta. Riippuvuuksia mallintavat
+eksploratiiviset ryhmittelymenetelmät tarjoavat näihin verrattuna
+keveän ja nopean vaihtoehdon. Ne eivät vaadi ennakkotietoa
+aineistosta, ja niitä voidaan käyttää aineiston tutkimisen
+ensimmäisenä vaiheena, jossa tavoitteena on aineiston huomionarvoisten
+piirteiden havaitseminen ja tarkempien tutkimussuuntien ehdottaminen.
+
+\section{Tutkimuksen tavoitteet}
+
+Tämän työn ensisijaisena tavoitteena on etsiä genominlaajuisesta
+ihmisen ja hiiren vastingeenien joukosta sellaisia vastingeenien
+ryhmiä, jotka voisivat liittyä biologisten jatkotutkimusten kannalta
+mielenkiintoisiin toiminnallisiin eroihin ja yhteyksiin lajien
+välillä. Tutkimus laajentaa artikkelin \cite{Su02} tuloksia
+vastingeenien ja lajien välisten toiminnallisten yhteyksien
+tarkastelun suuntaan.
+
+Yhteistä alkuperää olevilla lajin säilymisen kannalta tärkeillä
+vastingeeneillä on usein samankaltaisena säilynyt
+ilmenemiskäyttäytyminen, joka heijastelee lajeille yhteisiä
+fysiologisia toimintoja (ks. \cite{Stuart03}). Geenien tutkiminen
+ryhminä on lajien vertailussa usein mielenkiintoisempaa kuin
+yksittäisten geenien vertailu (ks. \cite{Carroll03,Stuart03}). Lajien
+toiminnallisiin eroihin ja yhteyksiin liittyvien kiinnostavien
+geeniryhmien löytämiseksi laajasta aineistosta tarvitaan kuitenkin
+hyvin määriteltyjä tavoitteita. Tässä työssä etsitään sellaisia
+vastingeenien ryhmiä, joiden ilmenemiseen liittyvä yhteys on
+tilastollisesti poikkeuksellisen yleinen tai harvinainen.
+
+Tutkimuksen toteuttamiseen soveltuva assosiatiivinen
+ryhmittelymenetelmä \cite{Sinkkonen03tr} on melko uusi, ja sen
+käytännön soveltamisesta on vasta vähän kokemuksia. Tämän työn toisena
+tavoitteena on uuden menetelmän toiminnan vertaaminen vaihtoehtoisiin
+menetelmiin, ja sen soveltamisessa huomionarvoisten ominaisuuksien
+kartoittaminen ja arviointi.
+
+\section{Tutkimusaineisto}
+
+Tässä työssä tarkastellaan julkisesti saatavilla olevaa geenilastuilla
+tuotettua geenien ilmenemisdataa \cite{Sandberg00,Su02}. Datajoukko on
+edustava otos kahdesta tavanomaista nisäkkään fysiologista tilaa
+esittävästä \emph{transkriptomista}, eli lähetti-RNA-molekyylien
+kokonaisuudesta. Mittauksia oli saatavilla 46:sta ihmisen ja 45:stä
+hiiren kudoksesta tai solulinjasta. Solulinja on soluviljelmä, joka
+suotuisissa olosuhteissa jatkaa jakaantumistaan määräämättömän ajan.
+
+\subsection{Esikäsittely}
+
+Esikäsittelyn tavoitteena on tutkimusaineiston muokkaaminen helpommin
+käsiteltävään muotoon. Tämän tutkimuksen aineistolle esikäsittelyt on
+tehty kuten artikkelissa
+\cite{Su02}. Eri kudoksissa tehtyjen mittausten vertailukelpoisuuden
+varmistamiseksi ilmenemistasojen keskiarvo skaalattiin jokaisessa
+näytteessä arvoon 200. Suurimmat ja pienimmät arvot (2\%) jätettiin
+huomiotta normalisointivakiota määritettäessä. Ilmenemistasot on
+laskettu Affymetrixin ohjelmistolla, ja ne ovat verrannollisia
+lähetti-RNA:n pitoisuuteen tutkittavassa näytteessä. Ilmenemistason
+AD=200 on arvioitu merkitsevän noin 3-5 lähetti-RNA-molekyylin
+pitoisuutta kussakin tutkimusnäytteen solussa. Useimmissa näytteissä
+geenilastuilla oli tehty 2-3 mittausta. Mittausvirheiden vaikutuksen
+vähentämiseksi kudoskohtaisista mittauksista laskettiin
+keskiarvo. Hyvin pienet arvot (AD<20) merkitsevät joko erittäin
+matalaa ilmenemistasoa tai epäluotettavaa mittausta, ja
+ilmenemistasoksi asetettiin näissä tapauksissa AD=20.
+
+Luettelo tutkituista kudoksista on annettu liitteessä A. Ensimmäisenä
+luetelluissa 21 kudoksessa geenien ilmenemistasojen mittaukset oli
+tehty molemmille lajeille. Muiden kudosten osalta mittaustuloksia oli
+saatavilla vain toisessa lajissa.
+
+\subsection{Näytteiden karsinta}\label{sec:karsinta}
+
+Esikäsittelyn jälkeen eri näytteissä mitatut ilmenemistasot ovat
+vertailukelpoisia. Vain osa geeneistä ilmeni merkittävästi (AD>200
+ainakin yhdessä kudoksessa). Ilmenemättömät geenit hidastavat ja
+monimutkaistavat laskentaa, ja niiden lisäarvo tälle tutkimukselle on
+olematon. Tämän vuoksi ne kannattaa poistaa
+aineistosta. Alkuperäisessä aineistossa oli mittauksia 6684 ihmisen ja
+hiiren putatiivisesti ortologisen geeniparin
+ilmenemisestä. Ilmenemättömien geenien karsinnan jälkeen käytettävissä
+oli 4499 geeniparia. Myös tarkasteltavan datajoukon
+dimensionaalisuuden pienentäminen nopeuttaisi laskentaa, mutta
+toisaalta se voisi kadottaa myös hyödyllistä informaatiota. Tässä
+työssä ulottuvuuksien karsintaan ei ollut laskentaresurssien
+riittävyyden kannalta tarvetta, joten se jätettiin tekemättä.
+
+\subsection{Normalisointi}
+
+Erilaisten mittausolosuhteiden johdosta eri näytteissä mitattujen
+ilmenemistasojen hajonnat eivät välttämättä ole vertailukelpoisia.
+Tietoa hajonnan merkityksestä eri näytteissä ei ollut käytettävissä,
+joten vertailun helpottamiseksi ilmenemistasojen varianssi
+normalisoitiin jokaisessa näytteessä arvoon 1.
+
+\subsection{Etäisyysmitat}
+
+Samankaltaisesti ilmenevillä geeneillä on usein samankaltaisia
+tehtäviä tai niihin liittyvät yhteiset säätelymekanismit
+(ks. \cite{Ewing00,Tilstone03}). Toisaalta samankaltainen ilmeneminen
+voi olla merkkinä geenien tuntemattomista toiminnallisista
+yhteyksistä. Geenien ilmenemisprofiilit voidaan esittää pisteinä
+data-avaruudessa, jonka koordinaattiakselit vastaavat eri kudoksissa
+tehtyjä mittauksia. Ilmenemisprofiilin muodosta voidaan päätellä,
+missä olosuhteissa geeni erityisesti ilmenee. Samoissa olosuhteissa
+ilmenevillä geeneillä voi olla toiminnallisia yhteyksiä, vaikka niiden
+absoluuttisissa ilmenemistasoissa olisi huomattaviakin
+eroja. Toisaalta jo pelkkä ero absoluuttisissa ilmenemistasoissa
+saattaa olla kiintoisa vastingeenejä vertailtaessa. Samankaltaisesti
+ilmenevien geenien etäisyys data-avaruudessa on pienempi kuin eri
+tavoin ilmenevien geenien. Jotta datapisteiden etäisyyksiä ja
+sijainteja voidaan mielekkäästi vertailla, tarkasteltavaan
+data-avaruuteen on määriteltävä tietyt matemaattiset ehdot toteuttava
+etäisyysmitta (ks. \cite{Rudin76}). Etäisyysmitta vaikuttaa aineiston
+tarkastelussa korostuviin piirteisiin.
+
+Tässä työssä käytetään tavanomaista euklidista etäisyysmittaa, joka
+huomioi sekä ilmenemisprofiilien muodon että erot absoluuttisissa
+ilmenemistasoissa. Perinteinen euklidinen etäisyysmitta ei välttämättä
+painota erilaisia ilmenemisprofiilien piirteitä biologisten
+tulkintojen kannalta optimaalisella tavalla, mutta sen käyttö on
+yksinkertaista ja johtaa mielekkäiden geeniryhmien löytymiseen.
+
+\section{Datan yleispiirteiden alustava kartoitus}
+
+Aineiston ominaisuuksia tutkitaan usein alustavilla
+ryhmittelymenetelmillä (ks. \cite{Ben-Dor99, Eisen98}) ennen
+monimutkaisempien mallien muodostamista. Kartoittamisen yhteydessä
+aineistosta voidaan löytää jatkoanalyysien kannalta huomionarvoisia
+piirteitä, minkä jälkeen erilaisten menetelmien soveltuvuutta kyseisen
+datajoukon tutkimiseen on helpompi arvioida.
+
+Tavanomainen ensiaskel laajojen ja korkeaulotteisten datajoukkojen
+tutkimisessa on visuaalinen tarkastelu, joka helpottaa suuren
+tietoaineiston hahmottamista. Aineiston karkeiden yleispiirteiden
+hahmotteluun soveltuvat hyvin sen dimensionaalisuutta pienentävät
+menetelmät, jotka pyrkivät säilyttämään mahdollisimman hyvin
+tutkimusaineistoon sisältyvän oleellisen informaation. Yleisesti
+käytettyjä menetelmiä ovat mm.  pääkomponenttianalyysi ja
+itseorganisoituva kartta (ks. esim. \cite{Haykin99}).
+
+\subsection{Erikoistuneet geenit}
+
+Tässä työssä käytetty tutkimusaineisto on peräisin artikkelista
+\cite{Su02}, jonka tavoitteena oli geenitiedon louhintamenetelmien
+havainnollistaminen ja geenien toiminnan ja säätelyn eksploratiivinen
+tutkiminen mm. hierarkkisella ryhmittelyllä. Tutkimuksessa aineiston
+havaittiin sisältävän lukuisia vain yhdessä kudoksessa voimakkaasti
+ilmenevien geenien ryhmiä. Ihmiseltä löydettiin mm. yksinomaan
+kiveksissä, haimassa, maksassa, istukassa ja kateenkorvassa, sekä
+hiirellä lisäksi maitorauhasissa, kilpirauhasessa ja sylkirauhasissa
+voimakkaasti ilmenevien geenien joukkoja.
+
+Myös tätä työtä varten muodostetuilla itseorganisoituvilla kartoilla
+havaittiin useita hiiren ja ihmisen geenien kasaumia alueilla, jotka
+vastasivat tiettyyn kudokseen erikoistunutta ilmenemistä. Aineistosta
+havaittiin myös sellaisia geenikasaumia, joihin ei liittynyt selvää
+kudoskohtaista erikoistumista.
+
+\subsection{Ortologien yhteydet}
+
+Artikkelissa \cite{Su02} ihmisen ja hiiren ortologisten geenien
+toimintaa vertailtiin korrelaatiomitalla, joka huomioi
+ilmenemisprofiilin muodon, mutta ei eroja absoluuttisessa
+ilmenemistasossa. Useimpien ortologien ilmenemisprofiileilla oli selvä
+positiivinen korrelaatio (>0.5). Voimakkaimmin korreloivien ortologien
+ilmenemisprofiilien visualisointi havainnollisti hiiren ja ihmisen
+vastingeenien toiminnallisia samankaltaisuuksia. Lisäksi havaittiin
+negatiivisesti korreloivia ortologien ilmenemisprofiileja. Tulosten
+nojalla ehdotettiin, että vastingeenit ilmenevät usein ainakin
+osittain yhteisin tavoin, ja että eri tavoin ilmenevien vastingeenien
+tutkimus voisi tuoda lisätietoa lajien eriytymisessä tapahtuneista
+muutoksista. Voimakkaasti korreloivien vastingeenien toiminta oli
+usein keskittynyt yhteen kudokseen kuten maksaan, amygdalaan,
+kiveksiin, sydämeen, munuaisiin tai pikkuaivoihin.
+
+Tutkimme hiiren ja ihmisen ortologien ilmenemisessä esiintyviä
+yhteyksiä alustavasti huomioimalla vain ne kudokset, joiden osalta
+mittaukset oli tehty molemmille lajeille. Tällöin sekä ihmisen että
+hiiren geenit voitiin esittää samassa 21-ulotteisessa
+data-avaruudessa. Keskimäärin ortologien etäisyys oli satunnaisesti
+valittuihin geenipareihin verrattuna merkitsevästi pienempi ainakin
+sisätulometriikassa (ks. \cite{Kohonen95}) lasketulla
+itseorganisoituvalla kartalla.
+
+
+
+
+
+

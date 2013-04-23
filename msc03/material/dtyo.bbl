@@ -1,0 +1,453 @@
+\begin{thebibliography}{10}
+
+\bibitem{Naturegensuppl99_bioinf}
+The chipping forecast.
+\newblock {\em Nature Genetics Supplement}, 21:1--60, 1999.
+
+\bibitem{Adams00}
+M.~D. Adams, S.~E. Celniker, R.~A. Holt, C.~A. Evans, J.~D. Gocayne, P.~G.
+  Amanatides, S.~E. Scherer, P.~W. Li, R.~A. Hoskins, R.~F. Galle, et~al.
+\newblock The genome sequence of \emph{Drosophila melanogaster}.
+\newblock {\em Science}, 287:2185--2195, 2000.
+
+\bibitem{Alter03}
+O.~Alter, P.~O. Brown, and D.~Botstein.
+\newblock Generalized singular value decomposition for comparative analysis of
+  genome-scale expression data sets of two different organisms.
+\newblock {\em PNAS}, pages 3351--3356, March 2003.
+
+\bibitem{Aparicio02}
+S.~Aparicio, J.~Chapman, E.~Stupka, N.~Putnam, J.~ming Chia, P.~Dehal,
+  A.~Christoffels, S.~Rash, S.~Hoon, A.~Smit, M.~D.~S. Gelpke, J.~Roach, T.~Oh,
+  I.~Y. Ho, M.~Wong, C.~Detter, F.~Verhoef, P.~Predki, A.~Tay, S.~Lucas,
+  P.~Richardson, S.~F. Smith, M.~S. Clark, Y.~J.~K. Edwards, N.~Doggett,
+  A.~Zharkikh, S.~V. Tavtigian, D.~Pruss, M.~Barnstead, C.~Evans, H.~Baden,
+  J.~Powell, G.~Glusman, L.~Rowen, L.~Hood, Y.~H. Tan, G.~Elgar, T.~H.
+  anddagger Byrappa~Venkatesh, D.~Rokhsar, and S.~Brenner.
+\newblock Whole-genome shotgun assembly and analysis of the genome of
+  \emph{Fugu rubripes}.
+\newblock {\em Science}, 297:1301--1310, 2002.
+
+\bibitem{Barash02}
+Y.~Barash and N.~Friedman.
+\newblock Context-specific bayesian clustering for gene expression data.
+\newblock {\em Journal of Computational Biology}, 9:169--191, 2002.
+
+\bibitem{Behr99}
+M.~Behr, M.~Wilson, W.~Gill, H.~Salamon, G.~Schoolnik, S.~Rane, and P.~Small.
+\newblock Comparative genomics of bcg vaccines by whole-genome {DNA}
+  microarray.
+\newblock {\em Science}, 284:1520--1523, 1999.
+
+\bibitem{Ben-Dor99}
+A.~Ben-Dor, R.~Shamir, and Z.~Yakhini.
+\newblock Clustering gene expression patterns.
+\newblock {\em Journal of Computational Biology}, 6(3-4):281--97, 1999.
+
+\bibitem{Benson03}
+D.~Benson, I.~Karsch-Mizrachi, D.~Lipman, J.~Ostell, and D.~Wheeler.
+\newblock Genbank.
+\newblock {\em Nucleic Acids Research}, 31(1):23--37, 2003.
+
+\bibitem{Benson00}
+D.~A. Benson, I.~Karsch-Mizrachi, D.~J. Lipman, J.~Ostell, B.~A. Rapp, and
+  D.~L. Wheeler.
+\newblock Genbank.
+\newblock {\em Nucleic Acids Research}, 28:15--18, 2000.
+
+\bibitem{Bono02}
+H.~Bono and Y.~Okazaki.
+\newblock Functional transcriptomes: comparative analysis of biological
+  pathways and processes in eukaryotes to infer genetic networks among
+  transcripts.
+\newblock {\em Current Opinion in Structural Biology}, 12:355--361, 2002.
+
+\bibitem{Brazma01}
+A.~Brazma, P.~Hingamp, J.~Quackenbush, G.~Sherlock, P.~Spellman, C.~Stoeckert,
+  J.~Aach, W.~Ansorge, C.~A. Ball, H.~Causton, T.~Gaasterland, P.~Glenisson11,
+  F.~Holstege, I.~Kim, V.~Markowitz, J.~Matese, H.~Parkinson, A.~Robinson,
+  U.~Sarkans, S.~Schulze-Kremer, J.~Stewart, R.~Taylor, J.~Vilo, and
+  M.~Vingron.
+\newblock Minimum information about a microarray experiment (miame) - toward
+  standards for microarray data.
+\newblock {\em Nature Genetics}, 29(4):365--371, 2001.
+
+\bibitem{elegans98}
+{C. elegans Sequencing Consortium}.
+\newblock Sequence and analysis of the genome of {C.} elegans.
+\newblock {\em Science}, 282:2012--2018, 1998.
+
+\bibitem{Campbell01}
+N.~A. Campbell, J.~B. Reece, and L.~G. Mitchell.
+\newblock {\em Biology}.
+\newblock Benjamin/Cummings, 2001.
+\newblock Sixth edition.
+
+\bibitem{Carroll03}
+S.~B. Carroll.
+\newblock Genetics and the making of homo sapiens.
+\newblock {\em Nature}, 422:849--857, 2003.
+\newblock Review.
+
+\bibitem{Chu98}
+S.~Chu, J.~DeRisi, M.~Eisen, J.~Mulholland, D.~Botstein, P.~O. Brown, and
+  L.~Herskowitz.
+\newblock The transcriptional program of sporulation in budding yeast.
+\newblock {\em Science}, 282:699--705, 1998.
+
+\bibitem{CoverThomas91}
+T.~M. Cover and J.~A. Thomas.
+\newblock {\em Elements of Information Theory}.
+\newblock Wiley, New York, 1991.
+
+\bibitem{Davis59}
+P.~J. Davis.
+\newblock Leonhard euler's integral: A historical profile of the gamma
+  function. in memoriam: Milton abramowitz.
+\newblock {\em American Mathematical Monthly}, 66:849--869, 1959.
+
+\bibitem{DeRisi97}
+J.~L. DeRisi, V.~R. Iyer, and P.~O. Brown.
+\newblock Exploring the metabolic and genetic control of gene expression on a
+  genomic scale.
+\newblock {\em Science}, 278:680--686, 1997.
+
+\bibitem{Diehn01}
+M.~Diehn and D.~Relman.
+\newblock Comparing functional genomic datasets: lessons from dna microarray
+  analyses of host-pathogen interactions.
+\newblock {\em Current Opinion in Microbiology}, 4:95--101, 2001.
+
+\bibitem{Doolittle97}
+R.~Doolittle.
+\newblock Microbial genomes opened up.
+\newblock {\em Nature}, 392:339--342, 1997.
+\newblock News feature.
+
+\bibitem{Naturefuncgeninsight00_bioinf}
+R.~D. {(editor)}.
+\newblock Functional genomics.
+\newblock {\em Nature}, 405:819--846, 2000.
+\newblock Nature Insight.
+
+\bibitem{Eisen98}
+M.~B. Eisen, P.~T. Spellman, P.~O. Brown, and D.~Botstein.
+\newblock Cluster analysis and display of genome-wide expression patterns.
+\newblock {\em Proceedings of the National Academy of Sciences, USA},
+  95:14863--14868, 1998.
+
+\bibitem{Ewing00}
+R.~M. Ewing and J.-M. Claverie.
+\newblock {EST} databases as multi-conditional gene expression datasets.
+\newblock In {\em Proc. of Pacific Symposium on Biocomputing}, volume~5, pages
+  427--439, 2000.
+
+\bibitem{Famili03}
+I.~Famili and B.~O. Palsson.
+\newblock Systemic metabolic reactions are obtained by singular value
+  decomposition of genome-scale stoichiometric matrices.
+\newblock {\em Journal of Theoretical Biology}, 224:87--96, 2003.
+
+\bibitem{Fisher34}
+R.~Fisher.
+\newblock {\em Statistical Methods for Research Workers}.
+\newblock Oliver and Boyd, Edinburgh, 1934.
+\newblock Fifth edition.
+
+\bibitem{Gaillardin00}
+C.~Gaillardin, G.~Duchateau-Nguyen, F.~Tekaia, B.~Llorente, S.~Casaregola,
+  C.~Toffano-Nioche, M.~Aigle, F.~Artiguenave, G.~Blandin, M.~Bolotin-Fukuhara,
+  E.~Bon, P.~Brottier, J.~de~Montigny, B.~Dujon, P.~Durrens, A.~Lepingle,
+  A.~Malpertuy, C.~Neuveglise, O.~Ozier-Kalogeropoulos, S.~Potier, W.~Saurin,
+  M.~Termier, M.~Wesolowski-Louvel, P.~Wincker, J.~Souciet, and J.~Weissenbach.
+\newblock Genomic exploration of the hemiascomycetous yeasts: 21. comparative
+  functional classification of genes.
+\newblock {\em FEBS Letters}, 487:134--149, 2000.
+
+\bibitem{Gelman03}
+A.~Gelman, J.~B. Carlin, H.~S. Stern, and D.~B. Rubin.
+\newblock {\em Bayesian Data Analysis}.
+\newblock Chapman \& Hall, USA, 2003.
+\newblock Second edition.
+
+\bibitem{Goffeau97}
+A.~Goffeau et~al.
+\newblock The yeast genome directory, 1997.
+\newblock Nature supplement.
+
+\bibitem{Golub96}
+G.~H. Golub and C.~F.~V. Loan.
+\newblock {\em Matrix Computations}.
+\newblock Johns Hopkins University Press, London, 1996.
+\newblock Third edition.
+
+\bibitem{Good74}
+I.~Good and J.~Crook.
+\newblock {The Bayes/non-Bayes compromise and the multinomial distribution}.
+\newblock {\em Journal of American Statistical Association}, 69:711--720, 1974.
+
+\bibitem{Good76}
+I.~J. Good.
+\newblock On the application of symmetric {Dirichlet} distributions and their
+  mixtures to contingency tables.
+\newblock {\em Annals of Statistics}, 4(6):1159--1189, 1976.
+
+\bibitem{Hardison97}
+R.~Hardison, J.~Oeltjen, and W.~Miller.
+\newblock Long human-mouse sequence alignments reveal novel regulatory
+  elements: a reason to sequence the mouse genome.
+\newblock {\em Genome Res.}, 7:959--966, 1997.
+
+\bibitem{Hartemink02}
+A.~J. Hartemink, D.~K. Gifford, T.~S. Jaakkola, and R.~A. Young.
+\newblock Combining location and expression data for principled discovery of
+  genetic regulatory network models.
+\newblock In {\em Proc. of Pacific Symposium on Biocomputing}, volume~7, pages
+  462--473, 2002.
+
+\bibitem{Haykin99}
+S.~Haykin.
+\newblock {\em Neural Networks, a Comprehensive Foundation}.
+\newblock Prentice Hall, New Jersey, second edition, 1999.
+
+\bibitem{Hosack03}
+D.~Hosack, G.~D. Jr., B.~Sherman, H.~Lane, and R.~Lempicki.
+\newblock Identifying biological themes within lists of genes with ease.
+\newblock {\em Genome Biology}, 4(R70), 2003.
+
+\bibitem{Jimenez02}
+J.~L. Jim\'enez, M.~P. Mitchell, and J.~G. Sgouros.
+\newblock Microarray analysis of orthologous genes: conservation of the
+  translational machinery across species at the sequence and expression level.
+\newblock {\em Genome Biology}, 4(R4), 2002.
+
+\bibitem{Kaski00ijcnn}
+S.~Kaski and J.~Sinkkonen.
+\newblock Metrics that learn relevance.
+\newblock In {\em Proceedings of IJCNN-2000, International Joint Conference on
+  Neural Networks}, volume~V, pages 547--552. IEEE Service Center, Piscataway,
+  NJ, 2000.
+
+\bibitem{Kato-Maeda01}
+M.~Kato-Maeda, J.~Rhee, T.~Gingeras, H.~Salamon, J.~Drenkow, N.~Smittipat, and
+  P.~Small.
+\newblock Comparing genomes within the species \emph{Mycobacterium
+  Tuberculosis}.
+\newblock {\em Genome Research}, 11:547--554, 2001.
+
+\bibitem{Kohonen95}
+T.~Kohonen.
+\newblock {\em Self-Organizing Maps}.
+\newblock Springer, Berlin, 2001.
+\newblock Third edition.
+
+\bibitem{Koop95}
+B.~Koop.
+\newblock Human and rodent dna sequence comparisons: A mosaic model of genomic
+  evolution.
+\newblock {\em Trends Genet.}, 11:367--371, 1995.
+
+\bibitem{Lander96}
+E.~Lander.
+\newblock The new genomics: Global views of biology.
+\newblock {\em Science}, 274:536--539, 1996.
+\newblock News feature.
+
+\bibitem{Lander01}
+E.~{Lander et al.}
+\newblock Initial sequencing and analysis of the human genome.
+\newblock {\em Nature}, 409:860--921, 2001.
+
+\bibitem{Lipschutz99}
+R.~J. Lipschutz, S.~P.~A. Fodor, T.~R. Gingeras, and D.~J. Lockhart.
+\newblock High density synthetic oligonucleotide arrays.
+\newblock {\em Nature Genetics Supplement}, 21(1):20--24, 1999.
+
+\bibitem{Lockhart96}
+D.~J. Lockhart, H.~Dong, M.~C. Byrne, M.~T. Follettie, M.~V. Gallo, M.~S. Chee,
+  M.~Mittmann, C.~Wang, M.~Kobayashi, H.~Horton, and E.~L. Brown.
+\newblock Expression monitoring by hybridization to high-density
+  oligonucleotide arrays.
+\newblock {\em Nature Biotechnology}, 14:1675--1680, 1996.
+
+\bibitem{Ma02}
+B.~Ma, J.~Tromp, and M.~Li.
+\newblock Patternhunter: Faster and more sensitive homology search.
+\newblock {\em Bioinformatics}, 18(3):440--445, 2002.
+
+\bibitem{Monni02}
+O.~Monni, S.~Hautaniemi, and O.~Kallioniemi.
+\newblock Geenisirutekniikka ja siihen liittyvä bioinformatiikka.
+\newblock {\em Duodecim}, 118:1157--1166, 2002.
+\newblock (In Finnish).
+
+\bibitem{Waterston02}
+{Mouse Genome Sequencing Consortium}.
+\newblock Initial sequencing and comparative analysis of the mouse genome.
+\newblock {\em Nature}, 420:520--562, 2002.
+
+\bibitem{Pruitt03}
+K.~Pruitt, T.~Tatusova, and D.~Maglott.
+\newblock {NCBI} reference sequence project: update and current status.
+\newblock {\em Nucleic Acids Research}, 31:34--37, 2003.
+
+\bibitem{Quackenbush01}
+J.~Quackenbush.
+\newblock Computational analysis of microarray data.
+\newblock {\em Nature Reviews Genetics}, 2:418--427, 2001.
+
+\bibitem{Quackenbush02}
+J.~Quackenbush.
+\newblock Microarray data normalization and transformation.
+\newblock {\em Nature Genetics Supplement}, 32:496--501, 2002.
+
+\bibitem{Rubinstein97}
+Y.~D. Rubinstein and T.~Hastie.
+\newblock Discriminative vs. informative learning.
+\newblock In D.~Heckerman, H.~Mannila, D.~Pregibon, and R.~Uthurusamy, editors,
+  {\em Proc. ACM KDD}, pages 49--53. AAAI Press, 1997.
+
+\bibitem{Rudin76}
+W.~Rudin.
+\newblock {\em Principles of mathematical analysis}.
+\newblock Mc-Graw-Hill, Singapore, 1976.
+\newblock Third edition.
+
+\bibitem{Sandberg00}
+R.~Sandberg and R.~Yasuda.
+\newblock From the cover: Regional and strain-specific gene expression mapping
+  in the adult mouse brain.
+\newblock {\em Proceedings of the National Academy of Sciences of the USA},
+  97:11038--11043, 2000.
+
+\bibitem{Schena95}
+M.~Schena, D.~Shalon, R.~Davis, and P.~Brown.
+\newblock Quantitative monitoring of gene expression patterns with a
+  complementary dna microarray.
+\newblock {\em Science}, 270:467--470, 1995.
+
+\bibitem{Schoolnik02}
+G.~K. Schoolnik.
+\newblock Functional and comparative genomics of pathogenic bacteria.
+\newblock {\em Current Opinion in Microbiology}, 5:20--26, 2002.
+\newblock Review.
+
+\bibitem{Segal03}
+E.~Segal, B.~Taskar, A.~Gasch, N.~Friedman, and D.~Koller.
+\newblock Rich probabilistic models for gene expression.
+\newblock {\em Bioinformatics}, 17(Suppl 1):243--252, 2003.
+
+\bibitem{Sinkkonen02NC}
+J.~Sinkkonen and S.~Kaski.
+\newblock Clustering based on conditional distributions in an auxiliary space.
+\newblock {\em Neural Computation}, 14:217--239, 2002.
+
+\bibitem{Sinkkonen02ecml}
+J.~Sinkkonen, S.~Kaski, and J.~Nikkil\"{a}.
+\newblock Discriminative clustering: Optimal contingency tables by learning
+  metrics.
+\newblock In T.~Elomaa, H.~Mannila, and H.~Toivonen, editors, {\em Proceedings
+  of the ECML'02, 13th European Conference on Machine Learning}, pages
+  418--430, Berlin, 2002. Springer.
+
+\bibitem{Sinkkonen03tr}
+J.~Sinkkonen, J.~Nikkil\"{a}, L.~Lahti, and S.~Kaski.
+\newblock Associative clustering by maximizing a {Bayes} factor.
+\newblock Technical Report A68, Helsinki University of Technology, Laboratory
+  of Computer and Information Science, Espoo, Finland, 2003.
+
+\bibitem{Slonim02thesis}
+N.~Slonim.
+\newblock {\em The information bottleneck: theory and applications}.
+\newblock PhD thesis, Hebrew University, Jerusalem, 2002.
+
+\bibitem{Stuart03}
+J.~M. Stuart, E.~Segal, D.~Koller, and S.~K. Kim.
+\newblock A gene-coexpression network for global discovery of conserved genetic
+  modules.
+\newblock {\em Science}, 302:249--255, 2003.
+
+\bibitem{Su02}
+A.~I. Su, M.~P. Cooke, K.~A. Ching, Y.~Hakak, J.~R. Walker, T.~Wiltshire, A.~P.
+  Orth, R.~G. Vega, L.~M. Sapinoso, A.~Moqrich, A.~Patapoutian, G.~M. Hampton,
+  P.~G. Schultz, and J.~B. Hogenesch.
+\newblock Large-scale analysis of the human and mouse transcriptomes.
+\newblock {\em PNAS}, 99:4465--4470, 2002.
+
+\bibitem{Tilstone03}
+C.~Tilstone.
+\newblock Vital statistics.
+\newblock {\em Nature}, 424:610--612, 2003.
+\newblock News feature.
+
+\bibitem{Tishby99}
+N.~Tishby, F.~C. Pereira, and W.~Bialek.
+\newblock The information bottleneck method.
+\newblock In {\em 37th Annual Allerton Conference on Communication, Control,
+  and Computing}, pages 368--377, Urbana, Illinois, 1999.
+
+\bibitem{Tomb97}
+J.-F. Tomb, O.~White, A.~R. Kerlavage, R.~A. Clayton, G.~G. Sutton, R.~D.
+  Fleischmann, K.~A. Ketchum, H.~P. Klenk, S.~Gill, B.~A. Dougherty, K.~Nelson,
+  J.~Quackenbush, L.~Zhou, E.~F. Kirkness, S.~Peterson, B.~Loftus,
+  D.~Richardson, R.~Dodson, H.~G. Khalak, A.~Glodek, K.~McKenney, L.~M.
+  Fitzegerald, N.~Lee, M.~D. Adams, E.~K. Hickey, D.~E. Berg, J.~D. Gocayne,
+  T.~R. Utterback, J.~D. Peterson, J.~M. Kelley, M.~D. Cotton, J.~M. Weidman,
+  C.~Fujii, C.~Bowman, L.~Watthey, E.~Wallin, W.~S. Hayes, M.~Borodovsky, P.~D.
+  Karp, H.~O. Smith, C.~M. Fraser, and J.~C. Venter.
+\newblock The complete genome sequence of the gastric pathogen helicobacter
+  pylori.
+\newblock {\em Nature}, 388:539--547, 1997.
+
+\bibitem{Townsend03}
+J.~Townsend, D.~Cavalieri, and D.~Hartl.
+\newblock Population genetic variation in genome-wide gene expression.
+\newblock {\em Molecular Biology and Evolution}, 20:955--963, 2003.
+
+\bibitem{Troyanskaya03}
+O.~G. Troyanskaya, K.~Dolinski, A.~B. Owen, R.~B. Altamna, and D.~Botstein.
+\newblock A {Bayesian} framework for combining heterogeneous data sources for
+  gene function prediction (in saccharomyces cerevisiae).
+\newblock {\em Proceedings of National Academy of Sciences},
+  100(14):8348--8353, 2003.
+
+\bibitem{Velculescu95}
+V.~E. Velculescu, L.~Zhang, B.~Vogelstein, and K.~W. Kinzler.
+\newblock Serial analysis of gene expression.
+\newblock {\em Science}, 270:484--487, 1995.
+
+\bibitem{Vukmirovic00_bioinf}
+O.~G. Vukmirovic and S.~M. Tilghman.
+\newblock Exploring genome space.
+\newblock {\em Nature}, 405:820--822, 2000.
+
+\bibitem{Warrington00}
+J.~A. Warrington, A.~Nair, M.~Mahadevappa, and M.~Tsyganskaya.
+\newblock Comparison of human adult and fetal expression and identification of
+  535 housekeeping/maintenance genes.
+\newblock {\em Physiol. Genomics}, 2:143--147, 2000.
+
+\bibitem{Werner-Washburne02}
+M.~Werner-Washburne, B.~Wylie, K.~Boyack, E.~Fuge, J.~Galbraith, J.~Weber, and
+  G.~Davidson.
+\newblock Comparative analysis of multiple genome-scale data sets.
+\newblock {\em Genome Research}, 12:1564--1573, 2002.
+
+\bibitem{Wheeler03}
+D.~Wheeler, D.~Church, S.~Federhen, A.~Lash, T.~Madden, J.U.Pontius,
+  G.~Schuler, L.~Schrimi, E.~Sequeira, T.~Tatusova, and L.~Wagner.
+\newblock Database resources of the national center for biotechnology.
+\newblock {\em Nucleic Acids Research}, 31(1):28--33, 2003.
+
+\bibitem{Yates34}
+F.~Yates.
+\newblock Contingency tables involving small numbers and the $\chi^2$ test.
+\newblock {\em Journal of the Royal Statistical Society Supplement},
+  1:217--239, 1934.
+
+\bibitem{Zhang00}
+Z.~Zhang, S.~Schwartz, L.~Wagner, and W.~Miller.
+\newblock A greedy algorithm for aligning dna sequences.
+\newblock {\em Journal of Computational Biology}, 7:203--214, 2000.
+
+\end{thebibliography}

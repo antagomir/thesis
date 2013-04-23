@@ -1,0 +1,109 @@
+\chapter{Johdanto}
+
+Useiden organismien kaikkien geenien eli \emph{genomin} rakenteen
+kartoittamisen
+\cite{Adams00,Aparicio02,elegans98,Goffeau97,Lander01,Waterston02,Tomb97}
+jälkeen geenien tehtävän ja toiminnallisten yhteyksien selvittämiseksi
+on avautunut uudenlaisia mahdollisuuksia. Vertaileva toiminnallinen
+genomiikka tutkii lajien yhteyksiä geenien toiminnan tasolla
+genominlaajuisessa mittakaavassa
+\cite{Doolittle97,Lander96}. Tulevaisuuden haasteena on geenien
+biologisen merkityksen selvittäminen ja uuden tiedon hyödyntäminen
+lääketieteellisten ongelmien ratkaisussa.
+
+Helpommin tutkittavien malliorganismien kuten hiiren avulla tehtävä
+tutkimus voi auttaa ymmärtämään myös ihmisen geenien
+toimintaa. Malliorganismien tutkimuksesta saatava lisätieto on
+arvokasta, sillä geenien toiminnan selvittäminen on valtava urakka,
+jossa tarvitaan monitieteistä yhteistyötä.
+
+Uusi geenisirutekniikka \cite{Lockhart96,Schena95,Velculescu95}
+mahdollistaa jopa kymmenien tuhansien geenien ilmenemistasojen
+mittaamisen samanaikaisesti yhdessä näytteessä, kun aiemmin kyettiin
+tutkimaan vain muutamaa geeniä kerrallaan. Uudet menetelmät tuottavat
+suuria määriä dataa, johon tärkeä tieto geenien toiminnasta kätkeytyy
+\cite{Naturegensuppl99_bioinf,Naturefuncgeninsight00_bioinf}. Laajojen
+datajoukkojen matemaattisesta mallintamisesta on tullut tärkeä
+geenitutkimuksen työväline (ks. \cite{Monni02,Vukmirovic00_bioinf}).
+
+Tutkimusmenetelmien valinnassa on huomioitava käytettävissä olevat
+voimavarat. Tavallisesti kannattaa aloittaa laskennallisesti
+kevyemmillä ja rakenteeltaan yksinkertaisilla eksploratiivisilla
+menetelmillä, jotka eivät vaadi ennakkotietoa
+tutkimusaineistosta. Eksploratiivisten menetelmien tavoitteena on
+tutkimusaineiston yleisten piirteiden hahmottaminen ja hypoteesien
+muodostus myöhemmän tutkimuksen tarpeisiin. Monimutkaisemmat
+menetelmät kuvaavat yleensä tutkittavaa ilmiötä paremmin, mutta ovat
+laskennallisesti raskaita ja voivat vaatia työlästä sovittamista
+tutkimuskohteeseen.
+
+Erilaiset ryhmittelymenetelmät (ks. \cite{Quackenbush01}) ja
+riippuvuuksien mallintaminen ovat yleisiä eksploratiivisen tutkimuksen
+välineitä. Ryhmittelymenetelmillä voidaan etsiä geeniryhmiä, joiden
+geeneillä on yhteisiä piirteitä. Yhteys voi liittyä esimerkiksi
+samankaltaiseen toimintaan tai toimintaan osana laajempaa geenejä
+yhdistävää verkostoa. Kunkin geeniryhmän biologisesta merkityksestä
+voidaan muodostettujen ryhmien avulla tehdä epäsuoria päätelmiä, jos
+kyseiseen ryhmään kuuluu myös ennestään tunnettuja ja toiminnaltaan
+hyvin kartoitettuja geenejä. Ryhmittelymenetelmien mahdollisuudet
+geenien toiminnan tutkimuksessa huomattiin alunperin hiivalla
+tehdyissä kokeissa. Tiettyihin aineenvaihduntareitteihin liittyvät
+geenit päätyivät samoihin ryhmiin \cite{Chu98,DeRisi97}, minkä
+seurauksena ehdotettiin, että ryhmittelyä voitaisiin käyttää geenien
+toiminnan ennustamiseen. Geenien toimintaa koskevia hypoteeseja
+löydetään ryhmittelyn avulla huomattavasti nopeammin kuin uusia
+kytköksiä perinteisillä laboratoriomenetelmillä. Riippuvuuksien
+mallintaminen auttaa ymmärtämään tutkimusaineistojen
+yhteyksiä. Riippuvuuksia voidaan mallintaa mm.  korrelaatiomitoilla ja
+yhteisesiintymämalleilla (ks. esim. \cite{Su02,Sinkkonen03tr}).
+
+Genominlaajuisen ilmenemisdatan vertailevaan tutkimukseen soveltuvia
+menetelmiä on kehitelty toistaiseksi vähän. Tämän työn tavoitteena on
+etsiä biologisen tutkimuksen kannalta kiinnostavia ihmisen ja hiiren
+vastingeenien ryhmiä käyttämällä ryhmittelyyn genominlaajuista
+aineistoa vastingeenien ilmenemisestä. Vastingeeneille muodostetaan
+nk. assosiatiivinen ryhmittely, joka maksimoi ihmisen ja hiiren
+geeniryhmien riippuvuudet Bayesilaisen riippuvuusmitan mielessä. Tällä
+tavalla löydetään vastingeenejä, joiden toiminnallinen yhteys on
+muuhun aineistoon verrattuna poikkeuksellinen. Assosiatiivinen
+ryhmittely \cite{Sinkkonen03tr} on uusi eksploratiivisen
+data-analyysin menetelmä, joka soveltuu kahden aineiston
+riippuvuuksien mallintamiseen ilman ennakkotietämystä niiden
+rakenteesta. Tämän työn toisena tavoitteena on uuden menetelmän
+arviointi ja vertaaminen vaihtoehtoisiin menetelmiin.
+
+Assosiatiivinen ryhmittely osoittautui vertailevassa toiminnallisessa
+genomianalyysissa käyttökelpoiseksi eksploratiiviseksi
+menetelmäksi. Se onnistuu yhdistämään kaksi hyvää ominaisuutta,
+helppotulkintaisten ryhmien muodostamisen ja riippuvuuksien
+mallintamisen, vaihtoehtoisia menetelmiä paremmin, ja sen muodostamat
+ryhmät yleistyvät kuvaamaan myös potentiaalisia uusia
+näytteitä. Tutkimuksessa löydettiin mielenkiintoisia vastingeenien
+ryhmiä, joille on olemassa biologinen tulkinta. Tämän lisäksi voitiin
+muodostaa uusia hypoteeseja geenien yhteyksistä sekä lajien välillä
+että niiden sisällä. Löydöksiä voidaan käyttää lähtökohtana
+biologisille jatkotutkimuksille.
+
+Työn biologinen tausta, geenien ilmenemisen mittaamiseen käytettävät
+menetelmät ja tutkimuksessa tarpeelliset tietokannat esitellään
+luvussa~\ref{sec:bioluku}. Luvussa~\ref{sec:geenidata} esitellään
+tutkimuksen tavoitteet ja tutkimusaineisto, sekä luodaan katsaus
+vertailevan toiminnallisen genomiikan
+tutkimusmenetelmiin. Luvussa~\ref{sec:ryhmittely} esitellään
+menetelmien ymmärtämisen kannalta oleelliset taustatiedot ja
+assosiatiiviselle ryhmittelylle vaihtoehtoiset
+menetelmät. Assosiatiivista ryhmittelyä käsittelevässä
+luvussa~\ref{sec:ac} esitellään tämän työn ensisijainen
+tutkimusmenetelmä. Kokeiden tulokset ja tulosten tulkinnat esitellään
+luvussa~\ref{sec:tulokset}. Viimeisessä luvussa~\ref{sec:pohdinta}
+työstä tehdään yhteenveto.
+
+
+
+
+
+
+
+
+
+

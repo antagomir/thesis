@@ -1,0 +1,29 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{paketti}[2003/11/03 Own basic definitions; Leo Lahti]
+\RequirePackage{amsmath}
+\RequirePackage{amsfonts}
+\RequirePackage{amsthm}
+
+%Lauseita
+\newtheorem{lause}{Theorem}[chapter]
+\newtheorem{lemma}[lause]{Lemma}
+\newtheorem{seur}[lause]{Corollary}
+\newtheorem{maar}[lause]{Definition}
+
+%Pistä viitteiden nimeksi Viitteet
+\renewcommand\bibname{Viitteet}
+
+%Omia lyhenteitä
+\def\R{\mathbb{R}}
+\def\x{\mathbf{x}}
+\def\y{\mathbf{y}}
+\def\m{\mathbf{m}}
+\def\c{\mathbf{c}}
+\def\d{\mathbf{d}}
+\def\X{\mathbf{X}}
+\def\Y{\mathbf{Y}}
+\def\e{${\^e}$}
+\def\u{${\^u}$}
+\def\xk{${\^x}$}
+\def\v{${\^v}$}
+

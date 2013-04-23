@@ -1,0 +1,512 @@
+\chapter{Käytettävät data-analyysimenetelmät}\label{sec:ryhmittely}
+
+Jopa kymmenien tuhansien geenien samanaikainen analysointi kymmenissä
+tai sadoissa erilaisissa näytteissä tuottaa valtavan määrän
+tutkimustietoa. Aineiston analysointiin käytettävien menetelmien
+valinta riippuu paitsi tutkimuksen tavoitteista ja tutkimusaineiston
+ominaisuuksista, myös käytettävissä olevista voimavaroista ja
+vaaditusta tarkkuudesta. Aineiston tutkiminen helpottuu, jos
+käytettävissä on sen rakennetta kuvaava malli. Mallin sovittamisessa
+pyritään etsimään sellaiset parametrit, joilla mallin kuvaamat yleiset
+säännönmukaisuudet kuvaavat tutkittavaa aineistoa mahdollisimman
+hyvin. Hyvä malli yleistyy kuvaamaan myös uusia havaintoja.
+
+Tämän työn tavoitteena on ihmisen ja hiiren vastingeeneihin liittyvien
+mielenkiintoisten toiminnallisten erojen ja samankaltaisuuksien
+etsintä eksploratiivisen data-analyysin keinoin. Tutkimusaineistona on
+genominlaajuinen joukko mittauksia ortologisten geeniparien
+ilmenemisestä. Ihmisen ja hiiren geenien ilmenemisprofiilit esitetään
+kahden monimuuttuja-avaruuden datapisteinä, joiden ryhmittelyyn on
+olemassa lukuisia menetelmiä. Ihmisen ja hiiren geeniryhmien yhteydet
+esitetään kontingenssitaululla, jonka avulla voidaan arvioida myös
+niiden tilastollisia riippuvuuksia. 
+
+Tutkimukseen ensisijaisesti käytetty assosiatiivinen
+ryhmittelymenetelmä esitellään luvussa~\ref{sec:ac}. Sen tavoitteena
+on Bayesilaisen riippuvuusmitan mielessä optimaalisen ryhmittelyn
+muodostaminen kahdelle geenijoukolle. Tässä luvussa esitellään
+menetelmien ymmärtämisen kannalta oleellinen taustatieto ja työssä
+käytettävät data-analyysin perusmenetelmät. Lisäksi luodaan katsaus
+assosiatiiviselle ryhmittelylle vaihtoehtoisiin menetelmiin.
+
+\section{Ohjaamaton ryhmittely}
+
+Ryhmittelymenetelmille on ominaista annetun näytejoukon jakaminen
+ryhmiin, joissa kuhunkin ryhmään kuuluvilla näytteillä on jotakin
+yhteistä ja toisaalta piirteitä, jotka erottavat ne muiden ryhmien
+näytteistä. Ohjaamattomassa ryhmittelyssä ryhmien muodostamiseen
+käytetään ainoastaan ryhmiteltävään aineistoon itseensä sisältyvää
+tietoa. Ryhmät muodostuvat tällöin ohjaamattomasti ryhmittelymallin ja
+tutkimusaineiston ominaisuuksien perusteella. Ohjaamattomat
+ryhmittelymenetelmät ovat käyttökelpoisia etenkin silloin, kun
+tutkittavaan aineistoon liittyvää ennakkotietoa ei ole käytettävissä.
+
+Ryhmittelyn avulla löydettäviä yhteyksiä voivat olla esimerkiksi
+geenien toiminnalliset luokat, osallisuus samoihin energia- tai
+aineenvaihduntareitteihin ja geenien koodaamien proteiinien perheet.
+
+\subsection{K-means}\label{sec:kmeans}
+
+K-means-algoritmi (ks. esim. \cite{Kohonen95}) soveltuu aineiston
+ryhmittelyyn, kun ryhmien määrä on valittu ennakolta. Menetelmän
+tavoitteena on ryhmien sisäisen homogeenisuuden ja toisaalta ryhmien
+väliset erot maksimoivan ryhmittelyn muodostaminen. Tämä voidaan
+mieltää 'luonnolliseksi' tavaksi muodostaa $K$ ryhmää tutkittavaan
+pistejoukkoon. Kustannusfunktiona käytetään yleensä ryhmien
+keskimääräistä kvantisaatiovirhettä. Ryhmän kvantisaatiovirhe $Q$ on
+siihen kuuluvien datapisteiden $\{ \d_r \}$ ja ryhmäkohtaisen
+mallivektorin $\m$ neliöllisten etäisyyksien summa
+
+\[
+	Q = \sum_r d(\d_r,\m)^2,
+\]
+
+missä $d$ merkitsee käytettävää etäisyysmittaa. 
+
+Ryhmittelyn lähtökohtana ovat satunnaisesti valitut ja riittävän
+etäällä toisistaan sijaitsevat $K$ mallivektoria. Mallivektorit 
+määrittelevät näytteiden ryhmittelyn siten, että kukin datapiste
+kuuluu lähimmän mallivektorin osoittamaan ryhmään. Uudet mallivektorit
+lasketaan kullakin laskentakierroksella ryhmän pisteiden
+keskiarvona. Mallivektorien sijainnit voivat tällöin muuttua, mikä voi
+puolestaan aiheuttaa niiden määrittelemän ryhmittelyn
+muuttumiseen. Ryhmien muuttuminen johtaa seuraavalla
+laskentakierroksella uusien mallivektoreiden määrittämiseen.
+Ryhmittelyä jatketaan kunnes riittävä kustannusfunktion suppeneminen
+tai muu optimointikriteeri on saavutettu.
+
+Satunnaisalustus vaikuttaa ryhmittelyn
+lopputulokseen. Kustannusfunktion paikallisten minimien vaikutuksen
+välttämiseksi ryhmittely tehdään muutamilla erilaisilla
+satunnaisalustuksilla, joista valitaan kustannusfunktion mielessä
+paras.
+
+\subsubsection{Voronoi-alueet}
+
+Mallivektoreiden avulla määritelty ryhmittely voidaan käsittää
+laajemmin koko avaruuden ositukseksi. Tarkasteltava data-avaruus $X$
+jaetaan osiin $\{ V_i\}$ määrittelemällä mallivektoreiden joukko
+$\{\m_i\} \subset X$. Mielivaltainen data-avaruuden piste $\x
+\in X$ kuuluu valitun etäisyysmitan $d$ mielessä lähimmän
+mallivektorin määräämään ryhmään: $\x \in V_j$, jos $d(\x ,\m_j ) <
+d(\x ,\m_k )$ pätee kaikille $k \neq j$. Ositus on reunapisteitä
+lukuun ottamatta yksikäsitteinen. Jatkuvassa avaruudessa
+reunapisteiden todennäköisyys on nolla, ja ne voidaan jättää
+huomioimatta käytännön laskennassa.
+
+Annetun mallivektorin $\m_j$ määrittelemää pistejoukkoa $V_j \subset
+X$ kutsutaan \emph{Voronoi-alueeksi}. Voronoi-alueet ovat yhtenäisiä
+ja ainakin matalaulotteisissa avaruuksissa usein myös konvekseja.
+
+Tutkittavien datapisteiden jakauma voidaan mallivektoreiden avulla
+esittää diskreetissä ja tiivistetyssä muodossa. Tämä on tavoitteena
+vektorikvantisaatiossa, johon K-means menetelmä on siten läheisessä
+yhteydessä.
+
+\section{Yhteisjakaumamallintaminen}
+
+Yksityiskohtaisimmin kahden aineiston $X$ ja $Y$ riippuvuuksia
+voitaisiin tutkia niiden yhteisesiintymien tiheyttä kuvaavan
+todennäköisyysjakauman $p(\X,\Y)$ avulla. Tämä yhteisjakauma
+sisältäisi kaiken tiedon aineistojen riippuvuuksista. Tuntematon
+yhteisjakauma joudutaan käytännössä arvioimaan äärellisen
+havaintoaineiston perusteella. Täydellisessä
+yhteisjakaumamallintamisessa käytetään aineistojen riippuvuuden
+mallintamisen ohella huomattavasti voimavaroja aineistojen sisäisten
+jakaumien mallintamiseen, ja se on laskennallisesti hyvin
+raskasta. Tässä työssä olemme ensisijaisesti kiinnostuneita kahden
+aineiston riippuvuuksista. Aineistoista kiinnostavia ryhmiä erotteleva
+menetelmä voi kyetä jäljittämään riippuvuuksia jopa paremmin kuin
+yhteisjakauman täysi mallintaminen
+(ks. \cite{Rubinstein97,Sinkkonen02NC,Sinkkonen02ecml}).
+
+Yhteisjakaumaa voitaisiin pyrkiä mallintamaan karkeasti esimerkiksi
+yhdistämällä tutkimusaineistot. Mallin opetukseen käytettävät
+dataparit $(\x,\y) \in X \times Y$ voitaisiin esittää yksittäisinä
+yhdistetyn avaruuden pisteinä $[\x, \y] \in X \cup Y$. Konkatenoitujen
+dataparien muodostama pistejoukko voitaisiin ryhmitellä tavanomaisella
+ryhmittelymenetelmällä. Ryhmiä tarkastelemalla havaittaisiin, miten
+kahden alkuperäisen data-avaruuden alueet ovat yhdistyneet
+ryhmittelyssä. Yhdistetyn avaruuden ositus saattaisi johtaa vaikeasti
+tulkittavien ryhmien muodostumiseen tapauksessa, jossa ositettava
+avaruus muodostuu kahdesta erillisestä komponentista, mutta
+ryhmittelymenetelmä etsii yhdistetyn avaruuden osituksen. Tässä työssä
+eksploratiiviseen riippuvuuksien mallinnustehtävään soveltuvatkin
+luultavasti paremmin menetelmät, jotka muodostavat omat osituksensa
+kahdelle erillisenä esitettävälle aineistolle.
+
+\section{Käytettävät riippuvuusmallintamisen menetelmät}
+
+Korrelaatioiden tai muiden etäisyysmittojen avulla olisi helppoa
+löytää geenipareja, joissa geenien ilmenemisessä on selviä eroja tai
+samankaltaisuuksia. Lisäehtoja asettamalla voidaan pienentää tarkemman
+tutkimuksen kohteeksi valittavien näytteiden määrää ja kohdentaa
+huomio sellaisiin tutkimusaineiston piirteisiin, joita ei onnistuta
+kuvaamaan pelkkien perinteisten tunnuslukujen avulla. Tässä työssä
+lisäehtona käytetään geeniryhmien riippuvuuksiin liittyvää
+vastingeenien tilastollisesti poikkeuksellista esiintymistiheyttä.
+
+\subsection{Kontingenssitaulut}
+
+Perinteisesti kontingenssitaulujen avulla on tutkittu diskreettien
+näytteiden yhteisesiintymiä ja riippuvuuksia, esimerkiksi eri
+kahvilaatujen ja maistajien arvostelmien suhdetta. Muodostettava
+kontingenssitaulu on kaksiulotteinen matriisi, jonka rivit vastaavat
+kahvilaatuja ja sarakkeet erilaisia luonnehdintoja kuten kitkerä,
+pehmeä tai imelä. Kontingenssitaulun ruudut ovat rivien ja sarakkeiden
+leikkauskohtia. Kukin ruutu kertoo miten monesti tietty kahvilaatu on
+arvioitu tietyn makuiseksi. Eri kahvilaaduille tehtyjen maistatusten
+ja erilaisten makuarvioiden kokonaismäärät muodostavat taulun
+reunajakaumat; pikakahvia on voinut maistaa kymmenen ihmistä, mutta
+pannukahvia vain viisi. Kontingenssitaulun tilastollisilla
+tarkasteluilla voidaan havaita satunnaisista vaihteluista poikkeavat
+reunajakaumien yhteydet, esimerkiksi se että pannukahvin makua
+pidetään yleisesti pehmeänä ja pikakahvia kitkeränä.
+
+\emph{Riippumattomien reunajakaumien mallissa} kontingenssitaulun 
+ruutujen todennäköisyydet ovat kontingenssitaulun reunajakaumia
+vastaavien todennäköisyysjakaumien tuloja, jolloin esimerkiksi kahvin
+laadun ja maun välillä ei havaita riippuvuutta. \emph{Riippuvien
+reunajakaumien mallissa} reunajakaumat oletetaan toisistaan
+tuntemattomalla tavalla riippuviksi, jolloin havaittu
+kontingenssitaulun jakauma heijastelee tuntematonta ruutujen yli
+määriteltyä multinomijakaumaa. Tällöin reunajakaumat eivät määrää
+kontingenssitaulun jakaumaa, mutta voivat jossain määrin vaikuttaa
+siihen. Yhteyksien päättely suoraan kontingenssitaulun jakaumasta voi
+olla hankalaa. Perinteisesti kontingenssitaulun riippuvuusmittana on
+käytetty $\chi^2$-testiä, mutta reunajakaumien riippuvuuksia voidaan
+tutkia myös {\it Bayes-faktorin} avulla.
+
+Kontingenssitaulun esittämää tietoa voidaan havainnollistaa
+erilaisilla visualisoinneilla (ks. kuva~\ref{fig:ctable_asym}), ja
+kontingenssitauluja vertaamalla voidaan arvioida eri menetelmien
+onnistumista riippuvuuksien mallinnustehtävässä.
+
+Hiiren ja ihmisen geeniryhmien riippuvuuksien tarkastelemiseksi
+muodostettavan kontingenssitaulun rivit vastaavat ihmisen ja sarakkeet
+hiiren geenien ryhmiä. Kummankin lajin geeniryhmiä kutsutaan tässä
+yhteydessä \emph{reunaryhmiksi}, koska niiden voidaan ajatella
+muodostavan kontingenssitaulun reunat. Kontingenssitaulun ruutujen
+osoittamia ihmisen ja hiiren geeniryhmien pareja kutsutaan
+\emph{yhteisryhmiksi}. Kontingenssitaulu esittää kunkin
+yhteisryhmän geeniparien lukumäärän.
+
+\subsection{Bayes-faktori riippuvuuden mittana}
+
+Bayesilainen teoria tarjoaa johdonmukaisen tavan käyttää
+todennäköisyyksiä ilmaisemaan epävarmuutta päättelyssä. Se poikkeaa
+tavanomaisesta tilastollisesta mallinnuksesta ja hypoteesin
+testauksesta ennakko-oletusten eksplisiittisen esittämisen
+suhteen. Perinteisessä tilastotieteessä ennakko-oletukset eivät ole
+suoraan mukana päättelyssä, vaan sisältyvät implisiittisesti luokkien
+todennäköisyysmalleihin, vertailtavaksi valittuihin hypoteeseihin ja
+hypoteesien hyväksymisehtoihin.
+
+Bayesilaisen päättelyn peruselementtejä ovat tutkittavaa hypoteesia
+koskeva ({\it a priori}) ennakkotietämys, ja {\it posteriori}tietämys,
+jossa havainnosta saatu informaatio on yhdistetty
+ennakkotietämykseen. Päättely tapahtuu muodostamalla
+todennäköisyysjakaumat kiinnostuksen kohteena oleville muuttujille
+havaintojen ja ennakko-oletusten avulla.
+
+Bayesilaista lähestymistapaa voidaan käyttää vastakkaisten hypoteesien
+$\bar H$ ja $H$ todennäköisyyksien vertailuun hypoteesien
+todennäköisyyksistä tehtyjen ennakko-oletusten $p(\bar H)$ ja $p(H)$
+ja havaintoaineiston $D$ valossa. Havaintojen $D$ ehdollinen
+todennäköisyys hypoteesin $H$ tapauksessa on $p(D|H)$. Merkitsemme
+vastaavasti myös muita ehdollisia todennäköisyyksiä. Havaintoaineiston
+todennäköisyyttä vastakkaisten hypoteesien valossa vertaava
+\emph{Bayes-faktori} on muotoa
+
+\begin{equation}
+\frac{p(D|\bar H)}{p(D|H)}
+=
+  \frac{p(\bar H | D)}{p(H|D)} \cdot \frac{p(\bar H)}{p(H)}\;,
+\label{eq:bf0}
+\end{equation}
+
+ja seuraa suoraan todennäköisyyslaskennan perusaksioomista
+(ks. \cite{Gelman03}).
+
+\subsubsection{Soveltaminen tutkimusaiheeseen}
+
+Bayes-faktoria voidaan käyttää mittana kontingenssitaulun
+reunajakaumien riippuvuudelle (ks. esim. \cite{Good76}). Tällöin
+riippumattomien reunaryhmien malli $H$ toimii nollahypoteesina, johon
+riippuvien reunaryhmien mallin $\bar H$ todennäköisyyttä
+verrataan. Havaintoaineistona on kontingenssitaulun
+multinomijakauma $\{n_{ij}\}$, jonka todennäköisyys on eri hypoteesien
+valossa erilainen. Reunajakaumien riippuvuuksista tehdyt
+ennakko-oletukset sisältyvät kontingenssitaulun prioreihin.
+
+Kontingenssitaulun jakauma ja sen reunajakaumat ovat multinomiaalisia,
+ja kontingenssitaulun Bayesilaiseen tarkasteluun soveltuva Dirichlet'n
+priori (ks. \cite{Good74}) on muotoa $\prod_{s=1}^t
+q_s^{\alpha_s-1}$. Parametrit $\alpha_s$ ovat positiivisia
+prioriparametreja, ja multinomijakauman muuttujiin liittyvien
+todennäköisyyksien summa on $\sum_s q_s = 1$. Parametri $t$ ilmaisee
+tarkastelun kohteena olevan multinomijakauman muuttujien
+lukumäärän. Kontingenssitaulun tarkastelussa esiintyviä
+multinomijakaumia ovat kontingenssitaulun jakauma ja sen
+reunajakaumat. Riippuvien reunaryhmien mallissa jokaiseen
+kontingenssitaulun ruutuun $(i,j)$ liittyy oma prioriparametrinsa
+$\alpha_{ij}$. Riippumattomien reunaryhmien mallissa priorit
+$\{\alpha_i\}$ ja $\{\alpha_j\}$ määritellään reunajakaumille, ja
+kontingenssitaulun ruutujen priorit saadaan näiden ulkotulona:
+$\alpha_{ij} = \alpha_i \cdot \alpha_j$ kaikille $(i,j)$. Sopivien
+prioriparametrien valinta riippuu ongelman
+luonteesta. Prioriparametrien valinnan jälkeen havaintoaineiston
+ehdolliset todennäköisyydet eri hypoteesien valossa $P(\{n_{ij}\}|H)$
+ja $P(\{n_{ij}\}|\bar H)$ voidaan laskea.
+
+Bayes-faktorissa (\ref{eq:bf0}) esiintyvä hypoteesien
+prioritodennäköisyyksien suhde on tässä tutkimuksessa $p(\bar H) /
+p(H) = 1$, koska kummankaan hypoteesin todennäköisyyden
+painottamiselle ei ole erityisiä perusteita. Kontingenssitaulun
+jakauman $\{n_{ij}\}$ nojalla laskettu Bayes-faktori yhtyy nyt
+hypoteesien posterioritodennäköisyyksien suhteeseen, joka on
+Dirichlet'n priorin tapauksessa muotoa (ks. \cite{Sinkkonen03tr})
+
+\begin{equation}
+\frac{P(\bar H|\{n_{ij}\})}{P(H|\{n_{ij}\})}
+\propto
+  \frac{\prod_{ij} \Gamma(n_{ij}+\alpha_{ij})}{
+    \prod_i \Gamma(n_{\cdot i}+\alpha_i) 
+    \prod_j\Gamma(n_{j \cdot}+\alpha_j)}\;,
+\label{eq:bf}
+\end{equation}
+
+missä $n_{\cdot i}=\sum_j n_{ij}$ ja $n_{j \cdot}=\sum_i n_{ij}$
+merkitsevät kontingenssitaulun reunajakaumia. Kaavassa esiintyvä
+gammafunktio on muotoa
+
+\[
+	\Gamma (z) = \int_0^{\infty} t^{z-1} e^{-t} \, dt.
+\]
+
+Gammafunktion ja kertoman välillä vallitsee mielenkiintoinen yhteys
+kaikille positiivisille kokonaisluvuille $n$; $\Gamma (n+1) = n!$
+(ks. \cite{Davis59}). Prioriparametrien asettaminen arvoon
+$\alpha_{ij} = \alpha_i = \alpha_j = 1$ kaikille $(i,j)$ vastaa
+tilannetta, jossa ennakko-oletuksena on erilaisten havaintoaineistojen
+tasajakauma. Oletus on luonteva, kun ennakkotietoa jakaumasta ei ole
+käytettävissä. Tässä tapauksessa Bayes-faktori yhtyy hypergeometriseen
+todennäköisyyteen, jota on perinteisesti käytetty kontingenssitaulujen
+riippuvuusmittana \cite{Fisher34,Yates34}: havaituilla reunajakaumilla
+$\{n_{i\cdot}\}$ ja $\{n_{\cdot j}\}$ todennäköisyys jakauman
+$\{n_{ij}\}$ esiintymiselle kontingenssitaulussa on riippumattomien
+reunaryhmien hypoteesin $H$ tapauksessa
+
+\begin{equation}
+P_T\equiv P(\{n_{ij}\}|\{n_{i\cdot}\},\{n_{\cdot j}\}, H) =
+\frac{\prod_i n_{i\cdot}!\prod_j n_{\cdot j}!}{N! \prod_{ij} n_{ij}!}\;, 
+\label{eq:pt}
+\end{equation}
+
+missä $N = \sum_{ij} n_{ij}$ merkitsee näyteparien
+kokonaismäärää. Mitä suurempi tämä todennäköisyys on, sitä
+todennäköisemmin reunajakaumat ovat riippumattomia. Toisaalta
+reunajakaumien riippuvuuden todennäköisyys ja tasajakaumaa esittävää
+prioria vastaava Bayes-faktori ovat käänteisesti verrannollisia
+todennäköisyyteen (\ref{eq:pt}) nähden. Tarkempia pohdintoja
+kontingenssitaulujen, multinomijakaumien ja Dirichlet'n priorien
+suhteesta löytyy esimerkiksi artikkeleista
+\cite{Good74} ja \cite{Good76}.
+
+Kontingenssitaulun reunajakaumien riippuvuutta voidaan mitata myös
+yhteisinformaatiolla. Äärellisen datan tapauksessa kontingenssitaulun
+heijastelema aito todennäköisyysjakauma on arvioitava
+kontingenssitaulun empiirisestä jakaumasta. Tästä johdettu
+yhteisinformaatio \cite{CoverThomas91} on kuitenkin harhainen
+estimaatti. Bayes-faktorin käyttö äärellisten datajoukkojen yhteydessä
+on hyvin perusteltua. Se välttää empiirisen yhteisinformaation
+näytteiden keruusta johtuvat epävarmuudet, mutta on asymptoottisesti
+verrannollinen yhteisinformaatioon suurilla näytemäärillä
+\cite{Sinkkonen02ecml}.
+
+\subsection{Riippuvuusmallintaminen K-means-menetelmällä}
+
+Täydellistä yhteisjakaumamallintamista keveämpi vaihtoehto kahden
+aineiston riippuvuuksien etsimiseksi olisi aineistojen riippumaton
+ryhmittely esimerkiksi tavanomaisella K-means-menetelmällä, ja esille
+tulevien riippuvuuksien tarkastelu kontingenssitaulun avulla. Ei ole
+kuitenkaan taattua, että aineistojen riippumaton ryhmittely
+paljastaisi tehokkaasti niiden riippuvuuksia.
+
+Tässä tutkimuksessa valittiin sekä ihmisen että hiiren geeneille
+K-means-menetelmän kustannusfunktion mielessä paras ryhmittely
+kolmella eri satunnaisalustuksella tehdyn ryhmittelyn
+joukosta. Ryhmittelyn onnistumista mitattiin
+validointijoukolla. Mallin opettamiseen käytettiin siis vain osaa
+aineistosta, ja opetetun mallin onnistumista jäljelle jääneiden
+näytteiden ryhmittelyssä mitattiin kustannusfunktiolla. Näin
+sovittamisessa kyetään arvioimaan myös mallin yleistyskykyä. Tässä
+tapauksessa opetukseen ja mallin arviointiin käytettiin yhtä suuria
+datajoukkoja.
+
+Mallin opetukseen käytettävää datajoukkoa sanotaan opetusjoukoksi, ja
+opetetun mallin arviointiin käytettävää joukkoa
+validointijoukoksi. {\it Ristiinvalidoinnissa} mallin opetus ja
+arviointi tehdään useilla erilaisilla tutkimusdatasta poimituilla
+opetus- ja validointijoukoilla, ja opetetuista malleista valitaan
+kustannusfunktion mielessä paras. 
+
+\subsection{VQ-IB}
+
+Tehokkaaseen riippuvuuksien etsintään kontingenssitaulun avulla
+soveltuva menetelmä on 'Information bottleneck' (IB)
+\cite{Slonim02thesis}. Alkuperäinen IB-menetelmä ryhmittelee 
+diskreettejä näytteitä yhdessä datajoukossa. Sen tavoitteena on
+sellaisten ryhmittelyn muodostaminen, joka maksimoi ryhmien ja
+koeasetelmien yhteyksiä esittävästä kontingenssitaulusta lasketun
+empiirisen yhteisinformaation. Tavanomainen esimerkki menetelmän
+soveltamisesta on tekstidokumenttien ryhmittely sanajakaumien
+perusteella.
+
+Tämän tutkimuksen tavoitteena on kahden jatkuva-arvoisesta datasta
+muodostuvan aineiston ryhmittely, joka kuvaa mahdollisimman hyvin
+aineistojen riippuvuuksia ja yleistyy kuvaamaan myös uusia
+näytteitä. IB-menetelmä soveltuu tehtävään joidenkin muutosten
+jälkeen. Ryhmittelyn lähtökohtana on kahden tarkasteltavan
+data-avaruuden diskretointi atomaarisiksi
+Voronoi-alueiksi. Ryhmittelyn pohjana käytettävät atomaariset ryhmät
+muodostetaan vektorikvantisaatiosta tutulla mallivektorimenetelmällä
+(ks. kohta~\ref{sec:kmeans}), minkä johdosta olemme antaneet
+menetelmän nimeksi VQ-IB.
+
+Ensimmäisen datajoukon atomaarisia alueita käytetään IB-menetelmällä
+ryhmiteltävinä diskreetteinä näytteinä. Kutakin näytettä vastaa
+kontingenssitaulun rivi, jolta voidaan lukea tarkasteltavaan
+atomaariseen alueeseen kuuluvien datapisteiden määrän jakauma toisen
+data-avaruuden atomaarisiin alueisiin kuuluvien pisteiden
+pareina. Satunnaisen alustuksen jälkeen ryhmittelyä optimoidaan näyte
+kerrallaan siten, että kontingenssitaulun rivien ja sarakkeiden
+empiirinen yhteisinformaatio maksimoituu. Näytteiden ryhmittelyn
+jälkeen datajoukkojen rooli vaihdetaan ja ryhmittely tehdään
+toisen data-avaruuden atomaarisille Voronoi-alueille. Prosessia
+toistetaan kustanusfunktiona käytettävän yhteisinformaation
+suppenemiseen tai ennalta asetetun askelmäärä saavuttamiseen asti.
+
+Ryhmittely maksimoi atomaarisista Voronoi-alueista muodostettujen
+kahden aineiston ryhmien välisen empiirisen yhteisinformaation. Ryhmät
+eivät välttämättä ole yhtenäisiä, mutta yleistyvät koko
+data-avaruuteen.
+
+\subsubsection{Sovittaminen tutkimusaiheeseen}
+
+Sopiva atomaaristen Voronoi-alueiden määrä etsittiin
+validointijoukolla, ja alueet parametrisoitiin kummassakin avaruudessa
+K-means-menetelmällä käyttäen kolmea erilaista
+satunnaisalustusta. Ryhmittelyn optimointiin käytettiin sekventiaalista
+IB-menetelmää \cite{Slonim02thesis}. Käytettäväksi valittiin
+validointijoukon avulla IB:n kustannusfunktion mielessä paras kolmesta
+ryhmittelystä.
+
+\section{Optimointimenetelmät}
+
+Käytännössä mallin onnistumista tehtävässään mitataan
+kustannusfunktion avulla. Sopivat parametrit etsitään laskennallisesti
+optimoimalla kustannusfunktion arvoa. Tällöin mallin sovituksesta
+tulee laskennallisessa mielessä perinteinen optimointiongelma. Tässä
+työssä tarvittavia optimointimenetelmiä ovat
+konjugaattigradienttimenetelmä ja simuloitu jäähdytys.
+
+\subsection{Konjugaattigradienttimenetelmä}\label{sec:cjg}
+
+Konjugaattigradienttimenetelmä (ks. esim. \cite{Golub96}) on
+suunniteltu neliöllisten ongelmien optimointiin, mutta sitä voidaan
+käyttää sopivilla rajoituksilla myös muunlaisten ongelmien
+ratkaisemiseen. Käytännössä useimpien kustannusfunktioiden paikallinen
+käyttäytyminen on lähes neliöllistä ja konjugaattigradienttimenetelmä
+löytää riittävällä askelmäärällä paikallisen minimin mille tahansa
+differentioituvalle kustannusfunktiolle.
+
+Uusi optimointisuunta valitaan jokaisella optimointiaskeleella
+funktion gradientin ja aiemman optimointisuunnan avulla. Minimoitava
+neliöllinen kustannusfunktio on muotoa
+
+\[
+	f(\x)=\x^T A \x + \c^T \x\ \;,
+\]
+
+missä $\x$ ja $\c$ ovat $D$-ulotteisia reaaliarvoisia vektoreita ja
+$A$ reaaliarvoinen $D \times D$-neliömatriisi. Ensimmäinen
+optimointisuunta $\d_0$ valitaan aloituspisteessä $\x_0$ funktion
+gradientille vastakkaiseksi. Tämän jälkeen edetään seuraavien askelten
+mukaisesti.
+
+\begin{enumerate}
+\item Etsi kustannusfunktion minimi suunnassa $\d_i$, eli
+ etsi $\lambda_i$ siten, että $f(\x_i + \lambda_i \d_i)$ minimoituu. Olkoon $\x_{i+1} = \x_i + \lambda_i \d_i$.
+\item Olkoon $\d_{i+1} = - \nabla f(\x_{i+1}) + \gamma_i \d_i$, missä
+ \[
+  \gamma_i = \frac{\nabla f(\x_{i+1})^T \left (
+  \nabla f(\x_{i+1}) - \nabla f(\x_i )\right )}
+  {\| \nabla f(\x_i) \|^2}
+ \]
+\item Lopeta, jos $i+1=D$, muuten kasvata lukua $i$ yhdellä ja palaa ensimmäiseen kohtaan.
+\end{enumerate}
+
+Parametrin $\gamma$ päivitykseen käytetään tässä niin kutsuttua
+Polak-Ribi\'eren menetelmää. Myös muita päivitysmenetelmiä on
+ehdotettu. Neliöllisten kustannusfunktioiden tapauksessa menetelmät
+ovat yleensä identtisiä, mutta ei-neliöllisten kustannusfunktioden
+tapauksessa Polak-Ribi\'eren menetelmää pidetään yleisesti
+laskennallisesti toimivimpana.
+
+Neliöllisille ongelmille sovellettuna konjugaattigradienttimenetelmä
+suppenee $D$ askeleella. Ei-neliöllisten ongelmien tapauksessa on
+käytettävä suurempaa askelmäärää. Laskennallisista epätarkkuuksista ja
+kustannusfunktion ei-neliöllisyydestä johtuen minimointisuuntien
+$A$-konjugaatti saattaa harhautua. Tästä syystä optimointi
+käynnistetään ei-neliöllisten ongelmien ratkaisemisessa ajoittain
+uudelleen. Yleisesti käytetty menetelmä on optimoinnin käynnistäminen
+saavutetussa optimipisteessä lasketun gradientin osoittamalle
+suunnalle vastakkaisesti $D$ askelen välein; gradientin vastaluku
+osoittaa uuden suunnan. Laskentaa jatketaan, kunnes riittävä
+suppeneminen tai muu optimointikriteeri on saavutettu.
+
+\subsection{Simuloitu jäähdytys}
+
+Simuloitu jäähdytys (ks. esim. \cite{Haykin99}) on satunnaisuuteen
+perustuva optimointimenetelmä, joka jäljittelee aineen
+molekyylirakenteen järjestäytymisen noudattamia säännönmukaisuuksia
+hitaassa lämpötilan laskussa. Optimaalista ratkaisua etsitään
+aiheuttamalla systeemiin pieniä satunnaismuutoksia. Satunnaisuuden
+hyödyntäminen uusien ratkaisuvaihtoehtojen etsimisessä on eduksi,
+koska se pienentää menetelmän häiriöalttiutta ja ehkäisee juuttumista
+paikallisiin minimeihin.
+
+Menetelmän suppenemisesta globaaliin optimiin ei yleensä ole
+takeita. Etuna on, että se löytää yleensä melko hyvän ratkaisun, eikä
+kustannusfunktion sileydestä ja derivoituvuudesta tarvitse tehdä
+oletuksia. Kustannusfunktion sijasta simuloidussa jäähdytyksessä
+puhutaan usein systeemin 'energiasta', mikä korostaa analogiaa
+fysikaalisen jäähtymisilmiön kanssa.
+
+Menetelmän soveltaminen etenee seuraavien askelten
+mukaisesti. Optimoitavan systeemin tilaan tuotetaan satunnainen
+muutos. Tämän jälkeen verrataan uuden ja vanhan systeemin
+energioita. Muutos hyväksytään automaattisesti, mikäli systeemin
+uudella tilalla on matalampi energia. Myös muutos korkeampaan
+energiatilaan voidaan hyväksyä tietyllä todennäköisyydellä. Tämä
+vastaa fysikaalisen systeemin lämpöliikettä. Energiaa kasvattavan
+muutoksen hyväksymistodennäköisyys $p_M$ optimointiaskeleella $t$
+saadaan kaavasta
+
+\begin{equation}
+	p_M(t)=\exp \left (-\frac{(E(t+1)-E(t))}{T(t)} \right )\;,
+\end{equation}
+
+missä $T(t)$ on askelmäärän mukana vähenevä systeemin 'lämpötilaa'
+osoittava funktio, ja $E(t)$ systeemin energia askelella
+$t$. Kokonaisenergiaa kasvattavat muutokset hyväksytään
+todennäköisemmin korkeammissa lämpötiloissa. Alkutilanteessa systeemin
+tilojen vaihtelu onkin lähes täysin satunnaista. Jäähdytyksen
+seurauksena systeemin energia vähitellen laskee, ja matalammissa
+lämpötiloissa energian kasvamiseen johtavat muutokset hyväksytään yhä
+epätodennäköisemmin. Vähitellen systeemi suppenee kohti lopullista
+ratkaisua. Optimointi voidaan lopettaa esimerkiksi siinä vaiheessa,
+kun merkittäviä muutoksia ei enää tapahdu.
+
+

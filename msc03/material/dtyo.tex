@@ -1,0 +1,38 @@
+\documentclass[11pt,a4paper,finnish,titlepage,oneside]{book}
+\usepackage[finnish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amsthm,amsfonts}
+\usepackage{paketti}
+\usepackage{tabularx}
+\usepackage{epsf,epsfig,psfig}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\setlength{\textwidth}{417pt}
+\setlength{\oddsidemargin}{44pt}
+\setlength{\marginparwidth}{55pt}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{4mm}
+\setlength{\topmargin}{9pt}
+\selectlanguage{finnish}
+\addtolength{\textheight}{40pt}
+\hyphenation{cDNA}
+
+\begin{document}
+	\frontmatter
+	\include{kansilehti}
+	\include{abstrakti}
+	\include{preface}
+	\tableofcontents
+	\mainmatter
+	\include{johdanto}
+	\include{biotausta}
+	\include{geenidata}
+	\include{ryhmittely}
+	\include{ac}
+	\include{tulokset}	
+	\include{pohdinta}
+	\include{appendix}
+	\include{viitteet}
+\end{document}
+

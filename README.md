@@ -1,7 +1,7 @@
 ## Source materials for theses and study assignments 
 
 * [D.Sc. Thesis](phd10) (Bioinformatics; 2010)
-* [M.Sc. Thesis](msc03) (Machine learning; 2003)
+* [M.Sc. Thesis (Vertaileva toiminnallinen genomianalyysi assosiatiivisella ryhmittelymenetelmällä)](msc03) (Machine learning; 2003)
 * [B.Sc. Thesis (Simon Blackburnin kvasi-realismi ja moraalisen keskustelun turvaaminen)](bsc09) (Practical Philosophy; 2009)
 * [Biopax/SBML overview](biopaxsbml07) (Bioinformatics course assignment; 2007)
 * [Itsesimilaarien fraktaalien Hausdorffin dimension määrittäminen](hausdorff02) (Matematiikan erikoistyö; 2002)

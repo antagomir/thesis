@@ -1,0 +1,440 @@
+\chapter{Assosiatiivinen ryhmittely}\label{sec:ac}
+
+T‰m‰n tyˆn tavoitteena on mielenkiintoisten hiiren ja ihmisen
+vastingeenien ryhmien etsint‰ genominlaajuisesta
+aineistosta. Teht‰v‰‰n soveltuvia valmiita menetelmi‰ ei ole ollut
+tiett‰v‰sti saatavilla. Assosiatiivinen ryhmittely on lupaava ja
+teoreettisesti perusteltu eksploratiivinen menetelm‰ kahden geenien
+ilmenemist‰ kuvaavan aineiston riippuvuuksien mallintamiseen ja
+kiinnostavien geeniryhmien etsint‰‰n. Uuden menetelm‰n hyvi‰
+ominaisuuksia ovat riippuvuusmallintamisen ohella tulosten yleistyvyys
+ja helppotulkintaisuus.
+
+Menetelm‰n toistaiseksi ainoat bioinformatiikkasovellukset ovat
+alustavia ja liittyv‰t vastingeenien ja geenien s‰‰telytekijˆiden
+tutkimiseen \cite{Sinkkonen03tr}.
+
+\section{Periaate}
+
+Assosiatiivinen ryhmittely on kahden jatkuva-arvoisen
+monimuuttuja-avaruuden $X$ ja $Y$ ryhmittelymenetelm‰, joka pyrkii
+mallintamaan datajoukkojen riippuvuuksia tunnetun paritiedon $\{({\bf
+x}_k, {\bf y}_k)\}_k \subset \R^{d_x} \times \R^{d_y}\}$ avulla ilman
+ennakkotiet‰myst‰ niiden rakenteesta. Menetelm‰ pyrkii lˆyt‰m‰‰n
+kummastakin avaruudesta yhten‰isi‰ alueita, joilla sijaitsevien
+pisteiden parit erottuvat omaksi ryhm‰kseen myˆs toisessa
+avaruudessa. Muodostettavat ryhm‰t yleistyv‰t koko
+data-avaruuteen. Yhten‰isyyden ansiosta ryhmill‰ on tietty‰ sis‰ist‰
+homogeenisuutta, mik‰ helpottaa niiden tulkintaa.
+
+Kahden avaruuden ositusten v‰liset yhteydet esitet‰‰n
+kontingenssitaululla. Ositusten karteesiset tulot vastaavat
+kontingenssitaulun ruutuja, ja m‰‰r‰‰v‰t dataparien jakautumisen
+yhteisryhmiin. Menetelm‰ pyrkii lˆyt‰m‰‰n sellaiset ositukset, ett‰
+niit‰ vastaavan kontingenssitaulun reunajakaumien riippuvuus on
+mahdollisimman suuri. Riippuvuutta mitataan Bayes-faktorin
+(\ref{eq:bf0}) avulla. Perinteisesti Bayes-faktoria on k‰ytetty
+mittana kontingenssitaulun reunojen riippuvuudelle
+(ks. esim. \cite{Good76}). Assosiatiivisessa ryhmittelyss‰ ryhm‰t
+muodostetaan maksimoimalla kontingenssitaulusta laskettua
+Bayes-faktoria sen sijaan, ett‰ ainoastaan mitattaisiin valmiiden
+taulujen esitt‰mi‰ riippuvuuksia.
+
+Bayes-faktorin optimoinnin j‰lkeen kontingenssitaululla on yleens‰
+joitakin satunnaisuudesta merkitsev‰sti poikkeavia ruutuja. N‰iss‰
+n‰ytteiden esiintymistiheyksi‰ ei voida selitt‰‰ kontingenssitaulun
+reunajakaumien tulona. Poikkeuksellisten ruutujen osoittamissa
+yhteisryhmiss‰ on t‰ss‰ tutkimuksessa potentiaalisesti
+mielenkiintoisia geenipareja.
+
+\section{Toteutus}
+
+Kummankin avaruuden ryhm‰t parametrisoidaan Voronoi-alueina, ja sopiva
+ryhmittely etsit‰‰n optimoimalla mallivektoreiden sijaintia. Ryhmien
+parametrisointi mallivektoreiden avulla on laskennallisesti
+yksinkertainen menettelytapa.
+
+\subsection{Alustus}
+
+Assosiatiivisessa ryhmittelymenetelm‰ss‰ ryhmien m‰‰r‰ on ennakolta
+kiinnitetty. Luonnollinen alustava ositus voidaan tuottaa
+luvussa~\ref{sec:ryhmittely} esitellyn K-means-menetelm‰n
+avulla. Valittu alustus voi vaikuttaa voimakkaasti ryhmittelyn
+lopputulokseen. K-means-menetelm‰n k‰yttˆ on perusteltua, koska se
+tuottaa mahdollisimman homogeenisia ryhmi‰ tukien pyrkimyst‰ helposti
+tulkittavien ryhmien muodostamiseen. Ryhmittely tehtiin kolmella eri
+satunnaisalustuksella, joista valittiin paras validointijoukolla.
+
+\subsection{Optimointi}
+
+Menetelm‰n maksimoitavana kustannusfunktiona k‰ytet‰‰n Bayes-faktoria
+(\ref{eq:bf0}), jonka avulla voidaan verrata kontingenssitaulun
+riippuvien ja riippumattomien reunajakaumien hypoteesien
+todenn‰kˆisyyksi‰. Hypoteesien prioritodenn‰kˆisyyksien suhteen
+ollessa vakio kontingenssitaulun Bayes-faktori (\ref{eq:bf0}) yhtyy
+lausekkeeseen (\ref{eq:bf}). Havaintoaineistojen tasajakaumaa
+vastaavilla prioriparametreilla $\alpha_{ij} = \alpha_i = \alpha_j =
+1$ kaikille $(i,j)$ t‰m‰ on muotoa
+
+\begin{equation}
+\frac{P(\bar H|n_{ij})}{P(H|n_{ij})}
+\propto
+  \frac{\prod_{ij} \Gamma(n_{ij}+1)}{
+    \prod_i \Gamma(n_{\cdot i}+1) 
+    \prod_j\Gamma(n_{j \cdot}+1)}\;.
+\label{eq:bf1}
+\end{equation}
+
+Lausekketta (\ref{eq:bf1}) k‰ytet‰‰n t‰ss‰ tyˆss‰ assosiatiivisen
+ryhmittelyn kustannusfunktiona. Sen maksimointi on tehdyill‰
+oletuksilla yht‰pit‰v‰‰ Bayes-faktorin (\ref{eq:bf0}) maksimoinnin
+kanssa.
+
+\subsubsection{Rajojen pehmennys}
+
+Optimointimenetelmien soveltamisessa tarvittava Bayes-faktorin
+gradientti on ns. 'kovien' ryhmien tapauksessa nolla tai sit‰ ei ole
+m‰‰ritelty suhteessa Voronoi-alueiden mallivektoreihin, riippuen
+niiden arvoista. T‰ss‰ tapauksessa kustannusfunktion (\ref{eq:bf1})
+maksimoiva ryhmien mallivektoreiden optimointiteht‰v‰ on
+kombinatorinen. Kombinatoristen ongelmien ratkaiseminen on
+laskennallisesti hyvin raskasta, jopa mahdotonta. Laskennan
+helpottamiseksi ja ‰‰rellisten gradienttien tuottamiseksi turvaudutaan
+'pehmennettyihin' rajoihin ja ositusten jatkuvuusoletukseen, jolloin
+mallin optimointiin voidaan k‰ytt‰‰ perinteisi‰
+optimointimenetelmi‰. On huomattava, ett‰ t‰ss‰ tapauksessa kunkin
+ryhm‰‰n kuuluvien n‰ytteiden 'lukum‰‰r‰' saadaan t‰t‰ ryhm‰‰ vastaavan
+kuulumisfunktion integraalina koko avaruuden yli. Vastaava
+kontingenssitaulun jakauma $\{n_{ij}\}$ ei v‰ltt‰m‰tt‰ muodostu
+kokonaisluvuista.
+
+Ryhmittely‰ sanotaan 'kovaksi', jos jokainen ryhmitelt‰v‰ piste voi
+kuulua vain yhteen ryhm‰‰n. 'Pehmeiden' ryhmien tapauksessa ryhmien
+rajat ovat sumeita, ja raja-alueiden pisteet voivat kuulua
+samanaikaisesti kahteen tai useampaan ryhm‰‰n, mutta eri
+voimakkuuksilla. Pisteen $x
+\in X$ {\it kuulumisaste} ryhm‰‰n $i$ saadaan t‰ss‰ tapauksessa kaavasta
+
+\[
+	g_i(\x) \equiv Z(\x)^{-1}
+	\exp\left(-\|\x-\m_i\|^2/\sigma^2\right).
+\]
+
+Gaussiset kuulumisfunktiot $g_i (\cdot)$ kuvaavat reunoilta pehmennettyj‰
+mallivektoreiden $\{\m_i\}$ avulla m‰‰riteltyj‰
+Voronoi-alueita. Gaussisen jakauman hajontaparametri $\sigma$ s‰‰telee
+pehmennyksen voimakkuutta. Kuulumisasteiden summa on jokaisessa
+avaruuden pisteess‰ $\x$ t‰sm‰lleen 1. T‰st‰ huolehtii
+normalisointivakio $Z(\cdot)$, joka m‰‰r‰ytyy ehdosta $\sum_i
+g_i(\x)=1$.
+
+\subsection{Laskenta}
+
+Pehmennetyill‰ rajoilla muokattua kustannusfunktiota (\ref{eq:bf1})
+merkit‰‰n symbolilla $BF'$. Laskennallisista syist‰ optimoinnissa
+k‰ytet‰‰n t‰m‰n logaritmia. T‰llˆin yksitt‰isten todenn‰kˆisyyksien
+tulot muuttuvat summiksi, joita on yleens‰ helpompi
+k‰sitell‰. Tavallisesti valmiit optimointimenetelm‰t minimoivat
+kustannusfunktion arvoa. Bayes-faktorin maksimoinnin sijasta voidaan
+minimoida sen vastalukua. T‰m‰n logaritmiksi saadaan nyt
+
+\begin{equation}
+\begin{split}
+- \log BF' 
+&= \log \sum_{ij} \Gamma \left( \sum_k g^{(x)}_i(\x_k) g^{(y)}_j(\y_k)\right) \\
+&  -\lambda^{(x)} \log \sum_i \Gamma \left(\sum_k g^{(x)}_i(\x_k)\right) \\
+&  - \lambda^{(y)} \log \sum_j \Gamma \left(\sum_k g^{(y)}_j(\y_k)\right) \;, \\
+\end{split}
+\label{eq:kf}
+\end{equation}
+
+miss‰ indeksit $x$ ja $y$ viittaavat kahteen tarkasteltavaan
+datajoukkoon. T‰m‰ on ryhmittelyn laskennallisessa vaiheessa
+minimoitava kustannusfunktio, joka optimoidaan
+konjugaattigradienttimenetelm‰ll‰ suhteessa kahdessa tarkasteltavassa
+avaruudessa oleviin Voronoi-alueiden mallivektoreiden joukkoihin
+$\{\m_i^{(x)}\}$ ja $\{\m_j^{(y)}\}$.
+
+Kaavassa (\ref{eq:kf}) esiintyvien parametrien $\lambda^{(\cdot)}$
+arvona on l‰htˆkohtaisesti 1, kun se johdetaan kustannusfunktion
+(\ref{eq:bf1}) pehmennettyjen rajojen logaritmina. N‰it‰ termej‰
+painottamalla menetelm‰n toimintaa voidaan tarvittaessa {\it regularisoida}.
+
+\subsection{Regularisointi}
+
+Regularisoinnilla tarkoitetaan menetelm‰n muokkaamista optimoinnin
+helpottamiseksi, laskennallisten ongelmien kiert‰miseksi ja
+erityisesti yleistyskyvyn parantamiseksi. Opetusjoukolla saatujen
+tulosten tulisi kuvata hyvin myˆs muita samaan ilmiˆˆn liittyvi‰
+aineistoja. Jos n‰in ei ole, mallin sanotaan ylisovittuneen.
+
+Joissakin tapauksissa ylisovittumista voidaan ehk‰ist‰
+regularisoinnilla, joka est‰‰ mallin parametreja saamasta liian
+‰‰rimm‰isi‰ arvoja. Hyvin joustavalle mallille voidaan esimerkiksi
+antaa sopivia lis‰rajoituksia. Ennakkotiet‰myksen merkityksen
+korostaminen voidaan n‰hd‰ regularisointina, ja Bayesilainen
+l‰hestymistapa regularisoinnin toteuttamiseksi olisi sopivan priorin
+m‰‰ritteleminen parametreille.
+
+T‰ss‰ tyˆss‰ k‰ytettiin regularisointia, joka l‰hestyy
+kontingenssitaulun reunajakaumien entropiaa ja siten yleisesti suosii
+saman kokoisten ryhmien muodostamista. Kustannusfunktion
+(\ref{eq:kf}) parametri $\lambda^{(\cdot)} > 1$ tuottaa t‰llaisen
+regularisoinnin vastaten IB-menetelm‰ss‰ \cite{Tishby99}
+reunaesitysten kompleksisuutta rajoittavaa termi‰.
+
+\section{Mallin opettaminen ja arviointi}
+
+Assosiatiivisen ryhmittelymallin opetuksen aikana etsit‰‰n
+mallivektorit, joiden m‰‰r‰‰m‰ ryhmittely on Bayesilaisen
+riippuvuusmitan mieless‰ optimaalinen. Vaihtoehtoisten ryhmittelyjen
+onnistumista riippuvuuksien mallintamisessa voidaan mitata
+kustannusfunktion avulla.
+
+\subsection{Opetusparametrien valinta}
+
+Ennen varsinaisen ryhmittelymallin opettamista valittavia parametreja
+ovat kontingenssitaulun koko eli haluttu reunaryhmien m‰‰r‰, ryhmien
+rajoille teht‰v‰n pehmennyksen voimakkuutta s‰‰telev‰
+optimointiparametri $\sigma$ ja reunajakaumia tasoittava
+regularisointiparametri $\lambda$.
+
+Assosiatiivisen ryhmittelyn tulokset eiv‰t ilmeisesti ole erityisen
+herkki‰ ryhmien m‰‰r‰n valinnalle, vaikka se vaikuttaakin siihen,
+miten hienojakoisia riippuvuuksia menetelm‰ kykenee tuomaan
+esille. Hiiren ja ihmisen datajoukkojen koko ja dimensionaalisuus oli
+samaa luokkaa, ja geenien ryhmittelyyn p‰‰tettiin k‰ytt‰‰ samaa
+ryhmien m‰‰r‰‰ molemmissa aineistoissa. Kontingenssitaulun koko
+valittiin siten, ett‰ kuhunkin yhteisryhm‰‰n p‰‰tyi keskim‰‰rin noin
+kymmenen geeniparia. T‰llaiset ryhm‰t ovat sopivan kokoisia
+manuaalista tarkastelua ja tulkintaa ajatellen. Taulun kooksi saatiin
+$21 \times 21$ ruutua. Samaa ryhmien m‰‰r‰‰ k‰ytet‰‰n myˆs
+vaihtoehtoisilla menetelmill‰ tehdyiss‰ vertailukokeissa.
+
+Sopiva optimointiparametrin $\sigma$ arvo etsittiin validointijoukon
+avulla. Tutkittava datajoukko jaettiin kahteen osaan, joista
+ensimm‰ist‰ k‰ytettiin assosiatiivisen ryhmittelymallin opettamiseen
+ja toista opetetun mallin arviointiin. Malli opetettiin 30 erilaisella
+parametrin $\sigma$ arvolla, jotka valittiin alustavien kokeiden
+j‰lkeen logaritmisesti v‰lilt‰ [0,005; 5]. Kustannusfunktion
+(\ref{eq:bf1}) mieless‰ parhaan ratkaisun tuottanut arvo valittiin
+k‰ytett‰v‰ksi lopullisen mallin opettamisessa. Sopivaksi
+regularisointiparametrin $\lambda$ arvoksi valittiin molemmissa
+avaruuksissa alustavien kokeiden nojalla 1,2.
+
+Lopullisen ryhmittelymallin opettamiseen k‰ytettiin koko
+tutkimusaineistoa.
+
+\subsection{Mallin arviointi}
+
+Rajojen pehmennyst‰ kuvaavan ryhmien jatkuvuusapproksimaation mukaista
+kustannusfunktiota (\ref{eq:kf}) k‰ytet‰‰n ainoastaan optimoinnin
+laskennallisessa vaiheessa. Opetetun mallin ryhmien riippuvuuden
+arviointiin k‰ytet‰‰n kaavan (\ref{eq:bf1}) mukaista
+kustannusfunktiota 'kovilla' ryhmill‰.
+
+\subsection{Mielenkiintoisten yhteisryhmien tunnistaminen}
+
+Assosiatiivisen menetelm‰n tuottamista yhteisryhmist‰ kiinnostavia
+ovat ne, joissa n‰ytteiden m‰‰r‰ poikkeaa merkitsev‰sti
+satunnaisuudesta. Assosiatiivisen ryhmittelyn tuottaman
+kontingenssitaulun jakaumaa verrattiin riippumattomien reunajakaumien
+nollahypoteesin mukaisiin satunnaisiin kontingenssitauluihin, joita
+tuotettiin vertailua varten tuhat kappaletta. Satunnaisuudesta
+merkitsev‰n‰ poikkeamana pidettiin t‰ss‰ tyˆss‰ p-arvoa $p < 0,001$.
+
+\section{Ominaisuudet ja tulkinta}
+
+Tilastollisesta satunnaisuudesta poikkeavat kontingenssitaulun ruudut
+osoittavat potentiaalisesti mielenkiintoisia vastingeenien
+ryhmi‰. Ryhmittely on toteutettu geenien ilmenemisprofiileiden
+perusteella, ja ryhmien tulkinta aloitetaan tarkastelemalla
+ilmenemisprofiileja ja niiden yhteyksi‰.
+
+\subsection{Tulkinnan tasot}
+
+Yhteisryhm‰n tulkinta on kaksitasoinen prosessi. Ensimm‰isess‰
+vaiheessa kiinnitet‰‰n huomiota yhteisryhm‰‰ vastaavien reunaryhmien
+koostumukseen. Toisessa vaiheessa tarkastellaan l‰hemmin yhteisryhm‰n
+geenej‰.
+
+\paragraph{Reunaryhmien tulkinta.}
+
+Poikkeuksellisen pienet yhteisryhm‰t sis‰lt‰v‰t tavallisesti
+korkeintaan muutaman geeniparin, joiden ilmeneminen ei v‰ltt‰m‰tt‰ ole
+yhten‰ist‰. T‰llaiset geeniparit ovat usein ns. 'outliereita' eli
+selv‰sti muusta datajoukosta erillisi‰ yksitt‰isi‰ pisteit‰. Ne voivat
+olla satunnaisia mittausvirheist‰ ja biologisista vaihteluista
+johtuvia harhapisteit‰, mutta voivat toisaalta liitty‰ harvinaisiin ja
+biologisen tutkimuksen kannalta mielenkiintoihin
+ilmiˆihin. 
+
+Data-analyysin yleisen‰ ongelmana on 'outlier'-pisteiden huomiointi
+tutkimuksessa. Ne voivat hankaloittaa tutkimusta tarpeettomasti, mutta
+toisaalta niihin saattaa liitty‰ arvokasta uutta
+tietoa. Assosiatiivinen ryhmittely on perusteltu tapa
+poikkeuksellisten vastingeenien etsimiseksi. Jos poikkeuksellisen
+pienen yhteisryhm‰n geenipari ilmenee hyvin samankaltaisesti kuin
+reunaryhmien geenit, satunnaisten tekijˆiden vaikutus geeniparin
+lˆytymiseen on saattanut olla pienempi. T‰ll‰ tavalla voitaisiin
+pyrki‰ erottamaan aineistoon sis‰ltyv‰t satunnaiset harhapisteet
+merkitt‰vist‰ biologisista lˆydˆksist‰.
+
+On toistaiseksi m‰‰rittelem‰tt‰, mill‰ tavalla voidaan erottaa
+geeniryhm‰lle 'tyypilliset' ilmenemisprofiilit ja toisaalta
+'outlier'-pisteet. Keskiarvojen ja hajontamittojen avulla tehdyt
+arviot ovat puutteellisia, koska n‰m‰ eiv‰t kuvaa geenien jakaumaa
+ryhm‰n sis‰ll‰. Jakauman ja luottamusv‰lien m‰‰rittely vaatisi
+monimutkaisempia tarkasteluja.
+
+Riippuvuusryhmittelyn paljastamien tilastollisesti poikkeuksellisen
+suurten yhteisryhmien tapauksessa keskittyminen yhteisryhm‰n geenien
+tulkintaan on luultavasti riitt‰v‰‰. Ei ole tiedossa, mit‰ tulkinnan
+kannalta tarpeellista lis‰tietoa reunaryhmien geenien tarkastelu voisi
+tuottaa t‰llaisissa tapauksissa.
+
+\paragraph{Yhteisryhmien tulkinta.}
+
+Yhteisryhm‰n tulkinnassa selvitet‰‰n sen geeniparien
+ominaisuudet. N‰it‰ ovat voimakkaimmin ilmenevien kudosten
+tunnistaminen, kudoskohtaisen hajonnan arviointi ja ryhm‰n geenipareja
+yhdist‰vien ominaisuuksien tarkastelu ilmenemisprofiilien vertailun ja
+kirjallisuushakujen avulla. Lis‰ksi huomioidaan, onko kyse
+satunnaisuuteen verrattuna poikkeuksellisen yleisest‰ vai
+harvinaisesta yhteydest‰.
+
+\subsection{Yhteisryhmien tulkinta}
+
+Alla esitell‰‰n lyhyesti menetelm‰n mahdollisuudet potentiaalisesti
+mielenkiintoisista lajien yhteyksist‰ kertovien vastingeeniryhmien
+etsimiseksi. N‰ist‰ esitet‰‰n tiivis yhteenveto taulukossa~5.1.
+
+\begin{table}
+\centering
+\begin{tabular}{l|c|c}
+\emph{Vastingeenit}	& (0) harvinainen yhteys  & (1) yleinen yhteys \\ \hline 
+(a) erilainen ilmeneminen & lajien erot, kohina & lajien erot \\ \hline 
+(b) yht‰l‰inen ilmeneminen & tapauskohtainen & lajien yhteydet \\ \hline
+\end{tabular}
+\label{tbl:acsov}
+\caption{
+Assosiatiivisen ryhmittelyn mahdollisuudet mielenkiintoisten
+vastingeeniryhmien etsinn‰ss‰. Jotkin yhteisryhm‰t ovat
+satunnaisuuteen verrattuna poikkeuksellisen suuria tai pieni‰
+($p<0,001$). T‰m‰ viittaa yhteisryhm‰n vastingeenien v‰lisiin
+poikkeuksellisen harvinaisiin tai yleisiin yhteyksiin, jotka voivat
+liitty‰ vastingeenien erilaiseen tai samankaltaiseen ilmenemiseen. Jos
+aineistossa on erityisen harvinaisia vastingeenien pareja, niiden
+ilmenemisess‰ on luultavimmin odottamaton ero (a0). Ero voi johtua
+tutkimuksen satunnaisista virhel‰hteist‰, mutta toisaalta se voi
+liitty‰ kiintoisaan biologiseen ilmiˆˆn.  Eri tavoin ilmenevien
+odottamattoman yleiseen yhteyteen liittyvien vastingeenien ryhm‰t (a1)
+ovat potentiaalisesti hyvin mielenkiintoisia, mutta niiden lˆytyminen
+on melko ep‰todenn‰kˆist‰. Samankaltaisesti ilmenevien vastingeenien
+ryhmienk‰‰n ei voida odottaa olevan erityisen harvinaisia
+(b0). T‰llaisten tapausten tulkinta on hyvin
+tapauskohtaista. Samankaltaisesti ilmenev‰t vastingeenit ovat
+luultavasti muita yleisempi‰, joten t‰llaisten yhteisryhmien (b1)
+lˆytyminen lienee todenn‰kˆisint‰.}  
+\end{table}
+
+\paragraph{Poikkeuksellisen yleiset yhteydet.}
+
+Samalla tavoin ilmenevien vastingeenien voitaisiin odottaa olevan
+tavallista yleisempi‰, koska ainakin sukulaislajeille t‰rkeisiin ja
+yhteisin‰ s‰ilyneisiin teht‰viin (mm. solusyklin yll‰pito,
+suvunjatkaminen, lihakset) erikoistuneiden geenien rakenteen ja
+teht‰v‰n on arveltu muuttuvan lajien eriytymisen aikana muuhun
+perim‰ainekseen verrattuna hitaammin
+(ks. \cite{Hardison97,Koop95,Stuart03}). Myˆs tutkimuksessa
+\cite{Su02}, josta t‰m‰n tyˆn tutkimusaineisto on per‰isin, 
+ortologien enemmistˆll‰ havaittiin ainakin osittain
+samankaltainen ilmenemisprofiili.
+
+Poikkeuksellisen suurille samankaltaisesti ilmenevien vastingeenien
+yhteisryhmille voitaisiin ehdottaa t‰llaista lajin s‰ilymisess‰
+t‰rke‰‰ teht‰v‰‰, ja lˆydˆs voisi korostaa lajien v‰lisi‰ geenitason
+yhteyksi‰.
+
+\paragraph{Lajien eroista kertovat yhteisryhm‰t.}
+
+Luultavasti harvinaisempaa, mutta lajien erojen tutkimisen kannalta
+mielenkiintoista voisi olla selv‰ ja odottamattoman yleinen ero
+vastingeenien ilmenemisess‰. T‰llaisten vastingeeniryhmien lˆytyminen
+voisi viitata s‰‰nnˆnmukaisuuteen lajien eriytymisess‰. Lajeista voisi
+esimerkiksi lˆyty‰ samaan teht‰v‰‰n liittyvi‰, mutta eri kudoksissa
+toimivia ja sen vuoksi eri tavoin ilmenevien geenien ryhmi‰. T‰llaiset
+geenit voisivat liitty‰ esimerkiksi jonkin elimistˆss‰ vaikuttavan
+hormonin tuottamiseen. Esimerkiksi el‰inkokeiden k‰yttˆkelpoisuuden
+edellytyksen‰ on vastingeenien yhten‰inen toiminta, joten t‰llainen
+lˆydˆs olisi potentiaalisesti hyvinkin kiintoisa.
+
+Harvinaiset vastingeenien toiminnalliset yhteydet voisivat viitata
+lajien eroihin, olipa vastingeenien ilmeneminen samankaltaista tai
+erilaista. Eri tavoin ilmenevien vastingeenien voidaan odottaa
+ryhmittyv‰n poikkeuksellisen pieniin yhteisryhmiin, koska ne ovat
+luultavasti samankaltaisesti ilmenevi‰ vastingeenej‰ harvinaisempia.
+Vastingeenien ilmenemisess‰ havaittavat erot voivat liitty‰
+esimerkiksi lajien eriytymisess‰ tapahtuneisiin muutoksiin
+proteiinisekvenssien tasolla (ks. \cite{Su02}). Mielenkiintoisia
+ihmisen ja hiiren geenien eroja voisi lˆyty‰ esimerkiksi
+kasvutekijˆist‰, maksasta ja aivoista. Ihmisen ja hiiren aivoissa on
+rakenteellisia eroja, ja hiiren maksa k‰sittelee huomattavasti ihmist‰
+tehokkaammin erilaisia myrkkyj‰. Kasvutekij‰t vaikuttavat
+geneettisesti l‰hisukuisten lajien kokoeroon.
+
+Vastingeenien ilmenemisen erot liittyv‰t luultavammin kudoskohtaisiin
+painotuseroihin kuin t‰ysin eri kudoksiin liittyviin ja jyrk‰sti eri
+tavoin ilmeneviin geeneihin.
+
+\paragraph{Yhteisryhmien jakautuminen.}
+
+Ihmisen ja hiiren geenien toiminnallisiin eroihin voisi viitata myˆs
+kontingenssitaulun avulla havaittu yhteisryhmien
+'jakautuminen'. T‰llaisessa tapauksessa lˆydett‰isiin kaksi
+yhteisryhm‰‰, joissa esimerkiksi hiiren geenit ilmenev‰t
+samankaltaisesti (kuuluvat samaan reunaryhm‰‰n), mutta ihmisen
+vastingeenit jakautuvat kahteen eri tavoin ilmenev‰‰n
+geeniryhm‰‰n. Kyse voisi olla geeneist‰, joiden ilmenemisess‰ on
+toisessa lajissa tapahtunut muutoksia geenien teht‰vien muuttumisen
+tai monipuolistumisen seurauksena.
+
+\paragraph{Geenien yhteydet lajien sis‰ll‰.}
+
+Geenien s‰‰telyverkostoja tunnetaan toistaiseksi huonosti. Usein
+samojen s‰‰telyreittien geenit tai vastingeenit ilmenev‰t melko
+samankaltaisesti (ks. \cite{Tilstone03}). Tapauksissa, joissa n‰in ei
+ole, tuntemattomia s‰‰telyverkoston j‰seni‰ voi olla vaikeaa havaita.
+Assosiatiivisessa ryhmittelyss‰ samaan yhteisryhm‰‰n kuuluvilla saman
+lajin geeneill‰ voi olla hyvinkin erilaisia ilmenemisprofiileita.
+Niill‰ on kuitenkin ominaisuuksia, jotka yhdist‰v‰t ne ryhm‰n muihin
+geeneihin. Assosiatiivisessa ryhmittelyss‰ k‰ytet‰‰n vastingeenien
+paritietoa, joten aineiston ulkopuolinen lis‰tieto vaikuttaa kummankin
+lajin geenien ryhmittelyyn. T‰m‰n ansiosta voidaan lˆyt‰‰ sellaisia
+tutkimusaineistoon k‰tkeytyvi‰ piirteit‰, joita ei havaittaisi
+tavanomaisilla ryhmittelymenetelmill‰.
+
+Olisi perusteltua ehdottaa tuntemattomia yhteyksi‰ yhteisryhm‰n
+geeneille kummankin lajin \emph{sis‰ll‰}, jolloin yhteys lˆydett‰isiin
+tavallaan toisen lajin kautta 'kiert‰m‰ll‰'. T‰llainen tilanne olisi
+mahdollinen esimerkiksi silloin, jos lajin geeneill‰ on yhteinen
+teht‰v‰ tietyss‰ kudoksessa, mutta muissa kudoksissa niiden teht‰v‰t
+ovat eriytyneet. T‰llˆin geenien ilmenemisprofiilit voivat olla
+hyvinkin erilaisia. Ainakin toisen lajin geenien ilmenemisprofiilien
+homogeenisuus tukee oletusta yhteisryhm‰n geenien todellisista
+biologisista yhteyksist‰ lajien sis‰ll‰. Homogeenisuus voi vaikuttaa
+oleellisesti geenien ryhmittymiseen, ja sen ansiosta assosiatiivinen
+ryhmittely voi sallia toisen lajin ilmenemisprofiileille suuremman
+hajonnan.
+
+On tietysti mahdollista, ett‰ yhdess‰ lajissa kytkeytyneiden geenien
+ortologeilla ei ole toiminnallisia yhteyksi‰ toisessa lajissa, mik‰
+pienent‰‰ t‰llaisen l‰hestymistavan mahdollisuuksia. Tiett‰v‰sti
+geenien ryhmittely‰ lajin sis‰ll‰ ei ole aiemmin tehty paritiedon
+avulla.
+
+
+
+
+
+
