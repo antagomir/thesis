@@ -1,0 +1,46 @@
+%% Driver file to produce finnish.bst from finnish.mbs
+%% Generated with makebst, version 4.1 (2003/09/08)
+%% Produced on 2007/04/05 at 19:32
+%% 
+\input docstrip
+
+\preamble
+----------------------------------------
+*** kfil_suomi ***
+
+\endpreamble
+
+\postamble
+End of customized bst file
+\endpostamble
+
+\keepsilent
+
+\askforoverwritefalse
+\def\MBopts{\from{finnish.mbs}{%
+    finnish,%: Finnish language
+%<<ABBREVIATE WORD `SIVUT':
+%   %: (def) `Sivu(t)' (no abbreviation)
+  pp,%: `Sivu' abbreviated as s. or ss.
+% ppx,%: `Sivu' omitted 
+%------\ans=a(==pp)-------
+%>>ABBREVIATE WORD `SIVUT':
+%<<ABBREVIATE WORD `TOIMITTAJAT':
+%   %: (def) `Toimittaja(t)' (no abbreviation)
+  ed,%: `Toimittaja' abbreviated as toim.
+%------\ans=a(==ed)-------
+%>>ABBREVIATE WORD `TOIMITTAJAT':
+%<<OTHER ABBREVIATIONS:
+%   %: (def) No abbreviations of other words
+  abr,%: Abbreviations of such words
+%------\ans=a(==abr)-------
+%>>OTHER ABBREVIATIONS:
+%<<EDITION NUMBERS:
+  xedn,%: Editions as in database saving much processing memory
+%   %: (def) Write out editions as emsimm\"ainen, toinen, etc
+% ord,%: Numerical editions as 1., 2., etc
+%------\ans=*(==xedn)-------
+%>>EDITION NUMBERS:
+  }}
+\generate{\file{finnish.bst}{\MBopts}}
+\endbatchfile

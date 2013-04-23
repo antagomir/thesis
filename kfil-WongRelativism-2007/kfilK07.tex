@@ -1,0 +1,391 @@
+\documentclass[a4paper,12pt,times,titlepage,finnish]{article}
+\usepackage[finnish]{babel}
+\selectlanguage{finnish}
+
+\RequirePackage[round]{natbib}
+
+%Commands from fancyhdr
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% - Set page numberis to upper middle
+\lhead{} %empty upper left
+\chead{\thepage} %page number on upper center
+\rhead{} %empty upper right
+\cfoot{} %remove the page numbering from the bottom center
+\voffset = 0pt %ylamarginaali 1 inch + x
+
+%\pagestyle{myheadings}
+%\markright{}
+%\pagenumbering{arabic}
+
+%\usepackage[T1]{fontenc}
+%\usepackage[latin1]{inputenc}
+\usepackage{t1enc}
+\setlength{\textwidth}{417pt}
+%\setlength{\oddsidemargin}{44pt}
+%\setlength{\marginparwidth}{55pt}
+\setlength{\leftmargin}{4cm}
+\setlength{\rightmargin}{2cm}
+\setlength{\topmargin}{2cm}
+\linespread{1.24}                      %riviväli 1.5
+\addtolength{\textheight}{40pt}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{4mm}
+
+%opening
+\title{David Wongin pluralistinen relativismi}
+\author{\underline{Leo} Mikael Lahti, 012093681, käytännöllinen filosofia}
+\date{Käytännöllisen filosofian 1. seminaarityö, \date{}}
+
+\begin{document}
+
+%sivunumero sivun ylalaitaan, miten tan kaskyn saa toimiin?
+%\@/headline</centerline</rm//folio>>
+
+
+\maketitle
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+%Set this page to be the first one, otherwise table of contents (toc) would be the first
+\setcounter{page}{1}
+
+\addcontentsline{toc}{section}{Johdanto}
+\section*{Johdanto}
+
+Moraalirelativismi on nykyisessä monikulttuurisessa yhteiskunnassa ajankohtainen etiikan tutkimuskohde. Moraalirelativismin tutkimus käsittelee moraalin perusteita ja moraalisiin kysymyksiin liittyviä ristiriitatilanteita. \citep[Ks. esim.][]{Boghossian06,Bok02,Wong95}.
+
+Moraalisen relativismin mukaan moraalisten väitteiden totuusarvo on olemassa vain suhteessa
+esimerkiksi tiettyyn kulttuuriin, mutta väitteillä ei ole
+absoluuttista totuusarvoa. Moraalinen objektivismi on relativismille vastakkainen kanta, jonka
+mukaan moraalisilla väittämillä on absoluuttinen totuusarvo, joskin
+sen selvittäminen voi olla käytännössä ongelmallista.
+\citep[Ks. esim.][luku 2]{LaFollette00}. 
+
+Molemmilla näkökulmilla on omat ongelmansa. Relativismi ei
+esimerkiksi vastaa tyydyttävästi kysymykseen moraalisten
+ristiriitojen ratkaisemisesta. Moraalisen objektivismin kannattajilla on
+ollut hankaluuksia päästä yksimielisyyteen siitä, mitä objektiiviset
+moraaliset totuudet ovat, ja miten ne voidaan johtaa. 
+
+Vaikka relativismi ja objektivismi ovat ristiriitaisia käsityksiä,
+molemmat sisältävät hyödyllisiä näkökulmia, joilla oma sijansa käytännön
+elämässä. Näiden kahden näkökulman parhaita piirteitä yhdistelevä teoria edistäisi ymmärrystä moraalisista kysymyksiä ja voisi olla varsin käyttökelpoinen. Relativismin ja objektivismin yhdistämiseksi onkin kehitelty lukuisia
+ehdotuksia. Tavanomaisesti nämä hylkäävät objektivismin
+vaatimuksen yksikäsitteisesti määritellystä moraalisesta totuudesta,
+tai vaatimuksen siitä että kaikilla moraalisilla väittämillä olisi
+totuusarvo. On myös mahdollista, että totuusteoreettinen näkemys on heikko; totuusarvojen määrittelyä pidetään epäselvänä tai määrittämisen ongelmallisuutta korostetaan. Esimerkkinä tästä on minimalistisen totuusteorian kannattajien \citep[ks. esim.][]{Dreier96} pohdinnat moraalikysymyksistä. Toisaalta relativistismin ja objektivismin yhdistelyyn pyrkivät teoriat usein vaativat, että kaikki pätevät 
+moraalijärjestelmät täyttävät tietyt kulttuurista riippumattomat perusehdot. 
+Tämä vaatimus on ristiriidassa puhtaan relativismin kanssa.
+
+Esimerkkejä  moraalisen   relativismin  ja  objektivismin  näkökulmien
+yhdistämiseen   pyrkivistä  teorioista   ovat   esitykset  moraalisten
+järjestelmien   rajoista  \citep[]{Foot02,Wong95}, Isaiah Berlinin  pluralismi
+\citep[]{Berlin98}, ja Bernard Williamsin ''etäisyyden relativismi''
+ \citep[]{Williams85}. Tässä työssä esitellään yksi tällainen ehdotus, David Wongin
+pluralistinen relativismi. Wongin teorian ytimenä on ajatus siitä, että moraalijärjestelmien kulttuurisidonnaisuudesta huolimatta on olemassa objektiivisia ehtoja, jotka kaikkien moraalisten järjestelmien on
+täytettävä. Nämä ehdot muodostavat moraalijärjestelmän perustan. Lisäksi tarvitaan paikallisia kriteereitä, joiden avulla moraalijärjestelmä saa lopullisen kulttuurista riippuvan muotonsa \citep[]{Wong95}.
+
+Esittelen aluksi lyhyesti moraaliseen relativismiin ja objektivismiin liittyviä ongelmia. Tämän jälkeen esittelen Wongin pluralistisen relativismin pääargumentit sekä kritiikkiä, jota teoriaa kohtaan voidaan esittää.
+
+\section{Moraalisen relativismin ja objektivismin ongelmia}
+
+Wongin pluralistinen relativismi pyrkii yhdistämään tarpeellisiksi katsottuja näkökulmia moraalisesta
+relativismista ja objektivismista. Wongin ehdotuksen ymmärtämiseksi on tarpeen
+esitellä lyhyesti ongelmia, joita liittyy puhtaaseen relativismiin ja objektivismiin.
+
+Moraalisen relativismin mukaan moraalisilla lauseilla ei ole absoluuttista
+totuusarvoa, vaan totuusarvo on olemassa vain suhteessa esimerkiksi tiettyyn
+kulttuuriin \citep[luku 2]{LaFollette00}. Relativismi eroaa nihilismistä siinä, että relativismissa moraalin katsotaan olevan kulttuurinen ilmiö, jossa moraaliset totuudet eivät ole pelkästään yksilön näkemyksistä riippuvaisia. Relativismi ei anna selviä vastauksia siihen, miten moraalisia ristiriitoja olisi käsiteltävä, vaan tyytyy toteamaan, että käsitykset oikeasta ja väärästä voivat poiketa eri kulttuurien välillä. Erityiseksi ongelmaksi tämä voi muodostua, kun kyse on perustavanlaatuisista erimielisyyksistä. Relativismista ei seuraa suvaitsevaisuutta, joka on tarpeellinen edellytys moniarvoisen
+yhteiskunnan toiminnalle moraalikysymysten ristiriitatilanteissa \citep[ks.][]{Berlin98,Bok02,Gowans87}. Relativismin mukaan moraalisten väitteiden totuusarvo voidaan määrittää järjestelmän sisällä, mutta ''globaalin'' moraalin mahdollisuus jää hämärän peittoon. Voidaan ajatella, että puhdas relativismi on kulttuurien tasolle siirrettyä nihilismiä. Relativismi johtaa myös siihen, että moraalisiin kysymyksiin liittyvän keskustelun käyminen eri järjestelmien välillä on varsin ongelmallista, kun järjestelmien käsitykset moraalista ja sen perusteluista ovat yhteismitattomia \citep{Wong84}.
+
+Moraalisen objektivismin mukaan moraaliset totuudet voidaan perustella kulttuurista riippumattomalla tavalla, usein moraalin ulkopuolisista oletuksista lähtien. Lähtökohdaksi on tarjottu esimerkiksi Jumalaa \citep[Ks. esim.][]{Rentto02}, yleisiä ihmisjärjen lainalaisuuksia \citep{Kant1788} tai utiliteettia \citep{Bentham1789}. Näkökulman kannattajilla on kuitenkin
+ollut hankaluuksia päästä yksimielisyyteen siitä, mitä objektiiviset
+moraaliset totuudet ovat, ja miten ne voidaan johtaa. Yksimielisyyden puute ei sinänsä ole argumentti objektivismia vastaan, mutta se tuo esiin moraalikysymysten monitahoisen luonteen ja ongelmat, joita liittyy yksittäisen lähtökohdan nostamiseen toisten edelle.
+Objektivismia voidaan arvostella myös siitä, ettei se kykene tyydyttävästi selittämään erilaisten kulttuurien varsin erilaisia käsityksiä perustavina pidetyistä moraalisista kysymyksistä, kuten abortista, ympärileikkauksesta tai kuolemantuomiosta.
+
+Sekä relativismi että objektivismi sisältävät käyttökelpoisia näkökulmia. Relativismi korostaa moraalikäsitysten moninaisuutta, joka on nyky-yhteiskunnan todellisuutta. Monet toisaalta kaipaavat ja etsivät tällaisessa tilanteessa jonkinlaista tukevaa perustaa moraalille. Moraalinen objektivismi pyrkii vastaamaan tähän tarpeeseen.
+
+\subsection{Arvojen moneudesta: moraalinen pluralismi}
+
+Moraalisen pluralismin mukaan on olemassa lukuisia riippumattomia ja
+perustavia moraalisia arvoja, jotka saattavat joutua ristiriitaan
+keskenään. Thomas Nagel on ehdottanut näiden luokittelua viiteen
+perusarvoon. Hänen mukaansa tällaisia olisivat
+(i) erityiseen suhteeseen liittyvät
+velvollisuudet toisia ihmisiä tai instituutioita kohtaan, (ii)
+yleisistä oikeuksista johdettavat rajoitukset,
+(iii) oman toiminnan yleinen utiliteetti, (iv) perfektionistiset arvot
+ja päämäärät, sekä (v) sitoutuminen omiin tavoitteisiin. \citep[Ks. esim.][luku 9]{Nagel87}.
+
+Muun muassa Isaiah Berlinin mukaan on epärealistista uskoa perustavien arvojen täydelliseen toteutumiseen samanaikaisesti. Berlinin mukaan arvojen ristiriidat ovat osa inhimillistä luonnetta \citep[]{Berlin98}. Wong muistuttaa, että toimivan moraalijärjestelmän on mukaan sisällettävä jonkinlainen ensisijaisuusjärjestys perustaville arvoille, sekä
+menetelmiä ristiriitatilanteiden selvittämiseksi \citep[]{Wong95}. Eri
+kulttuurit ovat kehittäneet tähän erilaisia ratkaisuja. Käsittelen seuraavaksi lähemmin Wongin pluralistista moraaliteoriaa,
+joka kumpuaa näistä havainnoista \citep[]{Wong84,Wong95}. 
+
+\section{Wongin pluralistinen relativismi}
+
+Wong pyrkii pluralistisessa relativismissaan yhdistämään käyttökelpoisia näkökulmia sekä moraalisesta relativismista että objektivismista; teoria sijoittuu näiden välimaastoon. Tiivistettynä pluralistisen relativismin ydin on, että moraalijärjestelmien kulttuurisidonnaisuudesta huolimatta on olemassa tiettyjä objektiivisia ehtoja, jotka kaikkien moraalisten järjestelmien on
+täytettävä. Objektiiviset kriteerit eivät määrää
+''oikeaa'' moraalijärjestelmää yksikäsitteisesti, vaan ainoastaan
+rajoittavat mahdollisten järjestelmien ominaisuuksia. Nämä ehdot muodostavat moraalijärjestelmän perustan. Lisäksi tarvitaan paikallisia kriteereitä, joiden avulla moraalijärjestelmä saa lopullisen kulttuurista riippuvan muotonsa: ''According to pluralistic relativism, the truth conditions for moral statements include local criteria that express certain kinds of priorities among human values.''. \citep[389]{Wong95}
+
+Wongin teoria on naturalistinen. Siinä pätevän moraalijärjestelmän ehdot johdetaan ihmisluonteesta ja ihmisyhteisöjen tarpeista käsin. Wongin pluralistisessa relativismissa ihmisluonto ja moraalille määritellyt tehtävät muodostavat rajat sille, mitä voidaan pitää  pätevänä moraalina. Teorian ymmärtämisen kannalta onkin tarpeen eritellä tarkemmin Wongin näkemystä moraalijärjestelmän tehtävistä. \citep{Wong95}.
+
+\subsection{Moraalijärjestelmän tehtävät}
+
+Moraalijärjestelmällä on Wongin mukaan kaksi pääasiallista tehtävää. 
+Ensimmäinen näistä on sosiaalisen järjestelmän ylläpito, ja toisena
+yksilöiden luonteen muovaaminen sekä ohjaaminen kohti hyvinä ja arvostettavina
+pidettyjä asioita: ''A morality specifies not only what is necessary for social cooperation, but in the form of character ideals and conceptions of the good life specifies what is worthwhile for the individual to become and to pursue.''. \citep[383]{Wong95}.
+
+Nämä moraalin kaksi tehtävää ovat sidoksissa toisiinsa. Sosiaalinen
+järjestelmä rajoittaa hyväksyttävinä pidettäviä tavoitteina. Toisaalta käsitys hyvästä elämästä ohjaa yhteiskunnallisia käsitteitä oikeasta ja väärästä. Wongin sanoin, 
+
+\begin{quote}
+Even if a moral conception of right relations between people does not dictate a specific ideal of character or a specific set of ends, it will certainly limit the range of permissible ideals and sets of ends. From the other side, a moral conception of individual excellence of character will place limits on conceptions of justice and the right. \citep[383]{Wong95}.
+\end{quote}
+
+Wongin mukaan merkittävä osa moraalikäsityksistämme seuraa siis sosiaalisen
+yhteistyön tarpeesta. Moraalia tarvitaan tässä yhteistyön säätelyyn
+ja ristiriitojen selvittämiseksi. Lisäksi sen olisi kuvattava asioita, joihin ihmiset aidosti pyrkivät. Inhimillisiä pyrkimyksiä on rajattu määrä, ja esimerkkejä tällaisista pyrkimyksistä ovat tarpeiden tyydytys, hyväksynnän haku tai aggressioiden purkaminen. Moraali ei määrää  näitä tarpeita, mutta ne rajoittavat toimivan moraalin ominaisuuksia. Henkilökohtainen moraali ei perustu palkkion haluun tai rangaistuksen pelkoon, vaan siinä on kyse syvistä sisäisistä motivaatioista. Koska itsekkyys ja muut inhimilliset pyrkimykset ovat vahvasti läsnä ihmisen motivaatiosysteemissä, Wongin mukaan on selvää, että tällaiset pyrkimykset muovaavat samalla moraalia: ''Morality is not {\it determined} by these deep human propensities, but if it is to serve as an effective guide to action, it must be limited by these propensities.''. \citep[384]{Wong95}.
+
+Esimerkiksi erilaisten vastapalvelusten sisältyminen moraalijärjestelmiin on Wongin mukaan peräisin itsekkyydestä osana ihmisen perusluonnetta. Vanhempien lapsiltaan kenties kaikissa kulttuureissa vaatima kunnioitus liittyisi siihen, että vanhemmat hakevat tasapainoa lapsille antamansa tuen ja omien tarpeidensa välille. Myös muissa valtasuhteissa on vastaavaa molemminpuolisuutta, koska
+yksipuolinen dominointi herättäisi vastustusta ja kuluttaisi energiaa. \citep[384-385]{Wong95}.
+
+Ihmisen luonteesta ja yhteisön tarpeista käsin johdettavaan moraalijärjestelmään sisältyy ristiriitaisia pyrkimyksiä. Toimiva järjestelmä pyrkii löytämään tasapainon erilaisten tavoitteiden välille. Tämä voi tapahtua esimerkiksi asettamalla tietyt pyrkimykset toisten edelle. Yhteiskunnassa voidaan esimerkiksi korostaa yksilön vapautta yhteisön tarpeiden kustannuksella, tai tinkiä yleisestä utiliteetista hyväksymällä ihmisten toiminta ensisijaisesti omien läheistensä hyväksi \citep{Wong95}.
+
+\subsection{Moraalijärjestelmien vuoropuhelusta}
+
+Wongin mukaan tiettyjen yhtenevien tekijöiden olemassa olo moraalijärjestelmien välillä on edellytys sille, että voimme kunnioittaa poikkeavia näkemyksiä ja käydä rakentavaa vuoropuhelua erilaisten järjestelmien välillä. Tämä on vastoin puhdasta relativismia, jonka mukaan erilaiset järjestelmät voivat olla täysin yhteismitattomia ja vertailukelvottomia. Wongin tulkinta jättää tilaa paikallisille ja kulttuurisidonnaisille moraalijärjestelmille, ja pyrkii löytämään niistä yhteisiä tekijöitä.
+
+Rakentavan vuoropuhelun aikaansaamiseksi moraalisten järjestelmien on ymmärrettävä toisiaan. Tämä on Wongin mukaan mahdollista, koska moraalisilla termeillä on yhteistä sisältöä, joka kumpuaa yhteisistä inhimillisistä tarpeista ja moraalin tehtävistä. Vastaavien moraalisten termien sisältö ei kuitenkaan ole välttämättä täsmälleen sama, minkä johdosta vuoropuhelu voi olla haasteellista. \citep[Ks.]{Wong84}.
+
+\begin{quote}
+- - even with respect to intrasocietal or intersocietal disagreement, we will have difficulty telling when our criteria of application for a moral term are sufficiently similar in the relevant respects that we should or should not expect to arrive at the same moral truth on a given issue. \citep[388]{Wong95}.
+\end{quote}
+
+Moraalisen väitteen totuusarvo voi eri järjestelmissä poiketa merkittävästi, koska yhteisen sisällön 
+lisäksi moraaliseen valintatilanteeseen liittyy joukko paikallisen järjestelmän prioriteetteja moraalisten pyrkimysten välillä sekä muita paikallisia olosuhteita. Totuusarvon ehdot voivat olla erilaiset eri järjestelmissä, mutta pluralistisessa relativismissa moraalisen totuuden
+suhteellisuus palautuu käytettävien termien sisällöllisiin eroihin sekä paikallisiin tapoihin priorisoida moraalisia pyrkimyksiä. Tämä poikkeaa puhtaasta relativismista, jonka mukaan kyse voi olla järjestelmien täydellisestä yhteismitattomuudesta. \citep[Ks. esim.][luku 2]{LaFollette00}.
+
+Pluralistinen relativismi tarjoaa kaksi mahdollisuutta toisten moraalijärjestelmien kritisointiin. Ensimmäinen tapa liittyy moraalin universaaleihin ehtoihin, ja toinen paikallisiin ehtoihin. Universaalien ehtojen nojalla tapahtuvassa kritiikissä voidaan kiinnittää huomiota seikkoihin, jotka ovat ristiriidassa yleisten moraalille asetettujen ehtojen kanssa. Voidaan esimerkiksi arvioida sitä, miten jokin käytäntö, esimerkiksi naisten ympärileikkaukset, toteuttaa moraalin yleisiä tavoitteita. Paikallisten ehtojen nojalla tapahtuvassa kritiikissä voidaan arvioida sitä, onko toimenpide 
+kyseisen moraalijärjestelmän sisäisten ehtojen kanssa sopusoinnussa. Tämä viitannee Wongin teoriassa ensisijaisesti arvojen prioriteettijärjestykseen. Wong mainitsee esimerkkinä naisten aseman Kiinassa, ja toteaa että kiinalaisen kulttuurin taustalla oleva konfutselaisuus ei itse asiassa anna perusteita sellaiselle naisten eriarvoistamiselle kuin mitä Kiinalaisessa nyky-yhteiskunnassa voidaan havaita. \citep[386]{Wong95}.
+
+\section{Pluralistisen relativismin kritiikki}
+
+Pluralistisen relativismin pyrkimys moraalisen relativismin ja objektivismin yhdistelyyn on haastava aihe. Teoriaa voidaan arvostella sekä puhtaan relativismin että objektivismin näkökulmista. Tällaista kritiikkiä on runsaasti tarjolla, joskin suoraa kritiikkiä Wongin teoriaa kohtaan on esitetty yllättävän vähän. Esittelen alla pääasiassa Wongin itse esiin nostamia arvostelun kohteita pluralistisessa moraaliteoriassa.
+
+\subsection{Teorian monimutkaisuus}
+
+Yhdistellessään kahta varsin erilaista näkökulmaa pluralistinen relativismi johtaa perinteisiä teorioita monimutkaisempaan moraalikäsitykseen. Yksinkertaisuus on tieteellisen teorian toivottava piirre, mutta tärkeää on myös teorian ilmaisuvoima. 
+Pluralistinen relativismi vastaa Wongin mukaan tärkeään eettiseen
+tarpeeseen, yritykseen ymmärtää ja kunnioittaa toisten ihmisten
+valitsemia elämäntapoja jopa silloin, kun ne ovat ristiriidassa omien
+arvojen kanssa. Monikulttuurisessa yhteiskunnassa tämä tarve on todellinen. \citep{Wong95}. 
+
+Moraaliseen relativismiin tai objektivismiin verrattuna tämä näkökulma saa Wongin teoriassa enemmän tilaa. Tässä tapauksessa se tapahtuu teorian yksinkertaisuuden kustannuksella. Wongin pluralistinen relativismi vaikuttaa kuitenkin suhteellisen yksinkertaiselta teorialta, ja helposti omaksuttavalta verrattuna esimerkiksi Immanuel Kantin moraaliteoriaan, joka on yksi objektivismin klassikoista \citep{Kant1788}.
+
+Pluralistinen relativismi voi myös johtaa epäkoherentteihin arvostelmiin moraalisiin väittämiin liittyen. 
+Laajakin moraalisten ehtojen konsistenssi eri järjestelmien välillä voi samalla sallia merkittäviä eroja moraalisissa arvostelmissa. Tuntuu kyseenalaiselta, että kunnollinen teoria voisi antaa eri tilanteissa erilaisen vastauksen samaan kysymykseen. Wongin mukaan tämä arvostelu pätee kuitenkin vain jos oletamme, että asettamiemme prioriteettien on oltava täysin yleisiä. Lisäksi se jättäisi huomiotta 
+sen, että käytännössä moraalisissa arvostelmissa huomioidaan usein erityiset olosuhteet. \citep{Wong95}.
+
+\subsection{Moraalisten pyrkimysten aliarviointi ja nihilismin uhka}
+
+Pluralistista relativismia voidaan arvostella myös siitä, että se aliarvioi alkuperäiset moraaliset pyrkimyksemme myöntäessään moraalikäsityksten perustavan ristiriitaisuuden ja jopa sallimalla ristiriitaisten näkemysten omaksumisen. Wongin mukaan tämä on jossain määrin totta, mutta siitä huolimatta pluralistisella relativismilla on myös hyvät puolensa. Ei ole myöskään syytä kieltää sitä, että meillä on oikeus muuttaa alkuperäisiä sitoumuksiamme laajempaan suuntaan, esimerkiksi oppiessamme uutta toisista kulttuureista ja pyrkiessämme ymmärtämään muiden ihmisten tapoja elää. Mitä tulee yksilön omienkin arvojen ristiriitaisuuteen, se ei ole vain pluralistisen relativismin ongelma. Wongin mukaan ihmisen luonteeseen kuuluu ristiriitaisten arvojen ylläpito, ja pluralistinen relativismi tarjoaa yhden viitekehyksen tämän inhimillisen piirteen hahmottamiseksi \citep{Wong95}.
+
+Pluralistisesta relativismista seuraa kaksijakoinen suhtautuminen omiin arvoihin, kun yhtäältä 
+olemme omistautuneita tiettyihin arvoihin, mutta toisaalta emme vaadi, että muiden pitäisi omaksua samat arvot. Vaarana on liukuminen moraaliseen nihilismiin, jossa moraalisen oikeutuksen katsotaan olevan täysin yksilön oman harkinnan varassa. Wong puolustaa teoriaansa tällaista kritiikkiä kohtaan kahdella argumentilla. Ensimmäisen mukaan voidaan vastustaa
+ongelman muotoilua. Arvomme eivät ole pelkän kylmän harkinnan tulosta,
+vaan kumpuavat kulttuurisesta taustastamme. Siten emme ole itsenäisesti
+''valinneet'' niitä, eikä meidän myöskään tarvitse olettaa, että muilla olisi tai pitäisi olla samat arvot. Voimme ymmärtää arvojen moninaisuuden kulttuurista taustaa vasten. Toiseksi elämämme sisältö ja moraaliset arvot voivat olla meille syvästi merkityksellisiä ilman, että pitäisimme niitä jollain tavalla ylivertaisina muiden arvoihin nähden. Tämän oivaltaminen edistää vuoropuhelua poikkeavien moraalikäsitysten välillä, ja mahdollisesti auttaa paremmin ymmärtämään moraalin niitä piirteitä, jotka ovat kaikille yhteisiä. Wong toteaa myöskin, että vasta tietyn järjestelmän johdonmukainen seuraaminen mahdollistaa arvojen täyden toteutumisen: ''-- we must be committed to one way or another to realize something of value.'' \citep[398]{Wong95}. Tästä ei kuitenkaan pitäisi seurata sitä, ettemmekö voisi oppia jotain toisista järjestelmistä:
+
+\begin{quote}
+- - it would be wrongheaded to think that we must preserve our original commitments in the face of recognizing that other moralities embody values and priorities we are capable of appreciating. It seems reasonable, if not rationally compulsory, to expand our sense of the range of values that need honoring and protecting. \citep[398]{Wong95}.
+\end{quote}
+
+\subsection{Paikallisten kriteerien tarpeellisuus}
+
+Monet filosofit ovat ehdottaneet, että on oltava olemassa tietty
+vähimmäiskokoelma arvoja, jotka ovat välttämättömiä yhteiskunnan
+selviämiselle. \citep[Ks. esim.][]{Berlin98,Bok02}. Pluralistinen relativismi on sekoitus paikallisia ja kaikille yhteisiä sääntöjä.  Moraalijärjestelmän paikallisten ehtojen tarpeellisuus voidaan kyseenalaistaa. Teoria olisi yksinkertaisempi, jos naturalistisesti johdetut moraalin yleiset ehdot asetettaisiin pätevän moraalin määritelmäksi, ja kaikki näiden rajojen sisällä tapahtuvat valinnat olisivat moraalisesti hyväksyttäviä \citep{Wong95}.
+
+Wongin mukaan pelkkä yleisten ehtojen rajoittama järjestelmä ei sellaisenaan ole
+riittävän rikas aidoksi moraaliseksi järjestelmäksi, joka ohjaa yksilöiden toimintaa: 
+
+\begin{quote}
+- - universally valid criteria yield merely a skeleton of morality. They do not yield a system of rules that is sufficiently rich in content to be action-guiding. - - Within a moral tradition, there is room for a significant degree of indeterminacy in the priorities specified [between moral values] - -. \citep[390]{Wong95}.
+\end{quote}
+
+Yhteiskunta ei myöskään voi tehdä vaihtoehdoista yksilölle täysin valinnaisia, koska tämä johtaisi lukuisiin ristiriitoihin erilaisten oikeuksien välillä. Kun moraalin tehtävistä ja ihmisluonteesta käsin ei Wongin mukaan voida johtaa ensisijaisuusjärjestystä erilaisten moraalisten pyrkimysten välille, yleiset ehdot eivät auta ristiriitatilanteiden ratkaisemisessa. Paikallisia ehtoja tarvitaan tähän, ja ne auttavat ohjailemaan yksilöiden toimintaa. \citep{Wong84,Wong95}.
+
+Tämä argumentti pätee kuitenkin vain yksilöiden tasolla. Paikalliset ehdot voitaisiin mieltää tarpeelliseksi osaksi kulttuuria ja paikallista elämäntapaa, mutta kuitenkin moraalista erillisiksi.
+Ristiriitatilanteiden ratkaisemiseen tarvitaan menettelytapoja ja arvojen järjestystä myös järjestelmien välillä. Tässä auttaisi moraalisen tietoisuuden laajeneminen oman kulttuuripiirin rajojen ylitse, jolloin yhteisten toimintamallien löytäminen saattaisi helpottua. Wong toteaa, että tiettyä moraalin ''laajenemista'' on tapahtunutkin nyky-yhteiskunnassa \citep[Ks.][398]{Wong95}. Joku toinen voisi ajatella, että kulttuurien välisten ristiriitatilanteiden ratkomisessa turvaudutaan yhä edelleen liian herkästi voimankäyttöön.
+
+Voidaan edelleen esittää hypoteesi, että arvojen prioriteettijärjestykselle löytyisi
+objektiivisiakin kriteereitä. Tämä tekisi paikalliset kriteerit tarpeettomiksi. Voitaisiin esimerkiksi ehdottaa, että kaikki
+moraalijärjestelmät pyrkivät utiliteetin maksimointiin, ja moraalijärjestelmä olisi syntynyt tukemaan tätä pyrkimystä. Tämän kaltaisessa pohdiskelussa joudutaan helposti turvautumaan kulttuurisidonnaisiin
+perusteluihin. Voitaisiin myös esittää, että esimerkiksi moraalisten arvojen
+tasapaino olisi moraalijärjestelmän ensisijainena tavoitteena. Wongin mukaan ei kuitenkaan ole selvää, että tämä todella olisi yhdenkään olemassa olevan yhteiskunnan tavoitteena. Jos objektiivisia kriteerejä arvojen prioriteettijärjestyksen määrittelyyn löytyisi, ristiriitatilanteiden ratkaisu olisi ongelmallista ainoastaan tiedon puutteen vuoksi. Wongin mukaan vaikuttaa kuitenkin epäselvältä, minkälainen tieto voisi ratkaista moraaliset ristiriidat esimerkiksi perfektionististen ja tasa-arvoisten pyrkimysten välillä. Periaatteellinen mahdollisuus tämän tiedon hankkimiseen on joka tapauksessa edellytys ehdotuksen tieteelliselle pätevyydelle. \citep{Wong95}.
+
+Pluralistisessa relativismissa paikallisten moraalijärjestelmän ehtojen ja toisaalta paikallisen kulttuurin välillä ei ole selviä rajoja. Tämä tekee teoriasta vähemmän selkeän kuin mikä olisi kenties toivottavaa, ja saattaa olla aito puute. Ei kuitenkaan tunnu mahdottomalta, että teoriaa olisi mahdollista kehittää edelleen tarkemman määrittelyn aikaansaamiseksi.
+
+\subsection{Moraaliset konfliktit}
+
+Moraalisten pyrkimysten ristiriitaisuus voi johtaa moraalisiin konflikteihin \citep[Ks. esim.]{Gowans87,Hampshire83} niin yksilöiden kuin kulttuurienkin välillä. Wong tarkoittaa moraalisella konfliktilla tilannetta, jossa kumpikin osapuoli ymmärtää toisen näkökulman, mutta ovat eri mieltä moraalisen kysymyksen ratkaisusta. Wong toteaa, että moraalinen konflikti on mahdollinen vasta silloin, kun osapuolilla on yhteinen käsitejärjestelmä keskustelua varten. Muussa tapauksessa osapuolet eivät ymmärrä toisiaan, eikä voida puhua {\it moraalisesta} erimielisyydestä. Pluralistisen relativismin kritiikki liittyy tässä tapauksessa siihen, että teoria ei tarjoaisi selkeää ratkaisumallia konfliktien ratkaisemiseksi. \citep{Wong84,Wong95}.
+
+Pluralistisen relativismin näkökulmasta kahdenlaiset moraaliset konfliktit ovat mahdollisia. Ensimmäinen liittyy siihen, mitä moraalisia arvostelmia pidetään totena. Tämä konflikti on mahdollinen ainoastaan siltä osin, kun osapuolet kykenevät ymmärtämään toisiaan. Toisessa tapauksessa on kysymys siitä, millaisia ihmisten toivotaan olevan ja miten heidän halutaan elävän. Jälkimmäinen tapaus liittyy moraalin
+tehtävään ihmisluonteen muovaajana ja toiminnan ohjaajana. Tällaisessa konfliktitilanteessa kyse on näiden ideaalien eroista (ns. ''pragmaattinen erimielisyys''). Wongin mukaan nämä kaksi konfliktin tyyppiä sotketaan usein keskenään, koska keskeisten
+moraalisten termien sisältö ja käyttö ovat niin lähellä toisiaan eri kulttureissa. 
+Joskus voi olla hankalaa nähdä, koskeeko erimielisyys sitä, mitä pidetään totena vai sitä, millaisen kumpikin osapuoli tahtoisi maailman olevan \citep{Wong95}. Kiistely abortin oikeutuksesta on selkeä esimerkki tällaisesta konfliktista, jossa alkion oikeus elämään ja yksilön oikeudet ovat ristiriidassa. Usein kiistassa on kyse enemmän moraalisista ideaaleista kuin abortin oikeutuksen totuusarvosta. 
+
+Aina moraalinen vastakkainasettelu ei myöskään ole niin voimakas kuin miltä se aluksi voi vaikuttaa.
+Allen Buchanan on muistuttanut, että myös yhteisöllisiä arvoja
+korostavissa yhteiskunnissa voi esiintyä jyrkkiä erimielisyyksiä
+siitä, mikä yhteisön hyvä on, ja miten siihen voidaan
+pyrkiä \citep[]{Buchanan89}. Poliittisten oikeuksien ja sananvapauden kaltaiset
+yksilönoikeudet voivat auttaa kanavoimaan tällaisia erimielisyyksiä ja
+edistää yhteisön pysymistä eheänä.  Samoin yksilökeskeisten
+järjestelmien on tunnustettava yhteisön merkitys itsehallinnon ja
+sosiaalisen oikeudenmukaisuuden toteutumisessa. Nämä
+sisältyvät yksilön oikeuksia korostavien yhteiskuntien demokraattisiin arvoihin.
+Yhteisö ja oikeudet ovat riippuvaisia toisistaan, joten
+vastakkainasettelu lievenee. \citep[Ks.][]{Buchanan89,Wong95}.
+
+Toisen yhteiskunnan toimien arvostelu on käytännössä ongelmallista, koska kaikkien toimien oikeutus ei välttämättä
+sisälly moraalijärjestelmien yhteiseen osaan. Tällaisessa tapauksessa
+emme kykene perustelemaan moraalista arvostelmaamme toiselle
+osapuolelle heidän hyväksymällään tavalla, ja kunnioitus toisen
+järjestelmän edustajia kohtaan tekee vaikeaksi puuttua asioihin,
+jotka eivät heidän näkökulmastaan ole vääriä. Joskus
+arvojemme loukkaus voi kuitenkin olla niin räikeä, että moraalinen
+velvollisuutemme on puuttua toisen osapuolen asioihin. Jotkin teot voivat olla niin julmia, että toivoisimme niiden tuomitsemisella olevan kiinteämpää perustaa kuin pelkät yhteisölliset tarpeet ja ihmisluonto, joista pluralistinen relativismi on johdettu. Useat moraalijärjestelmät kieltävät julmuuden ja itsekkäät pyrkimykset muiden alistamiseen, eikä
+arvostelukaan aina ole pelkästään järjestelmien välistä. Wong ehdottaakin moraalijärjestelmien välisten ongelmatilanteiden ratkaisumalliksi sellaista menettelyä, jossa toisen järjestelmän toimintaa pyritään arvostelemaan sen omilla kriteereillä, mutta mahdollisesti tunnustetaan motivaatioksi omat arvot \citep[393]{Wong95}.
+
+\subsection{Naturalistisen moraaliteorian kritiikistä}
+
+Wongin teoria on naturalistinen, eli se johdetaan ihmisluonteesta ja ihmisyhteisöjen tarpeista. Wong ei itse tuo esiin naturalistista moraaliteoriaa kohtaan esitettävää kritiikkiä, vaikka tällainenkin arvostelu on mahdollista \citep[Ks. esim.][]{Bhaskar98}. Voitaisiin esimerkiksi kyseenalaistaa naturalistien teorian lähtökohta, jonka mukaan edellä mainituista inhimillisistä tarpeista olisi löydettävissä kaikkialla pätevät rajoitukset moraalille. Vaikka ihmisyhteisöillä on selvästi monia samankaltaisia pyrkimyksiä, erilaisista marginaalisista yhteisöistä saattaa olla mahdollista löytää vastaesimerkkejä mille tahansa yksittäiselle tarpeelle. On yhteisöjä, joiden jäseniä yhdistää tarve oman elämänsä lopettamiseen, ja yksilöitä, jotka vastustavat sosiaalista yhteistyötä, tai jotka pyrkivät tietoisesti herättämään toiminnallaan paheksuntaa. On toki mahdollista, että nämäkin pyrkimykset kumpuavat tietyistä yleisinhimillisistä ominaisuuksista, ja että tällaisten yhteisöjen sisällä pätisivät samat yleiset säännöt kuin muissakin yhteisöissä. Moraalisesta valtavirrasta poikkeavien alakulttuurien olemassa olo kuitenkin tuntuisi vaikeuttavan yleisesti pätevien moraalisten ehtojen muotoilua, joka on naturalistisen moraaliteorian perustana. 
+
+
+\addcontentsline{toc}{section}{Yhteenveto}
+\section*{Yhteenveto}
+
+Työssä on esitelty David Wongin pluralistisen relativismin pääpiirteet, valotettu sen taustoja ja sitä kohtaan esitettävää kritiikkiä. 
+Wongin teoriassa moraalisen järjestelmän ehdot johdetaan ihmisen ja yhteisön luonteesta. Teorian mukaan moraalisilla järjestelmillä on sekä yhteisiä että paikallisia piirteitä. Yhteiset piirteet määrittelevät pätevän moraalijärjestelmän rajat, ja paikalliset piirteet antavat sille lopullisen sisällön. Lähestymistapa antaa selvästi tilaa useille erilaisille järjestelmille mahdollistaen samalla tietyn yhteisen arvopohjan löytämisen kulttuurien välillä.
+
+Pluralistinen relativismi pyrkii tarjoamaan käyttökelpoisia näkökulmia siihen ilmeiseen haasteeseen, että
+moraalijärjestelmät ovat tietyllä tavalla sumeita ja tehty pitämään kasassa ristiriitaisia pyrkimyksiä (''Moralities themselves are uneasy, somewhat indeterminate combinations of values that are not easily held together.'' \citep[398]{Wong95}). Tästä seuraa samalla jatkumo eri järjestelmien välillä, kun jokaiseen järjestelmään sisältyy jonkinasteista liikkumavaraa. Riittävän yhteismitallisten moraalisten käsitysten olemassaolo mahdollistaa molemminpuolisen kunnioituksen ja vuoropuhelun eri
+moraalijärjestelmien välillä. \citep{Wong95}.
+
+Pluralistinen relativismi ei pyri kiistämään sitä, että erilaiset
+moraaliset arvot voivat joutua konfliktiin keskenään. Vaikka
+kulttuurit jakaisivatkin monia yhteisiä moraalisia käsityksiä ja
+arvoja, ne ovat omaksuneet erilaisia tapoja asettaa ristiriitaan
+johtavia moraalisia arvoja tärkeysjärjestykseen. Pluralistinen relativismi vaikuttaisi puoltavan sellaista näkökulmaa, että järjestelmien erot liittyvät
+ensisijaisesti moraalisten arvojen priorisointiin, ja vasta
+toissijaisesti itse arvojen sisältöön. Konkreettisena esimerkkinä tästä on jännite yksilön ja yhteisön oikeuksien
+välillä. Länsimaissa yksilönvapautta korostetaan enemmän, kun taas
+esimerkiksi aasialaisissa traditioissa yhteisön hyvinvointi menee
+usein yksilön oikeuksien edelle. Molemmat arvot ovat kuitenkin
+löydettävissä näistä kulttuuriperinteistä. Wong muistuttaa, että
+moraalisessa ristiriitatilanteessa ymmärrämme ratkaisun johtavan tinkimiseen joistakin
+moraalisista perusarvoistamme. Tätä taustaa vasten voimme myöskin 
+ymmärtää sen, että toisenlaiset kulttuurit ovat voineet kehittää
+vastaaviin tilanteisiin erilaisia ratkaisuja. \citep{Wong84,Wong95}.
+
+%\bibliography{kfil}
+%\bibliographystyle{finn} %abbrv
+
+\begin{thebibliography}{17,12pt}
+
+\bibitem[Akvinolainen(2002)]{Rentto02}
+Akvinolainen, Tuomas (2002):
+\newblock \emph{Summa theologiae}.
+\newblock Gaudeamus, Helsinki.
+\newblock Valikoiden suomentanut J.-P. Rentto. (Alkuteos {\it Summa theologiae} julkaistu 1200-luvulla.)
+
+\bibitem[Bentham(1789)]{Bentham1789}
+Bentham, Jeremy (1789):
+\newblock \emph{An Introduction to the Principles of Morals and Legislation}.
+\newblock T.Payne, London.
+
+\bibitem[Berlin(1998)]{Berlin98}
+Berlin, Isaiah (1998):
+\newblock \emph{The Proper Study of Mankind: An Anthology of Essays.}
+\newblock Random House, New York.
+
+\bibitem[Bhaskar(1998)]{Bhaskar98}
+Bhaskar, Roy, toimittaja (1998):
+\newblock \emph{The Possibility of Naturalism: A Philosophical Critique of the
+  Contemporary Human Sciences}.
+\newblock Routledge, London.
+
+\bibitem[Boghossian(2006)]{Boghossian06}
+Boghossian, Paul (2006):
+\newblock \emph{Truth and realism}, luku ''What is relativism?''
+\newblock Oxford University Press.
+
+\bibitem[Bok(2002)]{Bok02}
+Bok, Sissela (2002):
+\newblock \emph{Common values}.
+\newblock University of Missouri Press, Columbia, Missouri.
+
+\bibitem[Buchanan(1989)]{Buchanan89}
+Buchanan, Allen~E (1989):
+\newblock ''Assessing the communitarian critique of liberalism''.
+\newblock \emph{Ethics} 99, 877.
+
+\bibitem[Dreier(1996)]{Dreier96}
+Dreier, James (1996):
+\newblock ''Expressivist embeddings and minimalist truth''.
+\newblock \emph{Philosophical Studies} 83, 29--51.
+
+\bibitem[Foot(1978)]{Foot02}
+Foot, Philippa (1978):
+\newblock Moral arguments.
+\newblock Teoksessa \emph{Virtues and Vices and Other Essays in Moral
+  Philosophy}, Basil Blackwell, Oxford, 96--109.
+
+\bibitem[Gowans(1987)]{Gowans87}
+Gowans, Christopher~W., toimittaja (1987):
+\newblock \emph{Moral dilemmas}.
+\newblock Oxford University Press, New York.
+
+\bibitem[Hampshire(1983)]{Hampshire83}
+Hampshire, Stuart (1983):
+\newblock \emph{Morality and conflict}.
+\newblock Basil Blackwell, Oxford, England.
+
+\bibitem[Kant(1788)]{Kant1788}
+Kant, Immanuel (1788):
+\newblock \emph{Kritik der Praktischen Vernunft}.
+
+\bibitem[LaFollette(2000)]{LaFollette00}
+LaFollette, Hugh, toimittaja (2002):
+\newblock \emph{The {Blackwell} guide to ethical theory}.
+\newblock Blackwell publishers ltd.
+
+\bibitem[Nagel(1987)]{Nagel87}
+Nagel, Thomas (1987):
+\newblock \emph{Moral dilemmas}.
+\newblock Oxford University Press.
+
+\bibitem[Williams(1985)]{Williams85}
+Williams, Bernard (1985):
+\newblock \emph{Ethics and the Limits of Philosophy}.
+\newblock Harvard University Press, Cambridge MA.
+
+\bibitem[Wong(1984)]{Wong84}
+Wong, David~B (1984):
+\newblock \emph{Moral relativity}.
+\newblock University of {California} press, London.
+
+\bibitem[Wong(1995)]{Wong95}
+Wong, David~B (1995):
+\newblock \emph{Midwest studies in philosophy}, osa XX: Moral concepts.
+\newblock University of Notre Dame Press, Notre Dame, 378--399.
+
+\end{thebibliography}
+
+\end{document}
