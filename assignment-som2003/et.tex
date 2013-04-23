@@ -1,0 +1,487 @@
+\documentclass[a4paper,12pt,titlepage]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin1]{inputenc}
+\usepackage[dvips]{graphics}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage[finnish]{babel}
+\usepackage{booktabs,amsmath,amsfonts,amssymb,bbm}
+\setlength{\textwidth}{140mm}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{3mm plus0.5mm minus0.5mm}
+
+\title{Ihmisen ja hiiren geenien ilmentymisdatan eksploratiivinen analyysi itseorganisoituvilla kartoilla}
+\author{Leo Lahti}
+\date{18.6.2003}
+\begin{document}
+
+\newcommand{\mycaption}[1]{\caption{\small{#1}}}
+\newcommand{\Rn}{\(\mathbb{R}^n\)} % Rn
+\newcommand{\Rk}{\(\mathbb{R}^2\)} % R2
+
+\begin{titlepage}
+  \begin{tabbing}
+    \hspace*{9cm} \= \\
+    TEKNILLINEN KORKEAKOULU \> ERIKOISTYÖ \\
+    Teknillisen fysiikan osasto \> T-61 Informaatiotekniikka  \\ 
+    \> \today \\
+  \end{tabbing}
+  \vspace{4cm}
+  \begin{center}
+    {\large {\bf Ihmisen ja hiiren geenien ilmentymisdatan eksploratiivinen analyysi itseorganisoituvilla kartoilla}}
+    \vspace{10cm} \\
+    Leo Lahti\linebreak
+    49791N
+    \vspace{2.5cm}
+  \end{center}
+\end{titlepage}
+
+\tableofcontents
+\mainmatter
+
+\pagebreak
+
+\include{esipuhe}
+
+\pagebreak
+
+\section{Johdanto}
+Ihmisen perimän kartoitustyön valmistuminen \cite{Lander01} ja uusi geenisirutekniikka \cite{Lockhart96, Schena95, Velculescu95} ovat mahdollistaneet jopa kymmenien tuhansien geenien ilmentymistasojen tutkimiseen samanaikaisesti yhdessä geenianalyysissä, kun aiemmin kyettiin tutkimaan vain yhtä tai korkeintaan muutamaa geeniä kerrallaan. Useimpien geenien merkitys ja toiminta soluissa tunnetaan hyvin huonosti. Uudet menetelmät tuottavat suuria määriä dataa, johon tärkeä tieto geenien toiminnasta kätkeytyy.
+
+Laajojen datajoukkojen profiloinnista on tullut tärkeä työväline tutkittaessa geenien ilmentymistä ja kytköksiä erilaisissa biologisissa yhteyksissä. Tässä auttavat ns. eksploratiiviset data-analyysimenetelmät.  Eksploratiivisessa analyysissä tarkoituksena on luoda hypoteeseja ja antaa suuntaviivoja myöhemmälle tutkimukselle. Järjestämällä ja ryhmittelemällä pyritään saamaan esille aiemmin tuntemattomia yhteyksiä. 
+
+Lajien välisten yhteyksien tutkiminen geenitasolla laajassa mittakaavassa on melko uusi tutkimusalue \cite{Doolittle97, Lander96}. Geenien toimintaa tutkitaan samanaikaisesti useissa organismeissa. Kun tiettyjen geenien toiminta tunnetaan yhdessä organismissa, voidaan saada lisävaloa toisen organismin geenien toiminnan selvittämiseen, mikäli geenien välillä tiedetään olevan yhteyksiä. Tällainen lisäinformaatio on arvokasta, sillä geenien toiminnan kartoittaminen on valtava urakka.
+
+Käytössäni on hiiren ja ihmisen geenien ilmentymisdataa, eli tietoa geenien ilmentymisestä erilaisissa näytteissä.  
+Tämän työn tavoitteena on 
+(i) tutustua tutkittavan ilmentymisdatan ominaisuuksiin ja
+(ii) osoittaa, että ihmisen ja hiiren geeniparit sijoittuvat data-avaruudessa keskimääräistä lähemmäksi toisiaan.
+Ominaisuuksien kartoittaminen auttaa jatkotutkimuksissa käytettävien menetelmien valinnassa ja helpottaa tulosten tulkintaa. Geeniparien sijoittuminen lähekkäin data-avaruudessa osoittaa, että lajien välisiä yhteyksiä saadaan esille ja niitä voidaan tutkia ryhmittelymenetelmillä. Se viittaa myös yleisemmin siihen, että läheinen sijainti voi olla merkki geenien toiminnallisista yhteyksistä. Kunkin geeniryhmän biologisesta merkityksestä voidaan tehdä epäsuoria päätelmiä, jos kyseiseen ryhmään kuuluu myös ennestään tunnettuja ja toiminnaltaan hyvin kartoitettuja geenejä.
+
+Luvussa~\ref{sec:datasta} esittelen menetelmät, joilla tutkittava ilmentymisdata on tuotettu ja esikäsitelty. 
+Luvussa~\ref{sec:menetelmat} esittelen data-analyysissä käyttämäni menetelmät ja niiden soveltamisen tähän tutkimukseen.
+Tulokset esittelen luvussa~\ref{sec:tulokset} ja 
+viimeisessä luvussa~\ref{sec:pohdiskelu} teen työstä yhteenvedon.
+
+\section{Geenien ilmentymisen mittaaminen ja datan esikäsittely}
+\label{sec:datasta}
+Ohjeet solutasolla tapahtuvaan elintoimintojen säätelyyn on tallennettu geeneihin. Geenit muodostuvat DNA:sta, joka on nukleotideista muodostuva pitkä kaksijuosteinen ketju. DNA säätelee solun toimintaa proteiinien valmistuksen eli proteiinisynteesin avulla. Proteiinien määrää ja laatua säätelemällä DNA ohjaa solun toimintaa molekyylitasolla. 
+
+Proteiinisynteesi alkaa DNA:n kopioimisella. DNA:n kaksoiskierre aukeaa ja toinen nukleotidiketjuista kopioidaan lähetti-RNA:n esiasteeksi. DNA-ketjun kaikki osat eivät ole merkityksellisiä proteiinin valmistuksessa, joten seuraavaksi tarpeettomat osat poistetaan nukleotidiketjusta RNA:n silmukoinnissa. Valmis lähetti-RNA siirtyy ulos solun tumasta ja kiinnittyy solulimassa ribosomiin. Ribosomin avulla lähetti-RNA-ketju luetaan ja proteiini valmistetaan sen sisältämän ohjeen mukaan. Ribosomi siirtyy pitkin lähetti-RNA-ketjua sitä mukaa, kun siirtäjä-RNA:t tuovat paikalle ketjun nukleotidien määräämiä aminohappoja. Valmis aminohappoketju laskostuu kolmiulotteiseksi rakenteeksi muodostaen lopullisen proteiinin \cite{Campbell01}.
+
+Geeniä vastaavan lähetti-RNA:n pitoisuus, eli \textit{ilmentymistaso} solussa viittaa geenin aktiivisuuteen. Geenien toiminnan kartoittamiseksi ne altistetaan mahdollisimman monelle erilaiselle olosuhteelle, jotta saataisiin selville, minkälaisissa tilanteissa kukin geeni aktivoituu. Esimerkiksi eri kudoksissa vallitsevat erilaiset olosuhteet. Ilmentymistasojen vertailu muodostaa pohjan laajoille analyyseille geenien toiminnasta. Geenisiruanalyysin avulla tietoa saadaan sekä geenien ilmentymisestä yksittäisessä näytteessä että yksittäisen geenin ilmentymisestä erilaisissa olosuhteissa. 
+
+Geenisirua voidaan käyttää mittaamaan tuhansien geenien samanaikaista pitoisuutta näytteessä. Kun mittaus tehdään monessa näytteissä, saadaan kullekin geenille useita mittausarvoja, joista muodostetaan \textit{ilmentymisvektori}. Kukin ilmentymisvektorin komponentti vastaa kyseisen geenin ilmentymistasoa yhdessä näytteistä. Geeniä vastaavan ilmentymisvektorin muotoa kutsutaan \textit{ilmentymisprofiiliksi} (ks. kuva~\ref{fig:HM200_0_mallivektoreita}). Ilmentymisvektori osoittaa geenin sijoittumisen ilmentymistasojen avaruudessa. Tässä mielessä jokaista näytettä vastaa yksi avaruuden koordinaattiakseli. 
+
+Tarkastelen tässä työssä julkisesti saatavilla olevaa Affymetrixin \textit{geenilastuilla} tuotettua ilmentymisdataa \cite{Su02}. Seuraavaksi esittelen lyhyesti tutkitun ilmentymisdatan mittamiseen ja esikäsittelyyn käytetyt menetelmät. Yksityiskohtaisempaa tietoa löytyy artikkeleista \cite{Sandberg00} ja \cite{Su02}.
+
+\subsection{Geenilastut}
+Lähetti-RNA:n ilmentymistasojen mittaamiseksi näytteestä on kehitelty erilaisia geenisirumenetelmiä \cite{Lockhart96, Schena95, Velculescu95}. Affymetrixin kehittämä geenilastu \cite{Lockhart96} on eräs tällainen menetelmä.
+
+Geenilastulla kutakin mitattavaa geeniä edustaa koetinjoukko, jossa on tavallisesti 11-20 erilaista oligonukleotidiparia. Oligonukleotidit ovat lyhyitä, korkeintaan muutaman kymmenen nukleotidin mittaisia nukleotidisekvenssejä. Kukin pari sisältää geenin lähetti-RNA:n osaa edustavan vastinjuosteen ja virheellisen kontrollijuosteen. Juosteet rakennetaan geenilastulle nukleotidi kerrallaan.
+On odotettavissa, että mitattavan geenin lähetti-RNA sitoutuu vastinjuosteeseen paremmin kuin kontrollijuosteeseen. 
+Laskemalla sitoutumisasteiden erotus vastinjuosteen ja kontrollijuosteen välillä saadaan arvo, joka kertoo lähetti-RNA:n pitoisuudesta näytteessä. Lopullinen mittausarvo geenin ilmentymistasolle (average difference value, AD) saadaan laskemalla erotusten keskiarvo kaikkien geeniä vastaavien koetinjoukon oligonukleotidiparien yli. Suuri ilmentymistaso kertoo korkeasta pitoisuudesta.
+
+Kontrollijuosteiden ja geenin eri osista valittujen edustavien vastinjuosteiden, sekä koetinjoukon tulosten keskiarvoistamisen ansiosta geenilastumenetelmällä on joitakin etuja muihin menetelmiin verrattuna. Affymetrixin geenilastut ovat vähemmän alttiita virheille ja niillä saadaan näkymään pienempiä muutoksia DNA-tasoissa \cite{Lipshutz99}. 
+Affymetrixin geenilastuilla tuotetun ilmentymisdatan suosio on kasvanut muihin geenisirumenetelmiin verrattuna. Menetelmä on kuitenkin melko kallis, mikä on rajoittanut sen käyttöä.
+
+Geenejä vastaavat koettimet on valmistettu erilaisten sekvenssitietokantojen, mm. GenBankin \cite{Benson00} sisältämien sekvenssitietojen perusteella. Affymetrixin koettimia on kullekin yksittäiselle tutkittavalle tietokantasekvenssille tehty yleensä alun perin 1-2. Tietokantojen tiedot tarkentuvat jatkuvasti. Osa alunperin erillisinä määritellyistä sekvensseistä voidaan lopulta liittää samaan geeniin ja täsmällisesti määriteltyyn paikkaan tietyssä kromosomissa. Paikan ilmoittaa esimerkiksi geeniin liittyvä LocusLink-symboli \cite{Pruitt01}.
+Jos myöhemmin selviää, että useampi tietokannoista poimittu sekvenssi liittyykin samaan geeniin, on tätä geeniä todellisuudessa vastaavien koettimienkin määrä vastaavasti suurempi. Tyypillisesti mittauksissa yhtä geeniä vastaa lopulta 1-8 koetinjoukkoa. Kaikkien geenien osalta tarkkaa sijaintia kromosomissa ei ole saatavilla, vaikka geenisekvenssi olisikin luetteloitu. Jatkossa tarkoitan \textit{geenillä} kutakin geenilastun koetinjoukkoa, joka mittaa tietyn lähetti-RNA:n ilmentymistasoa näytteessä. 
+
+\subsection{Esikäsittely}
+Yhdellä geenilastulla voi olla tuhansia koetinjoukkoja, joista kukin vastaa yhtä geeniä. Mittausolosuhteet eri kudoksissa ovat erilaiset. Jotta geenilastujen avulla tuotetut arvot saataisiin keskenään vertailukelpoisiksi, on data esikäsiteltävä. Data-analyysia varten dataa joudutaan mahdollisesti jatkokäsittelemään, mutta käsittelymenetelmät riippuvat tutkimuksessa käytettävistä menetelmistä ja tutkimuksen tavoitteesta. 
+
+Käyttämäni data on esikäsitelty seuraavasti. Näytteiden vertailukelpoisuuden varmistamiseksi ilmentymisten keskiarvo normalisoitiin jokaisessa näytteessä nollapisteen siirrolla arvoon 200. Suurimmat ja pienimmät arvot (2\%) jätettiin huomiotta normalisointivakiota määritettäessä. Hyvin pienet arvot (AD<20) merkitsevät joko erittäin matalaa ilmentymistasoa tai epäluotettavaa mittausta. Kohtelen tällaisia arvoja osoituksena matalasta ilmenemistasosta ja asetan arvoksi 20 tätä pienempien mittaustulosten osalta.
+Useimmille näytteille oli suoritettu 2-3 ilmentymistason mittausta geenilastujen avulla. Mittausvirheen vaikutuksen vähentämiseksi mittauksista laskettiin keskiarvo. Lopulta käytettävissä oli geenien ilmentymistasot hiirelle 45 ja ihmiselle 46 kudoksessa tai solulinjassa. Lista tutkituista kudoksista on annettu liitteessä A. 
+
+Edellä mainitun käsittelyn jälkeen geenien eri näytteissä mitatut ilmentymistasot ovat vertailukelpoisia. 
+Ihmiselle mittaustuloksia oli yhteensä 12533 ja hiirelle 9977 geenisekvenssin osalta. Laajan tietomäärän tutkimista varten on mielekästä aluksi karsia tutkimuksen kannalta epäoleellista tietoa. Olen tässä työssä kiinnostunut \textit{ilmentyvistä} geeneistä (AD>200 ainakin yhdessä kudoksessa) ja \textit{differentiaalisesti ilmentyvistä} geeneistä, joille vaaditaan lisäksi mediaaniarvoon nähden kolminkertainen ilmentymistaso ainakin yhdessä kudoksessa. Esikäsittely ja karsinta on tehty kuten artikkelissa \cite{Su02}. 
+Valitut karsintarajat ovat yleisesti käytettyjä, mutta hieman mielivaltaisia. Differentiaalisesti ilmentyvien geenien ilmentymisprofiilit ovat 'terävämpiä' kuin ilmentyvien geenien, ja osoittavat useammin geenin ilmentymistä erityisesti jossakin tai joissakin yksittäisissä näytteissä. Ilmentyviä geenejä oli 9404 (ihminen) ja 7919 (hiiri). Differentiaalisesti ilmentyviä geenejä oli vastaavasti 7408 (ihminen) ja 5070 (hiiri). 
+
+Kiinnostavien geenien valinnan jälkeen tutkittava datajoukko normalisoidaan. Käytettävissä ei ole tietoa geenien ilmentymisen suhteellisesta vaihtelusta eri kudoksissa. Ennakkotiedon puuttuessa normalisoin ilmentymistasojen varianssin jokaisessa kudoksessa arvoon 1. Normalisointi on toteutettu kaikissa tapauksissa vasta sille geenijoukolle, joka on sisällytetty kulloiseenkin tarkasteluun. Poikkeuksena on 5000 satunnaisesti poimitun geenin otos ihmisen ja hiiren yhdistetyistä datajoukoista luvussa~\ref{sec:tulokset}.  
+Tämän jälkeen geenien ilmentymistasoja vastaavat datapisteet normalisoidaan yksikköpallon pinnalle skaalaamalla kunkin ilmentymisvektorin euklidiseksi pituudeksi 1. Pallon pinnalle normalisointi on geeneille hyvin soveltuva menetelmä, koska usein ilmentymisprofiilin muoto on oleellinen ja ilmentymisen kokonaisvoimakkuus toissijainen tieto tutkittaessa geenien yhteyksiä ja ilmentymistasojen suhteellisia eroja näytteiden välillä. 
+Käsittelyn jälkeen ilmentymistasojen arvot (AD) ovat välillä [0, 1].
+
+\subsection{Putatiivisesti ortologiset geeniparit}
+Ihmisellä ja hiirellä on yhteinen kehityshistoriallinen alkuperä. On olemassa molemmille lajeille yhteisiä geenejä, jotka ovat voineet säilyttää alkuperäisen tehtävänsä lajien eriytymisen jälkeen. Näistä geeneistä voidaan saada tietoa biologisen tutkimuksen avulla. Toisaalta tällaisia geenejä voidaan etsiä myös laskennallisesti tutkimalla kahden lajin sekvenssihomologiaa, eli geenien nukleotidisekvenssien samankaltaisuutta. Sekvenssien rinnastukseen on kehitetty erilaisia menetelmiä. Tässä työssä ihmisen ja hiiren geeniparien selvittämiseen käytettiin HomoloGene-tietokannassa \cite{Pruitt01} olevaa tietoa \textit{putatiivisesti ortologisista} LocusLink-pareista. 
+
+HomoloGenen geenirinnastukset on tehty käyttämällä MegaBLAST-hakua \cite{Zhang00}. Menetelmän avulla kahdesta organismista voidaan etsiä geenipareja, joiden nukleotidisekvenssit ovat mahdollisimman samankaltaisia. Sekvenssien samankaltaisuus määritellään monimutkaisella pisteytysmenetelmällä. 
+
+Joissakin tapauksissa menetelmä löytää useita pariehdokkaita. Esimerkiksi annetulle ihmisen geenille voi löytyä useita pariehdokkaita hiiren geenien joukosta. Yleensä ehdokkailla on kuitenkin erilaiset pisteytykset. Parhaan pistemäärän saaneelle hiiren geenille voidaan etsiä pariehdokkaita ihmisen geenien joukosta. Jos kaksi sekvenssiä ovat toisiinsa parhaiten rinnastuvia kumpaankin suuntaan vertailtaessa, sekvenssejä vastaavia geenejä sanotaan putatiivisiksi ortologeiksi. 
+
+\section{Menetelmistä}
+\label{sec:menetelmat}
+Ryhmittelymenetelmien mahdollisuudet geenien toiminnan tutkimuksessa huomattiin alunperin hiivalla tehdyissä kokeissa. Ensimmäiset julkaisut osoittivat, että tiettyihin aineenvaihduntareitteihin liittyvät geenit päätyivät samoihin ryhmiin \cite{Chu98, DeRisi97}. Tämän seurauksena ehdotettiin, että ryhmittelyä voitaisiin käyttää geenien toiminnan ennustamiseen. Geenien toimintaa koskevia ehdotuksia on ryhmittelyn avulla saavutettu nopeammin kuin uusia kytköksiä perinteisillä laboratoriomenetelmillä. 
+
+Itseorganisoituva kartta \cite{Kohonen97} on yksi data-analyysissä yleisimmin käytetyistä neuraalilaskennan menetelmistä, joka soveltuu myös uusien ja korkeaulotteisten datajoukkojen visuaaliseen tarkasteluun. Itseorganisoituva kartta muodostaa järjestyneen kuvauksen moniulotteisesta data-avaruudesta pienempiulotteiselle karttahilalle, jota voidaan helpommin visualisoida ja tulkita kuin alkuperäistä dataa. Kartan avulla voidaan visualisoida aineiston kasaumarakenteita sekä näytteiden välisiä suhteita. 
+
+\subsection{Itseorganisoituva kartta}
+Itseorganisoituva kartta  \cite{Kohonen97} on ohjaamattoman oppimisen menetelmä, jota voidaan käyttää geenien ilmentymisdatan ryhmittelyyn ja järjestämiseen, sekä visualisointiin. Kartan visualisoinnilla saadaan esille datassa esiintyvät tiheysrakenteet ja niiden väliset suhteet. Ensimmäiset sovellutukset geenien ilmentymisdatan tutkimiseksi itseorganisoituvilla kartoilla julkaistiin 90-luvun lopulla \cite{Tamayo99, Toronen99}.
+
+\subsubsection{Rakenne ja alustus}
+Itseorganisoituva kartta määrittelee epälineaarisen kuvauksen data-avaruudelta \(\Rn\) säännölliselle karttayksiköistä muodostuvalle hilalle. 
+Kartan muodostamiseksi on ensin valittava kartan koko ja topologia. Tavallisesti käytetään suorakulmaista kaksiulotteista hilaa, joka muodostuu suorakulmaisista tai heksagonaalisisista karttayksiköistä. Karttahilan koko määrää sen \textit{resoluution}, eli sen, montako näytettä keskimäärin kuvautuu yhdelle karttayksikölle. Suurella kartalla pistejoukon sisäiset paikalliset suhteet näkyvät selvemmin. 
+
+Karttayksiköt esitetään data-avaruudessa mallivektoreina 
+
+\[
+	\textbf{m}=[m_1, m_2, ..., m_n]^T,
+\]
+
+joiden dimensio \(n\) on sama kuin tutkittavan data-avaruuden dimensio. Karttayksikköön \(i\) liittyvää mallivektoria merkitään symbolilla \(\textbf{m}_i\). Oppimisen tuloksena hilassa vierekkäisten karttayksiköiden mallivektorit ovat lähekkäin myös data-avaruudessa. Kartta säilyttää hyvin pistejoukon paikalliset rakenteet.
+
+Mallivektoreille on annettava alkuarvot ennen kartan opettamista, esimerkiksi kuvattavan jakauman tärkeimpien ominaisvektoreiden avulla \cite{Kohonen97}. Tätä sanotaan kartan alustamiseksi. 
+Lisäksi valitaan opetusjoukko, eli joukko datanäytteitä, joiden perusteella kartta opetetaan.
+
+Opetuksen jälkeen ilmentymisvektorit kuvataan kartalle. Kukin ilmentymisvektori kuvautuu lähintä mallivektoriansa vastaavaan karttayksikköön. Lopulta kukin karttayksikkö vastaa siis tietynlaisia datapisteitä, eli tässä tutkimuksessa geenejä, joiden ilmentymisprofiilit ovat samankaltaisia. Läheisten karttayksiköiden sisältämien geenien ilmentymisprofiilit ovat samankaltaisempia kuin kauemmaksi kartalla sijoittuvien.
+
+\subsubsection{Opettaminen}
+Kartan opettaminen on iteratiivinen prosessi. Kullakin opetuskierroksella opetusjoukosta valitaan satunnaisesti näyte, jonka perusteella kartan mallivektoreita päivitetään. Kierroksella \(t=1,2,...\) näytevektorille \(\textbf{x}(t) \in \Rn\) etsitään ensin 'lähin' mallivektori. Sanomme, että kaksi profiilia ovat sitä samankaltaisempia, mitä lähempänä vastaavat vektorit ovat data-avaruudessa.
+
+Etäisyyksien määrittämiseksi tarvitaan metriikka, eli tietyt matemaattiset ehdot täyttävä kuvaus \cite{Rudin76}. Etäisyys on suuresti riippuvainen vertailtaviksi valituista piirteistä. Erilaiset metriikat korostavat piirteitä eri tavoin. Käytettävä metriikka määrää näytteiden välisen etäisyyden ja sitä kautta vaikuttaa suuresti ohjaamattoman menetelmän tulokseen. 
+
+Pallon pinnalle sijoittuvien pisteiden etäisyyksien laskentaan hyvin soveltuva mitta on sisätulometriikka (ks. \cite{Kohonen97}). Sisätulometriikassa näytevektorille \(\textbf{x}(t)\) lähin mallivektori \(\textbf{m}_{c(\textbf{x})}\) määräytyy ehdosta
+
+\begin{equation}
+\label{eq:mallikaava}
+        \textbf{x}^T \textbf{m}_{c(\textbf{x})} \geq \textbf{x}^T \textbf{m}_i 
+\end{equation}
+
+kaikille \(i \in \{1,2,...,S\}\), missä \(S\) on karttayksiköiden määrä. Sanomme mallivektoria \(\textbf{m}_{c(\textbf{x})}\) vastaavaa karttayksikköä \(c(\textbf{x})\) \textit{voittajayksiköksi}. 
+Kaikkien ilmentymisvektoreiden euklidinen pituus on normeerattu arvoon 1, joten parien sisätulot ovat keskenään vertailukelpoisia. Ilmentymisprofiilien samankaltaisuutta voidaan siis mitata laskemalla ilmentymisvektoreiden sisätulo, joka saa arvoja väliltä [0,1]. Mitä suurempi arvo on, sitä lähempänä kaksi profiilia ovat keskenään. Identtisten profiilivektorien sisätulo saa arvon 1. 
+
+Voittajayksikön löytämisen jälkeen mallivektoria päivitetään niin, että se tulee lähemmäksi annettua ilmentymisvektoria. Lisäksi päivitetään naapuroivien karttayksiköiden mallivektoreita. Päivitys tapahtuu sisätulometriikassa kaavan
+
+\begin{equation}
+\label{eq:paivityskaava}
+        \textbf{m}_i (t+1) = \frac{\textbf{m}_i (t) + h_{c(\textbf{x}),i} (t) \textbf{x} (t)}{\parallel \textbf{m}_i (t) + h_{c(\textbf{x}),i} (t) \textbf{x} (t) \parallel}.
+\end{equation}
+
+mukaisesti. Funktio \(h_{c(\textbf{x}),i}\) on naapurustofunktio, jonka arvo pienenee mentäessä karttahilassa kauemmaksi voittajayksiköstä \(c(\textbf{x})\). Olen valinnut naapurustofunktioksi ns. leikatun gaussisen jakauman eli \textit{Epanechnikovin kernelin} \cite{Devroye96}
+
+\[
+h_{c(\textbf{x}),i} = \begin{cases}
+		\alpha (t) (1-\frac{d(n_c,n_i)^2}{r(t)^2}),  & \text{kun } d<r \\ 
+		0, & \text{muuten}.
+	\end{cases}
+\]
+
+Naapurustofunktion parametri \(r (t)\) määrää, miten laajassa naapurustossa oppimista tapahtuu ja sitä kutsutaan \textit{naapurustosäteeksi}. Funktio \(d\) osoittaa karttayksiköiden \(n_c\) ja \(n_i\) välisen etäisyyden. Naapurustofunktion korkeutta säätelevä opetusparametri \(\alpha (t)\) määrää oppimisen voimakkuuden. 
+
+Epanechnikovin kernelin muoto muistuttaa tavallista Gaussista jakaumaa, mutta sen käyttäminen nopeuttaa suuren kartan muodostamista huomattavasti. Gaussinen naapurustofunktio tuottaa parempia karttoja ja sen käyttö on suositeltavaa, jos laskenta-aika pysyy kohtuullisena. 
+Opetuskierrosten edetessä naapurustofunktion korkeutta ja naapurustosädettä pienennetään jatkuvasti. Opetuskierrosten määrän on oltava riittävän suuri algoritmin suppenemisen takaamiseksi. 
+
+Kartta opetetaan kahdessa vaiheessa, joista ensimmäistä kutsutaan järjestäytymisvaiheeksi ja toista hienosäätövaiheeksi. Järjestäytymisvaiheessa kartan mallivektorit hakeutuvat sopiville paikoille data-avaruudessa, ja epäjärjestyksessä olevan kartan naapurustosuhteet oikenevat. Hienosäätövaihe vastaa paikallisten rakenteiden yksityiskohtaisemmasta järjestäytymisestä. Laskennallisessa mielessä ero järjestäytymis- ja hienosäätövaiheen välillä on, että hienosäätövaiheessa opetuksen voimakkuus ja naapurustosäde ovat pienempiä, mutta opetuskierroksia toisaalta enemmän.
+
+Lisää tietoa itseorganisoituvien karttojen rakenteesta ja muodostamisesta löytyy esimerkiksi teoksesta \cite{Kohonen97}.
+
+\subsubsection{Arviointi}
+Joissakin tapauksissa kartta ei onnistu kuvaamaan kunnollisesti datapisteiden jakautumista alkuperäisessä avaruudessa. Pisteiden muodostama topologia voi olla esimerkiksi voimakkasti laskostunut tai selvästi erillisten ryhmien muodostama, jolloin kartan kuvaamat etäisyyssuhteet saattavat vääristyä poikkeuksellisen paljon verrattuna tasaisemmin levittäytyneiden datapisteiden joukkoon. Kartan keskustassa pisteiden alkuperäiset etäisyyssuhteet tulevat luotettavammin esille kuin reuna-alueilla. Järjestäytymisvaiheessa erityisen hankalat, muista erilliset pisteet tai pistejoukot joutuvat kartan reunoille, koska niiden suhteita muuhun dataan on vaikea esittää. Riittävällä resoluutiolla kartta kykenee kuvaamaan myös tällaiset tapaukset kartalle melko hyvin.
+
+Kartan onnistumista datan mallinnustehtävässä voidaan arvioida kvantisointivirheen avulla. Käytän painotettua virhemittaa 
+
+\[
+	E = \frac{1}{N} \sum_{j=1}^{N} \sum_{i=1}^{S} h_{c(\textbf{x}),i} \parallel \textbf{x}_j - \textbf{m}_i \parallel ^2, 
+\]
+
+missä \(N\) on kartalle kuvattavien datanäytteiden ja \(S\) karttayksiköiden määrä. Intuitiivisesti ilmaistuna tämä mittaa, kuinka kaukana data on keskimäärin lähimmistä mallivektoreistaan. Pienemmät virhemitan arvot viittavat luotettavampaan karttaan.
+
+\subsection{Vaihtoehtoiset menetelmät}
+Itseorganisoituvaa karttaa voidaan käyttää samanaikaisesti sekä vähentämään datan määrää ryhmittelyn avulla että projisoimaan data epälineaarisesti matalaulotteiseen esitysmuotoon. Tämä on merkittävä etu verrattaessa karttaa muihin sitä lähellä oleviin menetelmiin, kuten \textit{moniulotteiseen skaalaukseen} \cite{Kruskal78} tai \textit{Sammonin kuvaukseen} \cite{Sammon69}. Myös nämä menetelmät määrittelevät kuvauksen korkeaulotteiselta data-avaruudelta matalaulotteiseen esitysmuotoon.
+
+Moniulotteinen skaalaus pyrkii säilyttämään pisteiden väliset etäisyydet mahdollisimman hyvin. Sammonin kuvaus tekee saman painottaen erityisesti paikallisten etäisyyksien säilymistä. Itseorganisoituva kartta sekä ryhmittelee datan että kuvaa sen matalaulotteiseen avaruuteen siten, että alkuperäisen avaruuden paikalliset rakenteet säilyvät mahdollisimman hyvin.
+
+Itseorganisoituva kartta muistuttaa vektorikvantisaatiomenetelmiä, kuten \textit{k-means}-algoritmia \cite{Theodoridis99}. Erona on, että itseorganisoituvalla kartalla mallivektorit on järjestetty säännölliseen hilaan ja niiden naapurustosuhteet määrätty. Päivitettäessä voittajayksikköä lähemmäs näytettä siirretään myös voittajan naapureita ja kartan mallivektorit järjestyvät data-avaruuteen.
+
+Itseorganisoituvaan karttaan perustuvan esityksen etu biologien laajalti käyttämään vaihtoehtoiseen menetelmään, hierarkkiseen ryhmittelyyn \cite{Eisen98} verrattuna on, että itseorganisoituva kartta kykenee visualisoimaan koko datajoukon, ja voi tehdä sen vaihtoehtoisia menetelmiä luotettavammin \cite{Venna01}.
+
+\subsection{Sovittaminen tutkimusaiheeseen}
+Itseorganisoituvien karttojen laskenta ja analyysi on toteutettu muokatuilla SOM\_PAK ja SOM\_Toolbox (MATLAB)-ohjelmistoilla, jotka ovat saatavilla osoitteesta http://www.cis.hut.fi/research/software.shtml.
+
+Itseorganisoituva kartta ei ole erityisen herkkä koon tai muiden parametrien suhteen, vaikka ne vaikuttavatkin lopputulokseen. Yleensä kartta esittää datajoukon yleispiirteet luotettavasti.
+Olen valinnut kartan muodoksi kaksiulotteisen suorakaiteen, koska sen visualisointi on helppoa ja ymmärrettävien tulkintojen teko melko suoraviivaista. Karttayksiköt valitsin heksagonaalisiksi, koska tämä topologia on homogeenisempi kartan eri suuntien suhteen kuin toinen yleisesti käytetty vaihtoehto, suorakulmainen topologia.
+
+Kaikille tässä työssä muodostetuille kartoille oppimisparametrin \(\alpha (t)\) arvo pienenee järjestäytymisvaiheessa lineaarisesti arvosta 0,2 arvoon 0 ja hienosäätövaiheessa arvosta 0,02 arvoon 0. Naapurustosäde \(r (t)\) on valittu opetuskierrosten mukana lineaarisesti väheneväksi. Järjestäytymisvaiheen alussa se kattaa koko kartan, jolloin kaikki mallivektorit tulevat huomioiduksi. Opetuksen edetessä säde kutistuu. Hienosäätövaiheen lopussa säde kattaa vain pienen naapuruston. Säteen loppuarvot määräävät kartan 'jäykkyyden', eli sen, miten laajassa karttaympäristössä paikalliset rakenteet voidaan esittää.
+Karttayksiköitä vastaavat mallivektorit alustetaan satunnaisesti. Satunnaisalustus on laskennallisesti helppo menetelmä. Sitä käytettäessä on kuitenkin kartan laadun varmistamiseksi kokeiltava erilaisia alustuksia. Käytin viittä satunnaisalustusta, joista valitsin virhemitan mielessä parhaan. Suppenemisen varmistamiseksi opetuskierrosten määrä karttayksikköä kohden on melko suuri. Järjestäytymisvaiheessa opetuskierroksia on noin 500 ja hienosäätövaiheessa noin 1000 kutakin karttayksikköä kohden. 
+
+Lopullisiin arvoihin on päädytty alustavien kokeiden jälkeen. Opetusparametrille valitut alkuarvot ja vähenemisnopeus osoittautuivat toimiviksi, eikä opetuskierrosten määrän kasvattaminen yllämainitusta enää merkittävästi parantanut tuloksia. Opetusjoukkona käytettiin kulloinkin tarkasteltavaa datajoukkoa kokonaisuudessaan.
+Satunnaisesti alustettujen karttojen virhemittojen suuruus vaihteli yleisesti melko vähän. Lisäksi kartat näyttivät yleensä esittävän samankaltaisia rakenteita.
+
+\subsection{Visualisointi}
+Suuren informaatiomäärän hahmottamista helpottavat erilaiset visualisointimenetelmät, joista itseorganisoituva kartta on esimerkki. Näytteiden paikasta kartalla voidaan päätellä niiden suhde muihin näytteisiin. Jos näytteet ovat kartalla lähekkäin, ne ovat lähekkäin myös alkuperäisessä data-avaruudessa. Usein myös kaukana toisistaan kartalla olevat näytteet ovat kaukana toisistaan data-avaruudessa.
+
+Tietylle karttayksikölle kuvautuvien näytevektoreiden määrä voidaan visualisoida harmaan sävyinä. Mitä vaaleampi yksikkö on, sitä useampia datapisteitä se sisältää. Kartalta voidaan tämän avulla helposti erottaa paljon datanäytteitä sisältävät karttayksiköt. 
+
+\textit{U-matriisi} \cite{Ultsch90} on visualisointimenetelmä, joka kuvaa karttayksiköiden välisiä etäisyyksiä ja datan tiheysrakenteita. U-matriisi esitetään hilana, jossa kaikkien karttayksiköiden väliin on piirretty ylimääräinen hilapiste. Näiden värillä osoitetaan karttayksiköiden mallivektoreiden väliset etäisyydet. Yleensä käytetään harmaan eri sävyjä. Vaaleat sävyt kuvaavat lyhyempiä etäisyyksiä ja tummemmat sävyt suurempia. Karttayksikön kohdalla sijaitseva hilapiste värjätään sitä ympäröivien etäisyyshilapisteiden mediaanin mukaisesti.
+
+Mallivektoreiden tiheys heijastelee datan tiheyttä. Mallivektoreiden väliset etäisyydet ovat suurempia sellaisilla alueilla, joilla datapisteitä on harvemmassa. Siten myös naapuriyksiköiden mallivektoreiden etäisyys approksimoi datan tiheyttä alueella. Vaaleat alueet U-matriisin visualisoinnissa ovat karttayksikköryhmiä, jotka ovat data-avaruudessa lähellä toisiaan ja kuvaavat tihentymää. Tummat alueet kuvaavat kuvaavat tihentymien välisiä rajoja ja data-avaruuden harvempia alueita.
+
+Itseorganisoituvia karttoja tulkittaessa on syytä huomioida, että kartta kuvaa hyvin vain paikallisia rakenteita. Kartalla kaukana toisistaan sijaitsevien alueiden suhteita ei voida esittää yhtä luotettavasti. 
+Tässä työssä karttojen visualisointiin käytetään U-matriisiesitystä.
+
+\subsection{Pääkomponenttianalyysi}
+Suuren datamäärän tutkimisessa tärkeä ensiaskel on epäoleellisen tiedon karsinta. Korkeaulotteisessa avaruudessa esitetylle pistejoukolle saatetaan löytää ulottuvuuksia, joiden merkitys datan kuvaamisessa on hyvin pieni. Tällaiset ulottuvuudet voidaan tarvittaessa jättää huomioimatta ilman, että oleellista tietoa jää juurikaan käyttämättä. Tämän seurauksena tiedon seulonnasta tulee sekä nopeampaa että tehokkaampaa.
+Datan dimensionaalisuuden vähentämiseksi on olemassa myös muita keinoja, kuin alkuperäisten ulottuvuuksien suora karsinta. Eräs dimensionaalisuuden pienentämiseen soveltuva menetelmä on pääkomponenttianalyysi.
+
+Pääkomponenttianalyysissä \cite{Hotelling33, Pearson1901} etsitään pistejoukon esittämiseen koordinaatisto, joka maksimoi pistejoukon varianssin koordinaattiakselien osoittamissa suunnissa. Ensimmäinen pääkomponentti vastaa suuntaa, jolle projisoituna pistejoukon varianssi maksimoituu. Toinen pääkomponentti osoittaa seuraavan suunnan, joka maksimoi varianssin kun ensimmäisen pääkomponentin osuus jätetään huomioimatta, ja niin edelleen. Pääkomponentteja voidaan esittää yhtä monta kuin alkuperäisellä pistejoukolla on ulottuvuuksia. Tällöin alkuperäinen pistejoukko voidaan esittää sellaisenaan joko alkuperäisessä tai pääkomponenttikoordinaatistossa.
+
+Datan määrää voidaan tarvittaessa vähentää projisoimalla alkuperäinen pistejoukko alempiulotteiseen pääkomponenttiavaruuteen. Samalla säilytetään mahdollisimman suuri osa varianssivaihteluista. Menetelmä on usein informaation säilyttämisen kannalta käyttökelpoisempi kuin alkuperäisten ulottuvuuksien suora karsinta.
+
+\begin{figure}[h]
+\centerline{
+\begin{tabular}{l@{\hspace{1mm}}l@{\hspace{1mm}}l@{\hspace{1mm}}l@{\hspace{1mm}}c}
+&{\bf Kudos 15 (perna)}&&{\bf Kudos 24 (thalamus)}\\
+\rotatebox{90}{\begin{minipage}{4cm}\centerline{näytteiden määrä}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/H200_0_heikoinkudos15.eps,width=6cm,height=4cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/H200_0_vahvinkudos24.eps,width=6cm,height=4cm}\\
+&{\bf Kudos 21 (selkäydin)}&&{\bf Kudos 30 (OVR278S)}\\
+\rotatebox{90}{\begin{minipage}{4cm}\centerline{näytteiden määrä}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/H200_0_piikkikudos21.eps,width=6cm,height=4cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/H200_0_laskukudos30.eps,width=6cm,height=4cm}\\[-1mm]
+&{\begin{minipage}{5cm}\centerline{ilmentymistaso}\end{minipage}}&&{\begin{minipage}{5cm}\centerline{ilmentymistaso}\end{minipage}}
+\end{tabular}
+}
+\caption{Ihmisen kudoksille tyypillisiä ilmentymishistogrammeja. Huomaa kudoksen 15 poikkeava skaalaus.}
+\label{fig:Hkudos}
+\end{figure}
+
+\begin{figure}[h]
+\centerline{
+\begin{tabular}{l@{\hspace{1mm}}l@{\hspace{1mm}}l@{\hspace{1mm}}l@{\hspace{1mm}}c}
+&{\bf Ihminen}&&{\bf Hiiri}\\
+\rotatebox{90}{\begin{minipage}{4cm}\centerline{\rotatebox{270}{\textbf{A}}}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/H200_0_pca.eps,width=6cm,height=4cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/M200_0_pca.eps,width=6cm,height=4cm}\\
+\rotatebox{90}{\begin{minipage}{4cm}\centerline{\rotatebox{270}{\textbf{B}}}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/H200_3_pca.eps,width=6cm,height=4cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/M200_3_pca.eps,width=6cm,height=4cm}\\[-1mm]
+&{\begin{minipage}{5cm}\centerline{pääkomponentti}\end{minipage}}&&{\begin{minipage}{5cm}\centerline{pääkomponentti}\end{minipage}}
+\end{tabular}
+}
+\caption{Ihmisen ja hiiren pääkomponenttien suhteellinen merkitys (\%) varianssin selittämisessä (\textbf{A}) ilmentyville ja (\textbf{B}) differentiaalisesti ilmentyville geeneille.}
+\label{fig:pca}
+\end{figure}
+
+\section{Tulokset} 
+\label{sec:tulokset}
+
+\subsection{Datan dimensionaalisuus}
+\label{sec:pca}
+Tutkin aluksi ilmentymistasojen jakautumista kussakin alkuperäisessä, yhtä kudosnäytettä vastaavassa ulottuvuudessa. Tavoitteena oli selvittää, onko tutkimusaineistossa mukana kudoksia, joiden merkitys geenien ilmentymisessä on hyvin vähäinen. Poistamalla tällaiset kudokset voitaisiin vähentää datan dimensionaalisuutta ja siten nopeuttaa laskentaa.
+Samalla saadaan käsitys datan jakaumasta eri ulottuvuuksissa. Jakaumien muodoista nähdään, että ilmentymistasojen jakautuminen kudoksissa on melko säännönmukaista. Jos jakaumissa olisi useita piikkejä tai muita odottamattomia piirteitä, niitä tulisi tutkia tarkemmin. 
+
+Tyypillisiä ihmisen kudoskohtaisia histogrammeja on esitetty kuvassa~\ref{fig:Hkudos}. Geenien ilmentyminen oli heikointa kudoksessa 15 (perna). Yksittäisessä kudoksessa geenin ilmentymistaso on keskimäärin AD=0,15. Tämä vastaa 2,2\% osuutta geenin ilmentymisestä kaikissa kudoksissa. Jos geenin ilmentymistaso on kudoksessa selvästi tätä perustasoa korkeampi, se saattaa olla merkki siitä, että geenillä on kudoksessa jokin erityinen tehtävä. 
+Tahdoin selvittää tällaisten geenien määrän kussakin kudoksessa ja valitsin perustasosta poikkeavan ilmentymisen kynnysarvoksi AD=0,21. Tämä vastaa perustasoon verrattuna kaksinkertaista 4,4\% osuutta geenin ilmentymisestä kaikissa kudoksissa.
+
+Kudoksessa 15 on satoja selvästi ilmentyviä tai potentiaalisesti sellaisia geenejä (AD>0,21). Kudos 24 (thalamus) oli yksi niistä kudoksista, joissa geenien ilmentyminen oli voimakkainta. Lähes neljäsosa (24 \%) geeneistä ylitti kudoksessa kynnyssarvon 0,2. Myös geenien ilmentymistä kudoksissa 21 (selkäydin) ja 30 (OVR278S) esittävät histogrammit ovat tyypillisiä. Ensimmäisessä tapauksessa geenien yleisin ilmentymistaso poikkeaa nollasta. Jälkimmäisessä tapauksessa ilmentymistasot keskittyvät nollaan ja korkeampia ilmentymistasoja omaavien geenien määrä laskee tasaisesti.
+
+Hiirelle eri kudosten väliset erot olivat pienempiä kuin ihmisellä verrattaessa ilmentymistasojen jakautumista kudoksissa. Ihmisen kudoksen 21 tapaisia 'piikittyneitä' jakaumia (kuva~\ref{fig:Hkudos}) oli kuitenkin selvästi enemmän. Ihmiseen verrattuna hiirellä ei ollut erityisen heikosti ilmentyviä kudoksia.
+
+Päätin sisällyttää tutkimukseen kaikki datan kudoksia vastaavat ulottuvuudet, koska jokainen niistä ilmensi riittävän suurta määrää potentiaalisesti kiinnostavia geenejä. Selvitin kuitenkin vielä, voisiko datan määrää vähentää pääkomponenttianalyysin avulla.
+Kuvaan~\ref{fig:pca} on piirretty histogrammit ihmisen ja hiiren ilmentymisdatan eri pääkomponenttien suhteellisista osuuksista varianssivaihteluiden selittämisessä sekä ilmentyville että differentiaalisesti ilmentyville geeneille. 
+
+Datan dimensionaalisuus on melko suurta. Erot vähemmän merkitsevien pääkomponenttien välillä ovat melko pieniä, ja pieninkin pääkomponentti selittää lähes prosentin varianssivaihteluista. Ulottuvuuksien karsinta ei tässä tapauksessa ole välttämätöntä, eikä kuvan perusteella saada selviä viitteitä sopivan karsintakynnyksen valintaan. 
+Muutamankin ulottuvuuden karsinnassa on vaarana hyödyllisen tiedon katoaminen, joten päätin jättää sen tekemättä. Differentiaalisesti ilmentyvien geenien tapauksessa ensimmäisten pääkomponenttien merkitys on aavistuksen pienempi kuin ilmentyvillä geeneillä, mutta muuten joukkojen välillä ei tällä tavalla tarkasteltuna ole suuria eroja.
+
+\begin{figure}[hp]
+\centerline{\begin{tabular}{r@{\hspace{1mm}}cr@{\hspace{1mm}}c}
+&{\bf Ihminen}&&{\bf Hiiri}\\
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/H200_0.umat.eps,width=6cm,height=6cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/M200_0_2.umat.eps,width=6cm,height=6cm}\\[-1mm]
+      \begin{picture}(0,0)(0,0)
+   	\put(320,70){\vector(-3,1){45}}
+      \end{picture}
+&(53x61 karttayksikköä)&&(49x58 karttayksikköä)\\
+\end{tabular}}
+\caption{
+  Itseorganisoituvat kartat ihmisen ja hiiren ilmentyville geeneille. Nuolen osoittama 'kupla' hiiren kartalla on esimerkki poikkeavasta geeniryhmästä, jollaisia analysoidaan tekstissä.}
+\label{fig:HM200_0_umat}
+\end{figure}
+
+\begin{figure}[hp]
+\centerline{\begin{tabular}{r@{\hspace{1mm}}cr@{\hspace{1mm}}c}
+&{\bf Ihminen}&&{\bf Hiiri}\\
+\rotatebox{90}{\begin{minipage}{5cm}\centerline{Ilmentymistaso}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/H200_0_flat.eps,width=6cm,height=6cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/M200_0_keskikupla.eps,width=6cm,height=6cm}\\[-1mm]
+&Komponentti&&Komponentti
+\end{tabular}}
+\caption{
+  (Ihminen) Ihmisen kartan (kuva~\ref{fig:HM200_0_umat}) keskiosasta poimittu esimerkki latteasta ilmentymisprofiilista. Geeni ei ilmenny erityisen voimakkaasti yhdessäkään kudoksessa. (Hiiri) Hiiren kartan keskellä kuvassa~\ref{fig:HM200_0_umat} osoitetun kuplan mallivektorin profiili. Ilmentyminen on merkittävää vain komponentissa 41 (hajuhermokudos).}
+\label{fig:HM200_0_mallivektoreita}
+\end{figure}
+
+\subsection{Data-avaruuksien rakenteesta}
+Tutkin aluksi ihmisen ja hiiren geenien levittäytymistä ilmentymistasojen avaruudessa. Data-avaruuden rakenteen hahmottaminen helpottaa tulosten tulkintaa ja voi tuoda esille tutkimuksen kannalta huomionarvoisia seikkoja.
+
+Ihmisen ilmentyvien geenien levittäytyminen data-avaruuteen on visualisoitu itseorganisoituvalla kartalla kuvassa~\ref{fig:HM200_0_umat} (kartan koko 53\( \times \)61 karttayksikköä; resoluutio 2,9). Järjestäytymisvaiheen (1 500 000 iteraatiota) aikana naapurustofunktion säde pieneni arvosta 29 arvoon 7,2 ja hienosäätövaiheessa (3 000 000) edelleen arvoon 3,4.
+Hiiren 7919 ilmentyvää geeniä on kuvattu kartalla (49\( \times \)58; resoluutio 2,8) myös kuvassa~\ref{fig:HM200_0_umat}. Resoluutio on suunnilleen sama kuin ihmisen kartalla samassa kuvassa. Järjestäytymisvaiheessa (1 500 000) naapurustofunktion säde pieneni arvosta 27 arvoon 7 ja hienosäätövaiheessa (3 000 000) edelleen arvoon 3,25.
+
+Sekä ihmisen että hiiren kartoilla on havaittavissa 'kuplia', joita on erityisen paljon kartan reuna-alueilla. Kuplan keskellä on vaalea tiheän datan alue, jota ympäröi suurempiin etäisyyksiin data-avaruudessa viittava tummien hilayksiköiden rengas. Kuplat esittävät muusta datajoukosta voimakkaasti erillisten datapisteiden ryhmiä, mikä nähdään vertailemalla kuplien sisälle ja reunoille kuvautuvien geenien ilmentymisprofiileita. Kuplan sisältämien geenien ilmentymisessä on huomattavaa samankaltaisuutta, mutta profiilit muuttuvat jyrkästi edettäessä kuplan laidoille.
+Hiiren kartalla kuvan~\ref{fig:HM200_0_umat} keskiosassa näkyvä kupla on edustava esimerkki tällaisesta käyttäytymisestä. Kuplan keskiosasta poimittu mallivektori on esitetty kuvassa~\ref{fig:HM200_0_mallivektoreita} (hiiri). Komponentti 41 (hajuhermokudos) on ainoa, jossa merkittävää ilmentymistä esiintyy. Myös kuplan keskelle kuvautuneista 14 geenistä kaikki yhtä lukuun ottamatta ilmentyivät voimakkaimmin samassa komponentissa. Useimpien geenien osalta tämä oli ainoa kudos, jossa merkittävää (mediaaniarvoon nähden vähintään kolminkertaista) ilmentymistä esiintyi. Tässä mielessä kuplan geenejä edustava mallivektori oli edustava. Neljässä tapauksessa verrattain korkeita arvoja sai henkitorven lisäksi jokin toinen kudos (lisämunuainen, sylkirauhanen tai kilpirauhanen). Yhdessä tapauksessa ilmentymisprofiili oli melko lattea, eikä geeni ilmennyt yhdessäkään näytteessä merkittävästi. Kahdella geenisekvenssillä oli sama LocusLink-tunnus.
+
+Tulokset olivat saman suuntaisia myös muille tutkituille satunnaisesti ihmisen ja hiiren kartalta poimituille kuplille ja vaaleille tiheän datan ryhmille. Tavallisesti ryppäät sisälsivät erityisen voimakkaasti jossakin tietyssä kudoksessa ilmentyviä geenejä. Kaikille kudoksille ei ollut 'omaa' kuplaa, ja osa kuplista sisälsi kahdessa kudoksessa erityisen selvästi ilmentyviä geenejä. Kartoitus tehtiin yleiskuvan muodostamiseksi. 'Kuplan' tai 'ryhmän' tarkempi määrittely on jätetty avoimeksi, mutta tarkastelun nojalla voidaan sanoa, että data-avaruuksissa on useita muusta datajoukosta erillisiä pisteryhmiä.
+Toisaalta monet kuvan~\ref{fig:HM200_0_umat} ilmentyville geeneille muodostettujen karttojen keskiosissa näkyvistä tasaisesti värittyneistä alueista sisältävät latteita ilmentymisprofiileita. Esimerkki tällaisesta on ihmisen kartalta poimittu malliprofiili kuvassa~\ref{fig:HM200_0_mallivektoreita}. 
+
+\begin{figure}[hp]
+\centerline{\begin{tabular}{}
+\psfig{file=/home/info/lmlahti/tex/pic/et/rand5000_200_0.umat.eps,width=6cm,height=6cm}\\[-1mm]
+%&(39\( \times \)43)\\
+\end{tabular}}
+\caption{Kartta (39\( \times \)43) on muodostettu 5000 ihmisen ja hiiren yhdistetystä datajoukosta satunnaisesti poimitulla geenillä.}
+\label{fig:R5000_200_0_umat}
+\end{figure}
+
+Lajien vertailua varten mittaukset huomioidaan vain kummallekin datajoukolle yhteisten kudosten (21) osalta. Tällöin molempien lajien geenit voidaan esittää yhteisessä data-avaruudessa.
+
+Sisällytän tarkasteluun molempien lajien ilmentyvät geenit (17323). Riittävän laajan satunnaisotoksen jakautuminen data-avaruuteen noudattelee koko datan jakautumista, ja sen avulla voidaan muodostaa yleiskuva koko datajoukon rakenteesta. Tällainen menettely vähentää tarvittavaa laskenta-aikaa huomattavasti datajoukon ollessa suuri. Toisaalta on muistettava, että tulokset ovat vain suuntaa antavia.
+
+Kuvan~\ref{fig:R5000_200_0_umat} kartta (39\( \times \)43; resoluutio 3,0) on muodostettu yhdistetystä datajoukosta satunnaisesti poimituilla 5000 geenillä, mikä vastaa 29 \% osuutta kaikista näytteistä. Näistä 2241 oli hiiren ja 2759 ihmisen geenejä. 5000 geenin satunnaisotokselle ei tehty uutta normalisointia, sillä datajoukon rakenteesta saadaan yleiskuva jo mainituilla esikäsittelyillä.
+
+Järjestäytymisvaiheen (1 000 000) aikana naapurustofunktion säde pieneni arvosta 20,7 arvoon 6,2 ja hienosäätövaiheessa (2 000 000) edelleen arvoon 2,8. Kartta on esitetty kuvassa~\ref{fig:R5000_200_0_umat}. Myös tällä kartalla havaitaan erillisten pisteiden ryhmiä.
+
+\begin{figure}[hp]
+\centerline{\begin{tabular}{r@{\hspace{1mm}}cr@{\hspace{1mm}}c}
+&{\bf A}&&{\bf B}\\
+\rotatebox{90}{\begin{minipage}{6cm}\centerline{Karttayksiköiden määrä}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/Mratios0.eps,width=6cm,height=6cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/Mratios7.eps,width=6cm,height=6cm}\\[-1mm]
+&hiiren vs. kaikkien geenien määrä &&hiiren vs. kaikkien geenien määrä
+\end{tabular}}
+\caption{Histogrammit hiiren geenien osuudesta verrattuna kaikkien geenien määrään (\textbf{A}) kaikissa kuvan~\ref{fig:R5000_200_0_umat} karttayksiköissä (1677) ja (\textbf{B}) niissä karttayksiköissä, joihin on kuvautunut vähintään seitsemän geeniä (88).}
+\label{fig:Mratios}
+\end{figure}
+
+\begin{figure}[hp]
+\centerline{\begin{tabular}{r@{\hspace{1mm}}cr@{\hspace{1mm}}c}
+&\textbf{A}&&\textbf{B}\\
+\rotatebox{90}{\begin{minipage}{6cm}\centerline{Näytteiden määrä}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/R5000_200_0_dprof.eps,width=6cm,height=6cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/R5000_200_0_dcod,width=6cm,height=6cm}&
+%\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+%\psfig{file=/home/info/lmlahti/tex/pic/et/R5000_200_0_dgrid.eps,width=4cm,height=6cm}\\[-1mm]
+&Parien sisätulo&&Mallivektoreiden sisätulo
+\end{tabular}}
+\caption{
+  Histogrammit 5000 satunnaisesti valitun geenin geenipareille (397 kpl) ja alla vastaavalle määrälle  satunnaispareja; (\textbf{A}) ilmentymisvektoreiden sisätulo (\textbf{B}) geenejä kartalla vastaavien mallivektoreiden sisätulo}
+\label{fig:R5000_200_0_distances}
+\end{figure}
+
+Selvitin lisäksi, onko lajien välillä eroja, jotka näkyisivät selvästi myös geenien sijoittumisessa data-avaruuteen. Tällaiset erot voisivat olla jatkotutkimuksen kannalta kiinnostavia.
+Kuvassa~\ref{fig:Mratios} on esitetty histogrammit hiiren geenien osuudesta kaikissa kuvan~\ref{fig:R5000_200_0_umat} karttayksiköissä (1677) ja niissä karttayksiköissä, joihin on kuvautunut vähintään seitsemän geeniä (88). Kaikki karttayksiköt sisälsivät vähintään yhden geenin. Jälkimmäinen valinta karsii pois vähän geenejä sisältävät karttayksiköt. Näihin sisältyy pelkästä satunnaisuudesta johtuen paljon sellaisia yksiköitä, joissa on ainoastaan toisen lajin geenejä, eli hiiren osuus kaikista geeneistä on 0 tai 1. Runsaasti geenejä sisältävissä karttayksiköissä on tasaisemmin molempien lajien geenejä, mikäli geenin isäntälaji ei vaikuta voimakkaasti sen sijoittumiseen kartalla. Vähintään seitsemän geenin karttayksiköissä on keskimäärin 43 \% hiiren geenejä otosvarianssin saadessa arvon 6 \%. Tämä lähenee hiiren geenien osuutta kartan kaikista geeneistä, joka on 45 \%. Histogrammista nähdään, että joitakin lajikohtaisiakin ryhmiä saattaa löytyä.
+
+MATLABin neuroverkkopaketin funktiolla 'newpnn' muodostettu radiaalikantafunktioverkko (RBF) ylsi vain noin 75\% luokittelutarkkuuteen, mikä on melko alhainen.
+Ihmisen ja hiiren geenit eivät siis erotu data-avaruudessa kovin voimakkaasti toisistaan, mutta niiden sekoittuminen ei toisaalta ole täydellistä. Pidemmälle meneviä johtopäätöksiä varten geenien jakautumista kartalla olisi tutkittava yksityiskohtaisemmin.
+
+Sijainti data-avaruudessa ei siis välttämättä kerro isäntälajista, mutta voi mahdollisesti kertoa geenin toiminnasta ja yhteyksistä muihin lähellä oleviin geeneihin. 
+Tutkin jälkimmäistä väitettä lähemmin tarkastelemalla ihmisen ja hiiren geeniparien sijoittumista yhteiseen data-avaruuteen.
+
+\subsection{Geeniparien tarkastelu}
+Geeniparien tutkimista voi käyttää lähtökohtana lajien vertailulle geneettisellä tasolla. Selvitän, ovatko ihmisen ja hiiren putatiivisesti ortologiset geeniparit yhteisessä data-avaruudessa keskimäärin lähempänä toisiaan kuin satunnaisesti valitut parit. 
+
+Tutkin aluksi 5000 geenin satunnaisotoksen avulla, miten geeniparit sijoittuvat kartalla, jossa on runsaasti myös muita geenejä ja geeniparit esiintyvät osana kokonaisuutta. Tahdoin varmistua siitä, että tulokset ovat saman suuntaisia kuin pelkkien geeniparien tarkastelulla saavutettavat. Jos näin ei olisi, saattaisi geeniparien esittäminen muun datajoukon seassa sisältää parien suodattamisen myötä katoavaa, geeniparien sijoittumisen kannalta olennaista informaatiota.
+
+Kuvan~\ref{fig:R5000_200_0_umat} kartalle päätyi 397 geeniparia. Kuvassa~\ref{fig:R5000_200_0_distances} on vertailtu kolmella tavalla muodostettuja histogrammeja näille ja satunnaisille geenipareille. 
+Ilmentymisprofiilien sisätulo kertoo, miten lähellä geenit ovat alkuperäisessä data-avaruudessa. Karttayksiköiden mallivektoreiden sisätulo mittaa geenien etäisyyttä kartalla. 
+
+Histogrammeista nähdään, että geeniparien ilmentymisprofiilit ovat keskimäärin selvästi samankaltaisempia kuin satunnaisesti valittujen parien. Geeniparit ovat keskimääräistä lähempänä toisiaan myös kartalla.
+Kyseessä oli alustava katsaus geeniparien käyttäytymiseen, joten en vertaillut jakaumien eroja tilastollisesti. Tarkempi analyysi on tehty seuraavaksi tarkastelemalla pelkkien geeniparien sijoittumista data-avaruuteen. 
+
+\begin{figure}[hp]
+\centerline{\begin{tabular}{r@{\hspace{1mm}}cr@{\hspace{1mm}}c}
+&{\bf A}&&{\bf B}\\
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/combipairs200_0.umat.eps,width=6.4cm,height=6cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/combinedpairs200_3.umat.eps,width=6.4cm,height=6cm}\\[-1mm]
+&(53\( \times \)56 karttayksikköä)&&(45\( \times \)49 karttayksikköä)\\
+\end{tabular}}
+\caption{
+  Itseorganisoituvat kartat (\textbf{A}) ilmentyvien geenien joukosta poimituille geenipareille (\textbf{B}) differentiaalisesti ilmentyville geenipareille.}
+\label{fig:parikartat}
+\end{figure}
+
+Muodostin ilmentyville geenipareille kartan (53\( \times \)56; resoluutio 3,0) tutkiakseni hiiren ja ihmisen geeniparien levittäytymistä data-avaruudessa. Järjestäytymisvaiheen (1 500 000) aikana naapurustofunktion säde pieneni arvosta 27,5 arvoon 7,1 ja hienosäätövaiheessa (3 000 000) edelleen arvoon 3,3.
+Differentiaalisesti ilmentyville geenipareille (2442) muodostin tarkemman kartan (45\( \times \)49; resoluutio 2,2). Ensimmäisen opetusvaiheen (1 000 000) aikana naapurustofunktion säde pieneni arvosta 24 arvoon 6,6 ja toisessa opetusvaiheessa (2 000 000) edelleen arvoon 3,1. Myös näissä tapauksissa data-avaruudessa havaitaan lukuisia erillisiä pisteryhmiä.  
+
+\begin{figure}[hp]
+\centerline{\begin{tabular}{r@{\hspace{1mm}}cr@{\hspace{1mm}}c}
+&\textbf{A}&&\textbf{B}\\
+\rotatebox{90}{\begin{minipage}{6cm}\centerline{Näytteiden määrä}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/P200_0_dprof.eps,width=6cm,height=6cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/P200_0_dcod,width=6cm,height=6cm}&
+%\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+%\psfig{file=/home/info/lmlahti/tex/pic/et/P200_0_dgrid.eps,width=4cm,height=6cm}\\[-1mm]
+&Parien sisätulo&&Mallivektoreiden sisätulo
+\end{tabular}}
+\caption{
+  Histogrammit ilmentyville geenipareille (4499 kpl, yllä) ja vastaavalle määrälle satunnaispareja (alla); (\textbf{A}) ilmentymisvektoreiden sisätulo ja (\textbf{B}) mallivektoreiden sisätulo}
+\label{fig:P200_0_distances}
+\end{figure}
+
+\begin{figure}[hp]
+\centerline{\begin{tabular}{r@{\hspace{1mm}}cr@{\hspace{1mm}}c}
+&\textbf{A}&&\textbf{B}\\
+\rotatebox{90}{\begin{minipage}{6cm}\centerline{Näytteiden määrä}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/P200_3_dprof.eps,width=6cm,height=6cm}&
+\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+\psfig{file=/home/info/lmlahti/tex/pic/et/P200_3_dcod,width=6cm,height=6cm}&
+%\rotatebox{90}{\begin{minipage}{3cm}\centerline{}\end{minipage}}&
+%\psfig{file=/home/info/lmlahti/tex/pic/et/P200_3_dgrid.eps,width=4cm,height=6cm}\\[-1mm]
+&Parien sisätulo&&Mallivektoreiden sisätulo
+\end{tabular}}
+\caption{
+  Histogrammit differentiaalisesti ilmentyville pareille (2442 kpl, yllä) ja vastaavalle määrälle satunnaispareja (alla); (\textbf{A}) ilmentymisvektoreiden sisätulo ja (\textbf{B}) mallivektoreiden sisätulo}
+\label{fig:P200_3_distances}
+\end{figure}
+
+Kuvassa~\ref{fig:P200_0_distances} on esitetty etäisyyshistogrammit ilmentyville geenipareille. Kuvassa~\ref{fig:P200_3_distances} esitetään vastaavat histogrammit differentiaalisesti ilmentyville geenipareille. Geeniparit ovat lähempänä kuin satunnaisesti valitut parit. Ero on kaikissa tapauksissa merkitsevä (\(\chi ^2\)-testin \(p\)-arvo < 0,0001). 
+
+Histogrammien perusteella vaikuttaa siltä, että differentiaalisesti ilmentyvät geeniparit erottuvat satunnaispareista ilmentyviä geenipareja selvemmin. Tähän voi olla ainakin kaksi syytä. Ilmentyvien geenien joukkoon voi sisältyä enemmän tasaisesti kaikissa näytteissä ilmentyviä geenejä, kuin differentiaalisesti ilmentyvien geenien joukkoon. Näiden latteat profiilit saattavat muistuttaa toisiaan huomattavasti ja olla siten data-avaruudessa lähekkäin, vaikka niihin sisältyisi todellisia pareja hyvin vähän. Vain differentiaalisesti ilmentyviä geenejä sisältävässä datassa lattean profiilin geenejä on vähemmän. Toinen mahdollinen selitys on, että tiettyyn tehtävään erikoistuneet 'terävän' profiilin  geenit ovat evoluutiossa saattaneet säilyä muita geenejä paremmin. 
+
+\section{Pohdinta}
+\label{sec:pohdiskelu}
+Geenisiruanalyysi on uusi ja käyttökelpoinen väline biologisten ongelmien kokonaisvaltaiseen ymmärtämiseen. Geenisirut ovat parhaimmillaan seulontatutkimuksissa, esimerkiksi tuottamaan runsaasti uusia hypoteeseja jatkotutkimusta varten. Keskeiset tulokset on varmistettava toisilla menetelmillä ennen lopullisten päätelmien tekoa. Ilmentymisprofiilien tulkinta ei ole suoraviivaista, sillä ensisijaisia vaikutuksia on usein mahdotonta erottaa sekundaarisista muutoksista (ks. \cite{Monni02}).
+Eksploratiivinen analyysi voi antaa tutkimukselle suuntaviivoja, mutta hyvin määritelty päämäärä on tarpeellinen oleellisen tiedon ja hypoteesien haravoimiseksi valtavasta tietomäärästä. Tämän työn tavoitteena oli yleiskuvan muodostaminen ihmisen ja hiiren datajoukkojen ominaisuuksista ja putatiivisesti ortologisten geeniparien sijoittumisesta yhteiseen data-avaruuteen. Tiedoista on hyötyä jatkotutkimuksissa käytettävien menetelmien valinnassa ja tulosten tulkinnassa. 
+
+Datajoukkojen dimensionaalisuus oli melko suurta. Kaikissa kudoksissa ilmentyi satoja potentiaalisesti kiinnostavia geenejä. Pääkomponenttianalyysikään ei antanut selviä viitteitä siitä, millä tavalla ulottuvuuksia voisi karsia. Dimensionaalisuuden vähentäminen ei ollut tässä tapauksessa välttämätöntä, joten se jätettiin tekemättä.
+
+Itseorganisoituvien karttojen avulla toteutettujen visualisointien avulla huomattiin, että tutkituissa data-avaruuksissa on lukuisia muusta datajoukosta erillisiä ryppäitä, jotka ilmenevät kartalla 'kuplina'. Huomio on alustava, mutta se osoittaa ryhmittelymenetelmien ja sisätulometriikan soveltuvuuden tämän datan tutkimiseen.
+Visualisoinneissa näkyvät kuplat johtuvat osittain teknisistä syistä. Käytetty naapurustofunktio edistää kuplien syntymistä kartalle, ja opetuksessa käytettyjen lopetussäteiden suuruus saattaa myötävaikuttaa kuplien syntyyn. 
+Kuplien ja niiden reunojen sisältämien geeniprofiilien lähempi tarkastelu osoitti kuitenkin, että monien kuplien taustalla on myös datapisteiden voimakas kasautuminen kyseiselle alueelle.
+
+Lajien välisiä yhteyksiä voidaan tutkia esittämällä mittaukset yhteisessä data-avaruudessa.
+Geeniparit kuvautuvat mahdollisesti samoihin ryhmiin. Viitteitä tähän antaa niiden keskimääräistä pienempi etäisyys, joka saadaan esille myös itseorganisoituvalla kartalla. 
+Ainakin osa geenien yhteyksistä näkyy läheisenä sijaintina, ja lajien esittäminen yhteisessä avaruudessa on toimiva lähestymistapa yhteyksien tutkimiseksi. Olisi hyvä tutkia, miten tulos yleistyy geeniparien ohella muille toiminnallisille yhteyksille. Lisäksi voisi tutkia niitä geenipareja, joilla on hyvin erilaiset ilmentymisprofiilit. Kuvien~\ref{fig:R5000_200_0_distances},~\ref{fig:P200_0_distances} ja~\ref{fig:P200_3_distances} histogrammeista voidaan havaita, että tällaisiakin pareja on olemassa.
+
+Geenin sijoittuminen data-avaruudessa kertoo ensisijaisesti sen ilmentymistasojen suhteellisista voimakkuuksista eri kudoksissa. Lähekkäin sijoittuvien geenien ilmentyminen eri kudoksissa on samankaltaisempaa kuin kauemmaksi data-avaruudessa sijoittuvien. Tällaisilla geeneillä saattaa olla tuntemattomia toiminnallisia yhteyksiä.
+
+Geenien ilmentymisdatan analyysin eri vaiheissa on tehtävä lukuisia valintoja, jotka vaikuttavat lopullisiin tuloksiin. Menetelmiä voisi kehitellä tutkimusaiheen erityispiirteet paremmin huomioivaan suuntaan.
+Geenien ilmentymistä ja differentiaalista ilmentymistä arvioitiin ilmentymistason suuruuden ja mittausarvojen heilahtelun voimakkuuden avulla. Artikkelissa \cite{Dragichi02} luodaan katsaus kehittyneempiin tilastollisiin menetelmiin differentiaalisesti ilmentyvien geenien valikoimiseksi suuresta geenijoukosta. 
+Myöskään datajoukkojen ominaispiirteitä ei huomioitu niitä yhdistettäessä. Tämä voitaisiin tehdä suorittamalla normalisoinnit kummankin lajin datajoukolle erikseen ennen yhdistämistä. Tällainen lähestymistapa olisi perusteltu ja sitä käyttäen hiiren ja ihmisen välillä saattaisi ilmetä selvempiä eroja geenien ilmentymistasojen sijoittumisessa data-avaruuteen.
+
+Ryhmittelymenetelmät ja sisätulometriikka näyttävät tutkimusten perusteella soveltuvan käytetyn ilmentymisdatan tutkimiseen ja geenien yhteyksien analysointiin. Tulokset ovat alustavia. Pidemmälle menevä ilmentymisdatan analyysi itseorganisoituvilla kartoilla ja muilla menetelmillä voi tuottaa tarkempia hypoteeseja geenien toiminnasta ja yhteyksistä. 
+
+\pagebreak
+
+\include{appendix}
+
+\normalsize
+
+\pagebreak
+
+\include{viitteet}
+
+\end{document}
+
+
