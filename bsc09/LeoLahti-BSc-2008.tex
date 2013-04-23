@@ -1,0 +1,563 @@
+\documentclass[a4paper,12pt,times,titlepage,finnish]{article}
+\usepackage[finnish]{babel}
+\selectlanguage{finnish}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Leo Lahti / 27.12.2010
+%http://www.iki.fi/Leo.Lahti
+%leo.lahti@iki.fi
+
+%* LICENSE: This thesis is licensed under the terms of Creative Commons
+%Attribution 3.0 Unported license available from
+%http://www.creativecommons.org/. Accordingly, you are free to copy,
+%distribute, display, perform, remix, tweak, and build upon this work
+%even for commercial purposes, assuming that you give the original
+%author credit. See the licensing terms for details. For Appendices
+%(i.e. publication printouts) and Figures, consult the separate
+%copyright notices. If no copyright holders are mentioned, the images
+%are in public domain, or released under open license; in the latter
+%case the link to the original image and licensing information is
+%provided.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\RequirePackage[round]{natbib}
+%Commands from fancyhdr
+\usepackage{fancyhdr}
+\usepackage{amsmath,amssymb,amsthm}
+\pagestyle{fancy}
+% - Set page numberis to upper middle
+\lhead{} %empty upper left
+\chead{\thepage} %page number on upper center
+\rhead{} %empty upper right
+\cfoot{} %remove the page numbering from the bottom center
+\voffset = 0pt %ylamarginaali 1 inch + x
+
+%\pagestyle{myheadings}
+%\markright{}
+%\pagenumbering{arabic}
+
+%\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage{t1enc}
+%\usepackage{utf8enc}
+\setlength{\textwidth}{417pt}
+%\setlength{\oddsidemargin}{44pt}
+%\setlength{\marginparwidth}{55pt}
+\setlength{\leftmargin}{4cm}
+\setlength{\rightmargin}{2.2cm}
+\setlength{\topmargin}{5mm}
+\setlength{\textheight}{22cm}
+
+\linespread{1.24} % 1.24 = riviväli 1.5
+%\addtolength{\textheight}{36pt}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{4mm}
+
+
+\hyphenation{yk-si-mie-li-syys ky-sy-myksiin mo-raa-li-sil-la mo-raa-li-sis-sa kes-kus-te-lu-kump-pa-nit te-ke-mi-sen fy-si-kaa-li-sen Black-burn kon-teks-ti-si-don-nai-suu-des-ta Frege-Geach-argu-men-tis-ta Frege-Geach-argu-men-tin kult-tuu-riin mo-raa-li-siin riip-pu-en fy-si-kaa-li-ses-ta pe-rus-te-lui-den Black-burn-kaan mo-raa-li-seen riip-pu-mat-to-mal-la eks-pres-si-vis-mi vii-me mo-raa-li-teo-ri-ois-ta fy-si-kaa-li-sis-ta Phi-lo-sophy mo-raa-li-ky-sy-mys-ten vuo-ro-vai-ku-tuk-set vuo-ro-vai-ku-tus mo-raa-li-set kes-kus-te-lun ta-pa-uk-ses-sa Kum-pi-kin ko-ko-nai-suu-des-saan mu-kaan kau-saa-li-ses-ti mo-raa-li-sen mo-raa-lis-ta ta-van-o-mai-nen ideaali-ti-lan-tee-na im-pe-ra-tii-vi to-tuu-det to-tuus-ar-vo-jen to-tuus-ar-vo-ja tar-kas-te-le-maan si-vu-a-viin va-leh-te-le-mi-nen mo-raa-lis-ten luon-tees-ta ra-ken-tu-van esi-mer-kik-si mo-raa-li-ses-ti mo-raa-li-teo-ri-an mo-raa-li-teo-ri-a  mo-raa-li-ses-sa fy-si-kaa-lis-ten puut-tee-seen re-la-ti-vis-min mah-dol-li-suu-den}
+
+%opening
+\title{Simon Blackburnin kvasi-realismi ja moraalisen keskustelun turvaaminen}
+\author{\underline{Leo} Mikael Lahti, 012093681, käytännöllinen filosofia}
+\date{Kandidaatin tutkielma  \date{}}
+
+\begin{document}
+
+%sivunumero sivun ylalaitaan, miten tan kaskyn saa toimiin?
+%\@/headline</centerline</rm//folio>>
+
+\maketitle
+\thispagestyle{empty}
+\tableofcontents
+\newpage
+
+%Set this page to be the first one, otherwise table of contents (toc) would be the first
+\setcounter{page}{1}
+
+\addcontentsline{toc}{section}{Johdanto}
+
+
+\section*{Johdanto}
+
+Moraalinen relativismi on monikulttuurisessa maailmassa ajankohtainen etiikan tutkimuskohde. Sen tutkimus kä\-sit\-te\-lee moraalin perusteita ja moraalisiin kysymyksiin liittyviä ristiriitatilanteita. \citep[ks. esim.][luku 2]{Boghossian06,relativismSE,LaFollette00}. Moraalisen relativismin mukaan moraalisten lauseiden totuusarvo on olemassa vain suhteessa yksilöön tai esimerkiksi tiettyyn kulttuuriin, eikä objektiivista mittapuuta oikealle ja väärälle ole löy\-det\-tä\-vis\-sä. 
+
+Moraalinen objektivismi on relativismille vastakkainen kanta, jonka mukaan moraalisilla väittämillä on absoluuttinen totuusarvo, joskin sen selvittäminen voi olla käytännössä ongelmallista \citep[ks. esim.][luku 2]{LaFollette00}.  Moraalisen objektivismin mukaan moraaliset totuudet on ainakin periaatteessa mahdollista perustella yksilöstä riippumattomalla tavalla ja moraalin ulkopuolisista oletuksista lähtien. Objektiiviseksi moraalin lähtökohdaksi on eri yhteyksissä tarjottu esimerkiksi Jumalaa \citep[ks.][]{Rentto02}, muotoilunsa johdosta pätevää yleistä moraalilakia, josta tunnetuimpia on Immanuel Kantin kategorinen imperatiivi \citep{Kant1788}, sekä mm. Benthamin esittämää utiliteettia, hyödyn käsitettä \citep{Bentham1789}. Yksimielisyyttä sen suhteen, mitä objektiiviset moraaliset totuudet ovat, ja miten ne voidaan johtaa, ei ole syntynyt objektivistienkaan piirissä. Yksimielisyyden puute ei ole argumentti objektivismia vastaan, mutta tuo esiin moraalikysymysten monitahoisen luonteen. 
+
+Tässä työssä käsiteltävä Simon Blackburnin kvasi-\-realismi sijoittuu eräällä tavalla relativismin ja objektivismin välimaastoon. Teoria pohjautuu ekspressivismiin ja on siten lähtökohdiltaan relativistinen. Relativistisiin moraaliteorioihin on liitetty erilaisia ongelmia, jotka liittyvät niiden loogiseen pätevyyteen sekä kykyyn kuvata moraalista kokemusta. Blackburn pyrkii määrätietoisesti välttämään tiettyjä relativismille tyypillisiä ja erityisesti ekspressivistisiin moraaliteorioihin liitettyjä ongelmia. Tavoitteena on varmistaa, että mielekäs keskustelu moraalikysymyksistä ja moraalisten väittämien pätevyydestä on mahdollista relativistisista lähtökohdista käsin.
+
+Tavoitteenani on tässä työssä luoda yleiskatsaus kvasi-\-realistisen moraaliteorian keskeisiin argumentteihin, joiden avulla Blackburn pyrkii oikeuttamaan moraalisen relativismin näkökulmia. Keskeisinä lähteinäni ovat olleet Simon Blackburnin "Ruling Passions"\  \citep{Blackburn98} sekä joukko kvasi-\-rea\-lis\-mia kä\-sit\-te\-leviä artikkeleita joihin viittaan tuonnempana tekstissä. "Stanford Encyclopedia of Philosophy"\ -verkkojulkaisu\footnote{\texttt{http://plato.stanford.edu/}} on osoittautunut hyödylliseksi tie\-to\-läh\-teek\-si etsiessäni muuta työn aihetta sivuavaa kirjallisuutta.
+
+
+\section{Taustaa}
+
+Moraalisten arvostelmien on usein uskottu poikkeavan perustavalla tavalla fysikaalisista arvostelmista, jotka voidaan esittää objektiivisia ja mitattavia ominaisuuksia kuvailevin termein. Esimerkiksi G.E. Moore esitti 1900-luvun alussa niin sanotun "avoimen kysymyksen argumentin"\ \citep[15]{Moore03}, jonka mukaan moraalisen arvostelman pätevyys jää aina tietyllä tavalla avoimeksi; Mooren mukaan kunnollista systemaattista kuvausta moraalisten arvostelmien pätevyyden kriteereistä ei ole onnistuttu esittämään \citep[luku 2]{NonNaturalism08}. Tällä hetkellä vaikuttavista moraalifilosofeista esimerkiksi David Wong on muistuttanut, että relativistisista läh\-tö\-koh\-dis\-ta tarkasteltuna moraalia koskeva keskustelu eri moraalijärjestelmien välillä voi olla ongelmallista, mikäli järjestelmien käsitykset moraalin sisällöstä ja sen perusteluista ovat yhteismitattomia \citep[ks. esim.][luku 1]{Wong84}. Monet ovatkin sitä mieltä, ettei moraalisia ominaisuuksia ole mahdollista palauttaa yleisiin luonnollisiin ominaisuuksiin \citep[kappale 3.1]{cognitivismSE}, vaan ne muodostavat oman erityislaatuisen luokkansa todellisuuden ilmiöinä. 
+
+Kun moraalisen kokemuksen objektiivinen pätevyys kiistetään, moraalinen subjekti nousee moraalisten ilmiöiden kuvaamisessa keskeiselle sijalle, ja samalla lä\-hes\-ty\-tään moraalista relativismia. Keskeisenä lähtökohtana Blackburnin tarkasteluissa on sen osoittaminen, että subjektiivisten totuusarvojen käyttö moraalisessa keskustelussa on oikeutettua ja mielekästä, ja että näitä voidaan kohdella moraalisessa päättelyssä ikään kuin ne olisivat objektiivisia samalla tavoin kuin fysikaaliset uskomukset. Tä\-män oikeutuksen puutetta on perinteisesti pidetty yhtenä ekspressivismin mer\-kit\-tä\-vä\-nä ongelmana.
+
+Blackburn kiinnittää erityistä huomiota siihen, että vaikka moraaliset arvostelmat viime kädessä olisivatkin subjektiivisia, argumentoinnin pätevyys on tärkeää myös moraalisissa yhteyksissä. Moraalisten argumenttien pätevyyden tarkastelu tarjoaa hänen mukaansa erään ratkaisun moraalisen relativismin ongelmiin. Blackburnin kvasi-\-realismissa moraalisten arvostelmien alkuperä ja oikeutus palautuu viime kädessä yksilön tuntemuksiin. Se kuitenkin poikkeaa muun muassa Alfred J. Ayerin \citep{Ayer36} ja Charles Stevensonin \citep{Stevenson44} esittämistä emotivistisista moraaliteorioista  sallimalla moraalisten totuusarvojen olemassa olon. 
+
+Moraalinen kokemus kumpuaa Blackburnin teoriassa yksilöllisistä tulkinnoista ja tuntemuksista, mutta moraalikäsityksiä vertaamalla ja näiden pätevyyttä huolellisesti tarkastelemalla voidaan päästä lähemmäs yhteisesti hyväksyttyä nä\-ke\-mys\-tä moraalisesta totuudesta. Tä\-mä edellyttää sitä, että keskustelukumppanit suhtautuvat avoimesti toistensa näkökulmille ja ovat valmiita arvioimaan kriittisesti omia kantojaan.
+
+Simon Blackburn on kehitellyt kvasi-\-realismiksi kutsuttua moraaliteoriaansa lukuisissa kirjoissa ja lehtijulkaisuissa \citep[ks. esim.][]{Blackburn84,Blackburn93,Blackburn98,Blackburn99}. Blackburnin argumentointi on laaja-alaista, täsmällistä ja syvällistä. Moraalikysymysten lisäksi kvasi-\-realistisen teorian sovellusalue ulottuu myös muille aloille, joskin nämä sivuutetaan tässä työssä. Joukko teorian muita sovellutuksia on löy\-det\-tä\-vis\-sä esimerkiksi esseekokoelmasta "Essays in Quasi-Realism"\  \citep{Blackburn93}. 
+
+Esittelen Blackburnin kvasi-\-realistisen teorian pääpiirteet ja siihen liitettyjä ky\-sy\-myk\-siä niin kutsutun Frege-\-Geach-\-argumentin kautta \citep[ks.][]{Geach65}. Tämä argumentti nostaa esiin eräitä ekspressivistisille teorioille tavanomaisia ongelmia, joihin vastaaminen on ollut Blackburnin teoriassa keskeisellä sijalla. Tä\-män johdosta Frege-Geach -argumentin käsittely tarjoaa johdonmukaisen katsauksen kvasi-\-realismin avainkäsitteisiin. 
+
+Aloitan esittelemällä lyhyesti Frege-Geach -argu\-men\-tin, minkä jälkeen siirryn tarkastelemaan kvasi-\-realismin lähtökohtia ja sitä, minkä\-laisen vastauksen Blackburn tarjoaa argumentin osoittamaan haasteseen koskien moraalisten lauseiden totuusarvoja. Lopuksi käyn läpi teoriaa kohtaan esitettyä kritiikkiä ja kvasi-\-realismin suhdetta moraaliseen relativismiin, sekä luon lyhyen katsauksen muihin Blackburnin kvasi-\-realismia sivuaviin moraaliteorioihin.
+
+\section{Frege-Geach-argumentti ja moraalisen päät\-te\-lyn pätevyys}
+
+\subsection{Argumentin motivointi}
+
+Blackburnin kvasi-realismi lukeutuu ekspressivistisiin moraaliteorioihin.
+Ekspressivistisissä moraaliteorioissa kiinnitetään huomiota fysikaalisen uskomuksen ja subjektiivisen tunnetilan väliseen eroon, fysikaalisiin ja moraalisiin arvostelmiin. Fysikaalisten arvostelmien katsotaan kuvaavan uskomuksia, jotka pyr\-ki\-vät totuuteen jonkin havaitsijasta riippumattoman kriteerin mielessä. Moraaliset arvostelmat sen sijaan heijastelevat yksinomaan subjektiivista tunnetilaa, ja ekspressivismin mukaan niillä ei ole totuusarvoa ainakaan tavanomaisessa mielessä. Vaikka moraalista arvostelmaa kuvaavalla lauseella voi olla fysikaalisen arvostelman muoto, niiden tosiasiallinen sisältö on hyvin erilainen. Esimerkiksi fysikaalisella arvostelmalla "Ville on pitkä", ja moraalisella arvostelmalla "Ville on ilkeä"\ on sama kieliopillinen rakenne, mutta pituuden ja pahuuden kriteerit ovat kuitenkin pohjimmiltaan hyvin erilaisia. Pituus voidaan ajatella havaitsijasta riippumattomaksi ja mahdollisesti mitattavaksi ominaisuudeksi, kun taas pahuus on vahvasti havaitsijasta riippuva ominaisuus ainakin ekspressivisten moraaliteorioiden näkökulmasta.
+
+Fysikaalisen ja moraalisen arvostelman erottelun johdosta moraalisten ilmausten on sanottu olevan ekspressivimissä sillä tavoin kontekstisidonnaisia, ettei mielekäs moraalinen keskustelu olisi mahdollista ekspressivistisistä läh\-tö\-koh\-dis\-ta käsin. Tä\-mä kontekstisidoinnaisuus tuodaan esiin niin kutsutussa Frege-\-Geach-\-argumentissa. Argumentin esiin tuoma ongelma liittyy siihen, että moraalisia arvostelmia käy\-te\-tään semanttisesti monimutkaisten lauseiden osasina tavalla, joka ei ekspressivistisissä moraaliteorioissa kestä loogista tarkastelua. Frege-Geach-argumentin mukaan esimerkiksi ilmauksella "valehteleminen on väärin"\ on eri merkitys riippuen siitä, esiintyykö se itsenäisenä lauseena, vai ehdollisessa lauseessa "Jos valehteleminen on väärin, on väärin pistää pikkuveli valehtelemaan". Edellisessä tapauksessa lause ilmaisee puhujan tuntemuksia tapahtumaa kohtaan, jäl\-kim\-mäi\-ses\-sä ei. Tavanomaisessa moraalisessa päät\-te\-lys\-sä voimme johtaa näistä kahdesta premissistä lauseen "On väärin pistää pikkuveli valehtelemaan.". Toivoisimme, että pätevä moraaliteoria kykenee kuvaamaan tämän kaltaisia päätelmiä ja sisältää mahdollisuuden niiden tekemiseen.
+
+\subsection{Kontekstisidonnaisuuden looginen ongelma}
+
+Edellä esitettyyn päätelmään sisältyy kuitenkin looginen virhe, mikäli päättely tehdään ekspressivistisistä läh\-tö\-koh\-dis\-ta käsin. Esimerkissä annettu argumentti on alkun perin Fregen esittämä, ja sen looginen muotoilu on peräisin Geachilta \citep[ks.][]{Geach65}. Kyseessä on klassinen {\it modus ponens}-päätelmä: jos oletetaan tosiksi premissit 'p' ("valehteleminen on väärin") ja 'p \(\rightarrow\) q' ("jos valehteleminen on väärin, niin on väärin pistää pikkuveli valehtelemaan"), siitä seuraa lause 'q' ("on väärin pistää pikkuveli valehtelemaan"). Ekspressivismin on sanottu epäonnistuvan toisen premissin ('p \(\rightarrow\) q') kohdalla, koska puhuja ei ehdollisessa lauseessa itse ota moraalista kantaa tapahtumaan, jota lause p ilmaisee. Siten lauseen p ekspressivistinen merkitys on vaihtunut kontekstin mukana ensimmäiseen premissiin 'p' verrattuna. Ensimmäisen premissin totuusarvo on sidottu puhujan tunnetilaan, mutta jälkimmäisessä premississä ('p \(\rightarrow\) q') puhujan ei tarvitse ottaa subjektiivista kantaa lauseeseen 'p' eli siihen, onko valehteleminen väärin. 
+
+Kun moraalisen lauseen totuusarvo palautuu ekspressivismissä puhujan tunnetilaan, lauseen p merkitys on erilainen premisseissä 'p' ja 'p \(\rightarrow\) q'.  Mainitun modus ponens-päätelmän looginen pätevyys kuitenkin edellyttäisi, että lauseen p merkitys on täsmälleen sama molemmissa premisseissä. Tahtoisimme, että pä\-te\-vä moraaliteoria mahdollistaa tä\-mänkaltaisten päätelmien tekemisen. Myös esimerkiksi Nic\-holas Unwin on todennut Geachia seuraillen, että ekspressivismi näyttäisi olevan riittämätön kuvaamaan moraalista kokemusta, koska se ei kykene kuvaamaan tä\-mänkaltaisia päätelmiä \citep[338]{Unwin99}. 
+%\citep[ks. myös][106-110]{Youn05}. 
+Blackburnkin tunnistaa ongelman omissa kirjoituksissaan:
+
+\begin{quote}
+	- - many writers have insisted on a 'Fregean abyss' separating expressions of attitude from expressions of belief. They point out that evaluative commitments are expressed in ordinary indicatives, and that this enables them to occur in indefinitely many 'indirect' contexts. We not only say that X is good, but that either X is good or Y is, or that if X is good such-and-such. Some think that this puts a weighty, or even insupportable, burden on expressivism. For all the expressivist has given us is an account of what is done when a moral sentence is put forward in an assertoric context: an attitude is voiced. What then happens when it is put forward in an indirect context, such as 'if X is good, then Y is good, too' and no attitude to X or Y is voiced?  \citep[70]{Blackburn98}.
+\end{quote}
+
+Näin myös Blackburn mainitsee, että moraalinen arvostelma on ekspressivistisissä teorioissa viime kädessä puhujan mielipiteen ilmaus. Blackburn kiinnittää siten huomiota Frege-Geach-argumentin esiin tuomaan heikkouteen ekspressivistisissä teorioissa, joka on niiden kyvyttömyys kuvata moraalisten ilmausten käyttöä ehdollisisten lauseiden kaltaisissa epäsuorissa yhteyksissä.
+
+
+\section{Kvasi-realismi ja "eettisten ilmausten pelastaminen"}
+
+Blackburnin kvasi-\-realistisen teorian pohjalla on pyrkimys löytää oikeutus realististen käsitteiden, kuten "tiedon", "totuuden"\ ja "objektiivisuuden"\ käytölle moraalisessa keskustelussa. ja mahdollistaa näin mielekäs ja loogisesti pätevä moraalinen keskustelu ekpressivistisistä läh\-tö\-koh\-dis\-ta käsin. Blackburn pyrkii vastaamaan ekspressivismin kohtaamiin haasteisiin perusteellisella argumentoinnilla, tahtoen "pelastaa eettiset ilmaukset"\  eks\-pres\-si\-vis\-mis\-sä:
+
+\begin{quote}
+	The reason expressivism in ethics has to be correct is that if we supposed that belief, denial, and so on were simply discussions of a way the world is, we would still face the open question. Even if that belief were settled, there would still be issues of what importance to give it, what to do, and all the rest. For we have no conception of a 'truth condition' or fact of which mere apprehension by itself determines practical issues. For any fact, there is a question of what to do about it. But evaluative discussion just is discussion of what to do about things. \citep[70]{Blackburn98}.
+\end{quote}
+
+Blackburnin mukaan subjektiiviset tuntemukset ovat näin oleellinen osa eettistä kokemusta. Jos moraalinen arviointi oikeasta ja väärästä palautettaisiin pelkkään kuvailevaan rooliin maailman luonteesta, jäljelle jäisivät vielä moraaliset kysymykset siitä, mitä meidän tulisi tehdä asioille, miten toimia maailmassa. Blackburnin mukaan kuvailevaa ja toiminnallista näkökulmaa ei kuitenkaan voi erottaa toisistaan, ja viime kädessä moraalinen keskustelu liittyy juuri tähän kysymykseen. Sopivasti muotoiltuna ekspressivistinen teoria kykenee kuvaamaan asian molempia puolia. Lisäksi sen etuna on yksinkertaisuus moraalisen havainnon kuvaamisessa, kun moraalia ei pyritä selittämään ja oikeuttamaan subjektin ulkopuolisilla seikoilla. 
+
+Blackburnin kvasi-\-realismi voidaan nähdä yhtenä ehdotuksena ekspressivistiseksi moraaliteoriaksi. Teoria on ekspressivistinen, koska siinä moraaliset arvostelmat palautuvat viime kädessä subjektiiviseen kokemukseen. Sen ominaispiirteenä on moraalisten ominaisuuksien kä\-sit\-te\-leminen fysikaalisten ominaisuuksien kaltaisina moraalisessa päättelyssä, ja tämä myöskin erottaa sen muista ekspressivistisistä teorioista. Nimitys kvasi-\-realismi juontuu tästä. Projektivismi on toinen inhimillistä havaintoa kuvaava näkökanta, jonka avulla Blackburn pyrkii oikeuttamaan moraalisten ja fysikaalisten käsitteiden yhtäläisen käytön. Tähän palataan tarkemmin seuraavassa luvussa. Ekspressivismi, kvasi-\-realismi ja projektivismi ovat toisiinsa sidoksissa olevia, mutta erillisiä teorioita.
+
+Frege-Geach-argumentti on keskeisellä sijalla tarkasteltaessa Blackburnin teoriaa \citep[72]{Blackburn98}. Projektivistisen moraaliteorian avulla Blackburn pyrkii näyttämään, että moraalisista havainnoista voidaan viime kädessä perustellusti puhua fysikaalisten havaintojen kaltaisina, ikään kuin niillä olisi objektiivinen totuusarvo. Tä\-mä poistaa hänen mukaansa tärkeitä ekspressivismiin ja totuusarvoihin perinteisesti liitettyjä ongelmia, jotka liittyvät moraalisten lauseiden kontekstisidonnaisuuteen. Blackburn huomauttaa, että Fregen mukaan fysikaalisten tapahtumien kohdalla lauseen merkitys säilyy kontekstin vaihtuessa. Blackburnin keskeinen väite on, että sama voi päteä myös moraalisiin lauseisiin. Näin Blackburn kyseenalaistaa Frege-Geach-argumentin keskeisen sisällön:
+
+\begin{quote}
+	In the Fregean story a 'proposition' or 'thought' is simply introduced as the common element between contexts: something capable of being believed but equally capable of being merely supposed or entertained. So why not say the same about an 'attitude'? It can be avowed, or it can be put forward without avowal, as a {\it topic} for discussion, or as an alternative. Just as we want to know the implications of a proposition or a thought, so we want to know the implications of attitude. \citep[71]{Blackburn98}.
+\end{quote}
+
+Fysikaalisissa arvostelmissa annettu arvostelma toimii siten lauseita yhdistävänä elementtinä, johon voidaan uskoa, mutta joka voidaan yhtä hyvin olettaa vain mahdolliseksi asiantilaksi. Blackburnin mukaan sama voi päteä myös moraalisiin arvostelmiin. Moraalisten lauseiden ei ole välttämätöntä omata totuusarvoa, vaan myös ne voivat toimia keskustelussa samankaltaisina yhdistävinä elementteinä, joiden merkitys on vakio. Näin Frege-Geach-argumentin keskeinen teesi moraalisten lauseiden kontekstisidonnaisuuden merkityksestä moraalisessa päät\-te\-lys\-sä tulee kyseenalaistetuksi. 
+
+Luon seuraavaksi katsauksen Blackburnin esitykseen moraalisen kokemuksen luonteesta. Tä\-mä tukeutuu projektivismiin ja auttaa ymmärtämään kvasi-\-realistisen teorian argumentointia yllä esitetyn näkemyksen puolesta.
+
+\subsection{Moraalisen havainnon erityispiirteistä}
+
+Blackburn on tarkastellut eroja moraalisen ja fysikaalisen havainnon välillä hyvin perusteellisesti.  Hänen teoriassaan moraalisen subjektin ja havainnon kohteen vuorovaikutus on keskeisellä sijalla, ja kvasi-\-realistisen teorian voidaan ajatella rakentuvan tä\-män vuorovaikutuksen ympärille. Eräs moraalirelativistisen keskustelun kannalta keskeinen pohdiskelunaihe liittyy perinteisesti siihen, ovatko moraaliset ominaisuudet olemassa havaitsijasta riippumatta, jossakin objektiivisessa mielessä. Blackburnin kannattaman {\it projektivismin} mukaan näin ei ole, vaan moraalinen ominaisuus syntyy havaitsijan ja kohteen vuorovaikutuksessa. 
+
+Blackburn kiistää havaitsijoista riippumattomien moraalisten rakenteiden olemassa olon, jotka meillä olisi jonkinlainen kyky havaita: "Our moral understandings are not explained by independent moral structures, in which we are lucky enough to be sensitive."\ \citep[216-217]{Blackburn99}. Sen sijaan hän kannattaa näkökulmaa, jonka mukaan moraaliset ominaisuudet heijastelevat havaitsijan tuntemuksia, ja ovat itse asiassa niistä lähtöisin: "\ - - what we describe the ethical properties of things are constructed precisely in order to reflect our concerns."\ \citep[80]{Blackburn98}. 
+
+Moraalinen ominaisuus, esimerkiksi "hyvyys", on Blackburnin kannattamassa projektivismissa havaitsijan tulkinnan ja tunnekokemuksen synnyttämä. Tä\-mä erottaa sen fysikaalisesta ominaisuudesta ("väri"), joka on olemassa havaitsijasta riippumatta ("valon aallonpituus"). 
+Blackburnin katsannossa fysikaaliset arvostelmat ilmaisevat uskomuksia ("belief"), ja moraaliset arvostelmat ilmaisevat tuntemuksia ("attitude"). Fysikaaliset ja moraaliset ominaisuudet koetaan varsin eri tavoin:
+
+\begin{quote}
+	Obviously there will be some differences between 'ethical facts' and the others. The fact that there is a cannonball on the cushion explains why it is sagging in the middle. The fact that kindness is good explains no such kind of thing. We do not expect laws of ethics to play a role in treatises of physics. Probably the most promising way of finding contrasts would be to think more about the adaptive mechanisms that make us sensitive to physical facts, in contrast with the adaptive mechanism that give us an ethical motivational system. The adaptive stories will surely be sufficiently different to give vastly different accounts of 'representation'. \citep[80]{Blackburn98}.
+\end{quote}
+
+Blackburnin mukaan eettisten ja muiden tosiasioiden välillä on siis selvä laadullinen ero, ja tämä johtuu eroista niissä mekanismeissa, joiden myötä opimme hahmottamaan näitä ominaisuuksia. 
+
+\subsection{Moraalinen kokemus kvasi-\-realismissa}
+
+Blackburn painottaa moraalisten arvostelmien ja tunnekokemuksen tiivistä yh\-te\-yt\-tä, mutta välttää huolellisesti samastamasta näitä. Blackburnin mukaan moraalinen arvostelma on enemmän kuin "pelkkä"\ tunnekokemus. Lisäksi tuntemuksen synnyttämä moraalinen uskomus tai arvostelma voi poiketa itse tuntemuksesta, ja arvostelma voidaan mieltää fysikaalisen maailman ominaisuutena. Tä\-mä erottelu on Blackburnin teorian kannalta tärkeää. Erottelu on tarpeen muun muassa siksi, että kielteisiä tuntemuksia herättävää tapahtumaa voidaan joskus pitää kokonaisuutena arvioiden moraalisesti hyväksyttävänä. Tällaisten tilanteiden käsittely on ongelmallista esimerkiksi emotivistisissa moraaliteorioissa, jotka samastavat moraalisen arvostelman kokijan tunnetilaan.
+
+Miten moraalinen kokemus Blackburnin teoriassa sitten rakentuu? Blackburn kannattaa projektivistista moraalikäsitystä, joka kuvaa moraalista kokemusta kausaalisesti: Havainnon ("Ville potkii kissaa") perusteella tulkitsemme tapahtumaa, ja muodostamme siitä joukon uskomuksia. Uskomusten nojalla syntyy tunnetila, jonka havaitsija projisoi osaksi kokemustansa maailmasta. Projisoinnin jälkeen tuntemus mielletään kohteen ominaisuutena ("Ville on ilkeä"). Tä\-män jälkeen kyseinen tapahtuma voidaan tuomita esimerkiksi moraalisesti kielteiseksi. \citep[ks.][]{projectivismSE}. 
+
+Tä\-mä näkemys moraalisen uskomuksen luonteesta muodostaa kvasi-\-realismin ytimen. Moraaliset arvostelmat ovat osa eettistä kokemustamme maailmasta. Ne ovat lähtöisin havaitsijasta, mutta projisoinnin myötä ne mielletään havaintomaailman ominaisuutena. Ne mielletään realistisiksi, vaikka eivät olekaan sitä samassa mielessä kuin fysikaaliset ominaisuudet. Kvasi-realismi terminä viittaa tähän. Näin moraalisista ominaisuuksista ja niiden pätevyydestä voidaan Blackburnin mukaan käydä oikeutetusti keskustelua kuten niiden fysikaalisista ominaisuuksista.
+
+\begin{quote}
+	[Quasi-realism] starts from a contrast between expressing belief and expressing attitude, which it then undermines, by showing how the expression of attitude take on all the trappings of belief. Since we can handle the ethical proposition exactly like any other, it is not mistaken to say that we voice belief in it, when we do. \citep[79]{Blackburn98}.
+\end{quote}
+
+Kvasi-realismi lähtee siten liikkeelle uskomuksen ja mielipiteen ilmaisun välisestä erottelusta, mutta osoittaa tämän erottelun olevan merkityksetön moraalisen keskustelun pätevyyden kannalta. 
+
+\subsection{Moraalisen lauseen totuusarvosta}
+
+Blackburnin katsannossa moraalisen lauseen hyväksyminen voidaan katsoa pä\-te\-väk\-si uskomukseksi, jos lause on riittävässä mielessä kuvaileva tai totuuteen pyrkivä. Moraaliset uskomukset eivät voi myöskään olla ristiriidassa toistensa kanssa. Tä\-män huomion avulla Blackburn pyrkii kiistämään Geachin argumentin pätevyyden.
+
+\begin{quote}
+	- - if anyone represented themselves as holding the combination of 'p' and 'If p then q' and 'not-q' we would not know what to make of them. Logical breakdown means failure of understanding. Is this result secured, on my approach, for an evaluative antecedent, 'p'? Yes, because the person represents themselves as tied to a tree of possible combinations of belief and attitude, but at the same time represents themselves as holding a combination that the tree excludes. \citep[72]{Blackburn98}.
+\end{quote}
+
+Moraalisen uskomuksen on siten oltava muun muassa ristiriidaton ollakseen pätevä. Vaikka konteksti vaihtuisi, moraaliset uskomukset muodostavat kokonaisuutena eräänlaisen mahdollisten yhdistelmien puun, jonka on oltava sisäisesti ristiriidaton. Blackburn painottaa toistuvasti tämänkaltaisten seikkojen merkitystä moraalikäsitysten tarkastelussa:
+
+\begin{quote}
+	I believe that coherence is important. A system of attitudes and beliefs is open to criticism if it shows any of a number of different kinds of incoherence. First, there is the coherence of possibility. - - if our attitudes are inconsistent, in that what we recommend as policies or practices cannot all be implemented together then something is wrong. Second, there is the principle of fairness. If - - we are confident of some things and unconfident of others in apparently random patterns, then there is something wrong. - - Cleansing ourselves of such incoherences makes us better.  \citep[309-310]{Blackburn98}.
+\end{quote}
+
+Pyrkimys johdonmukaisuuteen moraalisissa valinnoissa on siten Blackburnin mukaan moraalisesti hyvää. Johdonmukaisuus ei kuitenkaan ole ainoa moraalinen hyve: "\ - - As well as coherence there are maturity, imagination, sympathy, and culture."\ \citep[310]{Blackburn98}. 
+Moraali on kuitenkin viime kädessä käytännön toimintaa, ja Blackburnin mukaan moraaliteorian tulee huomioida tästä johtuvat rajoitteet; moraaliteorian tulee kuvata käytännön moraalista toimintaa ja olla sille alisteinen:
+
+\begin{quote}
+
+So what is the right method in ethics? How are we to be both flexible and firm, principled yet sensitive? - - The virtues of a system of ethics are simply (and exactly) the virtues of the people who live it. - - Systematization should stop in theory just as it does in proper living. - - What we need to do is to make our responses mature, imaginative, cultured, sympathetic, and coherent, and we can accept what help we can - - \citep[310]{Blackburn98}.
+
+\end{quote}
+
+Eettiset hyveet ovat viime kädessä lähtöisin ihmisistä, jotka tekevät moraalisia valintoja. Moraaliset valinnat eivät aina noudata täydellisen systemaattista kaavaa, mutta Blackburnin mukaan tämä kuuluu moraalin todelliseen luonteeseen. Pätevän moraaliteorian ei tule pyrkiä rakentamaan tosiasiallista moraalista toimintaa pidemmälle vietyjä systematisointeja. 
+
+Blackburnin käsitys moraalisen lauseen totuudesta pohjautuu minimalistiseen totuusteoriaan. Hän painottaa, että viime kädessä moraalinen arvostelma palautuu yksilön omaan kokemukseen, eikä lisämääreiden luettelu kohota moraalisen lauseen totuusarvoa: 
+
+\begin{quote}
+ We can add flowers without end: 'it is good to be kind to children' conforms to the eternal normative structure of the world. For this means no more than that it is good to be kind to children. \citep[79]{Blackburn98}. 
+\end{quote}
+
+Tätä voitaneen tulkita myös niin, että moraalisilla lauseilla on yhtäläinen oikeus totuusarvoon kuin muillakin uskomuksilla: 
+
+\begin{quote}
+ Asking whether a moral judgement is true or right is no more than asking whether to accept it. And asking that is asking which attitude or policy or stance to endorse. \citep[214]{Blackburn99}.
+\end{quote}
+
+Siten moraalisen arvostelman totuusarvon selvittäminen liittyy käytännössä sen pohtimiseen, hyväksymmekö itse kyseisen arvostelman, ja minkälainen moraalinen asenne meidän tulisi omaksua. Vaikka Blackburn lähtee liikkeelle fysikaalisen ja moraalisen havainnon erottelusta, hänen mukaansa viime kädessä fysikaalisten tapahtumien ymmärtäminen ja moraalinen arviointi yhtyvät: 
+
+\begin{quote}
+ The drift is that since all exercises of thought, all representation of things as being one way or another involve evaluation and practice, evaluation should not be thought of as distinct from representation. \citep[81]{Blackburn98}. 
+\end{quote}
+
+Tä\-mä toisaalta herättää kysymyksen, onko fysikaalisella ja moraalisella arvostelmalla sittenkään todellista eroa. Mikäli ei, Blackburnin teorian tarpeellisuus joutuu kyseenalaiseksi.
+
+\section{Kvasi-realismin kritiikistä}
+
+Kvasi-realistisen teorian arvostelijat ovat tuoneet esiin muun muassa loogisia ja käsitteiden määrittelyyn liittyviä ongelmia. Esittelen seuraavaksi kolme esimerkkiä teorian kohtaan esitetystä kritiikistä. Ensimmäinen liittyy negaation loogiseen käsittelyyn moraalisissä päätelmissä kvasi-\-realismin näkökulmasta. Jälkimmäiset arvostelun kohde liittyy siihen, kykeneekö kvasi-\-realismi sittenkään välttämään relativismiin tyypillisesti liitettyjä ongelmia.
+
+\subsection{Negaation ongelma}
+
+Kvasi-realismin arvostelijoiden mukaan on epäselvää, mitä tunnetilojen ilmaukset merkitsevät, jos niillä ei ole totuusarvoa, eivätkä ne ole samassa mielessä kuvailevia kuin fysikaaliset arvostelmat. Blackburn puhuu kirjoituksissaan paljon tunnetilojen synnystä ja luonteesta, mutta Unwinin mukaan Blackburn ei kä\-sit\-te\-le tunnetilojen varsinaista merkitystä kovin yksityiskohtaisesti. Sen sijaan hän puhuu kirjoitustensa yhteydessä esimerkiksi "hurraamisesta"\ ja "buuaamisesta". 
+
+Tapahtuman p moraalista hyväksyntää ("hurraamista") on Blackburnin kvasi-\-realismin loogisissa tarkasteluissa kuvattu operaattorilla H!. Tä\-män lisäksi Blackburn on käyttänyt duaalioperaattoria T!, joka on ymmärtääkseni Blackburnin tarkasteluissa määritelty siten, että T!p = \(\sim\)H!\(\sim\)p, missä '\(\sim\)' merkitsee negaatiota. \citep[341]{Unwin99}. Tässä siis operaattori T kohdistettuna p:n negaatioon merkitsee samaa kuin se, että 'ei hurrata p:lle'.
+
+Unwin muistuttaa, että tä\-män kaltaisten ilmausten, esimerkiksi "hurraamisen"\ täs\-mäl\-li\-nen merkitys on lähtökohtaisesti epäselvä, ja hänen mukaansa Blackburnkaan ei ole kirjoituksissaan määritellyt tarkasti näiden operaattoreiden sisältöä. Esittelen lyhyesti tästä käsitteellisestä epäselvyydestä seuraavan negaation ongelman. Perusteellisempi tarkastelu löytyy Unwinin loogisesti ihastuttavan täs\-mäl\-li\-ses\-tä artikkelista \citep{Unwin99}, jossa Unwin osoittaa "hurraamisen"\ ja "buuamisen"\ käsitteisiin liittyvän loogisen puutteen Blackburnin teoriassa. 
+
+Frege-Geach-ongelmasta ammentava kvasi-\-realismi on Unwinin mukaan loogisissa perusteluissaan ensisijaisesti keskittynyt H!p \(\rightarrow\) H!q -tyyppisten mo\-raa\-lis\-ten implikaatioiden tarkasteluun ja oikeuttamiseen. Samalla esimerkiksi negaation käyttö moraalisissa päätelmissä on jäänyt vähemmälle huomiolle. Unwin viittaa Blackburnin artikkeliin "Attitudes and contents"\ \citep[189]{Blackburn93}, ja toteaa Blackburnin loogisissa tarkasteluissaan samaistavan negaatioita sisältävät lauseet "\(\sim\)H!p"\ ja "T!(\(\sim\)p)". 
+
+
+\begin{quote}
+	- - Blackburn's strategy is simply to introduce a dual operator 'T!' and rephrase '\(\sim\)H!p' as 'T!\(\sim\)p', a man\(\oe\)uvre which he finds unproblematic: 'corresponding to permission we can have T!p which is equivalent to not hooraying \(\sim\)p, that is, not booing p' ('Attitudes and Contents' p. 189). \citep[341]{Unwin99}.
+\end{quote}
+
+Tä\-mä on Unwinin mukaan selkeästi virheellinen rinnastus, koska nämä kaksi asiaa eivät ole ekvivalentteja:
+
+\begin{quote}
+Yet this is just wrong, since 'not hooraying \(\sim\)p' means 'not accepting H!\(\sim\)p', as opposed to 'accepting not-H!\(\sim\)p', which is what permission amounts to. \citep[341]{Unwin99}.
+\end{quote}
+
+Blackburn siis rinnastaa lauseet '\(\sim\)H!p' ja 'T!\(\sim\)p'. Unwin kiinnittää huomiota siihen, että p:n salliminen edellyttää aktiivista kannanottoa lauseeseen \(\sim\)p, ei pelkästään sen hyväksymättä jättämistä. Ensi katsomalta näyttäisi, että operaattori T! voidaan määritellä siten, että lauseet '\(\sim\)H!p' ja 'T!\(\sim\)p' ovat ekvivalentteja. Unwinin mukaan rinnastukseen sisältyvä virhe juontuu siitä, että lauseen '\(\sim\)H!' yhteys "hurraamiseen"\ ei ole loogisesti selvä. Ensimmäinen tapaus merkitsee, että 'ei hyväksytä lausetta H!\(\sim\)p', kun taas jälkimmäisessä tapauksessa hyväksytään lause ei-H!\(\sim\)p. Unwinin mukaan operaattori T! merkitsee aktiivista kannanottoa, jolloin myös ei-H!\(\sim\)p on aktiivinen kannanotto lausetta \(\sim\)p kohtaan,  vastakohtana lauseelle '\(\sim\)H!', joka merkitsee vain sitä että ei aktiivisesti "hurrata"\ p:lle. Lauseiden "H!p"\ ja "ei-H!p"\ välinen yhteys katoaa, mikäli "ei-H!"\ merkitsee uutta tunnetilaa, joka ei ole suoraan johdettavissa tilasta "H!". 
+
+Käytännön esimerkkinä Unwin mainitsee ateistin ja agnostikon välisen eron. Kumpikin kieltäytyy hyväksymästä Jumalan olemassa oloa, mutta vain ateisti hyväksyy väitteen, jonka mukaan Jumala ei ole olemassa. Annetun asiantilan kiistämisestä ei loogisesti seuraa sen vastakohdan hyväksyminen. Unwinin mukaan tämä johtaa merkittäviin ongelmiin Blackburnin teoriassa ja loogisissa päätelmissä:
+
+\begin{quote}
+	This may seem a small detail, but in fact points to a major difficulty. In other contexts, there is certainly a very real difference between not accepting (or refusing to accept) something and actually accepting its negation. For example, atheists and agnostics alike refuse to accept that God exists, though only the former accept that he does not. More basically, to accept the negation of a sentence S is to accept {\it something}, whereas to refuse to accept S is consistent with accepting nothing at all. \citep[341]{Unwin99}.
+\end{quote}
+
+Negaation hyväksyminen on Unwinin mukaan aina tietyllä tavalla aktiivinen toimenpide, ei vain jonkin toisen asian hyväksymättä jättämistä: 
+'- - Acceptance of the negation of a sentence must involve something positive, something more than just a commitment not to do something else."\ \citep[342]{Unwin99}. Tämä voi johtaa loogisiin ongelmiin negaatioita sisältävien implikaatoiden tarkastelussa. Unwin kutsuu argumenttiaan negaatioille sovelletuksi Frege-Geach-argumentiksi, ja toteaa, että tämä saattaa osoittautua pahaksi takaiskuksi kvasi-\-realistiselle projektille.
+
+\begin{quote}
+	- - we have not succeeded in integrating - - negation within Blackburn's overall strategy, and we are left with something that - - applies only to a very limited class of formulae. - - it looks as if the surface-syntactic properties of moral sentences will have to be taken largely at face value after all; in which case the prospects for Blackburn's {\it quasi-realist} project - - look rather bleak. \citep[352]{Unwin99}.
+\end{quote}
+
+Unwinin mukaan esitetty ongelma supistaa Blackburnin teorian sovellusalueen hyvin rajattuun joukkoon loogisia yhtälöitä. En ole tietoinen Blackburnin vastauksista Unwinin esittämään ongelmaan. Näyt\-tää kuitenkin siltä, että negaatioille sovelletun Frege-Geach-argumentin kumoaminen tai sen esiin nostamien ongelmien ratkaiseminen muilla keinoin ei ole vält\-tä\-mät\-tä aivan suoraviivainen tehtävä.
+
+\subsection{Relativismin uhka ja moraaliset konfliktit}
+
+Kvasi-realismin tavoite, moraalisten ilmausten totuusarvon oikeuttaminen periaatteellisella tasolla ei arvostelijoiden mukaan välttämättä johda siihen, että totuusarvojen kunnollinen arviointi olisi todella mahdollista. Jos tämä pitää paikkansa, teorian tarpeellisuus joutuu kyseenalaiseksi. 
+
+Mitä moraalisen totuusarvon kunnollinen arviointi sitten voisi tarkoittaa? Blackburnin teoriassa moraaliset arvostelmat palautuvat viime kädessä yksilön kokemuksiin, eikä ulkoista kriteeriä tapahtumien moraaliselle arvioinnille ole \citep[ks.][112]{Youn05}. Ulkoista kriteeriä peräänkuuluttaville Blackburn toteaa, että tämä vaatisi meiltä epärealistista asettautumista jonkinlaiseen arvotyhjiöön: 
+
+\begin{quote}
+ The objector asks us to occupy an external standpoint, the standpoint of the exile from all values, and to see our sensibilities entirely from without. But it is only using sensibilities that we judge value. \citep[89]{Blackburn96}. 
+\end{quote}
+
+Blackburnin mukaan voimme siis tehdä moraalisia arvostelmia ainoastaan asettumalla itse moraalisiksi toimijoiksi. Blackburnin katsannossa moraaliset nä\-ke\-myk\-set voivat koskea myös toisten ihmisten moraalisia kantoja. Kun moraalisten lauseiden totuusarvojen käyttö kvasi-\-realismissa oikeutettu projektivistisista lähtökohdista, moraalisista kä\-si\-tyk\-sis\-tä, niiden perusteluista ja pätevyydestä voi\-daan käydä mie\-le\-käs\-tä keskustelua samaan tapaan kuin fysikaalisista uskomuksista. Moraali\-kä\-si\-tyk\-siä kohtaan voidaan oikeutetusti esittää perusteltua kritiikkiä, ja tästä voi seurata moraalisiin uskomuksiin liittyvää keskustelua. Moraalisilla uskomuksilla voi puolestaan olla totuusarvo suhteessa moraalisiin "tosiasioihin". Käy\-tän\-nös\-sä tämä voisi merkitä esimerkiksi uskomusten ristiriidattomuutta ja yhteensopivuutta yksilön arvojärjestelmään kokonaisuudessaan, sekä moraaliseen näkemykseen johtaneiden uskomusten oikeellisuutta.
+
+\begin{quote}
+	- - if we start with a set of beliefs and attitudes, we can put them into a structured normative space by representing them as beliefs in the ethical proposition. Accepting conditionals and disjunctions shows us working out the implications of various combinations of attitude, or combinations of attitude and belief. We crossed Frege's abyss by creating the ethical proposition, and it is there in order to generate public discourse about which actions to insist upon or forbid, and which attitudes to hold or reject. \citep[73]{Blackburn98}.
+\end{quote}
+
+Tä\-män mukaan eettisen lauseen pätevyyttä voidaan yhteisesti arvioida ja koetella. On esimerkiksi mahdollista tunnistaa moraalisten näkemysten taustalla vaikuttavia oletuksia ja arvioida niitten pätevyyttä, tai havaita loogisia virheitä omassa tai keskustelukumppanin päät\-te\-lys\-sä. Eettisen lauseen yhtenä tehtävänä onkin Blackburnin mukaan toimia keskustelun herättäjänä ja kohteena moraalikysymyksissä sen sijaan, että se olisi pelkkä tunnetilan ilmaus kuten perinteisissä ekspressivistisissä teorioissa. On mahdollista, että tällaisen ajatuk\-sen\-vaih\-don seurauksena moraaliset näkökannat voivat lähentyä toisiaan, ja ideaalitilanteessa keskustelun avulla voidaan päästä yksimielisyyteen moraalisista kysymyksistä. Yksi etiikan perimmäisistä tehtävistä liittyykin Blackburnin mukaan juuri tähän: 
+
+\begin{quote}
+I hold that the key to ethics lies in the practical stances that we need to take up, to express to each other, and to discuss and negotiate. \citep[213]{Blackburn99}. 
+\end{quote}
+
+Moraalisten arvostelmien vahvan subjektikeskeisyyden ei siten Blackburnin mukaan tarvitse välttämättä johtaa relativismiin. Blackburn muistuttaa myös, että moraalisten näkökulmien moninaisuudesta ei sellaisenaan vielä seuraa moraalista pluralismia, monien näkökantojen samanaikaista oikeellisuutta: "\ - - there is no way to argue for a plurality of moral truths, simply from the existence of a plurality of moral opinions"\ \citep[213]{Blackburn99}. Jos moraalinen näkökanta on hyvin perusteltu, silloin kyse ei ole "pelkästään"\ subjektiivisesta asenteestamme. Näkemysten perusteluiden pätevyys on tärkeää myös moraalisessa keskustelussa. 
+
+\begin{quote}
+ Ethical avowals, like decisions and verdicts, require grounds. - - We acknowledge the need to point to something that grounds our judgement, in virtue of which one is better than the other. \citep[69]{Blackburn98}. 
+\end{quote}
+
+Blackburnin mukaan relativismi ei muodosta kvasi-\-realismissa ongelmaa, vaikka kyse onkin viime kädessä henkilökohtaisista tuntemuksistamme kumpuavista kä\-si\-tyk\-sis\-tä.  Tä\-mä johtuu siitä, että voimme olla valmiita arvioimaan ja tarvittaessa muuttamaan omia käsityksiämme.
+
+\begin{quote}
+	There is no problem of relativism because there is no problem of moral truth. Since moral opinion is not in the business of representing the world, but of assessing choices and actions and attitudes in the world, to wonder which attitude is right is to wonder which attitude to adopt or endorse. \citep[214]{Blackburn99}.
+\end{quote}
+
+Siten moraalisen näkökannan tehtävänä ei ole kuvata maailmaa, vaan arvioida omia valintoja ja toimenpiteiden oikeutusta. Viime kädessä yksilöiden tuntemukset toimivat moraalisen arvostelman mittapuuna, mutta aidon keskustelun avulla on mahdollista lähentyä yh\-tei\-ses\-ti hyväksyttyjä moraalisia näkökulmia. Arvostelijoiden mukaan ei ole kuitenkaan lainkaan selvää, millä tavalla moraalisten uskomusten pätevä vertailu todellisuudessa tapahtuisi, ja onko se ylipäänsä mahdollista:
+
+\begin{quote}
+	- - Blackburn never explains why and how the objectivist will come to respect one moral sensibility more than the other. The comparison of different moral sensibilities is taking place in Blackburn's black box. What may take place in this black box may be nothing more a matter of feeling. \citep[116]{Youn05}.
+\end{quote}
+
+Lainauksessa Nicholas Youn arvostelee Blackburnia siitä, että tämä ei kerro millä tavoin objektivisti päätyy arvostamaan yhtä moraalista näkökulmaa toisen ylitse. Younin mukaan arviointiprosessi on tuntematon, eikä sille ole välttämättä annettu viime kädessä muita kriteerejä kuin arvioitsijan omat tuntemukset. Verrattavien näkökantojen looginen pätevyys ja arviointini vaikuttavien seikkojen huomiointi, jota käsiteltiin aiemmin, muodostaa toki eräänlaisen kriteerin. Youn lienee kuitenkin oikeassa siinä, että kun tällaiset asiakysymysten pätevyyteen liittyvät seikat on huomioitu, näkökulmien vertailu pohjautuu pitkälti arvioitsijan omiin tuntemuksiin. Uskoisin Blackburnin ainakin joillakin varauksilla yhtyvän tähän näkemykseen.
+
+Tietääkseni Blackburn ei ole antanut Younin ilmaisemaan huoleen täsmällistä vastausta. Sen sijaan hän on jopa ehdottanut mahdollisuutta objektiivisen moraaliteorian muotoiluun kvasi-\-realismin avulla: "to be objective is to be sensitive to the right aspects of the situation, and in the right way."\ \citep[221]{Blackburn99}. Tässä lainauksessa Blackburn pyrkii kuvailemaan, minkälaista näkökulmaa pyrkimys moraaliseen konsensukseen edellyttää. Se edellyttää ainakin sitä, että havaitsija kykenee huomioimaan arvioinnin kannalta oleelliset seikat. 
+
+Epäselväksi kuitenkin jää, mitä "oikeanlainen"\ herkkyys "oikeille seikoille"\ lopulta tarkoittaa. Sen sijaan, että pyrkisi määrittelemään tätä tarkemmin, Blackburn usein muistuttaa moraalisen arvostelman perimmäisestä subjektisidonnaisuudesta ratkeamattomien moraalisten ristiriitatilanteiden kohdalla ja vetoaa siihen, että ristiriitatilanteet monesti liittyvät nimenomaan kunnollisen ajatuksenvaihdon puutteeseen:
+
+\begin{quote}
+	There is no proof procedure or for that matter no empirical process of working on the Taliban that is {\it guaranteed} in advance to bring him to my opionion. - - It is always contingent - - whether we can move a dissident towards concurrence with our own symphaties and attitudes. 
+\end{quote}
+
+Ei ole mitenkään varmaa, että saamme toisen ihmisen tukemaan omaa moraalista kantaamme, etenkin jos välissä on suuria maailmankatsomuksellisia ja kulttuurisia eroja. Blackburnin mukaan tämä ei kuitenkaan ole todiste kvasi-realismia vastaan:
+
+
+\begin{quote}
+- - If that worries anyone, they would do well to reflect that the same is true in empirical and even mathematical or logical cases. - - I can show that contradictions are false, but I cannot necessarily show it to some enthusiast who holds in advance that all logic is a patriarchal plot of which I am a part. \citep[216]{Blackburn99}.
+\end{quote}
+
+Ei voida siis taata, että ajatustenvaihto olisi hedelmällistä ja johtaisi konsensukseen. Tä\-mä ei kuitenkaan välttämättä tarkoita, että molemmat näkökannat olisivat yhtä päteviä. Keskustelukumppanien argumenttien pätevyys ja kyky huomioida vaikuttavia seikkoja voi olla eri tasoa, ja keskustelukumppanin vakuuttamisen vaikeus ei sinänsä ole vielä kunnollinen argumentti itse väitteen pätevyyttä vastaan. Moraalinen konsensus pitäneekin nähdä jonkinlaisena kvasi-\-realismin ideaalitilanteena:
+
+\begin{quote}
+	As we have seen, people hanker after algorithms, or procedures guaranteed in advance to prove that their opponents are wrong, or preferably to prove to them that they are wrong. They want this security. But suppose, as I am afraid is true, they cannot find such procedures. \citep[225]{Blackburn99}.
+\end{quote}
+
+Blackburn onkin selvästi sitä mieltä, että pyrkimys keskusteluun ja konsensukseen on tärkeää, mutta yleispäteviä menettelytapoja moraalisesti oikean ja väärän erottamiseksi ei lopulta ole olemassa. 
+
+Vaikka kvasi-\-realismin ehdotus moraalisten arvostelmien konteksti\-sidon\-nai\-suu\-des\-ta ja perustelujen merkityksestä moraalisessa keskustelussa on kiinnostava ja sisäl\-tää tärkeitä näkökulmia, Blackburn ei kuitenkaan nähdäkseni ole tältä osin onnistunut tyydyttävästi vastaamaan arvostelijoiden esittämään kritiikkiin ja siten eh\-käi\-se\-mään moraalisen relativismin mahdollisuutta kvasi-\-realismissa. 
+
+\subsection{Tarkoituksellisuuden argumentti}
+
+Terence Cuneo on kyseenalaistanut ekspressivistisille teorioille ominaisen nä\-ke\-myk\-sen moraalisen toimijan tarkoitusperistä \citep[ks.][]{Cuneo06}. Cuneon argumenttia on kutsuttu nimellä "Illocutionary Act-Intention Argument", jonka olen kääntänyt vapaasti "tarkoituksellisuuden argumentiksi". Tällä pyritään viittaamaan moraalisen toimijan käsitykseen moraalisen arvostelmansa merkityksestä. 
+Cuneon mukaan moraalinen arvostelma viittaa tavanomaisesti seikkoihin, jotka lausuja itse kokee objektiivisesti  olemassa oleviksi tosiasioiksi. Tä\-mä on vastoin ekspressivististä näkökulmaa, jonka mukaan moraalinen toimija ilmaisee tai - Blackburnia mukaillakseni - projisoi ensisijaisesti omia tuntemuksiaan asiantiloihin, jotka itsessään ovat moraalisesti neutraaleja:
+
+\begin{quote}
+It is false that, in ordinary optimal conditions, when an agent performs the sentential act of sincerely uttering a moral sentence, that agent does not thereby intend to assert a moral proposition, but intends to express an attitude toward a non-moral state of affairs or object. \citep[67]{Cuneo06}
+\end{quote}
+
+Cuneon mukaan on olemassa viitteitä siitä, että yleensä moraaliset toimijat uskovat viittaavansa tosiasiallisiin ja subjektista riippumattomiin asiantiloihin teh\-des\-sään moraalisia arvostelmia \citep[ks.][]{cognitivismSE}. Blackburnin edustama ekspressivismi kuitenkin kiis\-tää, että moraalisilla väittämillä olisi subjektin ulkoista todellisuutta kuvailevaa roolia. Tä\-mä on tarpeen ekspressivismin pyrkimykselle välttää moraaliseen objektivismiin liitettyjä vakavia ongelmia ja näin taata moraalisen keskustelun looginen pätevyys. Cuneo siis väittää, että ekspressivistinen moraaliteoria ei onnistu kuvaamaan sitä moraalista todellisuutta, jonka ihmiset yleensä kokevat kohtaavansa. 
+
+En ole varma muodostaako Cuneon argumentti todellisen esteen kvasi-realistisen moraaliteorian pätevyydelle. Blackburn on varmasti valmis sallimaan sen, että ihmiset voivat kokea moraalikysymykset hyvinkin objektiivisina. Toinen asia kuitenkin on, onko tällaisen kokemuksen olemassaolo varsinaisessa ristiriidassa Blackburnin projektivistisen teorian kanssa.
+
+
+\section{Kvasi-realismi ja muut relativismin muodot}
+
+
+Kvasi-realismissa moraalisten arvostelmien alkuperä ja oikeutus palautuu viime kädessä yksilön tuntemuksiin. Tässä mielessä Blackburnin teorialla on kytkös muun muassa emotivismiin, joka on eräs moraalisen relativismin muoto. Emotivismin tunnettuja puolustajia ovat olleet muun muassa Charles Stevenson \citep{Stevenson44} ja Alfred J. Ayer \citep{Ayer36}. 
+
+Emotivismin mukaan moraalinen arvostelma on viime kädessä pelkkä subjektiivisen tunnetilan ilmaus, jonka tilanne herättää. Moraalinen arvostelma on emotivistien katsannossa vailla objektiivista totuusarvoa. Objektiivisen totuusarvon olemassaolo kiistetään myös muun muassa John Mackien "virheteoriassa"\ ("Error Theory"). Tämän mukaan kaikki moraaliset väittämät ovat perustavalla tavalla virheellisiä, koska niiden esittämillä seikoilla ei ole pohjaa todellisuudessa \citep[ks.][]{Mackie77}. Emotivismin mukaan moraalinen arvostelma liittyy tietynlaisen mielentilan ilmaisuun. Esimerkiksi R.M. Hare on kuitenkin kyseenalaistanut tietyn tunnetilan välttämättömyyden moraalisen arvostelman esittämisessä tai hy\-väk\-sy\-mi\-ses\-sä \citep[9-11]{Hare52}. 
+
+Emotivismia on pidetty varsin jyrkkänä relativistisena kantana. Lievemmät relativismin muodot voivat sallia moraalisille arvostelmille tiettyä universaalisuutta, mutta kyseenalaistavat esimerkiksi sen, että yksikäsitteistä moraalista totuutta olisi mahdollista löytää. David Wongin pluralistinen relativismi on esimerkki tällaisesta teoriasta \citep[ks. esim.][]{Wong84}. 
+
+Preskriptivististen moraaliteorioiden mukaan moraaliset arvostelmat ovat tietyllä tavalla imperatiivisia ilmauksia, vaikka niillä olisi tavanomainen kuvailevan arvostelman muoto. Esimerkiksi Carnap on ehdottanut, että lause "Tappaminen on väärin."\ olisi ekvivalentti imperatiiville "Älä tapa"\ \citep[23-29]{Carnap37}. Tältä pohjalta myös Carnap kiisti moraalisen tiedon tai virheiden mahdollisuuden. 
+Keskeinen ajatus tässä katsannossa on, että moraaliset arvostelmat ovat kuitenkin luonteeltaan yleistyviä ja siten tietyssä mielessä universaaleja; moraalisilla arvostelmilla on oltava tiettyä konsistenssia. Siten ne eivät myöskään ole pelkkiä vallitsevan tunnetilan ilmauksia. \citep{cognitivismSE}.
+
+Suhde objektiivisen totuusarvon olemassa oloon erottaa Blackburnin teorian mainituista relativismin muodoista. Blackburnin keskeisenä tavoitteena on taata moraalisten lauseiden totuusarvon olemassa olo ja looginen pätevyys luopumatta moraalisen arvostelman subjektisidonnaisuudesta. 
+
+
+\subsection{Normi-ekspressivismi}
+
+Blackburnin kvasi-\-realismi on nykyisin yksi tunnetuimmista ekspressivistisistä moraaliteorioista. Esimerkkejä muista ekspressivistisistä teorioista ovat Allan Gibbardin “normi-\-ekspressivismi” \citep[ks.][]{Gibbard90} sekä Mark Timmonsin ja Terrence Horganin “kognitivistinen ekspressivismi” \citep{Horgan06}. Yh\-teis\-tä näille teorioille näyttäisi olevan erityisesti se, että ne pyr\-ki\-vät puolustamaan moraalisten lauseitten oikeutta totuusarvoon ja välttämään samalla Frege-Geach-argumentin esiin tuomat ongelmat. \citep{cognitivismSE}
+
+Gibbard on ehdottanut, että normatiiviset arvostelmat liittyvät tietyn nor\-mi\-jär\-jes\-tel\-män hyväksyntään. Nor\-mi\-jär\-jes\-tel\-mä määrittää, mitkä toimet ovat kiellettyjä tai hy\-väk\-syt\-ty\-jä. Gibbardin normi-\-ekspressivismissä moraalisia arvostelmia analysoidaan niiden rationaalisen ulottuvuuden mukaisesti. Karkeasti sanottuna toimea voidaan kutsua (moraalisesti) rationaaliseksi, jos se ilmaisee nor\-mi\-jär\-jes\-tel\-män hyväksymistä. Toisaalta toimi on irrationaalinen, mikäli samanaikaisesti hyväksytään toimenpiteen kieltävä nor\-mi\-jär\-jes\-tel\-mä. \citep[46]{Gibbard90}. 
+
+Tästä päästään moraaliseen oikean ja väärän arviointiin. Toimenpide on moraalisesti tuomittava, mikäli toimijan kannalta olisi rationaalista tuntea syyllisyyttä kyseisestä toimenpiteestä \citep[45]{Gibbard90}. Rationaalisuuden analyysi toisaalta palautuu ei-kognitiivisiin tarkasteluihin. Siten Gibbardin normi-\-ekspressivismi tarjoaa kvasi-\-realismin rinnalle toisen tavan pitää kiinni moraaliarvostelmien subjektisidonnaisuudesta, mutta samalla sallii niiden loogisesti pätevän tarkastelun. \citep{cognitivismSE}.
+
+%\newpage
+
+\section{Lopuksi}
+
+Kvasi-realismia on luonnehdittu enemmän filosofiseksi ohjelmaksi kuin nä\-kö\-kan\-nak\-si. Ohjelman julkilausuttuna tehtävänä on löytää oikeutus realistisen argumentointikoneiston, ja muun muassa moraalisen "tiedon", "totuuden"\ ja "objektiivisuuden"\ kaltaisten käsitteiden käyttöön projektivistisessa moraaliteoriassa. Blackburn pyrkii takaamaan nämä seikat osoittamalla, että totuusarvo liittäminen moraaliseen arvostelmaan on oikeutettua ja mielekästä. Edellytyksenä on tietynlainen moraalista kokemusta kuvaava malli. Näin Blackburnin ohjelma pyrkii varmistamaan, että mielekäs moraalinen keskustelu on mahdollista ekspressivistisistä läh\-tö\-koh\-dis\-ta.
+
+Olen esitellyt Blackburnin moraaliteoriaa lähtemällä liikkeelle Frege-Geach-\-argu\-men\-tis\-ta, joka on keskeinen kvasi-\-realismin haaste. Samalla on valotettu teorian lähtökohtia ja taustaoletuksia, sekä sitä kohtaan esitettyä kritiikkiä.  Blackburnin kvasi-\-realismi pyrkii löytämään yhtymäkohtia moraalisen relativismin ja objektivismin vä\-li\-maas\-tos\-ta. Teoria hyödyntää onnistuneesti sekä ekspressivismin että moraalisen realismin vahvuuksia. Toisaalta siihen pätee osin sama kritiikki kuin taustalla oleviin teorioihinkin.
+
+Minimalistiseen totuusteoriaan nojaava kvasi-\-realismi vetoaa yksinkertaisuudellaan ja samanaikaisella kyvyllään kuvata selkeästi ja kattavasti erilaisia moraaliseen arvostelmaan liittyviä seikkoja. Kvasi-realismi onnistuu kuvaamaan eettistä kokemusta paremmin kuin osa aiemmista ekspressivistisistä teorioista, koska se kykenee perustelemaan, miten moraalisia arvostelmia voidaan käsitellä tosiasioiden kaltaisina vaikkei niillä ole fysikaalisten ilmiöiden ominaisuuksia. Teorian valossa ristiriitaisetkin kannat voivat olla samanaikaisesti oikeutettuja ilman puhdasta relativismia, koska kvasi-\-realismi tunnustaa moraalisten tilanteiden kontekstisidonnaisuuden. Tä\-mä kontekstin huomiointi on yksi kvasi-\-realistisen teorian vahvuuksista. 
+
+Myös keskenään yhteensopimattomien arvojen mahdolliset ristiriitatilanteet voivat olla tällaista kontekstia \citep[ks. esim.][174]{Nagel87}. Kvasi-realismin ohella monet muutekin uudemmat moraaliteoriat ovat pyrkineet kuvaamaan moraalisten konfliktien mahdollisuutta ja niiden ratkaisuja. Muun muassa Isaiah Berlinin mukaan arvojen ristiriidat ovat osa inhimillistä luonnetta, ja hänen mukaansa on epä\-rea\-lis\-tis\-ta uskoa perustavien arvojen täydelliseen toteutumiseen samanaikaisesti \citep[luku 1]{Berlin98}. 
+
+Blackburnin esitystä moraalisesta kokemuksesta voidaan näh\-däk\-se\-ni tulkita niin, että moraalikäsitysten mahdollinen ristiriitaisuus palautuu eroihin yksilöiden tiedoissa ja tulkinnoissa arvioinnin kohteena olevasta tilanteesta. Aja\-tus\-ten\-vaih\-don kautta poikkeavat näkökulmat voivat lähentyä toisiaan, ja yksimielisyys moraalisen väitteen totuusarvosta kasvaa. Moraalisten arvostelmien konteksti- ja subjektisidonnaisuuden vuoksi yleisesti pätevien objektiivisten mo\-raa\-li\-sään\-tö\-jen muotoilu on Blackburnin mukaan itse asiassa tarpeetonta. Moraaliset ongelmat liittyvät poikkeuksetta erityisiin tilanteisiin. Blackburn osuvasti muistuttaakin, että jokainen moraalinen valintatilanne on ainutlaatuinen, ja kohdattava tilanteen asettamien reunaehtojen rajoissa:
+
+\begin{quote}
+	- - there remain {\it particular} moral problems connected with multiculturalism. There is no one moral or intellectual problem of relativism. But there are particular problems of when to tolerate and when to oppose - - But each issue has to be fought in its own merits. There is no problem of relativism, but only individual problems of living. \citep[218]{Blackburn99}.
+\end{quote}
+
+\pagebreak
+\addcontentsline{toc}{section}{Lähteet}
+
+%\bibliography{kfil}
+%\bibliographystyle{finn}
+
+\begin{thebibliography}{29}
+
+\bibitem[Akvinolainen(2002)]{Rentto02}
+Tuomas Akvinolainen (2002):
+\newblock \emph{Summa theologiae}.
+\newblock Valikoiden suomentanut J.-P. Rentto.
+\newblock Gaudeamus, Helsinki, 2002.
+
+\bibitem[Ayer(1936)]{Ayer36}
+Alfred~J. Ayer (1936):
+\newblock \emph{Language, Truth, and Logic}.
+\newblock (Toinen painos, 1946.).
+\newblock Gollancz, London.
+
+\bibitem[Bentham(1789)]{Bentham1789}
+Jeremy Bentham (1789):
+\newblock \emph{An Introduction to the Principles of Morals and Legislation}.
+\newblock T. Payne, London.
+
+\bibitem[Berlin(1998)]{Berlin98}
+Isaiah Berlin (1998):
+\newblock \emph{The Proper Study of Mankind: An Anthology of Essays.}
+\newblock Random House, Iso-Britannia.
+
+\bibitem[Blackburn(1984)]{Blackburn84}
+Simon~Blackburn (1984):.
+\newblock \emph{Spreading the Word}.
+\newblock Clarendon, Oxford.
+
+\bibitem[Blackburn(1993)]{Blackburn93}
+Simon~Blackburn (1993):
+\newblock \emph{Essays in Quasi-Realism}.
+\newblock Oxford University Press.
+
+\bibitem[Blackburn(1998)]{Blackburn98}
+Simon~Blackburn (1998):
+\newblock \emph{Ruling Passions}.
+\newblock Clarendon, Oxford.
+
+\bibitem[Blackburn(1999)]{Blackburn99}
+Simon~Blackburn (1999):
+\newblock "Is Objective Moral Justification Possible on a Quasi-Realist Foundation?":
+\newblock \emph{Inquiry} 42, 213--228.
+
+\bibitem[Blackburn(1996)]{Blackburn96}
+Simon Blackburn (1996):
+\newblock "Securing the nots"
+\newblock Teoksessa Walter Sinnot-Armstrong ja Mark Timmons (toim.),
+  \emph{Moral knowledge?}, Oxford University Press.
+
+\bibitem[Carnap(1937)]{Carnap37}
+Rudolf~Carnap (1937):
+\newblock \emph{Philosophy and Logical Syntax}.
+\newblock Kegan Paul, Trench, Trubner \& Co., London, 1937.
+
+\bibitem[Cuneo(2006)]{Cuneo06}
+Terence Cuneo (2006):
+"Saying what we Mean". Teoksessa Russ Shafer-Landau (toim.):
+\newblock \emph{Oxford Studies in Metaethics},
+\newblock Oxford University Press.
+
+
+\bibitem[Geach(1965)]{Geach65}
+Peter.~T. Geach (1965):
+\newblock "Assertion".
+\newblock \emph{The Philosophical Review}, 74, 449--465.
+
+\bibitem[Gibbard(1990)]{Gibbard90}
+Allan Gibbard (1990):
+\newblock \emph{Wise Choices, Apt Feelings}.
+\newblock Harvard University Press, Cambridge.
+
+
+\bibitem[Boghossian(2006)]{Boghossian06}
+Paul Boghossian (2006): "What is relativism?". Teoksessa
+P.~Greenough ja M.~Lynch, (toim.):
+\newblock \emph{Truth and realism},
+\newblock Oxford University Press.
+
+\bibitem[Hare(1952)]{Hare52}
+Richard.~M. Hare (1952):
+\newblock \emph{The Language of Morals},
+\newblock Clarendon, Oxford.
+
+\bibitem[Horgan ja Timmons(2006)]{Horgan06}
+Terry Horgan ja Mark Timmons (2006): "Cognitivist Expressivism". Teoksessa Terry Horgan ja Mark Timmons (toim.):
+\newblock \emph{Metaethics after Moore},
+\newblock Oxford University Press.
+
+\bibitem[Joyce(2008)]{projectivismSE}
+Richard Joyce (2008):
+\newblock Projectivism and quasi-realism.
+\newblock {Stanford Encyclopedia of Philosophy}.
+\newblock Verkkoviite. Viitattu 30.4.2008. http://plato.stanford.edu/entries/moral-anti-realism/projectivism-quasi-realism.html
+
+\bibitem[Kant(1788)]{Kant1788}
+Immanuel Kant (1788):
+\newblock \emph{Kritik der Praktischen Vernunft}.
+\newblock Alkuperäisteos julkaistu 1788.
+
+\bibitem[LaFollette(2000)]{LaFollette00}
+Hugh LaFollette, (toim.) (2000):
+\newblock \emph{The {Blackwell} guide to ethical theory}.
+\newblock Blackwell publishers ltd.
+
+\bibitem[Mackie(1977)]{Mackie77}
+John.~L. Mackie, (toim.) (1977):
+\newblock \emph{Ethics: Inventing Right and Wrong}.
+\newblock Pelican Books.
+
+\bibitem[Moore(1903)]{Moore03}
+George. E. Moore (1903):
+\newblock \emph{Principia Ethica}.
+\newblock Cambridge University Press, New York.
+
+\bibitem[Nagel(1987)]{Nagel87}
+Thomas Nagel (1987): "Fragmentation of value". Teoksessa
+Christopher~W. Gowans (toim.)
+\newblock \emph{Moral dilemmas},
+\newblock Oxford University Press.
+
+\bibitem[Ridge(2008)]{NonNaturalism08}
+Michael Ridge (2008):
+\newblock "Moral non-naturalism".
+\newblock {Stanford Encyclopedia of Philosophy}.
+\newblock Verkkoviite. Viitattu 29.4.2008. http://plato.stanford.edu/entries/moral-non-naturalism
+
+\bibitem[van Roojen(2008)]{cognitivismSE}
+Mark van Roojen (2008):
+\newblock "Moral cognitivism vs. non-cognitivism".
+\newblock {Stanford Encyclopedia of Philosophy}.
+\newblock Verkkoviite. Viitattu 25.4.2008. http://plato.stanford.edu/entries/moral-cognitivism/
+
+\bibitem[Stevenson(1944)]{Stevenson44}
+Charles. L. Stevenson (1944):
+\newblock \emph{Ethics and Language},
+\newblock Yale University Press.
+
+\bibitem[Swoyer(2008)]{relativismSE}
+Chris Swoyer (2008);
+\newblock "Relativism".
+\newblock {Stanford Encyclopedia of Philosophy}.
+\newblock Verkkoviite. Viitattu 25.4.2008. http://plato.stanford.edu/entries/relativism/
+
+\bibitem[Unwin(1999)]{Unwin99}
+Nicholas Unwin (1999):
+\newblock "Quasi-realism, negation and the frege-geach problem".
+\newblock \emph{The Philosophical Quarterly} 49, 337-352.
+
+\bibitem[Wong(1984)]{Wong84}
+David~B. Wong (1984):
+\newblock \emph{Moral relativity}.
+\newblock University of {California} press, London.
+
+\bibitem[Youn(2005)]{Youn05}
+Hoayoung Youn (2005):
+\newblock \emph{Objective values and moral relativism}.
+\newblock Väitöskirja, University of Texas at Austin.
+
+\end{thebibliography}
+
+
+\end{document}
