@@ -21,3 +21,6 @@
 
 
 
+[![githalytics.com
+alpha](https://cruel-carlota.pagodabox.com/717964a37ad2b4e2efab6d97fac1b7b8
+"githalytics.com")](http://githalytics.com/antagomir/thesis)
