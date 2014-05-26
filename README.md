@@ -1,6 +1,6 @@
 ## Source materials for theses and study assignments 
 
-[![DOI](https://zenodo.org/badge/4203/antagomir/thesis.png)](https://github.com/antagomir/thesis)
+To cite this repository, use: [![DOI](https://zenodo.org/badge/4203/antagomir/thesis.png)](https://github.com/antagomir/thesis)
 
 ### Theses
 
