@@ -1,5 +1,7 @@
 ## Source materials for theses and study assignments 
 
+[![DOI](https://zenodo.org/badge/4203/antagomir/thesis.png)](https://github.com/antagomir/thesis)
+
 ### Theses
 
 * [D.Sc. Thesis (Probabilistic analysis of the human transcriptome with side information)](phd10) (Bioinformatics; 2010)
